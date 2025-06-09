@@ -150,52 +150,59 @@ header.header-page img {
   }
 
   
-  .overlay-boxes {
-    position: relative;
-    margin-top: -60px;
-    z-index: 10;
-    padding-bottom: 3rem;
-  }
-  .overlay-boxes .about-box {
-    width: 29rem;
+ .box-container {
     display: flex;
-    justify-content: flex-end; /* كل العناصر لأقصى اليمين */
-    align-items: center;
-    gap: 0.5rem; /* مسافة صغيرة بين النص والصورة */
-    background-color: var(--white);
-    border-radius: 0.5rem;
-    padding: 1.7rem;
-    box-shadow: 0 0.25rem 0.7rem rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    justify-content: center; /* توسيط أفقي */
+    align-items: center; 
+  
+    position: relative;
+     top: -1.5rem;
+      display: flex;
+      flex-wrap: wrap;  /* يسمح بتعدد الصفوف عند ضيق العرض */
   }
-  .overlay-boxes .about-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
+  
+  .box-container .box {
+     width: 26rem;
+      display: flex;
+      justify-content: flex-end; /* كل العناصر لأقصى اليمين */
+      align-items: center;
+      gap: 0.5rem; /* مسافة صغيرة بين النص والصورة */
+      background-color: var(--white);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 0.25rem 0.7rem rgba(0, 0, 0, 0.1); 
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      margin-right: 1rem;
+      margin-left: 1rem;
   }
-  .overlay-boxes .about-info {
-    text-align: right;
-    margin-right: 1rem;
+  
+  .box-container .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
+      transition: 0.5s;
   }
-  .overlay-boxes .about-info h5 {
-    color: var(--main-color);
-    font-size: 2rem;
-    margin: 0 0 0.3rem;
-    font-weight: bold;
+  
+   .box-container .box div {
+      text-align: right; /* النص داخل الـ div */
   }
-
-  .overlay-boxes .about-info p.about-label{
-    font-size: 1.3rem;
-    color: var(--light-color);
-    margin: 0;
+  
+  .box-container .box h3 {
+      color: var(--main-color);
+      font-size: 2rem;
+      margin: 0 0 0.3rem; /* تعديل هامش بسيط */
   }
-  .overlay-boxes .about-box img {
-    width: 5.5rem;
-    height: auto;
-    margin-left: 0;
+  
+  .box-container .box p {
+      font-size: 1.3rem;
+      color: var(--light-color);
+      margin: 0;
   }
- 
+  
+  .box-container .box img {
+      width: 5rem;
+      height: auto;
+      margin-left: 0; /* إزالة المسافة الإضافية */
+  }
 
   .paragraph-box{
     direction: rtl;
@@ -252,3 +259,38 @@ header.header-page img {
     color: var(--main-color);
   }
   
+  
+  
+  /* Media Queries */
+@media (max-width: 768px) {
+    .about-section .about-text h3 {
+      width: 100%;
+      font-size: 1.8rem;
+    }
+    .about-section .about-text p {
+      font-size: 1.3rem;
+    }
+    .about-section .log-index {
+      font-size: 1.4rem;
+    }
+
+    .overlay-boxes .about-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .overlay-boxes .about-info {
+        margin-right: 0;
+      }
+  }
+  @media (max-width: 480px) {
+    .about-section .about-text h3 {
+      font-size: 1.5rem;
+    }
+    .about-section .about-text p {
+      font-size: 1.1rem;
+    }
+    .about-section .log-index {
+      font-size: 1.2rem;
+    }
+  }
