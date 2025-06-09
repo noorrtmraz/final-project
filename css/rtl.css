@@ -156,20 +156,20 @@ header.header-page img {
     align-items: center; 
   
     position: relative;
-     top: -1.5rem;
+     top: -4rem;
       display: flex;
       flex-wrap: wrap;  /* يسمح بتعدد الصفوف عند ضيق العرض */
   }
   
   .box-container .box {
-     width: 26rem;
+     width: 27rem;
       display: flex;
       justify-content: flex-end; /* كل العناصر لأقصى اليمين */
       align-items: center;
       gap: 0.5rem; /* مسافة صغيرة بين النص والصورة */
       background-color: var(--white);
       border-radius: 0.5rem;
-      padding: 1.5rem;
+      padding: 1.8rem;
       box-shadow: 0 0.25rem 0.7rem rgba(0, 0, 0, 0.1); 
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       margin-right: 1rem;
@@ -184,22 +184,25 @@ header.header-page img {
   
    .box-container .box div {
       text-align: right; /* النص داخل الـ div */
+      margin-right: 1rem;
   }
   
   .box-container .box h3 {
       color: var(--main-color);
       font-size: 2rem;
       margin: 0 0 0.3rem; /* تعديل هامش بسيط */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+     font-weight: bold;
   }
   
   .box-container .box p {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       color: var(--light-color);
       margin: 0;
   }
   
   .box-container .box img {
-      width: 5rem;
+      width: 5.5rem;
       height: auto;
       margin-left: 0; /* إزالة المسافة الإضافية */
   }
@@ -259,6 +262,28 @@ header.header-page img {
     color: var(--main-color);
   }
   
+
+  @media (max-width: 1200px){
+     
+    .box-container .box{
+        margin-top: 2rem;
+    }
+
+    .about-section .about-text h3 {
+        margin-top: 4rem;
+        width: 30%;
+        font-size: 1.7rem;
+
+    
+      }
+  }
+
+
+  @media (max-width: 992px){
+
+   
+  }
+
   
   
   /* Media Queries */
@@ -274,15 +299,16 @@ header.header-page img {
       font-size: 1.4rem;
     }
 
-    .overlay-boxes .about-box {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .overlay-boxes .about-info {
-        margin-right: 0;
-      }
+
   }
+
+
+  @media (max-width: 576px){
+
+  }
+
+
+
   @media (max-width: 480px) {
     .about-section .about-text h3 {
       font-size: 1.5rem;
@@ -293,4 +319,15 @@ header.header-page img {
     .about-section .log-index {
       font-size: 1.2rem;
     }
+
+    .footer-index h1{
+        font-size: 1.2rem;
+      }
+      
+      .footer-index img{
+        width: 50px;
+        height: auto;
+      }
+
+
   }
