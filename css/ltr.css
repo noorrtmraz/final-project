@@ -77,7 +77,7 @@ header.header-page img {
   .header-page nav a {
     font-size: 1.7rem;
     color: var(--secondary-color);
-     cursor: pointer;
+    cursor: pointer;
     height: 3.5rem;
     line-height: 3.5rem;
     text-align: center;
@@ -412,6 +412,118 @@ header.header-page img {
     margin-top: 2rem;
 }
 
+/******teacher & admin login page starts**/
+
+.login-teacher{
+    padding: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/back.png') no-repeat center center;
+    background-size: cover;
+    height: auto;
+}
+
+.login-teacher .form-container-teacher{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* يضع المحتوى في المنتصف أفقيًا */
+    align-items: center;
+    background-color:var(--white);
+    width: 48rem;
+    height: 40rem;
+    border-radius: 2.5rem;
+    padding: 3rem;
+
+}
+
+.login-teacher .form-container-teacher .custom-form h3{
+    color: var(--main-color);
+    font-size: 2.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+    text-align: center;
+
+}
+
+.login-teacher .form-container-teacher .custom-form .input-box-teacher {
+    padding: 1.4rem;
+    margin: 0.625rem 0;
+    margin-top:1.5rem ;
+    width: 100%;
+    border: 0.06rem solid #ccc;
+    border-top-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.login-teacher .form-container-teacher .custom-form .input-box-teacher2 {
+    padding: 1.4rem;
+    margin: 0.625rem 0;
+    width: 100%;
+    border: 0.06rem solid #ccc;
+    border-top-right-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.login-teacher .form-container-teacher .custom-form .login-btn-teacher{
+
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 1.4rem;
+    border: none;
+    border-bottom-right-radius: 1.25rem;
+    border-top-left-radius: 1.25rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top:1rem;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.login-teacher .form-container-teacher .custom-form .login-btn-teacher:hover{
+  background-color: var(--secondary-color);
+  transition: .5s linear;
+}
+
+
+.login-teacher .form-container-teacher .icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    flex-direction: row-reverse;
+}
+
+
+.login-teacher .form-container-teacher .icons img{
+    width: 5rem;
+    margin-top: 2rem;
+}
+
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+/******teacher & admin login page ends**/
 /* footer start */
 
 .footer{
@@ -506,6 +618,15 @@ header.header-page img {
         border-radius: 1rem;
         margin: 0 auto;
       }
+      .login-teacher {
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 5rem;
+    }
+
+    .login-teacher .form-container-teacher{
+        width: 90%;
+    }
 
 
   }
