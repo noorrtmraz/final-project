@@ -55,7 +55,7 @@
    body {
   
     background-color: var(--white);
-      height: 100%;
+      height: auto;
       margin: 0;
       padding-top: 6.5rem;
       overflow-x: hidden;
@@ -283,6 +283,157 @@ header.header-page img {
 
 
   /* index page end */
+
+  
+  /* login page for student & parent start */
+  
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/back.png') no-repeat center center;
+    background-size: cover;
+    height: 100%;
+
+}
+.login .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9rem;
+    flex-direction: row-reverse;
+ 
+}
+
+.login .login-container .left-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.login .login-container .left-section .image-container .student-img {
+    width:35rem;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    margin-right: 11rem;
+    transform: scaleX(-1);
+}
+
+
+.login .login-container .right-section{
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 1.875rem;
+    height: 40rem;
+    margin-bottom: 10rem;
+    width: 50%;
+    margin-left: 6rem;
+}
+
+.login .login-container .right-section .login-box {
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.login .login-container .right-section .login-box h2{
+    color: var(--main-color);
+    font-size: 2.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+
+}
+
+
+.login .login-container .right-section .login-box .input-box-custom {
+    padding: 1.4rem;
+    margin: 0.625rem 0;
+    margin-top:1.5rem ;
+    width: 80%;
+    border: 0.06rem solid #ccc;
+    border-top-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+
+.login .login-container .right-section .login-box .input-box-custom2 {
+    padding: 1.4rem;
+    margin-top:0.125rem;
+    margin-bottom: 1rem;
+    width: 80%;
+    border: 0.06rem solid #ccc;
+    border-top-right-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+
+.login .login-container .right-section .login-box .login-btn-custom {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 1.4rem;
+    border: none;
+    border-bottom-right-radius: 1.25rem;
+    border-top-left-radius: 1.25rem;
+    cursor: pointer;
+    width: 80%;
+    margin-top:1rem;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+
+}
+
+.login .login-container .right-section .login-box .login-btn-custom:hover{
+    background-color: var(--secondary-color);
+    transition: .5s linear;
+}
+
+
+.login .login-container .right-section .login-box .icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.login .login-container .right-section .login-box .icons img {
+    width: 5rem;
+    margin-top: 2rem;
+}
+
+/* footer start */
+
+.footer{
+    position: fixed;
+    bottom: 0; right: 0; left: 0;
+    background-color: var(--white);
+    padding: 2rem;
+    text-align: center;
+    color: var(--black);
+    font-size: 1.8rem;
+    margin-top: .5rem;
+    z-index: 1000;
+    max-height: 7rem;
+
+}
+
+.footer span{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/* footer end */
   
 
   @media (max-width: 1200px){
@@ -336,6 +487,25 @@ header.header-page img {
     .about-section .about-row{
         flex-direction: column-reverse;
     }
+
+
+    .login .login-container {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10rem;
+      }
+
+      .login .login-container .left-section .image-container .student-img {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+      .login .login-container .right-section {
+        width: 90%;
+        border-radius: 1rem;
+        margin: 0 auto;
+      }
 
 
   }

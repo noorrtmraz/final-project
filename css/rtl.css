@@ -55,7 +55,7 @@
    body {
   
     background-color: var(--white);
-      height: 100%;
+      height: auto;
       margin: 0;
       padding-top: 6.5rem;
       overflow-x: hidden;
@@ -298,11 +298,12 @@ header.header-page img {
 
 
 .login .login-container .left-section .image-container .student-img {
-    width:35rem;
+    width:36rem;
     max-width: 100%;
     height: auto;
     position: relative;
-    margin-left: 5rem;
+    margin-left: 11rem;
+
 }
 
 
@@ -343,6 +344,7 @@ header.header-page img {
     border-top-right-radius: 1.25rem;
     border-bottom-left-radius: 1.25rem;
     text-align: right;
+    font-size: 1.2rem;
 }
 
 
@@ -355,7 +357,9 @@ header.header-page img {
     border-top-left-radius: 1.25rem;
     border-bottom-right-radius: 1.25rem;
     text-align: right;
+    font-size: 1.2rem;
 }
+
 
 
 .login .login-container .right-section .login-box .login-btn-custom {
@@ -392,10 +396,10 @@ header.header-page img {
 }
 
 
+/* login page for student & parent end */
 
 
-
-
+/* footer start */
 
 
 
@@ -406,7 +410,7 @@ header.header-page img {
     padding: 2rem;
     text-align: center;
     color: var(--black);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-top: .5rem;
     z-index: 1000;
     max-height: 7rem;
@@ -418,8 +422,7 @@ header.header-page img {
     font-weight: bold;
 }
 
-  /* login page for student & parent end */
-  
+/* footer end */
 
   @media (max-width: 1200px){
      
@@ -469,6 +472,22 @@ header.header-page img {
         margin-left: auto;
     }
 
+
+    .login .login-container {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10rem;
+      }
+
+      .login .login-container .left-section .image-container .student-img {
+        max-width: 70%;
+      }
+    
+      .login .login-container .right-section {
+        width: 90%;
+        border-radius: 1rem;
+        margin: 0 auto;
+      }
 
   }
 
