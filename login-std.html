@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark Education</title>
+    <link rel="icon" href="images/logo-dark.png" type="image/png">
+  
+
+  <!-- ربط ملف bootstrap CSS المحلي -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <!-- font awsam cdn link -->
+    <script src="js/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&family=Square+Peg&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.css" rel="stylesheet" />
+  
+
+
+     <!-- custom css file link -->
+      <link  id="theme-style"  rel="stylesheet" href="css/rtl.css">
+     
+</head>
+</head>
+<body>
+    <header class="header-page bg-white shadow fixed-top">
+        <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3">
+      
+          <!-- القائمة اليسرى (أيقونات) -->
+          <nav class="d-flex gap-4 ms-4">
+            <a href="#" title="تغيير اللغة"><i class="fas fa-language"></i></a>
+            <a href="#" title="الحساب"><i class="fas fa-user"></i></a>
+            <a href="#" title="الإشعارات"><i class="fas fa-bell"></i></a>
+          </nav>
+      
+          <!-- الشعار على اليمين -->
+          <a href="loginstd.html">
+            <img src="images/spark.png" alt="spark education">
+          </a>
+        </div>
+      </header>
+
+      <section class="login">
+        <div class="login-container">
+            <div class="left-section">
+                <div class="image-container">
+                    <img src="images/child.png" alt="Student Image" class="student-img">
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="login-box">
+                    <form id="stdForm" class="custom-form" style="display: block;">
+                        <h2>تسجيل دخول الطالب</h2>
+                        <input type="text" placeholder="* ادخل رقم الهوية" class="input-box-custom">
+                        <input type="password" placeholder="* ادخل كلمة المرور" class="input-box-custom2">
+                        <button class="login-btn-custom">تسجيل الدخول</button>
+                    </form>
+
+                    <form id="parentForm" class="custom-form" style="display: none;">
+                        <h2>تسجيل دخول ولي الأمر</h2>
+                        <input type="text" placeholder="* ادخل رقم الهوية" class="input-box-custom">
+                        <input type="password" placeholder="* ادخل كلمة المرور" class="input-box-custom2">
+                        <button class="login-btn-custom">تسجيل الدخول</button>
+                    </form>
+
+                    <div class="icons">
+                        <a href="#" class="login-icon" id="icon-parent" onclick="showForm('parent', this)"><img src="images/par-off.png" alt="Parent" title="تسجيل دخول ولي الامر"></a>
+                        <a href="#" class="login-icon" id="icon-std"  onclick="showForm('student',this)"><img src="images/std-on.png" alt="Student" title="تسجيل دخول الطالب"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+  
+    
+         <!--- footer start-->
+         <footer class="footer">
+
+            &copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة 
+         
+         </footer>
+        <!--- footer ends-->
+      
+
+  <!-- ربط ملف bootstrap JS المحلي -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
