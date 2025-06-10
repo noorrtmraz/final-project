@@ -648,6 +648,11 @@ header.header-page img {
     color: var(--main-color);
 }
 
+
+.custom-user-table {
+    direction: rtl;
+  }
+  
 .table-users{
     width: 95%;
     margin-right: auto;
@@ -682,11 +687,14 @@ header.header-page img {
     padding: 1.4rem;
     background-color: rgba(88, 159, 67, 0.2);
     font-size: 1.5rem;
+
 }
 
 .custom-user-table td{
     padding: 1.4rem;
+
 }
+
 
 
 
