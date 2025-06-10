@@ -57,6 +57,63 @@ function showForm(type, clickedIcon) {
     });
     clickedIcon.classList.add('active-icon');
   }
-  
 
 
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.getElementById("sidebarToggle");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.getElementById("closeSidebar");
+    const mainContent = document.getElementById("mainContent");
+
+    function toggleSidebar() {
+      const isHidden = sidebar.classList.contains("hidden");
+      sidebar.classList.toggle("hidden");
+      mainContent.classList.toggle("with-sidebar", isHidden);
+      mainContent.classList.toggle("no-sidebar", !isHidden);
+    }
+
+    toggle.addEventListener("click", function(e) {
+      e.preventDefault();
+      toggleSidebar();
+    });
+
+    closeBtn.addEventListener("click", function() {
+      sidebar.classList.add("hidden");
+      mainContent.classList.remove("with-sidebar");
+      mainContent.classList.add("no-sidebar");
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".sidebar");
+    const overlay = document.createElement("div");
+    const toggleBtn = document.getElementById("sidebarToggle");
+
+    // إنشاء الـ overlay إذا مش موجود
+    overlay.id = "overlay";
+    document.body.appendChild(overlay);
+
+    // إظهار السايدبار والـ overlay
+    toggleBtn.addEventListener("click", function () {
+      sidebar.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
+
+    // إغلاق عند الضغط على الخلفية
+    overlay.addEventListener("click", function () {
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  });
+
+
+
+
+
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active');
+    }
+  });

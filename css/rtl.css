@@ -81,6 +81,18 @@ header.header-page img {
     transition: 0.3s ease-in-out;
   }
 
+  .header-page .logo-spark a{
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+     cursor: pointer;
+    line-height: 3.5rem;
+    text-align: center;
+    margin-right: 9px;
+    margin-left: 2rem;
+    transition: 0.3s ease-in-out;
+
+  }
+
   .header-page nav a:hover {
     transform: scale(1.1);
     color: var(--main-color); /* أخضر مثل الشعار */
@@ -518,9 +530,7 @@ header.header-page img {
 
 
 .footer{
-    position: fixed;
     bottom: 0; right: 0; left: 0;
-    background-color: var(--white);
     padding: 2rem;
     text-align: center;
     color: var(--black);
@@ -528,7 +538,6 @@ header.header-page img {
     margin-top: .5rem;
     z-index: 1000;
     max-height: 7rem;
-
 }
 
 .footer span{
@@ -537,6 +546,280 @@ header.header-page img {
 }
 
 /* footer end */
+
+
+
+
+/* sidebar start */
+
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover{
+    background-color: rgba(88, 159, 67, 0.2); /* خلفية خضراء فاتحة مثلاً */
+    border-radius: 10px;
+    
+   }
+
+  .sidebar {
+    position: fixed;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
+    top: 0;
+    width: 250px;
+    z-index: 1;
+    background-color: #fff;
+  }
+
+  .sidebar ul {
+    margin-top: 9rem;
+  }
+
+  .sidebar ul li a {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--secondary-color);
+    font-size: 1.6rem;
+    text-decoration: none;
+    margin-right: .5rem;
+    padding: 10px;
+  }
+
+  .sidebar ul li a span {
+    margin-right: 1.2rem;
+  }
+
+  .sidebar.hidden {
+    transform: translateX(100%);
+  }
+
+  #mainContent.with-sidebar {
+    margin-inline-end: 260px;
+  }
+
+  #mainContent.no-sidebar {
+    margin-inline-end: 0;
+  }
+
+  .logo-spark #sidebarToggle {
+    font-size: 1.3rem;
+  }
+
+
+  /* sidebar end */
+
+
+
+
+  /* manager dashoard start */
+
+  .dashboard-manager .card{
+    box-shadow: 1px 2px 5px rgba(0, 0, 0 ,0.15);
+    margin-top: 3rem;
+    height: 11rem;
+}
+
+.dashboard-manager{
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+
+.dashboard-manager .card .user-number h6{
+    font-size: 1.2rem;
+    color: var(--light-color);
+    padding: .5rem;
+}
+
+.dashboard-manager .card .user-number h4{
+    font-size: 1.8rem;
+    padding-left: .5rem;
+}
+
+.dashboard-manager .card .card-content i{
+    color: var(--main-color);
+    margin-right: .5rem;
+    font-size: 2.7rem;
+}
+
+.dashboard-manager .card a {
+    color: var(--main-color);
+}
+
+.table-users{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0 ,0.15);
+    padding: 2rem;
+    margin-bottom: 7rem;
+}
+
+.table-users ul.nav li button{
+    font-size: 1.4rem;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.table-users ul.nav li button.active{
+    color: var(--secondary-color);
+}
+
+
+.table-users.table-content table{
+    border: none;
+
+}
+
+
+.table-users .table-content table tbody {
+    font-size: 1.3rem;
+}
+
+.custom-user-table th{
+    padding: 1.4rem;
+    background-color: rgba(88, 159, 67, 0.2);
+    font-size: 1.5rem;
+}
+
+.custom-user-table td{
+    padding: 1.4rem;
+}
+
+
+
+
+
+  /* manager dashboard end */
+
+/* message start */
+
+.message-footer a{
+    font-size: 1.6rem;
+    color: var(--main-color);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+.messages-panel{
+    width: 35% !important;
+    margin-left: 3rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 65vh !important;
+    
+}
+
+.open-msg-btn {
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 1055;
+    bottom: 7rem;
+    left: 35px;
+    background: var(--main-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .1);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+  }
+
+  .open-msg-btn:hover{
+      background-color: var(--secondary-color);
+      transition: .6s linear;
+  }
+
+  .msg-info strong {
+    display: block;
+    font-size: 15px;
+    color: var(--secondary-color);
+    text-align: right;
+  }
+
+
+  .msg-info{
+      margin-right: .5rem;
+      flex: 1;
+  }
+
+  .msg-info p {
+    font-size: 13px;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    text-align: right;
+    color: var(--light-color);
+  }
+
+ .message-title{
+    background-color: var(--main-color);
+    padding: 2rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.message-title h5{
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.offcanvas-header .btn-close{
+    margin: 0;
+    padding: 0;
+}
+
+
+  /* الجسم */
+  .messages-body {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px;
+
+  }
+  
+  /* الرسالة */
+  .message-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--light-bg);
+    cursor: pointer;
+    flex-direction: row-reverse;
+    
+  }
+  
+  .message-item:hover {
+    background-color: var(--light-bg);
+  }
+  
+  .message-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-left: 10px;
+    object-fit: cover;
+  }
+ 
+  .message-item span{
+      font-size: 1.2rem;
+  }
+  
+
+  
+/* message end */
+
+
+
 
   @media (max-width: 1200px){
      
@@ -563,6 +846,8 @@ header.header-page img {
         width: 35%;
         font-size: 1.9rem;
       }
+
+      
   }
 
   
@@ -613,8 +898,81 @@ header.header-page img {
         width: 90%;
     }
 
+
+    .sidebar ul {
+        margin-top: 1rem;
+      }
+
+    .sidebar {
+      transform: translateX(100%);
+      position: fixed;
+      top: 72px;
+      right: 0;
+      height: calc(100vh - 72px);
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    .sidebar.active {
+      transform: translateX(0);
+    }
+
+    #mainContent.with-sidebar {
+      margin-inline-end: 0;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 72px);
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    #overlay.active {
+      display: block;
+    }
+
+    .messages-panel {
+        width: 100% !important;
+        margin-left: 0 !important;
+        height: 80vh !important;
+      }
+    
+      .open-msg-btn {
+        bottom: 7rem;
+        left: 15px;
+        padding: 8px 20px;
+        font-size: 1.2rem;
+
+      }
+    
+      .msg-info strong {
+        font-size: 14px;
+      }
+    
+      .msg-info p {
+        font-size: 12px;
+      }
+    
+      .message-item span {
+        font-size: 1rem;
+      }
+
   }
 
+
+  @media (min-width: 769px) and (max-width: 991px) {
+    .messages-panel {
+      width: 60% !important;
+      height: 70vh !important;
+    }
+  }
+  
+ 
 
   @media (max-width: 576px){
     .footer-index h1{
