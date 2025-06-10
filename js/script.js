@@ -59,6 +59,8 @@ function showForm(type, clickedIcon) {
   }
 
 
+//   اظهار واخفاء السايد بار من خلال الضغط على اييقونة القائمة
+
 
   document.addEventListener("DOMContentLoaded", function() {
     const toggle = document.getElementById("sidebarToggle");
@@ -86,6 +88,8 @@ function showForm(type, clickedIcon) {
   });
 
 
+//   اظهار واخفاء السايد بار عند تصغير الشاشة
+
   document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.querySelector(".sidebar");
     const overlay = document.createElement("div");
@@ -110,7 +114,7 @@ function showForm(type, clickedIcon) {
 
 
 
-
+// كلاس ال active على السايد بار
 
   document.querySelectorAll('.sidebar a').forEach(link => {
     if (link.href === window.location.href) {

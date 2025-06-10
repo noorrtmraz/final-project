@@ -315,6 +315,7 @@ header.header-page img {
     height: auto;
     position: relative;
     margin-left: 11rem;
+    margin-top: 5rem;
 
 }
 
@@ -652,7 +653,7 @@ header.header-page img {
 .custom-user-table {
     direction: rtl;
   }
-  
+
 .table-users{
     width: 95%;
     margin-right: auto;
@@ -693,6 +694,11 @@ header.header-page img {
 .custom-user-table td{
     padding: 1.4rem;
 
+}
+
+.table-users ul.nav{
+    display: flex;
+    justify-content: end;
 }
 
 
@@ -738,6 +744,8 @@ header.header-page img {
     z-index: 1000;
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    flex-direction: row-reverse;
 
   }
 
