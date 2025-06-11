@@ -576,7 +576,7 @@ header.header-page img {
   }
 
   .sidebar ul li a {
-    margin-bottom: 1rem;
+    margin-bottom: .3rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -614,6 +614,21 @@ header.header-page img {
 
 
   /* manager dashoard start */
+
+  #mainContent{
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
   .dashboard-manager .card{
     box-shadow: 1px 2px 5px rgba(0, 0, 0 ,0.15);
@@ -702,11 +717,128 @@ header.header-page img {
 }
 
 
+/* ------------------ */
+
+
+#mainContent .nav-std{
+  display: flex;
+  justify-content: end;
+  margin-top: 5rem;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+#mainContent .nav-std li{
+ font-size: 1.5rem;
+ margin-left: .2rem;
+}
+
+#mainContent .nav-std li button{
+  color: var(--light-color);
+  background-color:rgba(88, 159, 67, 0.1);
+  border: none;
+  padding: .8rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+ }
+
+ #mainContent .nav-std li button.active{
+  color: var(--white);
+  background-color: var(--main-color);
+ }
+
+ .table-users .header-table{
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .table-users .header-table input{
+   text-align: right;
+   border: 1px solid #ccc;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   padding-right: .2rem;
+   width: 20rem;
+   margin-bottom: 1rem;
+   font-size: 1.4rem;
+ }
+
+ .table-users .header-table a{
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: .8rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  display: flex;
+
+ }
+
+ .table-users .header-table .btn-promotion{
+   display: flex;
+   flex-direction: row;
+ }
+
+ .table-users .header-table .btn-promotion .rollback-btn{
+   margin-left: .5rem;
+   background-color: var(--red);
+ }
+
+/* ----------------- */
+
+#mainContent .teacher-header,
+#mainContent .teacher-parent{
+  text-align: right;
+  color: var(--main-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top:4rem;
+  margin-right: 4rem;
+}
 
 
 
+ 
 
   /* manager dashboard end */
+
+  /*********this is actions icon in the tables starts***********/
+.action-icon {
+  margin: 0 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.action-icon:hover {
+  transform: scale(1.2);
+}
+
+.delete-icon-action {
+  color: var(--red);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+}
+
+.relode-icon-action,.question-icon-action,
+.std-icon-action,.eye-icon-action, .download-icon-action, .edit-icon-action{
+  color: var(--main-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+}
+
+
+
+/*********the actions icon in the tables ends***********/
+
+
+
 
 /* message start */
 
@@ -988,7 +1120,6 @@ header.header-page img {
     }
   }
   
- 
 
   @media (max-width: 576px){
     .footer-index h1{
@@ -1017,6 +1148,12 @@ header.header-page img {
       font-size: 1.2rem;
     }
 
+
+    .header-page nav a{
+      font-size: 1.5rem;
+      margin-right: 1px;
+    margin-left: 1.5rem;
+    }
     
 
 
