@@ -34,28 +34,78 @@
 </head>
 </head>
 <body>
-    <header class="header-page bg-white shadow fixed-top">
-        <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3">
-      
-          <!-- القائمة اليسرى (أيقونات) -->
-          <nav class="d-flex gap-4 ms-4">
-            <a href="#" title="تغيير اللغة"><i class="fas fa-language"></i></a>
-            <a href="#" title="الحساب"><i class="fas fa-user"></i></a>
-            <a href="#" title="الإشعارات"><i class="fas fa-bell"></i></a>
-          </nav>
-      
-          <!-- الشعار والقائمة الجانبية -->
-          <div class="d-flex align-items-center logo-spark">
-            <a href="#" id="sidebarToggle" title="الإشعارات"><i class="fas fa-bars fa-lg"></i></a>
+    <!-- الهيدر -->
+<header class="header-page bg-white shadow fixed-top">
+  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3">
 
-            <a href="manager-index.html">
-              <img src="../images/spark.png" alt="spark education">
-            </a>
+    <!-- القائمة اليسرى (أيقونات) -->
+    <nav class="d-flex gap-4 ms-4 align-items-center">
+      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
+
+      <!-- القائمة المنسدلة للحساب -->
+      <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+          <i class="fas fa-user icon-header"></i>
+        </a>
+        
+        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
+          <li class="text-center">
+            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+            <p class="user-name">محمد محمد</p>
+            <p class="user-type">مدير</p>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="../login-teacher.html"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
+          <i class="fas fa-bell icon-header"></i>
+        </a>
+
+        <a href="manager_chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
+
+          <h6 class="notification-title">الاشعارات</h6>
+
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
           </div>
-        </div>
-      </header>
+
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
+          </div>
+          
+        </a>
+
+
+      </div>
+
+    </nav>
+
+    <!-- الشعار والقائمة الجانبية -->
+    <div class="d-flex align-items-center logo-spark">
+      <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
+      <a href="manager-index.html">
+        <img src="../images/spark.png" alt="spark education">
+      </a>
+    </div>
+
+  </div>
+</header>
+
       
-      <!-- الشريط الجانبي -->
+         <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
         <ul class="list-unstyled">
             <li>
@@ -98,7 +148,7 @@
               </li>
 
               <li>
-                <a href="manager-study-content.html">
+                <a href="manager-study-content.html" class="active">
                   <span> المحتوى الدراسي</span>
                   <i class="fas fa-book-reader"></i>
                 </a>
@@ -158,7 +208,7 @@
               <!-- الطلاب -->
               <div class="tab-pane fade show active" id="books" role="tabpanel">
                 <div class="header-table">   
-                    <a href="#">اضافة كتاب</a>
+                    <a href="manager-forms/manager-add-book.html">اضافة كتاب</a>
                     <input type="search" placeholder=".. ابحث">
                 </div>
                 <div class="table-responsive">
@@ -187,8 +237,8 @@
                         <td>20-11-2022</td>
                         <td>
                             <a href="#"><i class="fa-solid fa-download action-icon download-icon-action" title="تنزيل الكتاب"></i></a>
-                            <a href="edit_book_teacher.html"><i class="fas fa-edit action-icon edit-icon-action" title=" تعديل الكتاب"></i></a>
-                            <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف الكتاب"></i></a>
+                              <a href="manager-forms/manager-edit-book.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
+                              <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
 
                          </td> 
                       </tr>
@@ -201,7 +251,7 @@
           
               <div class="tab-pane fade" id="homeworks" role="tabpanel">
                 <div class="header-table">   
-                    <a href="#">اضافة واجب</a>
+                    <a href="manager-forms/manager-add-hw.html">اضافة واجب</a>
                     <input type="search" placeholder=".. ابحث">
                 </div>
                 <div class="table-responsive">
@@ -232,9 +282,9 @@
                         <td>
                             
                             <a href="#"><i class="fas fa-users students-icon action-icon std-icon-action" title="عرض الطلاب"></i></a>
-                            <a href="#"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل "></i></a>
-                            <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض تفاصيل"></i></a>
-                            <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف الواجب"></i></a>
+                            <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
+                            <a href="manager-forms/manager-edit-hw.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
+                            <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
                             
                           </td>
                       </tr>
@@ -246,7 +296,7 @@
           
               <div class="tab-pane fade" id="exams" role="tabpanel">
                 <div class="header-table">   
-                    <a href="#">اضافة اختبار</a>
+                    <a href="manager-forms/manager-add-exam.html">اضافة اختبار</a>
                     <input type="search" placeholder=".. ابحث">
                 </div>
                 
@@ -278,9 +328,9 @@
                             <td>12:00pm</td>
                             <td>12:00am</td>
                             <td>
-                              <i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i>
-                              <i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i>
-                              <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
+                              <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
+                              <a href="manager-forms/manager-edit-exam.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
+                              <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
 
                             </td>
                           
@@ -292,7 +342,7 @@
 
               <div class="tab-pane fade" id="lessons" role="tabpanel">
                 <div class="header-table">   
-                    <a href="#">اضافة درس</a>
+                    <a href="manager-forms/manager-add-lesson.html">اضافة درس</a>
                     <input type="search" placeholder=".. ابحث">
                 </div>
                 
@@ -322,9 +372,9 @@
                             <td>أ</td>
                             <td>20-2-2025</td>
                             <td>
-                              <i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i>
-                              <i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i>
-                              <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
+                              <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
+                              <a href="manager-forms/manager-edit-lesson.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
+                              <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
 
                             </td>
                           

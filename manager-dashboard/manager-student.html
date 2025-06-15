@@ -34,104 +34,154 @@
 </head>
 </head>
 <body>
-    <header class="header-page bg-white shadow fixed-top">
-        <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3">
-      
-          <!-- القائمة اليسرى (أيقونات) -->
-          <nav class="d-flex gap-4 ms-4">
-            <a href="#" title="تغيير اللغة"><i class="fas fa-language"></i></a>
-            <a href="#" title="الحساب"><i class="fas fa-user"></i></a>
-            <a href="#" title="الإشعارات"><i class="fas fa-bell"></i></a>
-          </nav>
-      
-          <!-- الشعار والقائمة الجانبية -->
-          <div class="d-flex align-items-center logo-spark">
-            <a href="#" id="sidebarToggle" title="الإشعارات"><i class="fas fa-bars fa-lg"></i></a>
+    <!-- الهيدر -->
+<header class="header-page bg-white shadow fixed-top">
+  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3">
 
-            <a href="manager-index.html">
-              <img src="../images/spark.png" alt="spark education">
-            </a>
+    <!-- القائمة اليسرى (أيقونات) -->
+    <nav class="d-flex gap-4 ms-4 align-items-center">
+      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
+
+      <!-- القائمة المنسدلة للحساب -->
+      <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+          <i class="fas fa-user icon-header"></i>
+        </a>
+        
+        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
+          <li class="text-center">
+            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+            <p class="user-name">محمد محمد</p>
+            <p class="user-type">مدير</p>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="../login-teacher.html"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
+          <i class="fas fa-bell icon-header"></i>
+        </a>
+
+        <a href="manager_chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
+
+          <h6 class="notification-title">الاشعارات</h6>
+
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
           </div>
-        </div>
-      </header>
+
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
+          </div>
+          
+        </a>
+
+
+      </div>
+
+    </nav>
+
+    <!-- الشعار والقائمة الجانبية -->
+    <div class="d-flex align-items-center logo-spark">
+      <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
+      <a href="manager-index.html">
+        <img src="../images/spark.png" alt="spark education">
+      </a>
+    </div>
+
+  </div>
+</header>
+
       
-       <!-- الشريط الجانبي -->
-       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
-        <ul class="list-unstyled">
-            <li>
-              <a href="manager-index.html">
-                  <span>لوحة التحكم</span>
-                  <i class="fa fa-home"></i>
-              </a>
-            </li>
-            <li>
-              <a href="manager-subject.html">
-                <span>المواد الدراسية</span>
-                <i class="fas fa-book"></i>
-              </a>
-            </li>
-
-            <li>
-                <a href="manager-student.html">
-                  <span> الطلاب</span>
-                  <i class="fas fa-user-graduate"></i>
+        <!-- الشريط الجانبي -->
+        <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
+          <ul class="list-unstyled">
+              <li>
+                <a href="manager-index.html">
+                    <span>لوحة التحكم</span>
+                    <i class="fa fa-home"></i>
                 </a>
               </li>
               <li>
-                <a href="manager-teacher.html">
-                    <span>المعلمين</span>
-                    <i class="fas fa-chalkboard-teacher"></i>
+                <a href="manager-subject.html">
+                  <span>المواد الدراسية</span>
+                  <i class="fas fa-book"></i>
                 </a>
               </li>
+  
+              <li>
+                  <a href="manager-student.html" class="active">
+                    <span> الطلاب</span>
+                    <i class="fas fa-user-graduate"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="manager-teacher.html">
+                      <span>المعلمين</span>
+                      <i class="fas fa-chalkboard-teacher"></i>
+                  </a>
+                </li>
+      
+                 <li>
+                  <a href="manager-parent.html">
+                      <span>أولياء الأمور</span>
+                      <i class="fas fa-user-shield"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="manager-grade.html">
+                      <span>المراحل الدراسية</span>
+                      <i class="fas fa-graduation-cap"></i>
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="manager-study-content.html">
+                    <span> المحتوى الدراسي</span>
+                    <i class="fas fa-book-reader"></i>
+                  </a>
+                </li>
     
-               <li>
-                <a href="manager-parent.html">
-                    <span>أولياء الأمور</span>
-                    <i class="fas fa-user-shield"></i>
-                </a>
-              </li>
+                <li>
+                  <a href="manager-meet.html">
+                      <span>اللقاءات المباشرة</span>
+                      <i class="fas fa-video"></i>
+                  </a>
+                </li>
+             
+    
+              
+    
               <li>
-                <a href="manager-grade.html">
-                    <span>المراحل الدراسية</span>
-                    <i class="fas fa-graduation-cap"></i>
-                </a>
-              </li>
-
-              <li>
-                <a href="manager-study-content.html">
-                  <span> المحتوى الدراسي</span>
-                  <i class="fas fa-book-reader"></i>
-                </a>
-              </li>
-  
-              <li>
-                <a href="manager-meet.html">
-                    <span>اللقاءات المباشرة</span>
-                    <i class="fas fa-video"></i>
-                </a>
-              </li>
-           
-  
-            
-  
-            <li>
-              <a href="manager-setting.html">
-                  <span>الاعدادات</span>
-                <i class="fa-solid fa-cogs"></i>
-                
-              </a>
-            </li>
-
-            <li>
-                <a href="manager-profile.html">
-                    <span>الملف الشخصي</span>
-                  <i class="fa-solid fa-user"></i>
+                <a href="manager-setting.html">
+                    <span>الاعدادات</span>
+                  <i class="fa-solid fa-cogs"></i>
                   
                 </a>
               </li>
-          </ul>
-
-  </div>
+  
+              <li>
+                  <a href="manager-profile.html">
+                      <span>الملف الشخصي</span>
+                    <i class="fa-solid fa-user"></i>
+                    
+                  </a>
+                </li>
+            </ul>
+  
+    </div>
       
       
       <!-- المحتوى الرئيسي -->
@@ -155,7 +205,7 @@
               <!-- الطلاب -->
               <div class="tab-pane fade show active" id="students" role="tabpanel">
                 <div class="header-table">   
-                    <a href="#">اضافة طالب</a>
+                    <a href="manager-forms/manager-add-student.html">اضافة طالب</a>
                     <input type="search" placeholder=".. ابحث">
                 </div>
                 <div class="table-responsive">
@@ -181,9 +231,9 @@
                         <td>الاول</td>
                         <td>أ</td>
                         <td>
-                            <i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i>
-                            <i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i>
-                            <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
+                          <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
+                          <a href="manager-forms/manager-edit-student.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
+                          <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
                           </td>
                        
                       </tr>
@@ -195,7 +245,7 @@
               <!-- المعلمين -->
               <div class="tab-pane fade" id="graduations" role="tabpanel">
                 <div class="header-table">   
-                    <a href="#">اضافة خريج</a>
+                    <a href="manager-forms/manager-add-graduated.html">اضافة خريج</a>
                     <input type="search" placeholder=".. ابحث">
                 </div>
                 <div class="table-responsive">
@@ -218,9 +268,9 @@
                         <td>19-12-208</td>
                         <td>2024</td>
                         <td>
-                            <i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i>
-                            <i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i>
-                            <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
+                          <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
+                          <a href="manager-forms/manager-edit-graduated.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
+                          <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
                           </td>
                       </tr>
                       
@@ -233,7 +283,7 @@
               <div class="tab-pane fade" id="promotions" role="tabpanel">
                 <div class="header-table">  
                     <div class="btn-promotion">
-                        <a href="#" > ترقية صف</a>
+                        <a href="manager-forms/manager-add-promotion.html" > ترقية صف</a>
                          <a href="#" class="rollback-btn">استعادة</a>
                     </div> 
                     
@@ -265,9 +315,11 @@
                             <td>الثاني</td>
                             <td>أ</td>
                             <td>
-                              <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
-                              <i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i>
-                              <i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i>
+                              <a href="#"><i class="fas fa-undo action-icon rollback-btn-action" title="استعادة"></i></a>
+                              <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
+                              <a href="manager-forms/manager-edit-promotion.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
+                              <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
+
                             </td>
                           
                           </tr>

@@ -62,7 +62,124 @@
       overflow: auto; /* لتمكين التمرير عند الحاجة */
      
   }
+
+
+
 /* header start */
+
+.notification-title{
+  font-size: 1.8rem;
+  color: var(--main-color);
+  font-weight: bold;
+  padding-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+  text-align: left;
+}
+
+.dropdown-menu.notification-dropdown{
+  width: 35rem;
+  height: auto;  
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border:none;
+  border-bottom: 2px solid var(--main-color);
+  text-decoration: none;
+
+
+}
+
+.dropdown-menu.notification-dropdown .notification-content{
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #ccc;
+  justify-content: space-between;
+  padding: 1rem;
+
+}
+
+.dropdown-menu.notification-dropdown .notification-content:hover{
+  background-color: var(--light-bg);
+}
+
+
+.dropdown-menu.notification-dropdown .notification-content .notification-info strong{
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    text-align: left;
+}
+
+.dropdown-menu.notification-dropdown .notification-content .notification-info p{
+  font-size: 1.3rem;
+  color: var(--light-color);
+  padding-top: .8rem;
+  text-align: left;
+}
+
+.dropdown-menu.notification-dropdown .notification-content span{
+  color: var(--light-color);
+}
+
+
+
+.dropdown-menu.account-dropdown {
+  min-width: 250px; 
+  height: auto;  
+  padding: 2rem;
+  font-size: 1.1rem;         /* تكبير حجم الخط */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border:none;
+  border-bottom: 1px solid var(--main-color);
+
+}
+
+/* ✅ تخصيص العناصر داخل القائمة */
+.account-dropdown .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--main-color); /* لون أخضر مخصص */
+  font-weight: bold;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  color: var(--white);
+  width: 70%;
+  justify-content: center;
+  margin: 0;
+  /* text-shadow: 1px 1px 2px rgba(0, 0, 0, .2); */
+  margin-right: auto;
+  margin-left: auto;
+  padding: .7rem;
+}
+
+.account-dropdown .dropdown-item i {
+  color: var(--white); /* لون الأيقونات أخضر */
+  font-size: 1.2rem;
+}
+
+
+.account-dropdown .user-img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.account-dropdown li .user-name{
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: .7rem;
+}
+
+.account-dropdown li .user-type{
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 
 .header-page .logo-spark{
    display: flex;
@@ -97,7 +214,7 @@ header.header-page img {
       flex-direction: row-reverse;
   }
 
-  .header-page nav a {
+  .header-page nav .icon-header {
     font-size: 1.7rem;
     color: var(--secondary-color);
     cursor: pointer;
@@ -109,7 +226,7 @@ header.header-page img {
     transition: 0.3s ease-in-out;
   }
 
-  .header-page nav a:hover {
+  .header-page nav .icon-header:hover {
     transform: scale(1.1);
     color: var(--main-color); /* أخضر مثل الشعار */
   }
@@ -667,28 +784,25 @@ header.header-page img {
     
 }
 
-.dashboard-manager .card .card-content{
-    display: flex;
-    flex-direction: row-reverse;
-}
+
 
 
 .dashboard-manager .card .user-number h6{
     font-size: 1.2rem;
     color: var(--light-color);
     padding: .5rem;
-    text-align: right;
+    text-align: left;
 }
 
 .dashboard-manager .card .user-number h4{
     font-size: 1.8rem;
-    padding-right: .5rem;
-    text-align: right;
+    padding-left: .5rem;
+    text-align: left;
 }
 
 .dashboard-manager .card .card-content i{
     color: var(--main-color);
-    margin-left: .5rem;
+    margin-right: .5rem;
     font-size: 2.7rem;
 }
 
@@ -712,7 +826,6 @@ header.header-page img {
 
 .table-users ul.nav{
     display: flex;
-    flex-direction: row-reverse;
     justify-content: start;
 }
 
@@ -826,8 +939,7 @@ header.header-page img {
  }
 
 
- #mainContent .teacher-header,
-#mainContent .teacher-parent{
+ #mainContent .manager-header{
   text-align: left;
   color: var(--main-color);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
@@ -918,8 +1030,9 @@ header.header-page img {
   }
 
   .open-msg-btn:hover{
-      background-color: var(--secondary-color);
-      transition: .6s linear;
+    background-color: rgba(88, 159, 67, 0.2);
+    color: var(--main-color);
+    transition: .5s linear;
   }
 
   .msg-info strong {
@@ -1189,7 +1302,7 @@ header.header-page img {
     }
 
     
-    .header-page nav a{
+    .header-page nav .icon-header{
       font-size: 1.5rem;
       margin-left: 1px;
       margin-right: 1.5rem;

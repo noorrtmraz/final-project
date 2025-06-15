@@ -34,26 +34,76 @@
 </head>
 </head>
 <body>
-    <header class="header-page bg-white shadow fixed-top">
-        <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3">
-      
-          <!-- القائمة اليسرى (أيقونات) -->
-          <nav class="d-flex gap-4 ms-4">
-            <a href="#" title="تغيير اللغة"><i class="fas fa-language"></i></a>
-            <a href="#" title="الحساب"><i class="fas fa-user"></i></a>
-            <a href="#" title="الإشعارات"><i class="fas fa-bell"></i></a>
-          </nav>
-      
-          <!-- الشعار والقائمة الجانبية -->
-          <div class="d-flex align-items-center logo-spark">
-            <a href="#" id="sidebarToggle" title="الإشعارات"><i class="fas fa-bars fa-lg"></i></a>
+    <!-- الهيدر -->
+<header class="header-page bg-white shadow fixed-top">
+  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3">
 
-            <a href="manager-index.html">
-              <img src="../images/spark.png" alt="spark education">
-            </a>
+    <!-- القائمة اليسرى (أيقونات) -->
+    <nav class="d-flex gap-4 ms-4 align-items-center">
+      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
+
+      <!-- القائمة المنسدلة للحساب -->
+      <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+          <i class="fas fa-user icon-header"></i>
+        </a>
+        
+        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
+          <li class="text-center">
+            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+            <p class="user-name">محمد محمد</p>
+            <p class="user-type">مدير</p>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="../login-teacher.html"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
+          <i class="fas fa-bell icon-header"></i>
+        </a>
+
+        <a href="manager_chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
+
+          <h6 class="notification-title">الاشعارات</h6>
+
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
           </div>
-        </div>
-      </header>
+
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
+          </div>
+          
+        </a>
+
+
+      </div>
+
+    </nav>
+
+    <!-- الشعار والقائمة الجانبية -->
+    <div class="d-flex align-items-center logo-spark">
+      <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
+      <a href="manager-index.html">
+        <img src="../images/spark.png" alt="spark education">
+      </a>
+    </div>
+
+  </div>
+</header>
+
       
        <!-- الشريط الجانبي -->
        <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
@@ -78,7 +128,7 @@
                 </a>
               </li>
               <li>
-                <a href="manager-teacher.html">
+                <a href="manager-teacher.html" class="active">
                     <span>المعلمين</span>
                     <i class="fas fa-chalkboard-teacher"></i>
                 </a>
@@ -136,7 +186,7 @@
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
-        <h3 class="teacher-header">جدول المعلمين</h3> 
+        <h3 class="manager-header">جدول المعلمين</h3> 
 
        
         <div class="table-users mt-5"> 
@@ -145,7 +195,7 @@
               <!-- الطلاب -->
               <div class="tab-pane fade show active" role="tabpanel">
                 <div class="header-table">   
-                    <a href="#">اضافة معلم</a>
+                    <a href="manager-forms/manager-add-teacher.html">اضافة معلم</a>
                     <input type="search" placeholder=".. ابحث">
                 </div>
                 <div class="table-responsive">
@@ -169,9 +219,9 @@
                         <td>رياضيات</td>
                         <td>الخامس</td>
                         <td>
-                            <i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i>
-                            <i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i>
-                            <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
+                          <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
+                          <a href="manager-forms/manager-edit-teacher.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
+                          <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
                           </td>
                        
                       </tr>
