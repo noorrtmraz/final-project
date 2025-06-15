@@ -181,6 +181,15 @@ header.header-page img {
     margin-right: 2rem;
   }
 
+  .header-page nav{
+    direction: rtl;
+  }
+
+  .header-page div.header-row{
+    direction: rtl;
+  }
+
+
   .header-page nav .icon-header {
     font-size: 1.7rem;
     color: var(--secondary-color);
@@ -193,6 +202,10 @@ header.header-page img {
     transition: 0.3s ease-in-out;
   }
 
+
+  .header-page .logo-spark {
+    direction: rtl;
+  }
   .header-page .logo-spark a{
     font-size: 1.2rem;
     color: var(--secondary-color);

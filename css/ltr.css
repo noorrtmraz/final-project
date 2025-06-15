@@ -179,14 +179,6 @@
 }
 
 
-
-
-.header-page .logo-spark{
-   display: flex;
-   flex-direction: row-reverse;
-
-  }
-
 .header-page .logo-spark a{
     font-size: 1.2rem;
     color: var(--secondary-color);
@@ -199,20 +191,12 @@
 
   }
 
-.header-row{
-    display: flex;
-    flex-direction: row-reverse;
-}
 
 header.header-page img {
     width: 9.5rem;
     margin-left: 2rem;
   }
 
-  .header-page nav{
-      display: flex;
-      flex-direction: row-reverse;
-  }
 
   .header-page nav .icon-header {
     font-size: 1.7rem;
