@@ -86,7 +86,6 @@
 
 .dropdown-menu.notification-dropdown .notification-content{
   display: flex;
-  flex-direction: row-reverse;
   border-top: 1px solid #ccc;
   justify-content: space-between;
   padding: 1rem;
