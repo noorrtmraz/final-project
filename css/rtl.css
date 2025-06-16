@@ -414,7 +414,7 @@ header.header-page img {
     align-items: center;
     background: url('../images/back.png') no-repeat center center;
     background-size: cover;
-    height: 100%;
+    direction: rtl;
 
 }
 .login .login-container {
@@ -422,13 +422,13 @@ header.header-page img {
     justify-content: center;
     align-items: center;
     margin-top: 9rem;
- 
 }
 
 .login .login-container .left-section {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+
 }
 
 
@@ -437,7 +437,6 @@ header.header-page img {
     width:36rem;
     max-width: 100%;
     height: auto;
-    position: relative;
     margin-left: 11rem;
     margin-top: 5rem;
 
@@ -478,8 +477,8 @@ header.header-page img {
     margin-top:1.5rem ;
     width: 80%;
     border: 0.06rem solid #ccc;
-    border-top-right-radius: 1.25rem;
-    border-bottom-left-radius: 1.25rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
     text-align: right;
     font-size: 1.2rem;
 }
@@ -491,8 +490,8 @@ header.header-page img {
     margin-bottom: 1rem;
     width: 80%;
     border: 0.06rem solid #ccc;
-    border-top-left-radius: 1.25rem;
-    border-bottom-right-radius: 1.25rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
     text-align: right;
     font-size: 1.2rem;
 }
@@ -504,8 +503,8 @@ header.header-page img {
     color: var(--white);
     padding: 1.4rem;
     border: none;
-    border-bottom-left-radius: 1.25rem;
-    border-top-right-radius: 1.25rem;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 2rem;
     cursor: pointer;
     width: 80%;
     margin-top:1rem;
@@ -573,24 +572,24 @@ header.header-page img {
 }
 
 .login-teacher .form-container-teacher .custom-form .input-box-teacher {
-    padding: 1.4rem;
+    padding: 1.6rem;
     margin: 0.625rem 0;
     margin-top:1.5rem ;
     width: 100%;
     border: 0.06rem solid #ccc;
-    border-top-right-radius: 1.25rem;
-    border-bottom-left-radius: 1.25rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
     text-align: right;
     font-size: 1.2rem;
 }
 
 .login-teacher .form-container-teacher .custom-form .input-box-teacher2 {
-    padding: 1.4rem;
+    padding: 1.6rem;
     margin: 0.625rem 0;
     width: 100%;
     border: 0.06rem solid #ccc;
-    border-top-left-radius: 1.25rem;
-    border-bottom-right-radius: 1.25rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
     text-align: right;
     font-size: 1.2rem;
 }
@@ -599,10 +598,10 @@ header.header-page img {
 
     background-color: var(--main-color);
     color: var(--white);
-    padding: 1.4rem;
+    padding: 1.6rem;
     border: none;
-    border-bottom-left-radius: 1.25rem;
-    border-top-right-radius: 1.25rem;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 2rem;
     cursor: pointer;
     width: 100%;
     margin-top:1rem;
@@ -720,11 +719,11 @@ header.header-page img {
   }
 
   #mainContent.with-sidebar {
-    margin-inline-end: 260px;
+    margin-inline-start: 260px;
   }
 
   #mainContent.no-sidebar {
-    margin-inline-end: 0;
+    margin-inline-start: 0;
   }
 
   .logo-spark #sidebarToggle {
@@ -741,6 +740,7 @@ header.header-page img {
 
   #mainContent{
     animation: fadeIn 1s ease-in-out;
+    direction: rtl;
   }
   
 @keyframes fadeIn {
@@ -848,7 +848,7 @@ header.header-page img {
 
 #mainContent .nav-std{
   display: flex;
-  justify-content: end;
+  justify-content: start;
   margin-top: 5rem;
   width: 95%;
   margin-left: auto;
@@ -886,11 +886,56 @@ header.header-page img {
    border: 1px solid #ccc;
    padding-top: 1rem;
    padding-bottom: 1rem;
-   padding-right: .2rem;
+   padding-right: 1rem;
    width: 20rem;
    margin-bottom: 1rem;
    font-size: 1.4rem;
  }
+
+ /* ---- */
+ .table-users .add-std {
+  margin-bottom: 2rem;
+ }
+
+ .table-users .add-std .add-std-btn{
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: .8rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+ }
+
+ .table-users .add-std .rollback-std-btn{
+  background-color: var(--red);
+  color: var(--white);
+  padding: .8rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+ }
+
+ .table-users .header-table .select-std{
+   display: flex;
+   
+ }
+
+ .table-users .header-table .select-std select{
+  text-align: right;
+  border: 1px solid #ccc;
+  /* padding-top: .5rem;
+  padding-bottom: .5rem; */
+  width: 12rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  margin-left: .5rem;
+  color: var(--light-color);
+  border-radius: 0;
+ }
+
+ /* ----- */
 
  .table-users .header-table a{
   background-color: var(--main-color);
@@ -930,6 +975,15 @@ header.header-page img {
 
 /* ----------------- */
 
+.manager-header-form{
+  text-align: center;
+  color: var(--main-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top:4rem;
+}
+
 .custom-form-card{
    width: 95%;
     margin-right: auto;
@@ -940,13 +994,17 @@ header.header-page img {
     border: none;
 }
 
-.custom-form-card .card-body .subject-form div {
-  direction: rtl;
-}
 
-.custom-form-card .card-body .subject-form div input[type="text"].custom-input{
+
+.custom-form-card .card-body .subject-form div input[type="text"].custom-input,
+.custom-form-card .card-body .subject-form div input[type="date"].custom-input,
+.custom-form-card .card-body .subject-form div input[type="number"].custom-input,
+.custom-form-card .card-body .subject-form div input[type="password"].custom-input,
+.custom-form-card .card-body .subject-form div input[type="datetime-local"].custom-input,
+.custom-form-card .card-body .subject-form div input[type="url"].custom-input,
+.custom-form-card .card-body .subject-form div input[type="file"].custom-input{
     padding: 10px;
-    margin: 10px 0;
+    margin: 5px 0;
     border-radius: 6px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     text-align: right;
@@ -958,7 +1016,7 @@ header.header-page img {
 
 .custom-form-card .card-body .subject-form div select.custom-select{
 
-    margin: 10px 0;
+    margin: 5px 0;
     border-radius: 6px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     font-size: 1.3rem;
@@ -967,6 +1025,7 @@ header.header-page img {
     padding-bottom: 10px;
     color: var(--light-color);
 }
+
 
 .custom-form-card .card-body .subject-form .text-end button{
   font-weight: bold;
@@ -990,6 +1049,11 @@ header.header-page img {
 }
 
 
+
+h6.section-heading{
+  font-size: 1.4rem;
+  font-weight: bold;
+}
 
 
  
@@ -1065,6 +1129,7 @@ header.header-page img {
     font-weight: bold;
     display: flex;
     flex-direction: row-reverse;
+    color: var(--white);
 
   }
 
@@ -1074,6 +1139,7 @@ header.header-page img {
     transition: .5s linear;
   }
 
+  
   .msg-info strong {
     display: block;
     font-size: 15px;
@@ -1458,7 +1524,7 @@ header.header-page img {
     }
 
     #mainContent.with-sidebar {
-      margin-inline-end: 0;
+      margin-inline-start: 0;
     }
 
     #overlay {
