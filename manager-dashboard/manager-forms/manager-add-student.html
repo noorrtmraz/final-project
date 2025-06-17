@@ -116,8 +116,8 @@
   </div>
 </header>
 
-      
-         <!-- الشريط الجانبي -->
+       
+      <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
         <ul class="list-unstyled">
             <li>
@@ -133,12 +133,21 @@
               </a>
             </li>
 
-            <li>
-                <a href="../manager-student.html" class="active">
-                  <span> الطلاب</span>
-                  <i class="fas fa-user-graduate"></i>
-                </a>
-              </li>
+            <li class="dropdown-sidebar position-relative">
+              <a href="#" class="dropdown-toggle-custom d-flex justify-content-end align-items-center active">
+                <i class="fas fa-chevron-left dropdown-arrow ms-2"></i> <!-- سهم لليسار بدل تحت -->
+                <span>الطلاب</span>
+                <i class="fas fa-user-graduate me-2"></i>
+              </a>
+            
+              <ul class="dropdown-menu-sidebar position-absolute">
+                <li><a href="../manager-student.html">عرض الطلاب</a></li>
+                <li><a href="../manager-graduated.html">الخريجين</a></li>
+                <li><a href="../manager-promotion.html">الترقيات</a></li>
+              </ul>
+            </li>
+            
+
               <li>
                 <a href="../manager-teacher.html">
                     <span>المعلمين</span>
