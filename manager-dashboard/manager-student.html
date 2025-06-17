@@ -116,102 +116,100 @@
   </div>
 </header>
 
-      
-        <!-- الشريط الجانبي -->
-        <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
-          <ul class="list-unstyled">
+       <!-- الشريط الجانبي -->
+       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
+        <ul class="list-unstyled">
+            <li>
+              <a href="manager-index.html">
+                  <span>لوحة التحكم</span>
+                  <i class="fa fa-home"></i>
+              </a>
+            </li>
+            <li>
+              <a href="manager-subject.html">
+                <span>المواد الدراسية</span>
+                <i class="fas fa-book"></i>
+              </a>
+            </li>
+
+            <li class="dropdown-sidebar position-relative">
+              <a href="#" class="dropdown-toggle-custom d-flex justify-content-end align-items-center active">
+                <i class="fas fa-chevron-left dropdown-arrow ms-2"></i> <!-- سهم لليسار بدل تحت -->
+                <span>الطلاب</span>
+                <i class="fas fa-user-graduate me-2"></i>
+              </a>
+            
+              <ul class="dropdown-menu-sidebar position-absolute">
+                <li><a href="manager-student.html">عرض الطلاب</a></li>
+                <li><a href="manager-graduated.html">الخريجين</a></li>
+                <li><a href="manager-promotion.html">الترقيات</a></li>
+              </ul>
+            </li>
+            
+
               <li>
-                <a href="manager-index.html">
-                    <span>لوحة التحكم</span>
-                    <i class="fa fa-home"></i>
+                <a href="manager-teacher.html">
+                    <span>المعلمين</span>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </a>
+              </li>
+    
+               <li>
+                <a href="manager-parent.html">
+                    <span>أولياء الأمور</span>
+                    <i class="fas fa-user-shield"></i>
                 </a>
               </li>
               <li>
-                <a href="manager-subject.html">
-                  <span>المواد الدراسية</span>
-                  <i class="fas fa-book"></i>
+                <a href="manager-grade.html">
+                    <span>المراحل الدراسية</span>
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="manager-study-content.html">
+                  <span> المحتوى الدراسي</span>
+                  <i class="fas fa-book-reader"></i>
                 </a>
               </li>
   
               <li>
-                  <a href="manager-student.html" class="active">
-                    <span> الطلاب</span>
-                    <i class="fas fa-user-graduate"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="manager-teacher.html">
-                      <span>المعلمين</span>
-                      <i class="fas fa-chalkboard-teacher"></i>
-                  </a>
-                </li>
-      
-                 <li>
-                  <a href="manager-parent.html">
-                      <span>أولياء الأمور</span>
-                      <i class="fas fa-user-shield"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="manager-grade.html">
-                      <span>المراحل الدراسية</span>
-                      <i class="fas fa-graduation-cap"></i>
-                  </a>
-                </li>
+                <a href="manager-meet.html">
+                    <span>اللقاءات المباشرة</span>
+                    <i class="fas fa-video"></i>
+                </a>
+              </li>
+           
   
-                <li>
-                  <a href="manager-study-content.html">
-                    <span> المحتوى الدراسي</span>
-                    <i class="fas fa-book-reader"></i>
-                  </a>
-                </li>
-    
-                <li>
-                  <a href="manager-meet.html">
-                      <span>اللقاءات المباشرة</span>
-                      <i class="fas fa-video"></i>
-                  </a>
-                </li>
-             
-    
-              
-    
-              <li>
-                <a href="manager-setting.html">
-                    <span>الاعدادات</span>
-                  <i class="fa-solid fa-cogs"></i>
+            
+  
+            <li>
+              <a href="manager-setting.html">
+                  <span>الاعدادات</span>
+                <i class="fa-solid fa-cogs"></i>
+                
+              </a>
+            </li>
+
+            <li>
+                <a href="manager-profile.html">
+                    <span>الملف الشخصي</span>
+                  <i class="fa-solid fa-user"></i>
                   
                 </a>
               </li>
-  
-              <li>
-                  <a href="manager-profile.html">
-                      <span>الملف الشخصي</span>
-                    <i class="fa-solid fa-user"></i>
-                    
-                  </a>
-                </li>
-            </ul>
-  
-    </div>
+          </ul>
+
+  </div>
       
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
-         <!-- التبويبات -->
-         <ul class="nav nav-tabs mb-3 nav-std" id="myTab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="students-tab" data-bs-toggle="tab" data-bs-target="#students" type="button" role="tab">الطلاب</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="teachers-tab" data-bs-toggle="tab" data-bs-target="#graduations" type="button" role="tab">الخريجين</button>
-          </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="parents-tab" data-bs-toggle="tab" data-bs-target="#promotions" type="button" role="tab">الترقية</button>
-            </li> 
-          </ul>   
+        <h3 class="manager-header">جدول الطلاب</h3> 
+
        
-        <div class="table-users mt-5">  
+        <div class="table-users mt-5"> 
             <!-- المحتوى -->
             <div class="table-content tab-content" id="myTabContent">
               <!-- الطلاب -->
@@ -236,60 +234,6 @@
                 </div>
 
                 <div class="table-responsive">
-                  <table class="table text-center custom-user-table">
-                    <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th>اسم الطالب</th>
-                        <th>رقم الهوية</th>
-                        <th>المرحلة</th>
-                        <th>الصف</th>
-                        <th>الشعبة</th>
-                        <th>العمليات</th>  
-                        
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>98765333</td>
-                        <td>الابتدائية</td>
-                        <td>الاول</td>
-                        <td>أ</td>
-                        <td>
-                          <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
-                          <a href="manager-forms/manager-edit-student.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-                          <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
-                          </td>
-                       
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-          
-              <!-- المعلمين -->
-              <div class="tab-pane fade" id="graduations" role="tabpanel">
-                <div class="add-std">
-                  <a href="manager-forms/manager-add-graduated.html" class="add-std-btn">اضافة خريج</a>
-                </div>
-
-                <div class="header-table">   
-                  <div class="select-std">
-                    <select class="form-select std-select" id="grade">
-                      <option selected disabled>اختر المرحلة ...</option>
-                    </select>
-                    <select class="form-select std-select" id="grade">
-                      <option selected disabled>اختر الصف ...</option>
-                    </select>
-                    <select class="form-select std-select" id="grade">
-                      <option selected disabled>اختر الشعبة ...</option>
-                    </select>
-                  </div>
-                    <input type="search" placeholder="ابحث ...">
-                </div>
-                <div class="table-responsive">
                     <table class="table text-center custom-user-table">
                         <thead class="thead-user">
                       <tr>
@@ -297,7 +241,6 @@
                         <th>اسم الطالب</th>
                         <th>رقم الهوية</th>
                         <th>تاريخ الميلاد</th>
-                        <th>سنة التخرج</th>
                         <th>العمليات</th>
                       </tr>
                     </thead>
@@ -307,80 +250,43 @@
                         <td>محمد محمد</td>
                         <td>98765333</td>
                         <td>19-12-208</td>
-                        <td>2024</td>
                         <td>
                           <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
-                          <a href="manager-forms/manager-edit-graduated.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-                          <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
-                          </td>
+                          <a href="manager-forms/manager-edit-student.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                            <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
+                          </a>                          
+                        </td>
                       </tr>
                       
                     </tbody>
                   </table>
+
+
+                  <!-- Modal حذف الطالب -->
+                  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف هذا الطالب؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
                 </div>
               </div>
           
-              <!-- أولياء الأمور -->
-              <div class="tab-pane fade" id="promotions" role="tabpanel">
-                <div class="add-std">
-                  <a href="manager-forms/manager-add-promotion.html" class="add-std-btn">ترقية صف</a>
-                  <a href="manager-forms/manager-add-student.html" class="rollback-std-btn">استعادة</a>
-
-                </div>
-
-                <div class="header-table">   
-                  <div class="select-std">
-                    <select class="form-select std-select" id="grade">
-                      <option selected disabled>اختر المرحلة ...</option>
-                    </select>
-                    <select class="form-select std-select" id="grade">
-                      <option selected disabled>اختر الصف ...</option>
-                    </select>
-                    <select class="form-select std-select" id="grade">
-                      <option selected disabled>اختر الشعبة ...</option>
-                    </select>
-                  </div>
-                    <input type="search" placeholder="ابحث ...">
-                </div>
-                
-                <div class="table-responsive">
-                    <table class="table text-center custom-user-table">
-                        <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th>اسم الطالب</th>
-                        <th> المرحلة السابقة</th>
-                        <th>الصف السابق</th>
-                        <th>الشعبة السابقة</th>
-                        <th> المرحلة الحالية</th>
-                        <th>الصف الحالي</th>
-                        <th>الشعبة الحالية</th>
-                        <th>العمليات</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td> محمد محمد</td>
-                            <td>الابتدائي</td>
-                            <td>الأول</td>
-                            <td>أ</td>
-                            <td>الابتدائي</td>
-                            <td>الثاني</td>
-                            <td>أ</td>
-                            <td>
-                              <a href="#"><i class="fas fa-undo action-icon rollback-btn-action" title="استعادة"></i></a>
-                              <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
-                              <a href="manager-forms/manager-edit-promotion.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-                              <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
-
-                            </td>
-                          
-                          </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -388,7 +294,8 @@
 
 
 
-      
+     
+       
 <!-- زر فتح الرسائل باستخدام Bootstrap -->
 <button class=" position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
 type="button" 

@@ -133,12 +133,21 @@
               </a>
             </li>
 
-            <li>
-                <a href="manager-student.html">
-                  <span> الطلاب</span>
-                  <i class="fas fa-user-graduate"></i>
-                </a>
-              </li>
+            <li class="dropdown-sidebar position-relative">
+              <a href="#" class="dropdown-toggle-custom d-flex justify-content-end align-items-center">
+                <i class="fas fa-chevron-left dropdown-arrow ms-2"></i> <!-- سهم لليسار بدل تحت -->
+                <span>الطلاب</span>
+                <i class="fas fa-user-graduate me-2"></i>
+              </a>
+            
+              <ul class="dropdown-menu-sidebar position-absolute">
+                <li><a href="manager-student.html">عرض الطلاب</a></li>
+                <li><a href="manager-graduated.html">الخريجين</a></li>
+                <li><a href="manager-promotion.html">الترقيات</a></li>
+              </ul>
+            </li>
+            
+
               <li>
                 <a href="manager-teacher.html">
                     <span>المعلمين</span>
@@ -153,7 +162,7 @@
                 </a>
               </li>
               <li>
-                <a href="manager-grade.html" class="active">
+                <a href="manager-grade.html">
                     <span>المراحل الدراسية</span>
                     <i class="fas fa-graduation-cap"></i>
                 </a>

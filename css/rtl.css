@@ -677,7 +677,64 @@ header.header-page img {
 /* sidebar start */
 
 
-.sidebar ul li a.active,
+.dropdown-sidebar {
+  position: relative;
+}
+
+.dropdown-menu-sidebar {
+  list-style: none;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 100%; /* تطلع يسار العنصر */
+  transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  z-index: 100;
+  min-width: 180px;
+}
+
+.dropdown-menu-sidebar li a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  text-align: right;
+}
+
+.dropdown-menu-sidebar li:last-child a {
+  border-bottom: none;
+}
+
+.dropdown-menu-sidebar li a:hover {
+  color: var(--main-color);
+}
+
+/* تفعيل القائمة عند المرور */
+.dropdown-sidebar:hover .dropdown-menu-sidebar {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* دوران السهم */
+.dropdown-sidebar:hover .dropdown-arrow {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.sidebar ul li a.active{
+  background-color: rgba(88, 159, 67, 0.2); /* خلفية خضراء فاتحة مثلاً */
+    border-radius: 10px;
+}
+
+
 .sidebar ul li a:hover{
     background-color: rgba(88, 159, 67, 0.2); /* خلفية خضراء فاتحة مثلاً */
     border-radius: 10px;
@@ -708,11 +765,10 @@ header.header-page img {
     text-decoration: none;
     margin-right: .5rem;
     padding: 10px;
+    gap:10px;
   }
 
-  .sidebar ul li a span {
-    margin-right: 1.2rem;
-  }
+ 
 
   .sidebar.hidden {
     transform: translateX(100%);
@@ -1056,6 +1112,42 @@ h6.section-heading{
 }
 
 
+
+/* modle start */
+.modal-body i{
+  color: var(--main-color);
+}
+
+.modal-body p{
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+.modal-footer .btn-cancel{
+  padding: .5rem 1rem .5rem 1rem;
+  background-color: var(--red);
+  border-radius: .7rem;
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.modal-footer .btn-del{
+  padding: .5rem 1rem .5rem 1rem;
+  background-color: var(--main-color);
+  border-radius: .7rem;
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.modal-footer .btn-del:hover{
+  border: 1px solid var(--main-color);
+  background-color: var(--white);
+  color: var(--main-color);
+  transition: .5s linear;
+}
+
+/* modle end */
  
 
   /* manager dashboard end */
