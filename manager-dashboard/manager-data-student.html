@@ -228,73 +228,91 @@
                 <!-- المحتوى -->
                 <div class="table-content tab-content" id="myTabContent">
                   <div class="tab-pane fade show active" id="details" role="tabpanel">
-                    <div class="header-table">   
-                        <a href="manager-forms/manager-add-grade.html">اضافة مرحلة</a>
-                        <input type="search" placeholder="ابحث ..">
-                    </div>
-                    <div class="table-responsive">
-                      <table class="table text-center custom-user-table">
-                        <thead class="thead-user">
-                          <tr>
-                            <th>#</th>
-                            <th>اسم المرحلة</th>
-                            <th>عدد الصفوف</th>
-                            <th>عدد الشعب</th>
-                            <th>عدد الطلاب</th>
-                            <th>العمليات</th>  
-                            
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>الابتدائي</td>
-                            <td>20</td>
-                            <td>40</td>
-                            <td>130</td>
-                            <td>
-                                <a href="manager-form/manager-edit-grade.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-                                <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
-                              </td>
-                           
-                          </tr>
-                        </tbody>
-                      </table>
+                    <div class="container">
+                      <div class="student-table table-responsive">
+                        <table class="table table-bordered mb-0">
+                          <tbody>
+                            <tr>
+                              <td>اسم الطالب</td>
+                              <td>علي محمد</td>
+                            </tr>
+                            <tr>
+                              <td> رقم الهوية</td>
+                              <td>876543234567</td>
+                            </tr>
+                            <tr>
+                              <td>ولي الأمر</td>
+                              <td>عماد محمد</td>
+                            </tr>
+                            <tr>
+                              <td>رقم هاتف ولي الأمر</td>
+                              <td>1234567810</td>
+                            </tr>
+                            <tr>
+                              <td>النوع</td>
+                              <td>ذكر</td>
+                            </tr>
+                            <tr>
+                              <td>المرحلة الدراسية</td>
+                              <td>المرحلة الابتدائية</td>
+                            </tr>
+                            <tr>
+                              <td>الصف الدراسي</td>
+                              <td>الصف الأول</td>
+                            </tr>
+                            <tr>
+                              <td>القسم</td>
+                              <td>أ</td>
+                            </tr>
+                            <tr>
+                              <td>تاريخ الميلاد</td>
+                              <td>2010-05-12</td>
+                            </tr>
+                            <tr>
+                              <td>السنة الدراسية</td>
+                              <td>2025/2026</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
               
                   <div class="tab-pane fade" id="attachment" role="tabpanel">
-                    <div class="header-table">   
-                        <a href="manager-forms/manager-add-classroom.html">اضافة صف</a>
-                        <input type="search" placeholder="ابحث ..">
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table text-center custom-user-table">
-                            <thead class="thead-user">
-                          <tr>
-                            <th>#</th>
-                            <th>الصف</th>
-                            <th>المرحلة</th>
-                            <th>عدد لشُعب</th>
-                            <th>عدد الطلاب</th>
-                            <th>العمليات</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>الاول</td>
-                            <td>الابتدائي</td>
-                            <td>2</td>
-                            <td>70</td>
-                            <td>
-                                <a href="manager-form/manager-edit-classroom.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i>
-                                <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
+                    <div class="container">
+                      <!-- خانة رفع الملف -->
+                      <div class="mb-3">
+                        <label for="fileUpload" class="form-label fw-bold text-danger label-attachment">المرفقات:</label>
+                        <input class="form-control file-attachment" type="file" id="fileUpload" multiple>
+                      </div>
+                    
+                      <!-- زر التأكيد -->
+                      <button class="btn btn-upload mb-4">تأكيد</button>
+                    
+                      <!-- جدول الملفات -->
+                      <div class="table-responsive">
+                        <table class="table table-attachment table-bordered align-middle">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>اسم الملف</th>
+                              <th>تاريخ الإضافة</th>
+                              <th>العمليات</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Screenshot 2024-12-01 12.47.02.png</td>
+                              <td>منذ 12 ثانية</td>
+                              <td>
+                                <button class="btn btn-sm btn-download"><i class="fa-solid fa-download"></i>تنزيل</button>
+                                <button class="btn btn-sm btn-delete"><i class="fas fa-trash-alt"></i>حذف</button>
                               </td>
-                          </tr>
-                          
-                        </tbody>
-                      </table>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
               
