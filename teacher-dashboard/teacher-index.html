@@ -36,28 +36,21 @@
 <body>
     <!-- الهيدر -->
 <header class="header-page bg-white shadow fixed-top">
-  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3">
+  
+  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3 ">
+
+      <!-- الشعار والقائمة الجانبية -->
+      <div class="d-flex align-items-center logo-spark">
+        <a href="teacher-index.html">
+          <img src="../images/spark.png" alt="spark education">
+        </a>
+
+        <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
+
+      </div>
 
     <!-- القائمة اليسرى (أيقونات) -->
     <nav class="d-flex gap-4 ms-4 align-items-center">
-      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
-
-      <!-- القائمة المنسدلة للحساب -->
-      <div class="dropdown">
-        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
-          <i class="fas fa-user icon-header"></i>
-        </a>
-        
-        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
-          <li class="text-center">
-            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
-            <p class="user-name">محمد محمد</p>
-            <p class="user-type">معلم</p>
-          </li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="../login-teacher.html"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a></li>
-        </ul>
-      </div>
 
       <div class="dropdown">
         <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
@@ -91,15 +84,34 @@
 
       </div>
 
-    </nav>
+       <!-- القائمة المنسدلة للحساب -->
+       <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+          <i class="fas fa-user icon-header"></i>
+        </a>
+        
+        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
+          <li class="text-center">
+            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+            <p class="user-name">محمد محمد</p>
+            <p class="user-type">معلم</p>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <form action="">
+              <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
+            </form>
+          </li>
+        </ul>
+      </div>
 
-    <!-- الشعار والقائمة الجانبية -->
-    <div class="d-flex align-items-center logo-spark">
-      <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
-      <a href="teacher-index.html">
-        <img src="../images/spark.png" alt="spark education">
-      </a>
-    </div>
+
+      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
+
+     
+     
+
+    </nav>
 
   </div>
 </header>
@@ -109,7 +121,7 @@
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
             <ul class="list-unstyled">
                 <li>
-                  <a href="teacher-index.html" class="active">
+                  <a href="teacher-index.html">
                       <span>لوحة التحكم</span>
                       <i class="fa fa-home"></i>
                   </a>
@@ -181,46 +193,47 @@
         <section class="dashboard-teacher">
             <div class="container-fluid">
               <div class="row gy-4">
-                <!-- البطاقة: عدد المعلمين -->
-                <div class="col-lg-3 col-md-6">
-                  <div class="card stats-card border-0 rounded-3 ">
-                    <div class="card-techaer-content d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-user-graduate fa-2x"></i>
 
-                      <div class="user-number-teacher">
-                        <h4 class="fw-bold">200</h4>
-                        <h6 class="text-muted">عدد الطلاب</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
-                <!-- البطاقة: عدد أولياء الأمور -->
-                <div class="col-lg-3 col-md-6">
-                  <div class="card stats-card border-0 rounded-3">
-                    <div class="card-techaer-content d-flex justify-content-center align-items-center">
-                        <i class="fas fa-book fa-2x"></i>
-
-                      <div class="user-number-teacher">
-                        <h4 class="fw-bold">200</h4>
-                        <h6 class="text-muted">عدد الصفوف</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
+        
                 <div class="col-lg-6 col-md-12">
                     <div class="card stats-card border-0 rounded-3 p-3">
                       <div class="card-welcome-content d-flex justify-content-between align-items-center">
                        
-                        <img src="../images/welcome.png" alt="">
                         <div class="user-welcome">
                             <h4> مرحباً بك في لوحة التحكم </h4>
                             <h6>محمد محمد</h6>
                             <img src="../images/pic-1.jpg" alt="" class="rounded-circle">
                         </div>
+                        <img src="../images/welcome.png" alt="">
+
 
                       </div>                    
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                    <div class="card stats-card border-0 rounded-3 ">
+                      <div class="card-techaer-content d-flex justify-content-center align-items-center">
+                          <i class="fa-solid fa-user-graduate fa-2x"></i>
+  
+                        <div class="user-number-teacher">
+                          <h4 class="fw-bold">200</h4>
+                          <h6 class="text-muted">عدد الطلاب</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <div class="col-lg-3 col-md-6">
+                    <div class="card stats-card border-0 rounded-3">
+                      <div class="card-techaer-content d-flex justify-content-center align-items-center">
+                          <i class="fas fa-book fa-2x"></i>
+  
+                        <div class="user-number-teacher">
+                          <h4 class="fw-bold">200</h4>
+                          <h6 class="text-muted">عدد الصفوف</h6>
+                        </div>
+                      </div>
                     </div>
                   </div>
           
@@ -238,14 +251,16 @@
             <!-- التبويبات -->
             <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="sections-tab" data-bs-toggle="tab" data-bs-target="#sections" type="button" role="tab">الشُعب</button>
+                <button class="nav-link active" id="grdes-tab" data-bs-toggle="tab" data-bs-target="#grades" type="button" role="tab">المراحل</button>
               </li>
               <li class="nav-item" role="presentation">
                 <button class="nav-link" id="classroom-tab" data-bs-toggle="tab" data-bs-target="#classrooms" type="button" role="tab">الصفوف</button>
               </li>
+             
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="grdes-tab" data-bs-toggle="tab" data-bs-target="#grades" type="button" role="tab">المراحل</button>
+                <button class="nav-link" id="sections-tab" data-bs-toggle="tab" data-bs-target="#sections" type="button" role="tab">الشُعب</button>
               </li>
+             
             </ul>
 
             </div>
@@ -389,7 +404,7 @@
   <div class="offcanvas-body d-flex flex-column p-0">
     <div class="messages-body overflow-auto flex-grow-1 p-3">
       <!-- عنصر رسالة -->
-      <a href="manager_chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -398,7 +413,7 @@
         <span>٣٠٠ س</span>
       </a>
 
-      <a href="manager_chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -408,7 +423,7 @@
       </a>
 
 
-      <a href="manager_chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -417,7 +432,7 @@
         <span>٣٠٠ س</span>
       </a>
 
-      <a href="manager_chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -428,7 +443,7 @@
       <!-- يمكنك إضافة المزيد من الرسائل هنا -->
     </div>
     <div class="message-footer text-center">
-      <a href="manager_chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
+      <a href="teacher-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
     </div>
   </div>
 </div>

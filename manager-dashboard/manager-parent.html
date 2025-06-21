@@ -238,11 +238,35 @@
                         <td>
                             <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
                             <a href="manager-forms/manager-edit-parent.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-                            <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                              <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
+                            </a>
                           </td>
                       </tr>
                     </tbody>
                   </table>
+
+                  
+                  <!-- Modal حذف الطالب -->
+                  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف هذه المادة ؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
                 </div>
               </div>
           

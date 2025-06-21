@@ -88,6 +88,33 @@ function showForm(type, clickedIcon) {
   });
 
 
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.getElementById("sidebarToggle");
+    const sidebarStd = document.getElementById("sidebarStd");
+    const closeBtn = document.getElementById("closeSidebar");
+    const mainContent = document.getElementById("mainContent");
+
+    function toggleSidebar() {
+      const isHidden = sidebarStd.classList.contains("hidden");
+      sidebarStd.classList.toggle("hidden");
+      mainContent.classList.toggle("with-sidebarStd", isHidden);
+      mainContent.classList.toggle("no-sidebarStd", !isHidden);
+    }
+
+    toggle.addEventListener("click", function(e) {
+      e.preventDefault();
+      toggleSidebar();
+    });
+
+    closeBtn.addEventListener("click", function() {
+      sidebarStd.classList.add("hidden");
+      mainContent.classList.remove("with-sidebarStd");
+      mainContent.classList.add("no-sidebarStd");
+    });
+  });
+
+
 //   اظهار واخفاء السايد بار عند تصغير الشاشة
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -113,6 +140,29 @@ function showForm(type, clickedIcon) {
   });
 
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebarStd = document.querySelector(".sidebarStd");
+    const overlayStd = document.createElement("div");
+    const toggleBtn = document.getElementById("sidebarToggle");
+
+    // إنشاء الـ overlay إذا مش موجود
+    overlayStd.id = "overlayStd";
+    document.body.appendChild(overlayStd);
+
+    // إظهار السايدبار والـ overlay
+    toggleBtn.addEventListener("click", function () {
+      sidebarStd.classList.toggle("active");
+      overlayStd.classList.toggle("active");
+    });
+
+    // إغلاق عند الضغط على الخلفية
+    overlay.addEventListener("click", function () {
+      sidebarStd.classList.remove("active");
+      overlayStd.classList.remove("active");
+    });
+  });
+
+
 
 // كلاس ال active على السايد بار
 
@@ -121,3 +171,63 @@ function showForm(type, clickedIcon) {
       link.classList.add('active');
     }
   });
+
+
+
+  // التقويم في سايد بار الطالب
+
+  
+ document.addEventListener("DOMContentLoaded", function () {
+  const miniMonthNames = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
+  const miniWeekDays = ["ح", "ن", "ث", "ر", "خ", "ج", "س"];
+  let miniDate = new Date();
+
+  function renderMiniCalendar(date) {
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    const header = document.getElementById("mini-month-year");
+    const grid = document.getElementById("mini-calendar-grid");
+
+    if (!header || !grid) return; // تأكيد وجود العناصر
+
+    header.textContent = `${miniMonthNames[month]} ${year}`;
+    grid.innerHTML = "";
+
+    miniWeekDays.forEach(d => {
+      const day = document.createElement("div");
+      day.innerHTML = `<strong>${d}</strong>`;
+      grid.appendChild(day);
+    });
+
+    for (let i = 0; i < firstDay; i++) {
+      grid.appendChild(document.createElement("div"));
+    }
+
+    const today = new Date();
+    for (let day = 1; day <= daysInMonth; day++) {
+      const cell = document.createElement("div");
+      cell.textContent = day;
+
+      if (
+        day === today.getDate() &&
+        month === today.getMonth() &&
+        year === today.getFullYear()
+      ) {
+        cell.classList.add("today");
+      }
+
+      grid.appendChild(cell);
+    }
+  }
+
+  function changeMonth(offset) {
+    miniDate.setMonth(miniDate.getMonth() + offset);
+    renderMiniCalendar(miniDate);
+  }
+
+  renderMiniCalendar(miniDate);
+});
+

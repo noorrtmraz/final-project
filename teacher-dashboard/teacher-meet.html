@@ -36,28 +36,21 @@
 <body>
     <!-- الهيدر -->
 <header class="header-page bg-white shadow fixed-top">
-  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3">
+  
+  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3 ">
+
+      <!-- الشعار والقائمة الجانبية -->
+      <div class="d-flex align-items-center logo-spark">
+        <a href="teacher-index.html">
+          <img src="../images/spark.png" alt="spark education">
+        </a>
+
+        <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
+
+      </div>
 
     <!-- القائمة اليسرى (أيقونات) -->
     <nav class="d-flex gap-4 ms-4 align-items-center">
-      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
-
-      <!-- القائمة المنسدلة للحساب -->
-      <div class="dropdown">
-        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
-          <i class="fas fa-user icon-header"></i>
-        </a>
-        
-        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
-          <li class="text-center">
-            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
-            <p class="user-name">محمد محمد</p>
-            <p class="user-type">معلم</p>
-          </li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="../login-teacher.html"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a></li>
-        </ul>
-      </div>
 
       <div class="dropdown">
         <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
@@ -91,15 +84,34 @@
 
       </div>
 
-    </nav>
+       <!-- القائمة المنسدلة للحساب -->
+       <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+          <i class="fas fa-user icon-header"></i>
+        </a>
+        
+        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
+          <li class="text-center">
+            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+            <p class="user-name">محمد محمد</p>
+            <p class="user-type">معلم</p>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <form action="">
+              <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
+            </form>
+          </li>
+        </ul>
+      </div>
 
-    <!-- الشعار والقائمة الجانبية -->
-    <div class="d-flex align-items-center logo-spark">
-      <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
-      <a href="teacher-index.html">
-        <img src="../images/spark.png" alt="spark education">
-      </a>
-    </div>
+
+      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
+
+     
+     
+
+    </nav>
 
   </div>
 </header>
@@ -156,7 +168,7 @@
                   </li>
 
                   <li>
-                    <a href="teacher-meet.html" class="active">
+                    <a href="teacher-meet.html">
                         <span>اللقاءات المباشرة</span>
                         <i class="fas fa-video"></i>
                     </a>
@@ -187,9 +199,8 @@
                 <div class="header-table-teacher"> 
                   <h3 class="teacher-title">جدول اللقاءات المباشرة</h3>  
                   <div>
-                    <a href="teacher-forms/teacher-add-meet.html">اضافة لقاء</a>
                     <input type="search" placeholder=".. ابحث"> 
-
+                    <a href="teacher-forms/teacher-add-meet.html">اضافة لقاء</a>
                   </div> 
                     
                 </div>
@@ -219,28 +230,35 @@
                         <td>
                           <a href="#"><i class="fas fa-eye action-icon eye-icon-action" title="تعديل"></i></a>
                           <a href="teacher-forms/teacher-edit-meet.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-                          <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
 
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-meet">
+                            <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
+                          </a>
                        </td> 
                       </tr>
 
-                      <tr>
-                        <td>1</td>
-                        <td> الوحدة الاولى</td>
-                        <td>لغة عربية</td>
-                        <td>الأول</td>
-                        <td>أ</td>
-                        <td>12-2-2025 12:00pm</td>
-                        <td><a href="https://meet.google.com/qxz-ybjo-biq">https://meet.google.com/qxz-ybjo-biq</a></td>
-                        <td>
-                          <a href="#"><i class="fas fa-eye action-icon eye-icon-action" title="تعديل"></i></a>
-                          <a href="teacher-forms/teacher-edit-meet.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-                          <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
-
-                       </td> 
-                      </tr>
+                  
                     </tbody>
                   </table>
+
+                  <!-- Modal حذف الطالب -->
+                  <div class="modal fade" id="deleteModal-meet" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف هذا اللقاء ؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
           

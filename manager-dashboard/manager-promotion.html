@@ -221,20 +221,21 @@
   
                   </div>
 
-                <div class="header-table">   
-                  <div class="select-std">
-                    <select class="form-select std-select" id="grade">
-                      <option selected disabled>اختر المرحلة ...</option>
-                    </select>
-                    <select class="form-select std-select" id="grade">
-                      <option selected disabled>اختر الصف ...</option>
-                    </select>
-                    <select class="form-select std-select" id="grade">
-                      <option selected disabled>اختر الشعبة ...</option>
-                    </select>
+                  <div class="header-table">   
+                    <div class="select-std d-flex gap-2 flex-wrap">
+                      <select class="form-select std-select" id="stage">
+                        <option selected disabled>اختر المرحلة ...</option>
+                      </select>
+                      <select class="form-select std-select" id="class">
+                        <option selected disabled>اختر الصف ...</option>
+                      </select>
+                      <select class="form-select std-select" id="section">
+                        <option selected disabled>اختر الشعبة ...</option>
+                      </select>
+                    </div>
+                  
+                    <input type="search" class="form-control search-input" placeholder="ابحث ...">
                   </div>
-                    <input type="search" placeholder="ابحث ...">
-                </div>
 
                 <div class="table-responsive">
                     <table class="table text-center custom-user-table">
@@ -261,14 +262,31 @@
                             <td>الابتدائي</td>
                             <td>الثاني</td>
                             <td>أ</td>
-                            <td>
-                              <a href="#"><i class="fas fa-undo action-icon rollback-btn-action" title="استعادة"></i></a>
-                              <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
-                              <a href="manager-forms/manager-edit-promotion.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-                              <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
-                              </a>
+                            <td class="position-relative">
+                              <div class="dropdown">
+                                <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                  العمليات
+                                </button>
+                                <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
+                                  <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                      <i class="fa-solid fa-eye text-success"></i> عرض التفاصيل
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-graduated.html">
+                                      <i class="fas fa-edit text-primary"></i> تعديل
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                      <i class="fas fa-trash-alt text-danger"></i> حذف
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
                             </td>
+                            
                           
                           </tr>
                     </tbody>

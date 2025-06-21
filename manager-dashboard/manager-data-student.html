@@ -116,6 +116,7 @@
   </div>
 </header>
 
+      
        <!-- الشريط الجانبي -->
        <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
         <ul class="list-unstyled">
@@ -206,148 +207,108 @@
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
-        <h3 class="manager-header">جدول الطلاب</h3> 
 
-       
-        <div class="table-users mt-5"> 
-            <!-- المحتوى -->
-            <div class="table-content tab-content" id="myTabContent">
-              <!-- الطلاب -->
-              <div class="tab-pane fade show active" id="students" role="tabpanel">
-                <div class="add-std">
-                  <a href="manager-forms/manager-add-student.html" class="add-std-btn">اضافة طالب</a>
-                </div>
+            <h3 class="header-data-std">بيانات الطالب</h3>
 
-                <div class="header-table">   
-                  <div class="select-std d-flex gap-2 flex-wrap">
-                    <select class="form-select std-select" id="stage">
-                      <option selected disabled>اختر المرحلة ...</option>
-                    </select>
-                    <select class="form-select std-select" id="class">
-                      <option selected disabled>اختر الصف ...</option>
-                    </select>
-                    <select class="form-select std-select" id="section">
-                      <option selected disabled>اختر الشعبة ...</option>
-                    </select>
-                  </div>
-                
-                  <input type="search" class="form-control search-input" placeholder="ابحث ...">
-                </div>
-                
+            <div class="student-data">
 
-                <div class="table-responsive">
-                    <table class="table text-center custom-user-table">
+                <ul class="nav nav-tabs mb-3 nav-std-data" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="students-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab">بيانات الطالب</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="teachers-tab" data-bs-toggle="tab" data-bs-target="#attachment" type="button" role="tab">المرفقات</button>
+                    </li>
+                  </ul>   
+            
+    
+          
+           
+            <div class="table-users mt-5">  
+                <!-- المحتوى -->
+                <div class="table-content tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="details" role="tabpanel">
+                    <div class="header-table">   
+                        <a href="manager-forms/manager-add-grade.html">اضافة مرحلة</a>
+                        <input type="search" placeholder="ابحث ..">
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table text-center custom-user-table">
                         <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th>اسم الطالب</th>
-                        <th>رقم الهوية</th>
-                        <th>تاريخ الميلاد</th>
-                        <th>العمليات</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>98765333</td>
-                        <td>19-12-208</td>
-                        <td class="position-relative">
-                          <div class="dropdown">
-                            <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                              العمليات
-                            </button>
-                            <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                  <i class="fa-solid fa-eye text-success"></i> عرض التفاصيل
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-graduated.html">
-                                  <i class="fas fa-edit text-primary"></i> تعديل
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                  <i class="fas fa-trash-alt text-danger"></i> حذف
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                        
-                      </tr>
-
-                      <tr>
-                        <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>98765333</td>
-                        <td>19-12-208</td>
-                        <td class="position-relative">
-                          <div class="dropdown">
-                            <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                              العمليات
-                            </button>
-                            <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                  <i class="fa-solid fa-eye text-success"></i> عرض التفاصيل
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-graduated.html">
-                                  <i class="fas fa-edit text-success "></i> تعديل
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                  <i class="fas fa-trash-alt text-danger"></i> حذف
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                        
-                      </tr>
-                      
-                    </tbody>
-                  </table>
-
-
-                  <!-- Modal حذف الطالب -->
-                  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
-                        </div>
-                        <div class="modal-body text-center">
-                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
-                          <p>هل أنت متأكد أنك تريد حذف هذا الطالب؟</p>
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
-                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
-                        </div>
-                      </div>
+                          <tr>
+                            <th>#</th>
+                            <th>اسم المرحلة</th>
+                            <th>عدد الصفوف</th>
+                            <th>عدد الشعب</th>
+                            <th>عدد الطلاب</th>
+                            <th>العمليات</th>  
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>الابتدائي</td>
+                            <td>20</td>
+                            <td>40</td>
+                            <td>130</td>
+                            <td>
+                                <a href="manager-form/manager-edit-grade.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
+                                <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
+                              </td>
+                           
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
-
-
-
+              
+                  <div class="tab-pane fade" id="attachment" role="tabpanel">
+                    <div class="header-table">   
+                        <a href="manager-forms/manager-add-classroom.html">اضافة صف</a>
+                        <input type="search" placeholder="ابحث ..">
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table text-center custom-user-table">
+                            <thead class="thead-user">
+                          <tr>
+                            <th>#</th>
+                            <th>الصف</th>
+                            <th>المرحلة</th>
+                            <th>عدد لشُعب</th>
+                            <th>عدد الطلاب</th>
+                            <th>العمليات</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>الاول</td>
+                            <td>الابتدائي</td>
+                            <td>2</td>
+                            <td>70</td>
+                            <td>
+                                <a href="manager-form/manager-edit-classroom.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i>
+                                <a href="#"><i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i></a>
+                              </td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+              
+                 
                 </div>
               </div>
-          
+    
             </div>
-          </div>
-
+          
       </div>
 
 
 
-     
-       
+          
 <!-- زر فتح الرسائل باستخدام Bootstrap -->
 <button class=" position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
 type="button" 
@@ -431,5 +392,4 @@ aria-controls="messagesOffcanvas">
 <script src="../js/script.js"></script>
 </body>
 </html>
-
 
