@@ -543,7 +543,7 @@ header.header-page img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../images/back.png') no-repeat center center;
+    background: url('../images/back.webp') no-repeat center center;
     background-size: cover;
     height: auto;
 }
