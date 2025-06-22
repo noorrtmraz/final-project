@@ -465,9 +465,12 @@ header.header-page img {
     color: var(--main-color);
     font-size: 2.1rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
     padding-bottom: 1.5rem;
 
+}
+
+.login .login-container .right-section .login-box h2 span{
+  font-weight: bold;
 }
 
 
@@ -565,10 +568,14 @@ header.header-page img {
     color: var(--main-color);
     font-size: 2.1rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
     padding-bottom: 1.5rem;
     text-align: center;
 
+}
+
+.login-teacher .form-container-teacher .custom-form h3 span{
+  font-weight: bold;
+  
 }
 
 .login-teacher .form-container-teacher .custom-form .input-box-teacher {
