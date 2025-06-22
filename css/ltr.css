@@ -971,7 +971,7 @@ header.header-page img {
 
 #mainContent .nav-std{
   display: flex;
-  justify-content: end;
+  justify-content: start;
   margin-top: 5rem;
   width: 95%;
   margin-left: auto;
@@ -1314,11 +1314,49 @@ background-color: rgba(88, 159, 67, 0.2);
   padding: .3rem;
 }
 
+/* ----------------- */
+
+.accordion-item{
+  border: none;
+}
+
+.accordion-button{
+  background-color: var(--white);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--main-color);
+}
+
+.accordion-button:hover{
+  background-color: var(--main-color);
+  color: var(--white);
+  transition: .5s linear;
+}
+
+.accordion-button::after, 
+.accordion-button:not(.collapsed)::after{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 1rem;
+  border: none;
+}
 
 
 
 
-
+.accordion-button:not(.collapsed){
+  background-color: var(--main-color);
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.5rem;
+  border: none;
+}
 
 
 
@@ -1364,6 +1402,73 @@ background-color: rgba(88, 159, 67, 0.2);
   color: var(--main-color);
   transition: .5s linear;
 }
+
+
+/* -------------- */
+
+.custom-modal-header .custom-modal-title{
+  color: var(--main-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 1rem 0 .5rem 1rem;
+}
+
+.custom-modal-body .custom-form{
+  padding: 1rem;
+}
+
+.custom-modal-body .custom-form input,
+.custom-modal-body .custom-form textarea{
+  padding: 1.5rem 1rem;
+  font-size: 1.3rem;
+}
+
+.custom-modal-body .custom-form select{
+  padding: 1.5rem 3rem;
+  font-size: 1.3rem;
+}
+
+.custom-modal-footer{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.custom-modal-footer .custom-save-btn{
+  font-size: 1.5rem;
+  color: var(--white);
+  background-color: var(--main-color);
+  border-radius: .7rem;
+  padding: .5rem 2rem;
+  font-weight: bold;
+  border: none;
+}
+
+.custom-modal-footer .custom-save-btn:hover{
+  background-color: var(--white);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  transition: .5s linear;
+}
+
+.custom-modal-footer .custom-cancel-btn{
+  font-size: 1.5rem;
+  color: var(--white);
+  background-color: var(--red);
+  border-radius: .7rem;
+  padding: .5rem 2rem;
+  font-weight: bold;
+  border: none;
+}
+
+.custom-modal-footer .custom-cancel-btn:hover{
+  background-color: var(--white);
+  border: 1px solid var(--red);
+  transition: .5s linear;
+  color: var(--red);
+}
+
+
 
 /* modle end */
 
