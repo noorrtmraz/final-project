@@ -226,11 +226,6 @@ header.header-page img {
 
 /* index page start */
 
-.about-section .about-img{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
   .about-section .about-text h3 {
     font-size: 2.5rem;
     color: var(--black);
@@ -380,7 +375,7 @@ header.header-page img {
 
   
 .footer-index{
-    background-image: url(../images/footer-back.png);
+    background-image: url(../images/back.webp);
     background-size: cover;
     background-position: center;
     background-color: var(--white);
@@ -2203,7 +2198,7 @@ background-color: rgba(88, 159, 67, 0.2);
 
 
     .login .login-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         padding-bottom: 10rem;
       }

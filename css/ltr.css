@@ -219,11 +219,6 @@ header.header-page img {
 
 /* index page start */
 
-.about-section .about-img{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
 .about-section .about-row{
     display: flex;
     flex-direction: row-reverse;
@@ -381,7 +376,7 @@ header.header-page img {
 
   
 .footer-index{
-    background-image: url(../images/footer-back.png);
+    background-image: url(../images/back-login.webp);
     background-size: cover;
     background-position: center;
     background-color: var(--white);
