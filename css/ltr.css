@@ -219,13 +219,18 @@ header.header-page img {
 
 /* index page start */
 
+.about-section .about-img{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .about-section .about-row{
     display: flex;
     flex-direction: row-reverse;
 }
 
 .about-section {
-    background: url('../images/back.png') center/cover no-repeat;
+    background: url('../images/back.webp') center/cover no-repeat;
     /* padding: 3rem 0; */
     position: relative;
   }
@@ -415,7 +420,7 @@ header.header-page img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../images/back.png') no-repeat center center;
+    background: url('../images/back-login.webp') no-repeat center center;
     background-size: cover;
     height: 100%;
 

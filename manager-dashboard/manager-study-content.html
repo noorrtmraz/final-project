@@ -230,8 +230,8 @@
               <div class="tab-pane fade show active" id="books" role="tabpanel">
                 <div class="header-table">   
                     <a href="manager-forms/manager-add-book.html">اضافة كتاب</a>
-                    <input type="search" placeholder="ابحث ..">
-                </div>
+                    <input type="search" class="form-control search-input" placeholder="ابحث ...">
+                  </div>
                 <div class="table-responsive">
                   <table class="table text-center custom-user-table">
                     <thead class="thead-user">
@@ -256,14 +256,26 @@
                         <td>الابتدائية</td>
                         <td>الاول</td>
                         <td>20-11-2022</td>
-                        <td>
-                            <a href="#"><i class="fa-solid fa-download action-icon download-icon-action" title="تنزيل الكتاب"></i></a>
-                              <a href="manager-forms/manager-edit-book.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-                              <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-book">
-                                <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
-                              </a>
-
-                         </td> 
+                        <td class="position-relative">
+                          <div class="dropdown">
+                            <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                              العمليات
+                            </button>
+                            <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
+                             
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-promotion.html">
+                                  <i class="fas fa-edit text-primary"></i> تعديل
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                  <i class="fas fa-trash-alt text-danger"></i> حذف
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -293,8 +305,8 @@
               <div class="tab-pane fade" id="homeworks" role="tabpanel">
                 <div class="header-table">   
                     <a href="manager-forms/manager-add-hw.html">اضافة واجب</a>
-                    <input type="search" placeholder="ابحث ..">
-                </div>
+                    <input type="search" class="form-control search-input" placeholder="ابحث ...">
+                  </div>
                 <div class="table-responsive">
                     <table class="table text-center custom-user-table">
                         <thead class="thead-user">
@@ -320,16 +332,26 @@
                         <td>أ</td>
                         <td>محمد محمد</td>
                         <td>20-9-2025</td>
-                        <td>
-                            
-                            <a href="#"><i class="fas fa-users students-icon action-icon std-icon-action" title="عرض الطلاب"></i></a>
-                            <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
-                            <a href="manager-forms/manager-edit-hw.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-hw">
-                              <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
-                            </a>
-                          </td>
+                        <td class="position-relative">
+                          <div class="dropdown">
+                            <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                              العمليات
+                            </button>
+                            <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
+                             
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-promotion.html">
+                                  <i class="fas fa-edit text-primary"></i> تعديل
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                  <i class="fas fa-trash-alt text-danger"></i> حذف
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
                       </tr>
                       
                     </tbody>
@@ -359,8 +381,8 @@
               <div class="tab-pane fade" id="exams" role="tabpanel">
                 <div class="header-table">   
                     <a href="manager-forms/manager-add-exam.html">اضافة اختبار</a>
-                    <input type="search" placeholder="ابحث ..">
-                </div>
+                    <input type="search" class="form-control search-input" placeholder="ابحث ...">
+                  </div>
                 
                 <div class="table-responsive">
                     <table class="table text-center custom-user-table">
@@ -389,13 +411,25 @@
                             <td>20-92-2025</td>
                             <td>12:00pm</td>
                             <td>12:00am</td>
-                            <td>
-                              <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
-                              <a href="manager-forms/manager-edit-exam.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-
-                              <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-exam">
-                                <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
-                              </a>
+                            <td class="position-relative">
+                              <div class="dropdown">
+                                <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                  العمليات
+                                </button>
+                                <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
+                                 
+                                  <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-promotion.html">
+                                      <i class="fas fa-edit text-primary"></i> تعديل
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                      <i class="fas fa-trash-alt text-danger"></i> حذف
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
                             </td>
                           
                           </tr>
@@ -427,8 +461,8 @@
               <div class="tab-pane fade" id="lessons" role="tabpanel">
                 <div class="header-table">   
                     <a href="manager-forms/manager-add-lesson.html">اضافة درس</a>
-                    <input type="search" placeholder="ابحث ..">
-                </div>
+                    <input type="search" class="form-control search-input" placeholder="ابحث ...">
+                  </div>
                 
                 <div class="table-responsive">
                     <table class="table text-center custom-user-table">
@@ -455,13 +489,25 @@
                             <td>الأول</td>
                             <td>أ</td>
                             <td>20-2-2025</td>
-                            <td>
-                              <a href="#"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
-                              <a href="manager-forms/manager-edit-lesson.html"><i class="fas fa-edit action-icon edit-icon-action" title="تعديل"></i></a>
-
-                              <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-lesson">
-                                <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف"></i>
-                              </a>
+                            <td class="position-relative">
+                              <div class="dropdown">
+                                <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                  العمليات
+                                </button>
+                                <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
+                                 
+                                  <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-promotion.html">
+                                      <i class="fas fa-edit text-primary"></i> تعديل
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                      <i class="fas fa-trash-alt text-danger"></i> حذف
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
                             </td>
                           
                           </tr>
