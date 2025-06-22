@@ -108,13 +108,15 @@
 
       <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
 
-    
+     
+     
 
     </nav>
 
   </div>
 </header>
 
+      
        <!-- الشريط الجانبي -->
        <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
         <ul class="list-unstyled">
@@ -132,7 +134,7 @@
             </li>
 
             <li class="dropdown-sidebar position-relative">
-              <a href="#" class="dropdown-toggle-custom d-flex justify-content-end align-items-center">
+              <a href="#" class="dropdown-toggle-custom d-flex justify-content-end align-items-center active">
                 <i class="fas fa-chevron-left dropdown-arrow ms-2"></i> <!-- سهم لليسار بدل تحت -->
                 <span>الطلاب</span>
                 <i class="fas fa-user-graduate me-2"></i>
@@ -202,100 +204,129 @@
 
   </div>
       
+      
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
-        <h3 class="manager-header">جدول المعلمين</h3> 
 
-       
-        <div class="table-users mt-5"> 
-            <!-- المحتوى -->
-            <div class="table-content tab-content" id="myTabContent">
-              <!-- الطلاب -->
-              <div class="tab-pane fade show active" role="tabpanel">
-                <div class="header-table">   
-                    <a href="manager-forms/manager-add-teacher.html">اضافة معلم</a>
-                    <input type="search" class="form-control search-input" placeholder="ابحث ...">
-                  </div>
-                <div class="table-responsive">
-                  <table class="table text-center custom-user-table">
-                    <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th>اسم المعلم</th>
-                        <th>رقم الهوية</th>
-                        <th>المادة التي يدرسها</th>
-                        <th>الصفوف التي يدرسها</th>
-                        <th>العمليات</th>  
-                        
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>98765333</td>
-                        <td>رياضيات</td>
-                        <td>الخامس</td>
-                        <td class="position-relative">
-                          <div class="dropdown">
-                            <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                              العمليات
-                            </button>
-                            <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-data-teacher.html">
-                                  <i class="fa-solid fa-eye text-success"></i> عرض التفاصيل
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-teacher.html">
-                                  <i class="fas fa-edit text-primary"></i> تعديل
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                  <i class="fas fa-trash-alt text-danger"></i> حذف
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                       
-                      </tr>
-                    </tbody>
-                  </table>
+            <h3 class="header-data-std">بيانات المعلم</h3>
 
-                   
-                  <!-- Modal حذف الطالب -->
-                  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
-                        </div>
-                        <div class="modal-body text-center">
-                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
-                          <p>هل أنت متأكد أنك تريد حذف هذه المادة ؟</p>
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
-                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
-                        </div>
+            <div class="student-data">
+
+                <ul class="nav nav-tabs mb-3 nav-std-data" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="students-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab">بيانات المعلم</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="teachers-tab" data-bs-toggle="tab" data-bs-target="#attachment" type="button" role="tab">المرفقات</button>
+                    </li>
+                  </ul>   
+            
+    
+          
+           
+            <div class="table-users mt-5">  
+                <!-- المحتوى -->
+                <div class="table-content tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="details" role="tabpanel">
+                    <div class="container">
+                      <div class="student-table table-responsive">
+                        <table class="table table-bordered mb-0">
+                          <tbody>
+                            <tr>
+                              <td>اسم الطالب</td>
+                              <td>علي محمد</td>
+                            </tr>
+                            <tr>
+                              <td> رقم الهوية</td>
+                              <td>876543234567</td>
+                            </tr>
+                            <tr>
+                              <td>ولي الأمر</td>
+                              <td>عماد محمد</td>
+                            </tr>
+                            <tr>
+                              <td>رقم هاتف ولي الأمر</td>
+                              <td>1234567810</td>
+                            </tr>
+                            <tr>
+                              <td>النوع</td>
+                              <td>ذكر</td>
+                            </tr>
+                            <tr>
+                              <td>المرحلة الدراسية</td>
+                              <td>المرحلة الابتدائية</td>
+                            </tr>
+                            <tr>
+                              <td>الصف الدراسي</td>
+                              <td>الصف الأول</td>
+                            </tr>
+                            <tr>
+                              <td>القسم</td>
+                              <td>أ</td>
+                            </tr>
+                            <tr>
+                              <td>تاريخ الميلاد</td>
+                              <td>2010-05-12</td>
+                            </tr>
+                            <tr>
+                              <td>السنة الدراسية</td>
+                              <td>2025/2026</td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   </div>
+              
+                  <div class="tab-pane fade" id="attachment" role="tabpanel">
+                    <div class="container">
+                      <!-- خانة رفع الملف -->
+                      <div class="mb-3">
+                        <label for="fileUpload" class="form-label fw-bold text-danger label-attachment">المرفقات:</label>
+                        <input class="form-control file-attachment" type="file" id="fileUpload" multiple>
+                      </div>
+                    
+                      <!-- زر التأكيد -->
+                      <button class="btn btn-upload mb-4">تأكيد</button>
+                    
+                      <!-- جدول الملفات -->
+                      <div class="table-responsive">
+                        <table class="table table-attachment table-bordered align-middle">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>اسم الملف</th>
+                              <th>تاريخ الإضافة</th>
+                              <th>العمليات</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Screenshot 2024-12-01 12.47.02.png</td>
+                              <td>منذ 12 ثانية</td>
+                              <td>
+                                <button class="btn btn-sm btn-download"><i class="fa-solid fa-download"></i>تنزيل</button>
+                                <button class="btn btn-sm btn-delete"><i class="fas fa-trash-alt"></i>حذف</button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+              
+                 
                 </div>
               </div>
-          
+    
             </div>
-          </div>
-
+          
       </div>
 
 
 
-     
-       
+          
 <!-- زر فتح الرسائل باستخدام Bootstrap -->
 <button class=" position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
 type="button" 
