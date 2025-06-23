@@ -219,10 +219,6 @@ header.header-page img {
 
 /* index page start */
 
-.about-section .about-row{
-    display: flex;
-    flex-direction: row-reverse;
-}
 
 .about-section {
     background: url('../images/back.webp') center/cover no-repeat;
@@ -305,7 +301,7 @@ header.header-page img {
   .box-container .box {
      width: 27rem;
       display: flex;
-      justify-content: flex-end; /* كل العناصر لأقصى اليمين */
+      justify-content: flex-start; /* كل العناصر لأقصى اليمين */
       align-items: center;
       gap: 0.5rem; /* مسافة صغيرة بين النص والصورة */
       background-color: var(--white);
@@ -315,7 +311,6 @@ header.header-page img {
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       margin-right: 1rem;
       margin-left: 1rem;
-      flex-direction: row-reverse;
   }
   
   .box-container .box:hover {
@@ -1201,7 +1196,6 @@ h6.section-heading{
 
 .table-responsive{
   overflow: visible !important;
-  position: relative; /* عشان القائمة تطلع */
   z-index: 1;
 
 }
@@ -1365,6 +1359,95 @@ background-color: rgba(88, 159, 67, 0.2);
   border: none;
 }
 
+
+
+
+/* ------------------ */
+.profile-card-manager {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+}
+.profile-avatar-manager {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #589f43;
+}
+.profile-info-manager h3 {
+  margin-bottom: 1rem;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.profile-info-manager p {
+  color: var(--light-color);
+  font-size: 1.1rem;
+  font-weight: 230;
+}
+
+
+.btn-custom-manager {
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  padding: .8rem;
+}
+
+.btn-custom-manager i{
+  padding-left: .8rem;
+}
+
+.btn-change-manager {
+  background-color: var(--white);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  padding: .8rem;
+}
+
+.btn-change-manager i{
+  padding-left: .8rem;
+}
+.btn-change-manager:hover {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+.cards-profile-manager{
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.state-cards{
+  /* background-color: rgba(88, 159, 67, 0.3); */
+  padding: 1rem 0 .5rem 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(88, 159, 67, 0.3);
+}
+
+.state-cards i{
+  color: var(--main-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+
+}
+
+.state-cards h6{
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+color: var(--main-color);
+font-weight: 200;
+padding: .5rem;
+}
+
+.state-cards h4{
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+color: var(--main-color);
+font-weight: bold;
+}
+/* ----------------- */
 
 
 
@@ -2218,9 +2301,6 @@ background-color: rgba(88, 159, 67, 0.2);
         margin-right: auto;
     }
 
-    .about-section .about-row{
-        flex-direction: column-reverse;
-    }
 
 
     .login .login-container {

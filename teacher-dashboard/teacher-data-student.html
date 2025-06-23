@@ -127,7 +127,7 @@
                   </a>
                 </li>
                 <li>
-                    <a href="teacher-student.html">
+                    <a href="teacher-student.html" class="active">
                       <span> الطلاب</span>
                       <i class="fas fa-user-graduate"></i>
                     </a>
@@ -188,95 +188,51 @@
       </div>
       
       
-      <!-- المحتوى الرئيسي -->
-      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
-        
+       <!-- المحتوى الرئيسي -->
+       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
 
-       
-        <div class="table-users-teacher mt-5"> 
-            <!-- المحتوى -->
-            <div class="table-content-teacher tab-content" id="myTabContent">
-              <!-- الطلاب -->
-              <div class="tab-pane fade show active" role="tabpanel">
-                <div class="header-table-teacher"> 
-                  <h3 class="teacher-title">جدول الطلاب</h3> 
-                  <input type="search" placeholder="ابحث ..">  
+        <div class="container my-5">
+            <div class="row g-4 cards-data-student">
+          
+              <!-- ✅ بطاقة بيانات الطالب -->
+              <div class="col-lg-6">
+                <div class="card student-card shadow-sm h-100">
+                    <div class="card-header student-card-header text-white fw-bold text-end d-flex align-items-center">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>بيانات الطالب</span>
+                      </div>
+                  <div class="card-body student-card-body">
+                    <p class="student-info text-end"><strong>اسم الطالب:</strong> محمد علي</p>
+                    <p class="student-info text-end"><strong>رقم الهوية:</strong> 9876654477</p>
+                    <p class="student-info text-end"><strong>الجنس:</strong> ذكر</p>
+                    <p class="student-info text-end"><strong>المرحلة:</strong> الابتدائية</p>
+                    <p class="student-info text-end"><strong>الصف:</strong> الأول</p>
+                    <p class="student-info text-end"><strong>الشعبة:</strong> أ</p>
+                    <p class="student-info text-end"><strong>تاريخ الميلاد:</strong> 2010-11-20</p>
+                    <p class="student-info text-end"><strong>السنة الدراسية:</strong> 2025/2026</p>
+                  </div>
                 </div>
-                <div class="table-responsive">
-                  <table class="table text-center custom-user-table-teacher">
-                    <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th>اسم الطالب</th>
-                        <th>رقم الهوية</th>
-                        <th>الجنس</th>
-                        <th>المرحلة</th>
-                        <th>الصف</th>
-                        <th>الشعبة</th>
-                        <th>العمليات</th>  
-                        
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>98765333</td>
-                        <td>ذكر</td>
-                        <td>الابتدائية</td>
-                        <td>الأول</td>
-                        <td>أ</td>
-                        <td>
-                            <a href="teacher-data-student.html"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
-                          </td>
-                      </tr>
-
-                      <tr>
-                        <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>98765333</td>
-                        <td>ذكر</td>
-                        <td>الابتدائية</td>
-                        <td>الأول</td>
-                        <td>أ</td>
-                        <td>
-                            <a href="teacher-data-student.html"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
-                          </td>
-                      </tr>
-
-
-                      <tr>
-                        <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>98765333</td>
-                        <td>ذكر</td>
-                        <td>الابتدائية</td>
-                        <td>الأول</td>
-                        <td>أ</td>
-                        <td>
-                            <a href="teacher-data-student.html"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
-                          </td>
-                      </tr>
-
-                      <tr>
-                        <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>98765333</td>
-                        <td>ذكر</td>
-                        <td>الابتدائية</td>
-                        <td>الأول</td>
-                        <td>أ</td>
-                        <td>
-                            <a href="teacher-data-student.html"><i class="fa-solid fa-eye action-icon eye-icon-action" title="عرض التفاصيل"></i></a>
-                          </td>
-                      </tr>
-                    </tbody>
-                  </table>
+              </div>
+          
+              <!-- ✅ بطاقة بيانات ولي الأمر -->
+              <div class="col-lg-6">
+                <div class="card parent-card shadow-sm h-100">
+                    <div class="card-header parent-card-header fw-bold text-end d-flex  align-items-center">
+                        <i class="fas fa-user-shield"></i>
+                        <span>بيانات ولي الأمر</span>
+                      </div>
+                  <div class="card-body parent-card-body">
+                    <p class="parent-info text-end"><strong>اسم ولي الأمر:</strong> عماد علي</p>
+                    <p class="parent-info text-end"><strong>رقم الجوال:</strong> 1234567810</p>
+                    <p class="parent-info text-end"><strong>مهنة ولي الأمر:</strong> مهندس</p>
+                    <p class="parent-info text-end"><strong>عنوان ولي الأمر:</strong> غزة الرمال</p>
+                  </div>
                 </div>
               </div>
           
             </div>
           </div>
+          
           
         <!-- محتوى الصفحة هنا -->
       </div>
