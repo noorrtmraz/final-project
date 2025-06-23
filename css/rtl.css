@@ -1198,11 +1198,7 @@ h6.section-heading{
 
 /* -------------- */
 
-.table-responsive{
-  overflow: visible !important;
-  z-index: 1;
 
-}
 /* زر العمليات */
 .operations-btn {
 background-color: var(--main-color);
@@ -1221,17 +1217,19 @@ color: var(--white);
 }
 
 .operations-dropdown {
-top: 100%;  /* خليها تحت الزر مباشرة */
-right: 0;
 min-width: 160px;
 font-size: 1.2rem;
 border-radius: 0;
 box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 padding: 0.5rem 0;
 background-color: #fff;
-position: relative;
-z-index: 1050; 
 border: none;
+
+position: fixed !important;
+  top: auto !important;
+  left: auto !important;
+  transform: translateY(0) !important;
+  z-index: 9999;
 }
 
 .operations-dropdown .dropdown-item {
@@ -2343,7 +2341,6 @@ background-color: rgba(88, 159, 67, 0.2);
     }
   }
   
-
   @media (max-width: 576px){
     .footer-index h1{
         font-size: 1.2rem;
