@@ -1227,7 +1227,7 @@ border: none;
 
 position: fixed !important;
   top: auto !important;
-  left: 10rem !important;
+  left: 6rem !important;
   transform: translateY(0) !important;
   z-index: 9999;
 }
