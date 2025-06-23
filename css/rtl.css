@@ -1217,7 +1217,6 @@ color: var(--white);
 }
 
 .operations-dropdown {
-right: 0;
 min-width: 160px;
 font-size: 1.2rem;
 border-radius: 0;
@@ -1228,7 +1227,7 @@ border: none;
 
 position: fixed !important;
   top: auto !important;
-  left: auto !important;
+  left: 10rem !important;
   transform: translateY(0) !important;
   z-index: 9999;
 }
