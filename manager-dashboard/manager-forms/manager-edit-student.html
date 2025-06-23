@@ -29,7 +29,7 @@
 
 
      <!-- custom css file link -->
-      <link  id="theme-style"  rel="stylesheet" href="../../css/rtl.css">
+      <link  id="theme-style"  rel="stylesheet" href="../../css/ltr.css">
      
 </head>
 </head>
@@ -209,27 +209,42 @@
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">   
         <h3 class="manager-header-form">تعديل بيانات الطالب</h3> 
   
-        <div class="container mt-4">
+       <div class="container mt-4">
           <div class="card custom-form-card">
             <div class="card-body">        
               <form class="subject-form">
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <input type="text" class="form-control custom-input" id="subjectAr" placeholder=" اسم الطالب باللغة العربية">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="text" class="form-control custom-input" id="subjectEn" placeholder=" اسم الطالب باللغة الانجليزية">
-                  </div>
-                </div>
+                  <!-- الاسم بالعربي والانجليزي -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group-float position-relative">
+              <input type="text" class="form-control custom-input float-input" id="studentNameAr" placeholder=" " />
+              <label for="studentNameAr" class="float-label">اسم الطالب بالعربي</label>
+            </div>
 
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <input type="number" class="form-control custom-input" id="subjectAr" placeholder="رقم هوية الطالب">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="password" class="form-control custom-input" id="subjectEn" placeholder="كلمة مرور الطالب">
-                  </div>
-                </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group-float position-relative">
+              <input type="text" class="form-control custom-input float-input" id="studentNameEn" placeholder=" " />
+              <label for="studentNameEn" class="float-label">اسم الطالب بالانجليزي</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- الهوية وكلمة المرور -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group-float position-relative">
+              <input type="number" class="form-control custom-input float-input" id="studentID" placeholder=" " />
+              <label for="studentID" class="float-label">رقم الهوية</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group-float position-relative">
+              <input type="password" class="form-control custom-input float-input" id="studentPass" placeholder=" " />
+              <label for="studentPass" class="float-label">كلمة المرور</label>
+            </div>
+          </div>
+        </div>
                 <div class="row mb-3">
                   <div class="col-md-6">
                     <input type="date" class="form-control custom-input" id="subjectAr" placeholder="تاريخ ميلاد الطالب">

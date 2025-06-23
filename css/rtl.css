@@ -1159,6 +1159,40 @@ header.header-page img {
 
 }
 
+.form-group-float {
+  direction: rtl;
+}
+
+.float-input {
+  text-align: right;
+  padding: 1rem 0.75rem 0.25rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+}
+
+.float-label {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 0.25rem;
+  color: var(--light-color);
+  transition: 0.2s ease all;
+  pointer-events: none;
+  font-size: 1.3rem;
+
+}
+
+.float-input:focus + .float-label,
+.float-input:not(:placeholder-shown) + .float-label {
+  top: 0;
+  transform: translateY(-50%) scale(0.85);
+  background-color: white;
+  color: var(--main-color);
+}
+
+
 .custom-form-card .card-body .subject-form div select.custom-select{
 
     margin: 5px 0;
@@ -1819,6 +1853,8 @@ font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
   font-size: 2.4rem;
   font-weight: 200;
+  margin-top: 4rem;
+  margin-right: 3.5rem;
 
 }
 
@@ -1851,20 +1887,19 @@ font-weight: bold;
   justify-content: space-between;
 }
 
-.table-users-teacher .header-table-teacher div a{
+.table-users-teacher .header-table-teacher a{
   background-color: var(--main-color);
-  padding: 1rem;
   margin-bottom: 1rem;
   font-size: 1.2rem;
   box-shadow: 1px 2px 2px rgba(0, 0, 0 ,0.05);
-  border-top-left-radius:10px ;
-  border-bottom-right-radius:10px ;
+  border-radius:5px ;
   color: var(--white);
   font-weight: bold;
   text-decoration: none;
+  padding: 1.3rem 1rem 0 1rem;
 }
 
-.table-users-teacher .header-table-teacher div a:hover{
+.table-users-teacher .header-table-teacher a:hover{
   background-color: rgba(88, 159, 67, 0.2);
   color: var(--main-color);
   transition: .5s linear;
@@ -1881,9 +1916,7 @@ font-weight: bold;
   font-size: 1.4rem;
   box-shadow: 1px 2px 2px rgba(0, 0, 0 ,0.05);
   /* border-radius: 7px; */
-  border-top-right-radius:10px ;
-  border-bottom-left-radius:10px ;
-
+  border-radius:5px ;
 }
 
 .table-users-teacher{
