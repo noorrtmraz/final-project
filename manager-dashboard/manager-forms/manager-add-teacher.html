@@ -118,7 +118,7 @@
 
       
          <!-- الشريط الجانبي -->
-      <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
+       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
         <ul class="list-unstyled">
             <li>
               <a href="../manager-index.html">
@@ -133,12 +133,21 @@
               </a>
             </li>
 
-            <li>
-                <a href="../manager-student.html">
-                  <span> الطلاب</span>
-                  <i class="fas fa-user-graduate"></i>
-                </a>
-              </li>
+            <li class="dropdown-sidebar position-relative">
+              <a href="#" class="dropdown-toggle-custom d-flex justify-content-end align-items-center">
+                <i class="fas fa-chevron-left dropdown-arrow ms-2"></i> <!-- سهم لليسار بدل تحت -->
+                <span>الطلاب</span>
+                <i class="fas fa-user-graduate me-2"></i>
+              </a>
+            
+              <ul class="dropdown-menu-sidebar position-absolute">
+                <li><a href="../manager-student.html">عرض الطلاب</a></li>
+                <li><a href="../manager-graduated.html">الخريجين</a></li>
+                <li><a href="../manager-promotion.html">الترقيات</a></li>
+              </ul>
+            </li>
+            
+
               <li>
                 <a href="../manager-teacher.html" class="active">
                     <span>المعلمين</span>
@@ -177,7 +186,7 @@
             
   
             <li>
-              <a href="../manager-setting.html">
+              <a href="manager-setting.html">
                   <span>الاعدادات</span>
                 <i class="fa-solid fa-cogs"></i>
                 
@@ -185,7 +194,7 @@
             </li>
 
             <li>
-                <a href="../manager-profile.html">
+                <a href="manager-profile.html">
                     <span>الملف الشخصي</span>
                   <i class="fa-solid fa-user"></i>
                   
@@ -204,23 +213,37 @@
           <div class="card custom-form-card">
             <div class="card-body">        
               <form class="subject-form">
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <input type="text" class="form-control custom-input" id="subjectAr" placeholder=" اسم المعلم باللغة العربية">
+                 <div class="row mb-3">
+                <div class="col-md-6">
+                  <div class="form-group-float position-relative ">
+                    <input type="text" class="form-control custom-input float-input" id="teacherNameAr" placeholder=" " />
+                    <label for="teacherNameAr" class="float-label">اسم المعلم بالعربي</label>
                   </div>
-                  <div class="col-md-6">
-                    <input type="text" class="form-control custom-input" id="subjectEn" placeholder=" اسم المعلم باللغة الانجليزية">
-                  </div>
-                </div>
 
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <input type="number" class="form-control custom-input" id="subjectAr" placeholder=" رقم هوية المعلم">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="password" class="form-control custom-input" id="subjectEn" placeholder="كلمة مرور الطالب">
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group-float position-relative ">
+                    <input type="text" class="form-control custom-input float-input" id="teacherNameEn" placeholder=" " />
+                    <label for="teacherNameEn" class="float-label">اسم المعلم بالانجليزي</label>
                   </div>
                 </div>
+              </div>
+
+                 <!-- الهوية وكلمة المرور -->
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <div class="form-group-float position-relative ">
+                    <input type="text" class="form-control custom-input float-input" id="teacherID" placeholder=" " />
+                    <label for="teacherID" class="float-label">رقم الهوية</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group-float position-relative ">
+                    <input type="password" class="form-control custom-input float-input" id="teacherPass" placeholder=" " />
+                    <label for="teacherPass" class="float-label">كلمة المرور</label>
+                  </div>
+                </div>
+              </div>
                 <div class="row mb-3">
                   <div class="col-md-6">
                     <select class="form-select custom-select" id="grade">
@@ -239,7 +262,10 @@
                     <input type="date" class="form-control custom-input" id="subjectEn" placeholder="تاريخ الانضمام">
                   </div>
                   <div class="col-md-6">
-                    <input type="text" class="form-control custom-input" id="subjectEn" placeholder="العنوان">                  
+                    <div class="form-group-float position-relative ">
+                      <input type="text" class="form-control custom-input float-input" id="teacherAddress" placeholder=" " />
+                      <label for="teacherAddress" class="float-label">العنوان</label>
+                    </div>                  
                   </div>
                 </div>
         

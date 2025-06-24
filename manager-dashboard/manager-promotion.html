@@ -216,22 +216,20 @@
               <!-- الطلاب -->
               <div class="tab-pane fade show active" id="students" role="tabpanel">
                 <div class="add-std">
-                    <a href="manager-forms/manager-add-promotion.html" class="add-std-btn">ترقية صف</a>
-                    <a href="manager-forms/manager-add-student.html" class="rollback-std-btn">استعادة</a>
+                    <a href="manager-forms/manager-add-promotion.html" class="add-std-btn" >ترقية صف</a>
+                    <a href="#" class="rollback-std-btn" data-bs-toggle="modal" data-bs-target="#rollbackAllStdModal">استعادة</a>
   
                   </div>
 
                   <div class="header-table">   
                     <div class="select-std d-flex gap-2 flex-wrap">
                       <select class="form-select std-select" id="stage">
-                        <option selected disabled>اختر المرحلة ...</option>
+                        <option selected disabled>الصف السابق ...</option>
                       </select>
                       <select class="form-select std-select" id="class">
-                        <option selected disabled>اختر الصف ...</option>
+                        <option selected disabled> الصف الحالي ...</option>
                       </select>
-                      <select class="form-select std-select" id="section">
-                        <option selected disabled>اختر الشعبة ...</option>
-                      </select>
+                    
                     </div>
                   
                     <input type="search" class="form-control search-input" placeholder="ابحث ...">
@@ -241,6 +239,9 @@
                     <table class="table text-center custom-user-table">
                         <thead class="thead-user">
                       <tr>
+                        <th scope="col">
+                          <input type="checkbox" id="selectAll">
+                        </th>
                         <th>#</th>
                         <th>اسم الطالب</th>
                         <th> المرحلة السابقة</th>
@@ -254,6 +255,7 @@
                     </thead>
                     <tbody>
                         <tr>
+                          <td><input type="checkbox" id="selectAll"></td>
                             <td>1</td>
                             <td> محمد محمد</td>
                             <td>الابتدائي</td>
@@ -270,13 +272,13 @@
                                 <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
                             
                                   <li>
-                                    <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-graduated.html">
-                                      <i class="fas fa-edit text-primary"></i> تعديل
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#graduateStdModal">
+                                      <i class="fas fa-user-graduate text-success"></i> تخريج الطالب
                                     </a>
                                   </li>
                                   <li>
-                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                      <i class="fas fa-trash-alt text-danger"></i> حذف
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#rollbackStdModal">
+                                      <i class="fas fa-rotate-right text-danger"></i> استعادة الطالب
                                     </a>
                                   </li>
                                 </ul>
@@ -289,8 +291,8 @@
                   </table>
 
                   
-                  <!-- Modal حذف الطالب -->
-                  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                  <!-- Modal استعادة الطالب -->
+                  <div class="modal fade" id="rollbackStdModal" tabindex="-1" aria-labelledby="rollbackStdModal" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
                       <div class="modal-content">
                         <div class="modal-header">
@@ -298,10 +300,50 @@
                         </div>
                         <div class="modal-body text-center">
                           <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
-                          <p>هل أنت متأكد أنك تريد حذف هذا الطالب؟</p>
+                          <p>هل أنت متأكد أنك تريد استعادة هذا الطالب؟</p>
                         </div>
                         <div class="modal-footer justify-content-center">
-                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
+                          <button type="button" class="btn btn-del">تأكيد</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- Modal تخريج الطالب -->
+                  <div class="modal fade" id="graduateStdModal" tabindex="-1" aria-labelledby="graduateStdModal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد تخريج هذا الطالب؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del"> تخريج</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                   <!-- Modal استعادة كل الطالب -->
+                  <div class="modal fade" id="rollbackAllStdModal" tabindex="-1" aria-labelledby="rollbackAllStdModal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد استعادة جميع الطلاب ؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del">استعادة</button>
                           <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
                         </div>
                       </div>
