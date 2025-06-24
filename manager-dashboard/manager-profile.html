@@ -118,91 +118,92 @@
 
       <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
-        <ul class="list-unstyled">
-            <li>
-              <a href="manager-index.html">
-                  <span>لوحة التحكم</span>
-                  <i class="fa fa-home"></i>
-              </a>
-            </li>
-            <li>
-              <a href="manager-subject.html">
-                <span>المواد الدراسية</span>
-                <i class="fas fa-book"></i>
-              </a>
-            </li>
+  <ul class="list-unstyled">
 
-            <li class="dropdown-sidebar position-relative">
-              <a href="#" class="dropdown-toggle-custom d-flex justify-content-end align-items-center">
-                <i class="fas fa-chevron-left dropdown-arrow ms-2"></i> <!-- سهم لليسار بدل تحت -->
-                <span>الطلاب</span>
-                <i class="fas fa-user-graduate me-2"></i>
-              </a>
-            
-              <ul class="dropdown-menu-sidebar position-absolute">
-                <li><a href="manager-student.html">عرض الطلاب</a></li>
-                <li><a href="manager-graduated.html">الخريجين</a></li>
-                <li><a href="manager-promotion.html">الترقيات</a></li>
-              </ul>
-            </li>
-            
+    <li>
+      <a href="manager-index.html">
+        <span>لوحة التحكم</span>
+        <i class="fa fa-home"></i>
+      </a>
+    </li>
 
-              <li>
-                <a href="manager-teacher.html">
-                    <span>المعلمين</span>
-                    <i class="fas fa-chalkboard-teacher"></i>
-                </a>
-              </li>
+    <li>
+      <a href="manager-subject.html">
+        <span>المواد الدراسية</span>
+        <i class="fas fa-book"></i>
+      </a>
+    </li>
+
+    <!-- عنصر الطلاب مع قائمة تظهر وتختفي -->
+    <li class="dropdown-sidebar">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
     
-               <li>
-                <a href="manager-parent.html">
-                    <span>أولياء الأمور</span>
-                    <i class="fas fa-user-shield"></i>
-                </a>
-              </li>
-              <li>
-                <a href="manager-grade.html">
-                    <span>المراحل الدراسية</span>
-                    <i class="fas fa-graduation-cap"></i>
-                </a>
-              </li>
+    <i class="toggle-icon fas fa-plus"></i>
+    <div class="d-flex align-items-center gap-2">   
+      <span>الطلاب</span>
+      <i class="fas fa-user-graduate"></i>
+    </div>
+  </a>
 
-              <li>
-                <a href="manager-study-content.html">
-                  <span> المحتوى الدراسي</span>
-                  <i class="fas fa-book-reader"></i>
-                </a>
-              </li>
-  
-              <li>
-                <a href="manager-meet.html">
-                    <span>اللقاءات المباشرة</span>
-                    <i class="fas fa-video"></i>
-                </a>
-              </li>
-           
-  
-            
-  
-            <li>
-              <a href="manager-setting.html">
-                  <span>الاعدادات</span>
-                <i class="fa-solid fa-cogs"></i>
-                
-              </a>
-            </li>
+  <ul id="studentsMenu" class="collapse list-unstyled ps-4 mt-2">
+    <li><a href="manager-student.html">عرض الطلاب</a></li>
+    <li><a href="manager-graduated.html">الخريجين</a></li>
+    <li><a href="manager-promotion.html">الترقيات</a></li>
+  </ul>
+</li>
 
-            <li>
-                <a href="manager-profile.html">
-                    <span>الملف الشخصي</span>
-                  <i class="fa-solid fa-user"></i>
-                  
-                </a>
-              </li>
-          </ul>
 
-  </div>
-      
+
+    <li>
+      <a href="manager-teacher.html">
+        <span>المعلمين</span>
+        <i class="fas fa-chalkboard-teacher"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-parent.html">
+        <span>أولياء الأمور</span>
+        <i class="fas fa-user-shield"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-grade.html">
+        <span>المراحل الدراسية</span>
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-study-content.html">
+        <span>المحتوى الدراسي</span>
+        <i class="fas fa-book-reader"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-meet.html">
+        <span>اللقاءات المباشرة</span>
+        <i class="fas fa-video"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-setting.html">
+        <span>الاعدادات</span>
+        <i class="fa-solid fa-cogs"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-profile.html">
+        <span>الملف الشخصي</span>
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </li>
+  </ul>
+      </div>
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     

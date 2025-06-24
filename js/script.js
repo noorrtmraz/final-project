@@ -231,3 +231,27 @@ function showForm(type, clickedIcon) {
   renderMiniCalendar(miniDate);
 });
 
+
+// القائمة المنسدلة للطلاب فيي الساييد بار
+
+ document.addEventListener("DOMContentLoaded", function () {
+    const toggleLink = document.querySelector(".dropdown-toggle-custom");
+    const target = document.querySelector("#studentsMenu");
+    const toggleIcon = toggleLink.querySelector(".toggle-icon");
+
+    // عند الضغط: نتوقع الحالة القادمة
+    toggleLink.addEventListener("click", function (e) {
+      const willOpen = !target.classList.contains("show");
+
+      if (willOpen) {
+        toggleIcon.classList.remove("fa-plus");
+        toggleIcon.classList.add("fa-minus");
+      }
+    });
+
+    // عند الإغلاق النهائي: نرجّع الأيقونة إلى زائد
+    target.addEventListener("hidden.bs.collapse", function () {
+      toggleIcon.classList.remove("fa-minus");
+      toggleIcon.classList.add("fa-plus");
+    });
+  });

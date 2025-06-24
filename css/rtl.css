@@ -687,58 +687,17 @@ header.header-page img {
 
 /* sidebar start */
 
-
-.dropdown-sidebar {
-  position: relative;
-}
-
-.dropdown-menu-sidebar {
-  list-style: none;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  right: 100%; /* تطلع يسار العنصر */
-  transform: translateY(-50%);
-  opacity: 0;
-  visibility: hidden;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-  z-index: 100;
-  min-width: 180px;
-}
-
-.dropdown-menu-sidebar li a {
-  display: block;
-  padding: 10px 15px;
-  color: var(--secondary-color);
-  text-decoration: none;
-  border-bottom: 1px solid #eee;
-  text-align: right;
-}
-
-.dropdown-menu-sidebar li:last-child a {
-  border-bottom: none;
-}
-
-.dropdown-menu-sidebar li a:hover {
-  color: var(--main-color);
-}
-
-/* تفعيل القائمة عند المرور */
-.dropdown-sidebar:hover .dropdown-menu-sidebar {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* دوران السهم */
-.dropdown-sidebar:hover .dropdown-arrow {
-  transform: rotate(90deg);
+.toggle-icon {
   transition: transform 0.3s ease;
+  font-size: 1rem;
 }
+.dropdown-toggle-custom {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  color: #333;
+  text-decoration: none;
+}
+
 
 .sidebar ul li a.active{
   background-color: rgba(88, 159, 67, 0.2); /* خلفية خضراء فاتحة مثلاً */
@@ -1858,6 +1817,14 @@ font-weight: bold;
 
 }
 
+.teacher-title2{
+  margin-right: 1rem;
+  color: var(--main-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+  font-size: 2.4rem;
+  font-weight: 200;
+}
+
 .table-users-teacher ul.nav{
   border: none;
 }
@@ -1881,11 +1848,35 @@ font-weight: bold;
 
 }
 
+.table-users-teacher .header-table-teacher2{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.table-users-teacher .header-table-teacher2 input{
+  text-align: right;
+  border: 1px solid rgba(88, 159, 67, 0.6);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  width: 20rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0 ,0.05);
+  /* border-radius: 7px; */
+  border-radius:5px ;
+}
+
 
 .table-users-teacher .header-table-teacher{
   display: flex;
   justify-content: space-between;
 }
+
+
+
+
 
 .table-users-teacher .header-table-teacher a{
   background-color: var(--main-color);
@@ -1923,7 +1914,8 @@ font-weight: bold;
   width:98%;
   margin-right: auto;
   margin-left: auto;
-  padding: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   margin-bottom: 7rem;
  
 }
