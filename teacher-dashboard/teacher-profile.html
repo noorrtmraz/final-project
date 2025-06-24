@@ -117,7 +117,7 @@
 </header>
 
       
-      <!-- الشريط الجانبي -->
+       <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
             <ul class="list-unstyled">
                 <li>
@@ -149,26 +149,26 @@
                   <li>
                     <a href="teacher-exam.html">
                       <span> الاختبارات</span>
-                      <i class="fas fa-book-reader"></i>
+                      <i class="fa fa-pen-to-square"></i>
                     </a>
                   </li>
 
                   <li>
                     <a href="teacher-hw.html">
                       <span> الواجبات</span>
-                      <i class="fas fa-book-reader"></i>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="teacher-meet.html">
-                        <span>الدروس المسجلة</span>
-                        <i class="fas fa-video"></i>
+                      <i class="fa fa-tasks"></i>
                     </a>
                   </li>
 
                   <li>
                     <a href="teacher-lesson.html">
+                        <span>الدروس المسجلة</span>
+                        <i class="fas fa-play-circle"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="teacher-meet.html">
                         <span>اللقاءات المباشرة</span>
                         <i class="fas fa-video"></i>
                     </a>
@@ -188,9 +188,128 @@
       </div>
       
       
-      <!-- المحتوى الرئيسي -->
-      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
+       <!-- المحتوى الرئيسي -->
+      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
+       
+
+        <div class="container py-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="profile-card-manager text-center">
+                <img src="../images/pic-1.jpg" alt="مدير" class="profile-avatar mb-3">
+                <div class="profile-info-manager">
+                  <h3>أ. أحمد يوسف</h3>
+                  <p>9876543234</p>
+                  <p>+970 599 123 456</p>
+                  <p>معلم - مدرسة الأمل</p>
+                </div>
+        
+                <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+                  <a href="#" class="btn btn-custom-manager px-4" data-bs-toggle="modal" data-bs-target="#editProfile">
+                    <i class="fas fa-edit me-2"></i>تعديل الملف الشخصي
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- ✅ قسم الإحصائيات البارزة -->
+          <div class="row text-center mt-5 g-4 cards-profile-manager">
+            <div class="col-md-4 col-sm-6">
+              <a href="teacher-hw.html" class="card state-cards shadow-sm " style="text-decoration: none;">
+                <div class="card-body">
+                  <i class="fa fa-tasks fa-2x mb-2"></i>
+                  <h6 class="mb-1">الواجبات</h6>
+                </div>
+              </a>
+            </div>
+        
       
+        
+            <div class="col-md-4 col-sm-6">
+              <a href="teacher-exam.html" class="card state-cards shadow-sm" style="text-decoration: none;">
+                <div class="card-body">
+                  <i class="fa fa-pen-to-square fa-2x  mb-2"></i>
+                  <h6 class="mb-1"> الاختبارات</h6>
+                </div>
+              </a>
+            </div>
+        
+            <div class="col-md-4 col-sm-6">
+              <a href="teacher-lesson.html" class="card state-cards shadow-sm" style="text-decoration: none;">
+                <div class="card-body">
+                  <i class="fa fa-book-open fa-2x mb-2"></i>
+                  <h6 class="mb-1"> الدروس</h6>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+                           <!-- المودال -->
+              <div class="modal fade custom-modal" id="editProfile" tabindex="-1" aria-labelledby="editProfile" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                  <div class="modal-content custom-modal-content">
+
+                    <!-- رأس المودال -->
+                    <div class="modal-header custom-modal-header">
+                      <h5 class="modal-title custom-modal-title" id="editProfile">إضافة صف جديد</h5>
+                    </div>
+
+                    <!-- جسم المودال -->
+                    <div class="modal-body custom-modal-body">
+                      <form id="stageForm" class="custom-form">
+                        <div class="mb-3 custom-form-group">
+                           <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">الاسم بالعربي</label>
+                          </div> 
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                           <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label"> االاسم بالانجليزي</label>
+                          </div> 
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                           <div class="form-group-float position-relative ">
+                            <input type="password" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">كلمة المرور الحالية</label>
+                          </div> 
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                           <div class="form-group-float position-relative ">
+                            <input type="password" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">كلمة المرور الجديدة</label>
+                          </div> 
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                           <div class="form-group-float position-relative ">
+                            <input type="password" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label"> تأكيد كلمة المرور</label>
+                          </div> 
+                        </div>
+
+                      </form>
+                    </div>
+
+                    <!-- تذييل المودال -->
+                    <div class="modal-footer custom-modal-footer">
+                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تعديل</button>
+                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+        
+
       </div>
 
 

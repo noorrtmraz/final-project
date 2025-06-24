@@ -127,7 +127,7 @@
                   </a>
                 </li>
                 <li>
-                    <a href="../teacher-student.html" >
+                    <a href="../teacher-student.html">
                       <span> الطلاب</span>
                       <i class="fas fa-user-graduate"></i>
                     </a>
@@ -149,21 +149,21 @@
                   <li>
                     <a href="../teacher-exam.html" class="active">
                       <span> الاختبارات</span>
-                      <i class="fas fa-book-reader"></i>
+                      <i class="fa fa-pen-to-square"></i>
                     </a>
                   </li>
 
                   <li>
                     <a href="../teacher-hw.html">
                       <span> الواجبات</span>
-                      <i class="fas fa-book-reader"></i>
+                      <i class="fa fa-tasks"></i>
                     </a>
                   </li>
 
                   <li>
                     <a href="../teacher-lesson.html">
                         <span>الدروس المسجلة</span>
-                        <i class="fas fa-video"></i>
+                        <i class="fas fa-play-circle"></i>
                     </a>
                   </li>
 
@@ -199,10 +199,16 @@
                 <form class="subject-form">
                   <div class="row mb-3">
                     <div class="col-md-6">
-                      <input type="text" class="form-control custom-input" id="subjectAr" placeholder=" اسم الاختبار باللغة العربية">
+                      <div class="form-group-float position-relative ">
+                        <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                        <label for="" class="float-label">اسم الاختبار بالعربي</label>
+                      </div>                     
                     </div>
                     <div class="col-md-6">
-                      <input type="text" class="form-control custom-input" id="subjectEn" placeholder=" اسم الاختبار باللغة الانجليزية">
+                      <div class="form-group-float position-relative ">
+                        <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                        <label for="" class="float-label">اسم الاختبار بالاجليزي</label>
+                      </div>                     
                     </div>
                   </div>
           
@@ -224,29 +230,35 @@
                     </div>
                   </div>
   
-                  <div class="row mb-3">
-                    <div class="col-md-6">
+                  <div class="row mb-4">
+                    <div class="col-md-4">
                       <select class="form-select custom-select" id="grade">
-                        <option selected disabled>اختر المادة ...</option>
-                      </select>
-                    </div>
-                    <div class="col-md-6">
-                      <select class="form-select custom-select" id="class">
                         <option selected disabled>اختر المعلم ...</option>
                       </select>
                     </div>
-                   
+                    <div class="col-md-4">
+                      <select class="form-select custom-select" id="class">
+                        <option selected disabled>اختر المادة ...</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group-float position-relative ">
+                        <input type="number" class="form-control custom-input float-input" id="" placeholder=" " />
+                        <label for="" class="float-label">  مدة الاختبار بالدقائق</label>
+                      </div> 
+                    </div>
                   </div>
+
+
   
-                  <div class="row mb-4">
-                    <div class="col-md-4">
-                      <input type="number" class="form-control custom-input" id="subjectAr" placeholder=" مدة الاختبار بالدقائق">                  
+                   <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="" class="text-danger">بداية الاختبار *</label>
+                      <input type="datetime-local" class="form-control custom-input" id="" placeholder=" اسم الاختبار باللغة العربية">
                     </div>
-                    <div class="col-md-4">
-                      <input type="datetime-local" class="form-control custom-input" id="subjectAr" placeholder=" بداية الاختبار ">                  
-                    </div>
-                    <div class="col-md-4">
-                      <input type="datetime-local" class="form-control custom-input" id="subjectAr" placeholder="نهاية الاختبار ">                  
+                    <div class="col-md-6">
+                      <label for="" class="text-danger">نهاية الاختبار *</label>
+                      <input type="datetime-local" class="form-control custom-input" id="" placeholder=" اسم الاختبار باللغة الانجليزية">
                     </div>
                   </div>
   

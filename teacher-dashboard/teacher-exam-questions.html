@@ -117,7 +117,7 @@
 </header>
 
       
-      <!-- الشريط الجانبي -->
+       <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
             <ul class="list-unstyled">
                 <li>
@@ -147,7 +147,7 @@
                   </li>
 
                   <li>
-                    <a href="teacher-exam.html">
+                    <a href="teacher-exam.html" class="active">
                       <span> الاختبارات</span>
                       <i class="fa fa-pen-to-square"></i>
                     </a>
@@ -188,141 +188,90 @@
       </div>
       
       
-      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;"> 
-        <div class="table-users-teacher mt-5">
-
-            <div class="header-table-teacher">   
-
-             <!-- التبويبات -->
-             <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="grdes-tab" data-bs-toggle="tab" data-bs-target="#grades" type="button" role="tab">المراحل</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="classroom-tab" data-bs-toggle="tab" data-bs-target="#classrooms" type="button" role="tab">الصفوف</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="sections-tab" data-bs-toggle="tab" data-bs-target="#sections" type="button" role="tab">الشُعب</button>
-              </li>
-             
-             
-            </ul>
-            <input type="search" placeholder="ابحث ..">
-
-
-            </div>
-          
+      <!-- المحتوى الرئيسي -->
+      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
+        <h3 class="teacher-title">اسئلة الاختبار</h3> 
+       
+        <div class="table-users-teacher mt-5"> 
             <!-- المحتوى -->
             <div class="table-content-teacher tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" role="tabpanel">
+                <div class="header-table-teacher">   
+                  <a href="teacher-forms/teacher-add-question.html">اضافة سؤال</a>
+                  <input type="search" class="form-control search-input" placeholder="ابحث ...">
+              </div>
 
-                <div class="tab-pane fade show active" id="grades" role="tabpanel">
                 <div class="table-responsive">
                   <table class="table text-center custom-user-table-teacher">
                     <thead class="thead-user">
                       <tr>
                         <th>#</th>
-                        <th>اسم المرحلة</th>
-                        <th>عدد الصفوف</th>
-                        <th>عدد الشعب</th>
-                        <th>عدد الطلاب</th>
+                        <th> السؤال</th>
+                        <th> الخيارات</th>
+                        <th>الاجابة الصحيحة</th>
+                        <th>درجة السؤال</th>
+                        <th> مادة الاختبار</th>
+                        <th>العمليات</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>الابتدائي</td>
-                        <td>4</td>
-                        <td>3</td>
-                        <td>100</td>
-                       
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>الاعدادي</td>
-                        <td>4</td>
-                        <td>3</td>
-                        <td>100</td>
-                       
-                      </tr>
-                    
-                     
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-          
-              <div class="tab-pane fade" id="classrooms" role="tabpanel">
-                <div class="table-responsive">
-                    <table class="table text-center custom-user-table-teacher">
-                        <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th>الصف</th>
-                        <th>المرحلة</th>
-                        <th>الشعبة</th>
-                        <th>عدد الطلاب</th>
-                        <th>المادة</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>الاول</td>
-                        <td>الابتدائي</td>
-                        <td>أ</td>
-                        <td>20</td>
-                        <td>رياضيات</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>الاول</td>
-                        <td>الابتدائي</td>
-                        <td>أ</td>
-                        <td>20</td>
-                        <td>رياضيات</td>
-                      </tr>
-                      
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-          
-              <div class="tab-pane fade" id="sections" role="tabpanel">
-                <div class="table-responsive">
-                    <table class="table text-center custom-user-table-teacher">
-                        <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th> الشعبة</th>
-                        <th> الصف</th>
-                        <th>المرحلة</th>
-                        <th>المادة</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>ب</td>
-                        <td>الرابع</td>
-                        <td>الابتدائي</td>
+                        <td>السؤال الأول</td>
+                        <td>صح وخطأ</td>
+                        <td>صح</td>
+                        <td>5</td>
                         <td>لغة عربية</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>ب</td>
-                        <td>الرابع</td>
-                        <td>الابتدائي</td>
-                        <td>لغة عربية</td>
-                      </tr>
-                     
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>       
+                        <td class="position-relative">
+                          <div class="dropdown">
+                            <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                              العمليات
+                            </button>
+                            <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
 
-         
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-forms/teacher-edit-question.html" >
+                                  <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
+                                </a>
+                              </li>
+    
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-question">
+                                  <i class="fas fa-trash-alt action-icon delete-icon-action"></i> حذف
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                   <!-- Modal حذف الطالب -->
+                   <div class="modal fade" id="deleteModal-question" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف هذا السؤال ؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+          
+        <!-- محتوى الصفحة هنا -->
       </div>
 
 
@@ -389,7 +338,7 @@
       <!-- يمكنك إضافة المزيد من الرسائل هنا -->
     </div>
     <div class="message-footer text-center">
-      <a href="manager_chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
+      <a href="manager-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
     </div>
   </div>
 </div>

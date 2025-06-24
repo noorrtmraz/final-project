@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark Education</title>
-    <link rel="icon" href="../images/logo-dark.png" type="image/png">
+    <link rel="icon" href="../../images/logo-dark.png" type="image/png">
   
 
   <!-- ربط ملف bootstrap CSS المحلي -->
-   <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <link rel="stylesheet" href="../../css/bootstrap.min.css">
 
 
     <!-- font awsam cdn link -->
@@ -29,7 +29,7 @@
 
 
      <!-- custom css file link -->
-      <link  id="theme-style"  rel="stylesheet" href="../css/rtl.css">
+      <link  id="theme-style"  rel="stylesheet" href="../../css/rtl.css">
      
 </head>
 </head>
@@ -41,8 +41,8 @@
 
       <!-- الشعار والقائمة الجانبية -->
       <div class="d-flex align-items-center logo-spark">
-        <a href="teacher-index.html">
-          <img src="../images/spark.png" alt="spark education">
+        <a href="../teacher-index.html">
+          <img src="../../images/spark.png" alt="spark education">
         </a>
 
         <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
@@ -57,7 +57,7 @@
           <i class="fas fa-bell icon-header"></i>
         </a>
 
-        <a href="teacher-chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
+        <a href="../teacher-chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
 
           <h6 class="notification-title">الاشعارات</h6>
 
@@ -94,7 +94,7 @@
           <li class="text-center">
             <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
             <p class="user-name">محمد محمد</p>
-            <p class="user-type">معلم</p>
+            <p class="user-type">مدير</p>
           </li>
           <li><hr class="dropdown-divider"></li>
           <li>
@@ -121,54 +121,54 @@
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
             <ul class="list-unstyled">
                 <li>
-                  <a href="teacher-index.html">
+                  <a href="../teacher-index.html">
                       <span>لوحة التحكم</span>
                       <i class="fa fa-home"></i>
                   </a>
                 </li>
                 <li>
-                    <a href="teacher-student.html">
+                    <a href="../teacher-student.html">
                       <span> الطلاب</span>
                       <i class="fas fa-user-graduate"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="teacher-grade.html">
+                    <a href="../teacher-grade.html">
                         <span>المراحل الدراسية</span>
                         <i class="fas fa-graduation-cap"></i>
                     </a>
                   </li>
                 <li>
-                    <a href="teacher-book.html">
+                    <a href="../teacher-book.html">
                       <span> الكتب الدراسية</span>
                       <i class="fas fa-book-reader"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="teacher-exam.html">
+                    <a href="../teacher-exam.html" class="active">
                       <span> الاختبارات</span>
                       <i class="fa fa-pen-to-square"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="teacher-hw.html">
+                    <a href="../teacher-hw.html">
                       <span> الواجبات</span>
                       <i class="fa fa-tasks"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="teacher-lesson.html">
+                    <a href="../teacher-lesson.html">
                         <span>الدروس المسجلة</span>
                         <i class="fas fa-play-circle"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="teacher-meet.html">
+                    <a href="../teacher-meet.html">
                         <span>اللقاءات المباشرة</span>
                         <i class="fas fa-video"></i>
                     </a>
@@ -177,7 +177,7 @@
                
 
                 <li>
-                    <a href="teacher-profile.html">
+                    <a href="../teacher-profile.html">
                         <span>الملف الشخصي</span>
                       <i class="fa-solid fa-user"></i>
                       
@@ -188,141 +188,98 @@
       </div>
       
       
-      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;"> 
-        <div class="table-users-teacher mt-5">
+      <!-- المحتوى الرئيسي -->
+      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
 
-            <div class="header-table-teacher">   
-
-             <!-- التبويبات -->
-             <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="grdes-tab" data-bs-toggle="tab" data-bs-target="#grades" type="button" role="tab">المراحل</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="classroom-tab" data-bs-toggle="tab" data-bs-target="#classrooms" type="button" role="tab">الصفوف</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="sections-tab" data-bs-toggle="tab" data-bs-target="#sections" type="button" role="tab">الشُعب</button>
-              </li>
-             
-             
-            </ul>
-            <input type="search" placeholder="ابحث ..">
+        <h3 class="teacher-header-form">تعديل السؤال</h3> 
+  
+        <div class="container mt-4">
+          <div class="card custom-form-card-teacher">
+            <div class="card-body">        
+                <form class="subject-form">
+                  <div class="row mb-4">
+                    <div class="col-md-12">
+                      <select class="form-select custom-select" id="grade">
+                        <option selected disabled>مادة الاختبار ...</option>
+                      </select>                     
+                    </div>
+                  
+                  </div>
 
 
-            </div>
-          
-            <!-- المحتوى -->
-            <div class="table-content-teacher tab-content" id="myTabContent">
+                  <div class="row mb-4">
+                    <div class="col-md-12">
+                      <textarea class="form-control custom-textarea fs-5 p-3" id="stageNotes" rows="3" placeholder="ادخل نص السؤال"></textarea>
+                    </div>
+                  
+                  </div>
 
-                <div class="tab-pane fade show active" id="grades" role="tabpanel">
-                <div class="table-responsive">
-                  <table class="table text-center custom-user-table-teacher">
-                    <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th>اسم المرحلة</th>
-                        <th>عدد الصفوف</th>
-                        <th>عدد الشعب</th>
-                        <th>عدد الطلاب</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>الابتدائي</td>
-                        <td>4</td>
-                        <td>3</td>
-                        <td>100</td>
-                       
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>الاعدادي</td>
-                        <td>4</td>
-                        <td>3</td>
-                        <td>100</td>
-                       
-                      </tr>
+                  <div class="row mb-4">
+                    <div class="col-md-12">
+                        <label for="" class="text-danger">اضافة صورة السؤال (اختباري)</label>
+                        <input type="file" class="form-control custom-input float-input" id="" placeholder=" " />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                       <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">الخيار الأول</label>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">الخيار الثاني</label>
+                        </div> 
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                       <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">الخيار الثالث</label>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">الخيار الرابع</label>
+                        </div> 
+                    </div>
+                  </div>
+
+                  <div class="row mb-4">
+                    <div class="col-md-6">
+                     <div class="form-group-float position-relative ">
+                            <input type="number" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">درجة السؤال</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <select class="form-select custom-select" id="class">
+                        <option selected disabled>الاجابة الصحيحة ...</option>
+                      </select>
+                    </div>
                     
-                     
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-          
-              <div class="tab-pane fade" id="classrooms" role="tabpanel">
-                <div class="table-responsive">
-                    <table class="table text-center custom-user-table-teacher">
-                        <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th>الصف</th>
-                        <th>المرحلة</th>
-                        <th>الشعبة</th>
-                        <th>عدد الطلاب</th>
-                        <th>المادة</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>الاول</td>
-                        <td>الابتدائي</td>
-                        <td>أ</td>
-                        <td>20</td>
-                        <td>رياضيات</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>الاول</td>
-                        <td>الابتدائي</td>
-                        <td>أ</td>
-                        <td>20</td>
-                        <td>رياضيات</td>
-                      </tr>
-                      
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-          
-              <div class="tab-pane fade" id="sections" role="tabpanel">
-                <div class="table-responsive">
-                    <table class="table text-center custom-user-table-teacher">
-                        <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th> الشعبة</th>
-                        <th> الصف</th>
-                        <th>المرحلة</th>
-                        <th>المادة</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>ب</td>
-                        <td>الرابع</td>
-                        <td>الابتدائي</td>
-                        <td>لغة عربية</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>ب</td>
-                        <td>الرابع</td>
-                        <td>الابتدائي</td>
-                        <td>لغة عربية</td>
-                      </tr>
-                     
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>       
+                  </div>
 
-         
+
+  
+                   
+  
+  
+          
+                  <div class="text-end">
+                    <button type="submit" class="btn save-btn">تعديل</button>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </div>
+        <!-- محتوى الصفحة هنا -->
       </div>
 
 
@@ -350,7 +307,7 @@
   <div class="offcanvas-body d-flex flex-column p-0">
     <div class="messages-body overflow-auto flex-grow-1 p-3">
       <!-- عنصر رسالة -->
-      <a href="manager_chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="../teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -359,7 +316,7 @@
         <span>٣٠٠ س</span>
       </a>
 
-      <a href="manager_chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="../teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -369,7 +326,7 @@
       </a>
 
 
-      <a href="manager_chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="../teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -378,7 +335,7 @@
         <span>٣٠٠ س</span>
       </a>
 
-      <a href="manager_chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="../teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -389,7 +346,7 @@
       <!-- يمكنك إضافة المزيد من الرسائل هنا -->
     </div>
     <div class="message-footer text-center">
-      <a href="manager_chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
+      <a href="../teacher-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
     </div>
   </div>
 </div>
@@ -408,8 +365,8 @@
       
 
   <!-- ربط ملف bootstrap JS المحلي -->
-  <script src="../js/bootstrap.bundle.min.js"></script>
-  <script src="../js/script.js"></script>
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/script.js"></script>
 </body>
 </html>
 
