@@ -255,3 +255,18 @@ function showForm(type, clickedIcon) {
       toggleIcon.classList.add("fa-plus");
     });
   });
+
+
+
+  // صفحة المحادثات
+ 
+    const toggleBtn = document.getElementById('sidebarToggle');
+  const chatList = document.querySelector('.chat-list');
+  const messageArea = document.querySelector('.main-message-area');
+
+  toggleBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    chatList.classList.toggle('slide-hidden');
+    messageArea.classList.toggle('expanded');
+  });
