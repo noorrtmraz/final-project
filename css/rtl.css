@@ -1723,6 +1723,12 @@ font-weight: bold;
 
 /* -----chat page starts -------*/
 
+
+.chat-item.active {
+  background-color: #f0f8ff;
+}
+
+
 .chatContent{
   direction: rtl;
 }
@@ -1829,7 +1835,7 @@ font-weight: bold;
 
     .main-message-area .icon {
       font-size: 50px;
-      color: #aaa;
+      color: var(--main-color);
       margin-bottom: 1rem;
     }
 

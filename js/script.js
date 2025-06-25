@@ -270,3 +270,12 @@ function showForm(type, clickedIcon) {
     chatList.classList.toggle('slide-hidden');
     messageArea.classList.toggle('expanded');
   });
+
+// بعرض قائمة الرسائل عند تصغير الشاشة 
+   function toggleChatList() {
+    const chatList = document.querySelector('.chat-list');
+    chatList.classList.toggle('active');
+  
+  }
+
+
