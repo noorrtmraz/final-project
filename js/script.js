@@ -279,3 +279,25 @@ function showForm(type, clickedIcon) {
   }
 
 
+
+
+  const chatItems = document.querySelectorAll(".chat-item");
+  const msgStart = document.querySelector(".msg-start");
+  const conversation = document.querySelector(".conversation");
+
+  chatItems.forEach(item => {
+    item.addEventListener("click", () => {
+      // إظهار المحادثة
+      msgStart.style.display = "none";
+      conversation.style.display = "block";
+
+      // تمييز الرسالة المختارة
+      chatItems.forEach(i => i.classList.remove("selected"));
+      item.classList.add("selected");
+
+      // (اختياري) تحديث الرسائل أو الاسم حسب العنصر المختار
+    });
+  });
+
+
+  
