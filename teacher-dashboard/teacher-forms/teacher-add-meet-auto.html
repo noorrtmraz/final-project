@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark Education</title>
-    <link rel="icon" href="../images/logo-dark.png" type="image/png">
+    <link rel="icon" href="../../images/logo-dark.png" type="image/png">
   
 
   <!-- ربط ملف bootstrap CSS المحلي -->
-   <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <link rel="stylesheet" href="../../css/bootstrap.min.css">
 
 
     <!-- font awsam cdn link -->
@@ -29,7 +29,7 @@
 
 
      <!-- custom css file link -->
-      <link  id="theme-style"  rel="stylesheet" href="../css/rtl.css">
+      <link  id="theme-style"  rel="stylesheet" href="../../css/rtl.css">
      
 </head>
 </head>
@@ -41,8 +41,8 @@
 
       <!-- الشعار والقائمة الجانبية -->
       <div class="d-flex align-items-center logo-spark">
-        <a href="teacher-index.html">
-          <img src="../images/spark.png" alt="spark education">
+        <a href="../teacher-index.html">
+          <img src="../../images/spark.png" alt="spark education">
         </a>
 
         <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
@@ -57,7 +57,7 @@
           <i class="fas fa-bell icon-header"></i>
         </a>
 
-        <a href="teacher-chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
+        <a href="../teacher-chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
 
           <h6 class="notification-title">الاشعارات</h6>
 
@@ -94,7 +94,7 @@
           <li class="text-center">
             <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
             <p class="user-name">محمد محمد</p>
-            <p class="user-type">معلم</p>
+            <p class="user-type">مدير</p>
           </li>
           <li><hr class="dropdown-divider"></li>
           <li>
@@ -121,54 +121,54 @@
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
             <ul class="list-unstyled">
                 <li>
-                  <a href="teacher-index.html">
+                  <a href="../teacher-index.html">
                       <span>لوحة التحكم</span>
                       <i class="fa fa-home"></i>
                   </a>
                 </li>
                 <li>
-                    <a href="teacher-student.html">
+                    <a href="../teacher-student.html">
                       <span> الطلاب</span>
                       <i class="fas fa-user-graduate"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="teacher-grade.html">
+                    <a href="../teacher-grade.html">
                         <span>المراحل الدراسية</span>
                         <i class="fas fa-graduation-cap"></i>
                     </a>
                   </li>
                 <li>
-                    <a href="teacher-book.html">
+                    <a href="../teacher-book.html">
                       <span> الكتب الدراسية</span>
                       <i class="fas fa-book-reader"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="teacher-exam.html">
+                    <a href="../teacher-exam.html">
                       <span> الاختبارات</span>
                       <i class="fa fa-pen-to-square"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="teacher-hw.html">
+                    <a href="../teacher-hw.html">
                       <span> الواجبات</span>
                       <i class="fa fa-tasks"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="teacher-lesson.html">
+                    <a href="../teacher-lesson.html">
                         <span>الدروس المسجلة</span>
                         <i class="fas fa-play-circle"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="teacher-meet.html">
+                    <a href="../teacher-meet.html" class="active">
                         <span>اللقاءات المباشرة</span>
                         <i class="fas fa-video"></i>
                     </a>
@@ -177,7 +177,7 @@
                
 
                 <li>
-                    <a href="teacher-profile.html">
+                    <a href="../teacher-profile.html">
                         <span>الملف الشخصي</span>
                       <i class="fa-solid fa-user"></i>
                       
@@ -188,105 +188,91 @@
       </div>
       
       
-       <!-- المحتوى الرئيسي -->
-       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
+      <!-- المحتوى الرئيسي -->
+      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
 
-        <h3 class="teacher-title"> اللقاءات المباشرة</h3> 
-       
-        <div class="table-users-teacher mt-5"> 
-            <!-- المحتوى -->
-            <div class="table-content-teacher tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" role="tabpanel">
-                <div class="header-table-teacher2">   
-                   <div class="add-meet d-flex gap-2 flex-wrap">
-                    <a href="teacher-forms/teacher-add-meet.html" >اضافة لقاء يدوي</a>
-
-                    <a href="teacher-forms/teacher-add-meet-auto.html" class="add-auto">اضافة لقاء تقائي</a>
+        <h3 class="teacher-header-form">اضافة لقاء يدوياً</h3> 
+  
+        <div class="container mt-4">
+          <div class="card custom-form-card-teacher">
+            <div class="card-body">        
+              <form class="subject-form">
+                <div class="row mb-3">
+                  <div class="col-md-12">
+                     <div class="form-group-float position-relative ">
+                        <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                        <label for="" class="float-label">عنوان اللقاء</label>
+                      </div>  
                   </div>
-                  
-                  <input type="search" class="form-control search-input" placeholder="ابحث ...">
-              </div>
-                <div class="table-responsive">
-                  <table class="table text-center custom-user-table-teacher">
-                    <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th>عنوان الدرس</th>
-                        <th> المادة</th>
-                        <th>الصف</th>
-                        <th>الشعبة</th>
-                        <th>موعد القاء</th>
-                        <th>رابط اللقاء</th> 
-                        <th>العمليات</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td> الوحدة الاولى</td>
-                        <td>لغة عربية</td>
-                        <td>الأول</td>
-                        <td>أ</td>
-                        <td>12-2-2025 12:00pm</td>
-                        <td><a href="https://meet.google.com/qxz-ybjo-biq">https://meet.google.com/qxz-ybjo-biq</a></td>
-                        <td class="position-relative">
-                          <div class="dropdown">
-                            <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                              العمليات
-                            </button>
-                            <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
-
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-forms/teacher-edit-meet.html" >
-                                  <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
-                                </a>
-                              </li>
-    
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-meet">
-                                  <i class="fas fa-trash-alt action-icon delete-icon-action"></i> حذف
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-
-                  
-                    </tbody>
-                  </table>
-
-                  <!-- Modal حذف الطالب -->
-                  <div class="modal fade" id="deleteModal-meet" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
-                        </div>
-                        <div class="modal-body text-center">
-                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
-                          <p>هل أنت متأكد أنك تريد حذف هذا اللقاء ؟</p>
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
-                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
-                        </div>
-                      </div>
-                    </div>
+              
+                </div>
+        
+                <div class="row mb-4">
+                  <div class="col-md-4">
+                    <label for="" class="text-danger">المرحلة *</label>
+                    <select class="form-select custom-select" id="grade">
+                      <option selected disabled>اختر المرحلة ...</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                     <label for="" class="text-danger">الصف *</label>
+                    <select class="form-select custom-select" id="class">
+                      <option selected disabled>اختر الصف ...</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                   <label for="" class="text-danger">الشعبة *</label>
+                    <select class="form-select custom-select" id="teacher">
+                      <option selected disabled>اختر الشعبة ...</option>
+                    </select>
                   </div>
                 </div>
-              </div>
-          
+
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="" class="text-danger">المادة *</label>
+                    <select class="form-select custom-select" id="grade">
+                      <option selected disabled>اختر المادة ...</option>
+                    </select>
+                  </div>
+
+                   <div class="col-md-6">
+                    <label for="" class="text-danger">موعد اللقاء *</label>
+                    <input type="datetime-local" class="form-control custom-input" id="subjectAr" placeholder=" بداية اللقاء ">                  
+                  </div>
+                  
+                 
+                </div>
+
+                <div class="row mb-3">
+                
+
+                   <div class="col-md-12">
+                    <div class="form-group-float position-relative ">
+                        <input type="number" class="form-control custom-input float-input" id="" placeholder=" " />
+                        <label for="" class="float-label">مدة اللقاء</label>
+                      </div>
+                  </div>
+                  
+               
+                </div>
+
+               
+        
+                <div class="text-end">
+                  <button type="submit" class="btn save-btn">اضافة</button>
+                </div>
+              </form>
             </div>
           </div>
-          
+        </div>
         <!-- محتوى الصفحة هنا -->
       </div>
 
 
 
-     
-     
+          
+      
 <!-- زر فتح الرسائل باستخدام Bootstrap -->
 <button class="position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
         type="button" 
@@ -311,8 +297,8 @@
 
     <div class="messages-body overflow-auto flex-grow-1 p-3">
       <!-- عنصر رسالة -->
-      <a href="teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+      <a href="../teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
           <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
@@ -320,8 +306,8 @@
         <span>٣٠٠ س</span>
       </a>
 
-      <a href="teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+      <a href="../teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
           <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
@@ -330,8 +316,8 @@
       </a>
 
 
-      <a href="teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+      <a href="../teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
           <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
@@ -339,8 +325,8 @@
         <span>٣٠٠ س</span>
       </a>
 
-      <a href="teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+      <a href="../teacher-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
           <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
@@ -350,7 +336,7 @@
       <!-- يمكنك إضافة المزيد من الرسائل هنا -->
     </div>
     <div class="message-footer text-center">
-      <a href="teacher-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
+      <a href="../../teacher-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
     </div>
   </div>
 </div>
@@ -369,8 +355,8 @@
       
 
   <!-- ربط ملف bootstrap JS المحلي -->
-  <script src="../js/bootstrap.bundle.min.js"></script>
-  <script src="../js/script.js"></script>
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/script.js"></script>
 </body>
 </html>
 

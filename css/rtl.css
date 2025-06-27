@@ -974,11 +974,7 @@ header.header-page img {
   margin-bottom: 1.5rem;
 }
 
-.table-users .header-table .select-std select {
-  min-width: 160px;
-  font-size: 1.4rem;
-  padding: 1rem 3rem;
-}
+
 
 .table-users .header-table .search-input {
   text-align: right;
@@ -1037,6 +1033,11 @@ header.header-page img {
   margin-left: .5rem;
   color: var(--light-color);
   border-radius: 0;
+
+  min-width: 160px;
+  font-size: 1.4rem;
+  padding: 1rem 3rem;
+
  }
 
  /* ----- */
@@ -1148,7 +1149,7 @@ header.header-page img {
   top: 0;
   transform: translateY(-50%) scale(0.85);
   background-color: white;
-  color: var(--main-color);
+  color: var(--red);
 }
 
 
@@ -1972,6 +1973,31 @@ font-weight: bold;
 
 /* ----------- teacher dashboard start-------------- */
 
+
+ .table-users-teacher .header-table-teacher2 .select-std{
+   display: flex;
+   
+ }
+
+ .table-users-teacher .header-table-teacher2 .select-std select{
+  text-align: right;
+  /* padding-top: .5rem;
+  padding-bottom: .5rem; */
+  width: 12rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  margin-left: .5rem;
+  color: var(--light-color);
+  border-radius: 5px;
+  min-width: 160px;
+  font-size: 1.4rem;
+  padding: 1rem 3rem;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0 ,0.05);
+
+ }
+
+ /* /* ---- */
+
 .dashboard-teacher{
   width: 97%;
   margin-right: auto;
@@ -2105,6 +2131,7 @@ font-weight: bold;
   display: flex;
   justify-content: space-between;
   margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
 .table-users-teacher .header-table-teacher2 input{
@@ -2114,12 +2141,26 @@ font-weight: bold;
   padding-bottom: 1rem;
   padding-right: 1rem;
   width: 20rem;
-  margin-bottom: 1rem;
   font-size: 1.4rem;
   box-shadow: 1px 2px 2px rgba(0, 0, 0 ,0.05);
-  /* border-radius: 7px; */
   border-radius:5px ;
 }
+
+.table-users-teacher .header-table-teacher2 .add-meet a{
+  background-color: var(--main-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  
+}
+.table-users-teacher .header-table-teacher2 .add-meet a.add-auto{
+  background-color: rgba(88, 159, 67, 0.5);
+}
+
+
 
 
 .table-users-teacher .header-table-teacher{
@@ -2342,6 +2383,11 @@ font-weight: bold;
     border: 1px solid rgba(88, 159, 67, 0.2);
 }
 
+.checkbox-file div label{
+  font-size: 1.5rem;
+  color: #686868;
+  margin-right: .7rem;
+}
 
 
 .custom-form-card-teacher .card-body .subject-form div input[type="text"].custom-input,

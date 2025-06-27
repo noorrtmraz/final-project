@@ -197,26 +197,8 @@
           <div class="card custom-form-card-teacher">
             <div class="card-body">        
                 <form class="subject-form">
-  
-                  <div class="row mb-4">
-                    <div class="col-md-4">
-                      <select class="form-select custom-select" id="grade">
-                        <option selected disabled>اختر المرحلة ...</option>
-                      </select>
-                    </div>
-                    <div class="col-md-4">
-                      <select class="form-select custom-select" id="class">
-                        <option selected disabled>اختر الصف ...</option>
-                      </select>
-                    </div>
-                    <div class="col-md-4">
-                      <select class="form-select custom-select" id="teacher">
-                        <option selected disabled>اختر الشعبة ...</option>
-                      </select>
-                    </div>
-                  </div>
-                  
-                  <div class="row mb-3">
+
+                   <div class="row mb-3">
                     <div class="col-md-6">
                       <div class="form-group-float position-relative ">
                         <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
@@ -230,23 +212,51 @@
                       </div>                     
                     </div>
                   </div>
-          
-                 
-  
+
                   <div class="row mb-3">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
+                      <label for="" class="text-danger">وصف الواجب*</label>
+                      <textarea name="" id="" class="form-control custom-textarea fs-5 p-3" rows="3" placeholder="وصف الواجب*" ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                  <div class="col-md-6">
+                      <label for="" class="text-danger"> المادة*</label>
                       <select class="form-select custom-select" id="grade">
                         <option selected disabled>اختر المادة ...</option>
                       </select>
                     </div>
+
                     <div class="col-md-6">
-                      <select class="form-select custom-select" id="class">
-                        <option selected disabled>اختر المعلم ...</option>
-                      </select>
+                      <label for="" class="text-danger"> اخر موعد تسليم*</label>
+                      <input type="datetime-local" class="form-control custom-input">
                     </div>
-                   
+  
                   </div>
   
+                  <div class="row mb-4">
+                    <div class="col-md-4">
+                      <label for="" class="text-danger"> المرحلة*</label>
+                      <select class="form-select custom-select" id="grade">
+                        <option selected disabled>اختر المرحلة ...</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="" class="text-danger"> الصف*</label>
+                      <select class="form-select custom-select" id="class">
+                        <option selected disabled>اختر الصف ...</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="" class="text-danger"> الشعبة*</label>
+                      <select class="form-select custom-select" id="teacher">
+                        <option selected disabled>اختر الشعبة ...</option>
+                      </select>
+                    </div>
+                  </div>
+
+
                   <div class="row mb-3">
                     <div class="col-md-6">
                       <label for="" class="text-danger">اخر موعد تسليم الواجب</label>
@@ -258,11 +268,45 @@
                       <input type="file" class="form-control custom-input" id="subjectAr" placeholder="علامة الواجب">                  
                     </div>
                   </div>
-  
-  
-          
+
+              <label for="hobbies" class="text-danger">الملفات المسموح بتسليمها:</label><br>
+
+              <div class="checkbox-file mt-4">
+
+                 <div>
+                  <input type="checkbox" id="reading" name="hobbies" value="" class="ms-2">
+                  <label for="">pdf</label>
+                </div>
+
+                  <div>
+                    <input type="checkbox" id="cooking" name="hobbies" value="" class="ms-2">
+                    <label for="">txt</label>
+                  </div>
+
+                  <div>
+                    <input type="checkbox" id="sports" name="hobbies" value="" class="ms-2">
+                    <label for="">powerpoint</label>
+                  </div>
+
+                    <div>
+                      <input type="checkbox" id="drawing" name="hobbies" value="" class="ms-2">
+                      <label for="">word</label>
+                    </div>
+              </div>
+
+              
+              <label for="hobbies" class="text-danger fw-bold fs-5 text-decoration-underline mt-4"> السماح بأكثر من تسليم واحد:</label><br>
+
+              <div class="checkbox-allow mt-3">
+                <div>
+                  <input type="checkbox" id="reading" name="hobbies" value="" class="ms-2">
+                  <label for="" class="fs-5 ">نعم مسموح للطالب تسلييم اكثر من اجابة</label>
+                </div>
+              </div>
+
+              
                   <div class="text-end">
-                    <button type="submit" class="btn save-btn">تعديل</button>
+                    <button type="submit" class="btn save-btn">اضافة</button>
                   </div>
                 </form>
               </div>

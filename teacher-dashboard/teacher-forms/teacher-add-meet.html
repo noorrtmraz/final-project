@@ -191,7 +191,7 @@
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
 
-        <h3 class="teacher-header-form">اضافة لقاء جديد</h3> 
+        <h3 class="teacher-header-form">اضافة لقاء يدوياً</h3> 
   
         <div class="container mt-4">
           <div class="card custom-form-card-teacher">
@@ -209,16 +209,19 @@
         
                 <div class="row mb-4">
                   <div class="col-md-4">
+                    <label for="" class="text-danger">المرحلة *</label>
                     <select class="form-select custom-select" id="grade">
                       <option selected disabled>اختر المرحلة ...</option>
                     </select>
                   </div>
                   <div class="col-md-4">
+                     <label for="" class="text-danger">الصف *</label>
                     <select class="form-select custom-select" id="class">
                       <option selected disabled>اختر الصف ...</option>
                     </select>
                   </div>
                   <div class="col-md-4">
+                   <label for="" class="text-danger">الشعبة *</label>
                     <select class="form-select custom-select" id="teacher">
                       <option selected disabled>اختر الشعبة ...</option>
                     </select>
@@ -227,32 +230,55 @@
 
                 <div class="row mb-3">
                   <div class="col-md-6">
+                    <label for="" class="text-danger">المادة *</label>
                     <select class="form-select custom-select" id="grade">
                       <option selected disabled>اختر المادة ...</option>
                     </select>
                   </div>
-                  <div class="col-md-6">
-                    <select class="form-select custom-select" id="class">
-                      <option selected disabled>اختر المعلم ...</option>
-                    </select>
+
+                   <div class="col-md-6">
+                    <label for="" class="text-danger">موعد اللقاء *</label>
+                    <input type="datetime-local" class="form-control custom-input" id="subjectAr" placeholder=" بداية اللقاء ">                  
                   </div>
+                  
                  
                 </div>
 
                 <div class="row mb-3">
-                  
-                  <div class="col-md-12">
-                    <label for="" class="text-danger">موعد اللقاء *</label>
-                    <input type="datetime-local" class="form-control custom-input" id="subjectAr" placeholder=" بداية اللقاء ">                  
+                  <div class="col-md-4">
+                    <div class="form-group-float position-relative ">
+                        <input type="password" class="form-control custom-input float-input" id="" placeholder=" " />
+                        <label for="" class="float-label">كلمة مرور اللقاء</label>
+                      </div>
                   </div>
-                
+
+                   <div class="col-md-4">
+                    <div class="form-group-float position-relative ">
+                        <input type="number" class="form-control custom-input float-input" id="" placeholder=" " />
+                        <label for="" class="float-label">مدة اللقاء</label>
+                      </div>
+                  </div>
+                  
+                 <div class="col-md-4">
+                    <div class="form-group-float position-relative ">
+                        <input type="number" class="form-control custom-input float-input" id="" placeholder=" " />
+                        <label for="" class="float-label">رقم اللقاء</label>
+                      </div>
+                  </div>
                 </div>
 
                 <div class="row mb-3">
-                  <div class="col-md-12">
+                  <div class="col-md-6">
                      <div class="form-group-float position-relative ">
                         <input type="url" class="form-control custom-input float-input" id="" placeholder=" " />
-                        <label for="" class="float-label">رابط اللقاء</label>
+                        <label for="" class="float-label">رابط البدء</label>
+                      </div>  
+                  </div>
+
+                  <div class="col-md-6">
+                     <div class="form-group-float position-relative ">
+                        <input type="url" class="form-control custom-input float-input" id="" placeholder=" " />
+                        <label for="" class="float-label">رابط الدخول للطلاب</label>
                       </div>  
                   </div>
                 
