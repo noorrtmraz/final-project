@@ -2239,7 +2239,6 @@ font-weight: bold;
 .custom-user-table-teacher {
   direction: rtl;
   box-shadow: 1px 2px 5px rgba(0, 0, 0 ,0.15);
- 
 
 }
 
@@ -2446,6 +2445,68 @@ font-weight: bold;
   transition: .5s linear;
 }
 
+
+
+
+/* ------------------ */
+
+.subject-content-container{
+  width:98%;
+  padding-top: 1rem;
+}
+
+.classroom-header .classroom-title .classroom-name,
+.classroom-header .classroom-title .section-name{
+  font-size: 2rem;
+  color: var(--main-color);
+  text-shadow:  1px 1px 2px rgba(0, 0, 0, .1);
+
+}
+
+.classroom-header .subject-name{
+  color: var(--secondary-color);
+    text-shadow:  1px 1px 2px rgba(0, 0, 0, .1);
+
+}
+
+.content-card-body{
+  padding: 1.5rem;
+}
+
+.content-title{
+  font-size: 1.8rem;
+  text-shadow:  1px 1px 2px rgba(0, 0, 0, .2);
+  color: var(--secondary-color);
+
+}
+
+
+.content-date{
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.operations-btn-subject {
+  background-color: var(--main-color);
+  box-shadow:  0 4px 12px rgba(88, 159, 67, 0.1);
+  font-size: 1.5rem;
+  color: var(--white);
+  border: none;
+  font-weight: bold;
+  padding: .7rem;
+  position: relative;
+  z-index: 1050; 
+  top: 100%;  /* خليها تحت الزر مباشرة */
+right: 0;
+
+}
+
+.operations-btn-subject:hover{
+  background-color: var(--white);
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  transition: all.5s ease;
+}
 
 
 
