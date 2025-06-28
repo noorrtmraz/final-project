@@ -1619,10 +1619,10 @@ font-weight: bold;
 
 .open-msg-btn {
     border-radius: 50%;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: bold;
     z-index: 1000;
-    bottom: 7rem;
+    bottom: 6rem;
     left: 35px;
     background: var(--main-color);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -2450,6 +2450,10 @@ font-weight: bold;
 
 /* ------------------ */
 
+.card-content-subject{
+  margin-bottom: 7rem;
+}
+
 .subject-content-container{
   width:98%;
   padding-top: 1rem;
@@ -2464,8 +2468,9 @@ font-weight: bold;
 }
 
 .classroom-header .subject-name{
-  color: var(--secondary-color);
+  color: var(--main-color);
     text-shadow:  1px 1px 2px rgba(0, 0, 0, .1);
+    font-weight: 100;
 
 }
 
@@ -2486,18 +2491,42 @@ font-weight: bold;
   margin-top: 2rem;
 }
 
+.operations-dropdown-subject {
+min-width: 130px;
+font-size: 1.5rem;
+border-radius: 0;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+background-color: #fff;
+border: none;
+font-weight: bold;
+position: fixed !important;
+  top: auto !important;
+  left: 4rem !important;
+  transform: translateY(0) !important;
+  z-index: 9999;
+}
+
+.operations-dropdown-subject .dropdown-item {
+padding: 7px 13px;
+transition: 0.2s;
+
+}
+
+.operations-dropdown-subject .dropdown-item:hover{
+  background-color: rgba(88, 159, 67, 0.2);
+}
+
 .operations-btn-subject {
-  background-color: var(--main-color);
+ background-color: var(--white);
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  transition: all.5s ease;
   box-shadow:  0 4px 12px rgba(88, 159, 67, 0.1);
   font-size: 1.5rem;
-  color: var(--white);
-  border: none;
   font-weight: bold;
   padding: .7rem;
-  position: relative;
-  z-index: 1050; 
-  top: 100%;  /* خليها تحت الزر مباشرة */
-right: 0;
+  z-index: 9999; 
+ 
 
 }
 
@@ -2506,6 +2535,23 @@ right: 0;
   border: 1px solid var(--main-color);
   color: var(--main-color);
   transition: all.5s ease;
+}
+
+.select-add .custom-select{
+ text-align: right;
+  border: 1px solid #ccc;
+  /* padding-top: .5rem;
+  padding-bottom: .5rem; */
+  width: 12rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  margin-left: .5rem;
+  color: var(--light-color);
+  border-radius: 0;
+
+  min-width: 160px;
+  font-size: 1.4rem;
+  padding: 1rem 3rem;
 }
 
 
@@ -2869,11 +2915,11 @@ right: 0;
       }
     
       .open-msg-btn {
-        bottom: 7rem;
-        left: 15px;
-        padding: 8px 20px;
-        font-size: 1.2rem;
-
+    font-size: 1.7rem;
+    z-index: 1000;
+    bottom: 6rem;
+    left: 30px;
+    padding: 1.7rem;
       }
     
       .msg-info strong {
