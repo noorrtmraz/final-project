@@ -299,7 +299,85 @@ function showForm(type, clickedIcon) {
     });
   });
 
+
+  // الرسائل عند الطالب 
+  
+  const chatItemsStd = document.querySelectorAll(".chat-item");
+  const msgStartStd = document.querySelector(".msg-start-std");
+  const conversationStd = document.querySelector(".conversation-std");
+
+  chatItemsStd.forEach(item => {
+    item.addEventListener("click", () => {
+      // إظهار المحادثة
+      msgStartStd.style.display = "none";
+      conversationStd.style.display = "block";
+
+      // تمييز الرسالة المختارة
+      chatItemsStd.forEach(i => i.classList.remove("selected"));
+      item.classList.add("selected");
+
+      // (اختياري) تحديث الرسائل أو الاسم حسب العنصر المختار
+    });
+  });
+
   
 
 
-  
+  // اسئلة الاختبار 
+   let currentQuestion = 1;
+  const totalQuestions = 4;
+
+  function showQuestion(index) {
+    for (let i = 1; i <= totalQuestions; i++) {
+      document.getElementById(`question-${i}`).classList.remove("active");
+      document.querySelectorAll(".question-number-btn")[i - 1].classList.remove("active");
+    }
+    document.getElementById(`question-${index}`).classList.add("active");
+    document.querySelectorAll(".question-number-btn")[index - 1].classList.add("active");
+    currentQuestion = index;
+  }
+
+  document.getElementById("nextBtn").addEventListener("click", function () {
+    if (currentQuestion < totalQuestions) {
+      showQuestion(currentQuestion + 1);
+    }
+  });
+
+  document.getElementById("prevBtn").addEventListener("click", function () {
+    if (currentQuestion > 1) {
+      showQuestion(currentQuestion - 1);
+    }
+  });
+
+
+
+  // عداد الوقت 
+
+  const timerElement = document.getElementById("timer");
+
+  // قراءة الرقم من الخاصية data-time
+  let durationInMinutes = parseInt(timerElement.dataset.time);
+  let time = durationInMinutes * 60;
+
+  function updateTimer() {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+
+    // عرض الوقت داخل العنصر
+    timerElement.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+
+    if (time <= 0) {
+      clearInterval(timerInterval);
+      endExam(); // انتهى الوقت
+    }
+
+    time--;
+  }
+
+  function endExam() {
+    alert("انتهى الوقت! سيتم تسليم الاختبار الآن.");
+    // يمكنك هنا إعادة توجيه أو إرسال الطلب أو إخفاء المحتوى
+  }
+
+  updateTimer(); // عرض أولي
+  const timerInterval = setInterval(updateTimer, 1000);
