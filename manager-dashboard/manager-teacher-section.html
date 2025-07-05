@@ -108,16 +108,14 @@
 
       <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
 
-     
-     
+    
 
     </nav>
 
   </div>
 </header>
 
-      
-     <!-- الشريط الجانبي -->
+       <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
   <ul class="list-unstyled">
 
@@ -137,7 +135,7 @@
 
     <!-- عنصر الطلاب مع قائمة تظهر وتختفي -->
     <li class="dropdown-sidebar">
-  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center active" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
     
     <i class="toggle-icon fas fa-plus"></i>
     <div class="d-flex align-items-center gap-2">   
@@ -170,7 +168,7 @@
     </li>
 
     <li>
-      <a href="manager-grade.html">
+      <a href="manager-grade.html" class="active">
         <span>المراحل الدراسية</span>
         <i class="fas fa-graduation-cap"></i>
       </a>
@@ -206,57 +204,37 @@
   </ul>
       </div>
       
-      
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
-        <h3 class="manager-header">جدول الخريجين</h3> 
+        <h3 class="manager-header"> المعلمين والمواد الخاصة بهذه الشعبة</h3> 
 
        
         <div class="table-users mt-5"> 
             <!-- المحتوى -->
             <div class="table-content tab-content" id="myTabContent">
               <!-- الطلاب -->
-              <div class="tab-pane fade show active" id="students" role="tabpanel">
-                <div class="add-std">
-                  <a href="manager-forms/manager-add-graduated.html" class="add-std-btn">اضافة خريج</a>
-                </div>
-
+              <div class="tab-pane fade show active" role="tabpanel">
                 <div class="header-table">   
-                  <div class="select-std d-flex gap-2 flex-wrap">
-                    <select class="form-select std-select" id="stage">
-                      <option selected disabled>اختر المرحلة ...</option>
-                    </select>
-                    <select class="form-select std-select" id="class">
-                      <option selected disabled>اختر الصف ...</option>
-                    </select>
-                    <select class="form-select std-select" id="section">
-                      <option selected disabled>اختر الشعبة ...</option>
-                    </select>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#addTeacherSectionModal">اضافة معلم للشعبة</a>
+                    <input type="search" class="form-control search-input" placeholder="ابحث ...">
                   </div>
-                
-                  <input type="search" class="form-control search-input" placeholder="ابحث ...">
-                </div>
-
                 <div class="table-responsive">
-                    <table class="table text-center custom-user-table">
-                        <thead class="thead-user">
+                  <table class="table text-center custom-user-table">
+                    <thead class="thead-user">
                       <tr>
                         <th>#</th>
-                        <th>اسم الطالب</th>
-                        <th>رقم الهوية</th>
-                        <th>تاريخ الميلاد</th>
-                        <th>سنة التخرج</th>
-                        <th>العمليات</th>
+                        <th> المعلم</th>
+                        <th>المادة</th>
+                        <th>العمليات</th>  
+                        
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>1</td>
                         <td>محمد محمد</td>
-                        <td>98765333</td>
-                        <td>19-12-208</td>
-                        <td>2024</td>
-                         <td class="position-relative">
+                        <td>رياضيات</td>
+                       <td class="position-relative">
                           <div class="dropdown">
                             <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                               العمليات
@@ -265,7 +243,7 @@
                              
 
                               <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-graduated.html">
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#editTeacherSectionModal">
                                    <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
                                 </a>
                               </li>
@@ -277,11 +255,95 @@
                             </ul>
                           </div>
                         </td>
-                        
+                       
                       </tr>
-                      
-                   <!-- Modal حذف الطالب -->
-                   <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    </tbody>
+                  </table>
+
+
+                                         <!-- مودال اضافة معلم للشعبة -->
+              <div class="modal fade custom-modal" id="addTeacherSectionModal" tabindex="-1" aria-labelledby="addTeacherSectionModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                  <div class="modal-content custom-modal-content">
+
+                    <!-- رأس المودال -->
+                    <div class="modal-header custom-modal-header">
+                      <h5 class="modal-title custom-modal-title" id="addTeacherSectionModalLabel">اضافة معلم للشعبة</h5>
+                    </div>
+
+                    <!-- جسم المودال -->
+                    <div class="modal-body custom-modal-body">
+                      <form id="stageForm" class="custom-form">  
+
+                        <div class="mb-3 custom-form-group">
+                          <select class="form-select custom-select" id="grade">
+                              <option selected disabled>اختر المعلم ...</option>
+                          </select>                         
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                          <select class="form-select custom-select" id="grade">
+                              <option selected disabled>اختر المادة ...</option>
+                          </select>                         
+                        </div>
+                      </form>
+                    </div>
+
+                    <!-- تذييل المودال -->
+                    <div class="modal-footer custom-modal-footer-manager">
+                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">اضافة</button>
+                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+
+
+                                     <!-- مودال تعديل معلم الشعبة -->
+              <div class="modal fade custom-modal" id="editTeacherSectionModal" tabindex="-1" aria-labelledby="editTeacherSectionModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                  <div class="modal-content custom-modal-content">
+
+                    <!-- رأس المودال -->
+                    <div class="modal-header custom-modal-header">
+                      <h5 class="modal-title custom-modal-title" id="editTeacherSectionModalLabel">تعديل المعلم في الشعبة</h5>
+                    </div>
+
+                    <!-- جسم المودال -->
+                    <div class="modal-body custom-modal-body">
+                      <form id="stageForm" class="custom-form">  
+
+                        <div class="mb-3 custom-form-group">
+                          <select class="form-select custom-select" id="grade">
+                              <option selected disabled>اختر المعلم ...</option>
+                          </select>                         
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                          <select class="form-select custom-select" id="grade">
+                              <option selected disabled>اختر المادة ...</option>
+                             
+                          </select>                         
+                        </div>
+                      </form>
+                    </div>
+
+                    <!-- تذييل المودال -->
+                    <div class="modal-footer custom-modal-footer-manager">
+                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">اضافة</button>
+                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+                   
+                  <!-- Modal حذف المعلم -->
+                  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
                       <div class="modal-content">
                         <div class="modal-header">
@@ -289,7 +351,7 @@
                         </div>
                         <div class="modal-body text-center">
                           <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
-                          <p>هل أنت متأكد أنك تريد حذف هذا الخريج ؟</p>
+                          <p>هل أنت متأكد أنك تريد حذف هذا المعلم ؟</p>
                         </div>
                         <div class="modal-footer justify-content-center">
                           <button type="button" class="btn btn-del">تأكيد الحذف</button>
@@ -298,10 +360,6 @@
                       </div>
                     </div>
                   </div>
-                      
-                    </tbody>
-                  </table>
-
                 </div>
               </div>
           
@@ -402,5 +460,4 @@
 <script src="../js/script.js"></script>
 </body>
 </html>
-
 

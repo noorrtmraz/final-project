@@ -116,8 +116,7 @@
   </div>
 </header>
 
-      
-     <!-- الشريط الجانبي -->
+      <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
   <ul class="list-unstyled">
 
@@ -137,7 +136,7 @@
 
     <!-- عنصر الطلاب مع قائمة تظهر وتختفي -->
     <li class="dropdown-sidebar">
-  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center active" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
     
     <i class="toggle-icon fas fa-plus"></i>
     <div class="d-flex align-items-center gap-2">   
@@ -170,7 +169,7 @@
     </li>
 
     <li>
-      <a href="manager-grade.html">
+      <a href="manager-grade.html" class="active">
         <span>المراحل الدراسية</span>
         <i class="fas fa-graduation-cap"></i>
       </a>
@@ -209,7 +208,7 @@
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
-        <h3 class="manager-header">جدول الخريجين</h3> 
+        <h3 class="manager-header">جدول الطلاب في الشعبة </h3> 
 
        
         <div class="table-users mt-5"> 
@@ -217,25 +216,11 @@
             <div class="table-content tab-content" id="myTabContent">
               <!-- الطلاب -->
               <div class="tab-pane fade show active" id="students" role="tabpanel">
-                <div class="add-std">
-                  <a href="manager-forms/manager-add-graduated.html" class="add-std-btn">اضافة خريج</a>
-                </div>
-
+    
                 <div class="header-table">   
-                  <div class="select-std d-flex gap-2 flex-wrap">
-                    <select class="form-select std-select" id="stage">
-                      <option selected disabled>اختر المرحلة ...</option>
-                    </select>
-                    <select class="form-select std-select" id="class">
-                      <option selected disabled>اختر الصف ...</option>
-                    </select>
-                    <select class="form-select std-select" id="section">
-                      <option selected disabled>اختر الشعبة ...</option>
-                    </select>
-                  </div>
-                
                   <input type="search" class="form-control search-input" placeholder="ابحث ...">
                 </div>
+                
 
                 <div class="table-responsive">
                     <table class="table text-center custom-user-table">
@@ -245,7 +230,6 @@
                         <th>اسم الطالب</th>
                         <th>رقم الهوية</th>
                         <th>تاريخ الميلاد</th>
-                        <th>سنة التخرج</th>
                         <th>العمليات</th>
                       </tr>
                     </thead>
@@ -255,17 +239,20 @@
                         <td>محمد محمد</td>
                         <td>98765333</td>
                         <td>19-12-208</td>
-                        <td>2024</td>
-                         <td class="position-relative">
+                        <td class="position-relative">
                           <div class="dropdown">
                             <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                               العمليات
                             </button>
                             <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
-                             
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-data-student.html">
+                                   <i class="fas fa-eye action-icon eye-icon-action"></i> عرض بيانات الطالب
+                                </a>
+                              </li>
 
                               <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-graduated.html">
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-student.html">
                                    <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
                                 </a>
                               </li>
@@ -278,10 +265,8 @@
                           </div>
                         </td>
                         
-                      </tr>
-                      
-                   <!-- Modal حذف الطالب -->
-                   <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                  <!-- Modal حذف الطالب -->
+                  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
                       <div class="modal-content">
                         <div class="modal-header">
@@ -289,7 +274,7 @@
                         </div>
                         <div class="modal-body text-center">
                           <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
-                          <p>هل أنت متأكد أنك تريد حذف هذا الخريج ؟</p>
+                          <p>هل أنت متأكد أنك تريد حذف هذا الطالب؟</p>
                         </div>
                         <div class="modal-footer justify-content-center">
                           <button type="button" class="btn btn-del">تأكيد الحذف</button>
@@ -298,9 +283,12 @@
                       </div>
                     </div>
                   </div>
+
+                      </tr>
                       
                     </tbody>
                   </table>
+
 
                 </div>
               </div>
