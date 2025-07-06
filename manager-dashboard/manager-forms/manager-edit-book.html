@@ -218,20 +218,28 @@
               <form class="subject-form">
                 <div class="row mb-3">
                   <div class="col-md-6">
-                    <input type="text" class="form-control custom-input" id="subjectAr" placeholder=" اسم الكتاب باللغة العربية">
+                    <div class="form-group-float position-relative ">
+                          <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                          <label for="" class="float-label">اسم الكتاب بالعربي</label>
+                    </div> 
                   </div>
                   <div class="col-md-6">
-                    <input type="text" class="form-control custom-input" id="subjectEn" placeholder=" اسم الكتاب باللغة الانجليزية">
+                    <div class="form-group-float position-relative ">
+                          <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                          <label for="" class="float-label">اسم الكتاب بالانجليزي</label>
+                    </div> 
                   </div>
                 </div>
         
                 <div class="row mb-3">
                   <div class="col-md-6">
+                    <label for="" class="text-danger">المرحلة*</label>
                     <select class="form-select custom-select" id="grade">
                       <option selected disabled>اختر المرحلة ...</option>
                     </select>
                   </div>
                   <div class="col-md-6">
+                    <label for="" class="text-danger">الصف</label>
                     <select class="form-select custom-select" id="class">
                       <option selected disabled>اختر الصف ...</option>
                     </select>
@@ -240,11 +248,11 @@
 
                 <div class="row mb-3">
                   <div class="col-md-6">
-                    <label for="">صورة *</label>
+                    <label for="" class="text-danger">صورة *</label>
                     <input type="file" class="form-control custom-input" id="subjectAr">                  
                   </div>
                   <div class="col-md-6">
-                    <label for="">مرفقات *</label>
+                    <label for="" class="text-danger">مرفقات *</label>
                     <input type="file" class="form-control custom-input" id="subjectAr">
                   
                   </div>

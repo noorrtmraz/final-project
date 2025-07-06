@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark Education</title>
+    <link rel="icon" href="../images/logo-dark.png" type="image/png">
+  
+
+  <!-- ربط ملف bootstrap CSS المحلي -->
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
+    <!-- font awsam cdn link -->
+    <script src="js/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&family=Square+Peg&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.css" rel="stylesheet" />
+  
+
+
+     <!-- custom css file link -->
+      <link  id="theme-style"  rel="stylesheet" href="../css/rtl.css">
+     
+</head>
+</head>
+<body>
+    <!-- الهيدر -->
+<header class="header-page bg-white shadow fixed-top">
+  
+  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3 ">
+
+      <!-- الشعار والقائمة الجانبية -->
+      <div class="d-flex align-items-center logo-spark">
+        <a href="teacher-index.html">
+          <img src="../images/spark.png" alt="spark education">
+        </a>
+
+        <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
+
+      </div>
+
+    <!-- القائمة اليسرى (أيقونات) -->
+    <nav class="d-flex gap-4 ms-4 align-items-center">
+
+      <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
+          <i class="fas fa-bell icon-header"></i>
+        </a>
+
+        <a href="teacher-chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
+
+          <h6 class="notification-title">الاشعارات</h6>
+
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
+          </div>
+
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
+          </div>
+          
+        </a>
+
+
+      </div>
+
+       <!-- القائمة المنسدلة للحساب -->
+       <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+          <i class="fas fa-user icon-header"></i>
+        </a>
+        
+        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
+          <li class="text-center">
+            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+            <p class="user-name">محمد محمد</p>
+            <p class="user-type">معلم</p>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <form action="">
+              <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+
+
+      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
+
+     
+     
+
+    </nav>
+
+  </div>
+</header>
+
+
+       <div class="chatContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
+
+
+        <button class="chat-toggle-btn d-md-none" onclick="toggleChatList()"><i class="fas fa-comments"></i></button>
+
+        <div class="sidebar-chat">
+          <a href="manager-index.html"><i class="fa fa-home" title="لوحة التحكم"></i></a>
+          <a href="manager-subject.html"><i class="fas fa-book" title="المواد الدراسية"></i></a>
+          <a href="manager-student.html"><i class="fas fa-user-graduate" title=" الطلاب"></i></a>
+          <a href="manager-teacher.html"><i class="fas fa-chalkboard-teacher" title="المعلمين"></i></a>
+          <a href="manager-parent.html"><i class="fas fa-user-shield" title="أولياء الأمور"></i></a>
+          <a href="manager-grade.html"><i class="fas fa-graduation-cap" title="المراحل الدراسية"></i></a>
+          <a href="manager-study-content.html"><i class="fas fa-book-reader" title=" المحتوى الدراسي"></i></a>
+          <a href="manager-meet.html"><i class="fas fa-video" title=" اللقاءات المباشرة"></i></a>
+          <a href="manager-setting.html"><i class="fa-solid fa-cogs" title="الاعدادات"></i></a>
+          <a href="manager-profile.html"><i class="fa-solid fa-user" title="الملف الشخصي"></i></a>
+        </div>
+
+  <div class="messages-container d-flex">
+    <div class="chat-list col-md-4 col-12">
+  
+  <!-- حقل البحث -->
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="ابحث ...">
+  </div>
+
+  <!-- عنصر رسالة -->
+  <div class="chat-item">
+    <img src="../images/pic-2.jpg" alt="User" />
+    <div class="chat-item-user d-flex justify-content-between align-items-center w-100">
+      <div class="items">
+        <div class="name">محمد علي</div>
+        <small>أرسل رسالة قبل قليل</small>
+      </div>
+      <small class="message-time">3:25 م</small>
+    </div>
+  </div>
+
+
+  <div class="chat-item">
+    <img src="../images/pic-3.jpg" alt="User" />
+    <div class="chat-item-user d-flex justify-content-between align-items-center w-100">
+      <div class="items">
+        <div class="name">محمد علي</div>
+        <small>أرسل رسالة قبل قليل</small>
+      </div>
+      <small class="message-time">3:25 م</small>
+    </div>
+  </div>
+
+  <div class="chat-item">
+    <img src="../images/pic-1.jpg" alt="User" />
+    <div class="chat-item-user d-flex justify-content-between align-items-center w-100">
+      <div class="items">
+        <div class="name">محمد علي</div>
+        <small>أرسل رسالة قبل قليل</small>
+      </div>
+      <small class="message-time">3:25 م</small>
+    </div>
+  </div>
+
+</div>
+
+
+    <div class="main-message-area col-md-8 col-12">
+      <div class="msg-start">
+        <div class="icon"><i class="fas fa-comments"></i></div>
+        <h4>رسائلك</h4>
+        <p>أرسل صور أو رسائل خاصة إلى صديق أو مجموعة</p>
+        <button>إرسال رسالة</button>
+      </div>
+
+       <div class="conversation ">
+          <div class="chat-header d-flex justify-content-between align-items-center p-3 border-bottom">
+            <div class="d-flex align-items-center gap-2">
+              <img src="../images/pic-1.jpg" alt="User" class="user-img">
+              <strong>اسم المرسل</strong>
+            </div>
+          </div>
+
+          <div class="chat-body">
+            <div class="message received">
+              <p>مرحبًا بك في المنصة التعليمية </p>
+              <span class="time">23:06</span>
+            </div>
+
+            <div class="message sent">
+              <p>مرحبًا بك.</p>
+              <span class="time">23:06</span>
+            </div>
+
+            <div class="message received">
+              <p>مرحبًا بك في المنصة التعليمية </p>
+              <span class="time">23:06</span>
+            </div>
+
+            <div class="message sent">
+              <p>مرحبًا بك.</p>
+              <span class="time">23:06</span>
+            </div>
+
+            <div class="message received">
+              <p>مرحبًا بك في المنصة التعليمية </p>
+              <span class="time">23:06</span>
+            </div>
+
+            <div class="message sent">
+              <p>مرحبًا بك.</p>
+              <span class="time">23:06</span>
+            </div>
+
+            <div class="message received">
+              <p>مرحبًا بك في المنصة التعليمية </p>
+              <span class="time">23:06</span>
+            </div>
+
+
+            <div class="message sent">
+              <p>مرحبًا بك.</p>
+              <span class="time">23:06</span>
+            </div>
+
+            <div class="message received">
+              <p>مرحبًا بك في المنصة التعليمية </p>
+              <span class="time">23:06</span>
+            </div>
+
+          <div class="chat-input border-top d-flex align-items-center gap-2">
+            <input type="text" class="form-control rounded-pill" placeholder="اكتب رسالتك هنا">
+            <button class="btn btn-success rounded-circle"><i class="fas fa-paper-plane"></i></button>
+          </div>
+
+        </div>
+      
+    </div>
+
+
+  </div>
+      </div>
+
+
+         <!--- footer start-->
+         <footer class="footer bg-white shadow fixed-bottom">
+
+            &copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة 
+         
+         </footer>
+        <!--- footer ends-->
+      
+
+  <!-- ربط ملف bootstrap JS المحلي -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
+

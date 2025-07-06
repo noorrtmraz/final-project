@@ -1177,7 +1177,8 @@ header.header-page img {
 
 
 
-.custom-form-card .card-body .subject-form div select.custom-select{
+.custom-form-card .card-body .subject-form div select.custom-select,
+.custom-form-card .card-body .subject-form div textarea{
     margin: 5px 0;
     border-radius: 6px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);

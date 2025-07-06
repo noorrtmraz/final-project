@@ -221,24 +221,33 @@
                         <td>لا يوجد</td>
                         <td>12-3-2025 3:30pm</td>
                        
-                        <td>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#relodeModal-exam"><i class="fas fa-rotate-right action-icon relode-icon-action" title="اعادة"></i></a>
-                          </td>
+                       <td class="position-relative">
+                          <div class="dropdown">
+                            <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                              العمليات
+                            </button>
+                            <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
+
+                                <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="#" >
+                                  <i class="fas fa-eye action-icon relode-icon-action"></i>  عرض الاجابات
+                                </a>
+                              </li>
+
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="#" >
+                                  <i class="fas fa-rotate-right action-icon relode-icon-action"></i> اعادة الاختبار
+                                </a>
+                              </li>
+    
+                            
+                            </ul>
+                          </div>
+                        </td>
                       </tr>
 
                      
-                      <tr>
-                        <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>20</td>
-                        <td>لا يوجد</td>
-                        <td>12-3-2025 3:30pm</td>
-                       
-                        <td>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#relodeModal-exam"><i class="fas fa-rotate-right action-icon relode-icon-action" title="اعادة"></i></a>
-                          </td>
-                      </tr>
-
+                      
                     </tbody>
                   </table>
                 </div>

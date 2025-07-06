@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark Education</title>
-    <link rel="icon" href="../../images/logo-dark.png" type="image/png">
+    <link rel="icon" href="../images/logo-dark.png" type="image/png">
   
 
   <!-- ربط ملف bootstrap CSS المحلي -->
-   <link rel="stylesheet" href="../../css/bootstrap.min.css">
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
 
 
     <!-- font awsam cdn link -->
@@ -29,42 +29,35 @@
 
 
      <!-- custom css file link -->
-      <link  id="theme-style"  rel="stylesheet" href="../../css/rtl.css">
+      <link  id="theme-style"  rel="stylesheet" href="../css/rtl.css">
      
 </head>
 </head>
 <body>
     <!-- الهيدر -->
 <header class="header-page bg-white shadow fixed-top">
-  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3">
+  
+  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3 ">
+
+      <!-- الشعار والقائمة الجانبية -->
+      <div class="d-flex align-items-center logo-spark">
+        <a href="manager-index.html">
+          <img src="../images/spark.png" alt="spark education">
+        </a>
+
+        <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
+
+      </div>
 
     <!-- القائمة اليسرى (أيقونات) -->
     <nav class="d-flex gap-4 ms-4 align-items-center">
-      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
-
-      <!-- القائمة المنسدلة للحساب -->
-      <div class="dropdown">
-        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
-          <i class="fas fa-user icon-header"></i>
-        </a>
-        
-        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
-          <li class="text-center">
-            <img src="../../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
-            <p class="user-name">محمد محمد</p>
-            <p class="user-type">مدير</p>
-          </li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="../../login-teacher.html"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a></li>
-        </ul>
-      </div>
 
       <div class="dropdown">
         <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
           <i class="fas fa-bell icon-header"></i>
         </a>
 
-        <a href="#" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
+        <a href="manager_chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
 
           <h6 class="notification-title">الاشعارات</h6>
 
@@ -91,33 +84,51 @@
 
       </div>
 
-    </nav>
+       <!-- القائمة المنسدلة للحساب -->
+       <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+          <i class="fas fa-user icon-header"></i>
+        </a>
+        
+        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
+          <li class="text-center">
+            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+            <p class="user-name">محمد محمد</p>
+            <p class="user-type">مدير</p>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <form action="">
+              <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
+            </form>
+          </li>
+        </ul>
+      </div>
 
-    <!-- الشعار والقائمة الجانبية -->
-    <div class="d-flex align-items-center logo-spark">
-      <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
-      <a href="../manager-index.html">
-        <img src="../../images/spark.png" alt="spark education">
-      </a>
-    </div>
+
+      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
+
+     
+     
+
+    </nav>
 
   </div>
 </header>
- 
 
- <!-- الشريط الجانبي -->
+       <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
   <ul class="list-unstyled">
 
     <li>
-      <a href="../manager-index.html">
+      <a href="manager-index.html">
         <span>لوحة التحكم</span>
         <i class="fa fa-home"></i>
       </a>
     </li>
 
     <li>
-      <a href="../manager-subject.html">
+      <a href="manager-subject.html">
         <span>المواد الدراسية</span>
         <i class="fas fa-book"></i>
       </a>
@@ -125,7 +136,7 @@
 
     <!-- عنصر الطلاب مع قائمة تظهر وتختفي -->
     <li class="dropdown-sidebar">
-  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center active" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
     
     <i class="toggle-icon fas fa-plus"></i>
     <div class="d-flex align-items-center gap-2">   
@@ -135,58 +146,58 @@
   </a>
 
   <ul id="studentsMenu" class="collapse list-unstyled ps-4 mt-2">
-    <li><a href="../manager-student.html">عرض الطلاب</a></li>
-    <li><a href="../manager-graduated.html">الخريجين</a></li>
-    <li><a href="../manager-promotion.html">الترقيات</a></li>
+    <li><a href="manager-student.html">عرض الطلاب</a></li>
+    <li><a href="manager-graduated.html">الخريجين</a></li>
+    <li><a href="manager-promotion.html">الترقيات</a></li>
   </ul>
 </li>
 
 
 
     <li>
-      <a href="../manager-teacher.html">
+      <a href="manager-teacher.html">
         <span>المعلمين</span>
         <i class="fas fa-chalkboard-teacher"></i>
       </a>
     </li>
 
     <li>
-      <a href="../manager-parent.html">
+      <a href="manager-parent.html">
         <span>أولياء الأمور</span>
         <i class="fas fa-user-shield"></i>
       </a>
     </li>
 
     <li>
-      <a href="../manager-grade.html">
+      <a href="manager-grade.html">
         <span>المراحل الدراسية</span>
         <i class="fas fa-graduation-cap"></i>
       </a>
     </li>
 
     <li>
-      <a href="../manager-study-content.html">
+      <a href="manager-study-content.html" class="active">
         <span>المحتوى الدراسي</span>
         <i class="fas fa-book-reader"></i>
       </a>
     </li>
 
     <li>
-      <a href="../manager-meet.html">
+      <a href="manager-meet.html">
         <span>اللقاءات المباشرة</span>
         <i class="fas fa-video"></i>
       </a>
     </li>
 
     <li>
-      <a href="../manager-setting.html">
+      <a href="manager-setting.html">
         <span>الاعدادات</span>
         <i class="fa-solid fa-cogs"></i>
       </a>
     </li>
 
     <li>
-      <a href="../manager-profile.html">
+      <a href="manager-profile.html">
         <span>الملف الشخصي</span>
         <i class="fa-solid fa-user"></i>
       </a>
@@ -194,16 +205,85 @@
   </ul>
       </div>
       
-      
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
+        <h3 class="manager-header">تقييم واجبات الطلاب </h3> 
+
        
+        <div class="table-users mt-5"> 
+            <!-- المحتوى -->
+            <div class="table-content tab-content" id="myTabContent">
+              <!-- الطلاب -->
+              <div class="tab-pane fade show active" role="tabpanel">
+                <div class="header-table">   
+                    <input type="search" class="form-control search-input" placeholder="ابحث ...">
+                </div>
+                <div class="table-responsive">
+                  <table class="table text-center custom-user-table">
+                    <thead class="thead-user">
+                      <tr>
+                        <th>#</th>
+                        <th>اسم الطالب</th>
+                        <th> الصف</th>
+                        <th>الشعبة</th>
+                        <th>ملف التسليم</th>
+                        <th>موعد التسليم</th>
+                        <th> العمليات</th>  
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>محمد محمد</td>
+                        <td>الأول</td>
+                        <td>أ</td>
+                        <td>txt.docs</td>
+                        <td>12-3-2025 3:30pm</td>
+                        <td>
+                         <div class="d-flex justify-content-center align-items-center gap-2 std-submission-hw">
+                            <input type="number" min="0" max="100" class="form-control form-control-sm w-25">
+                            <button class="btn btn-success btn-sm">تقييم الواجب</button>
+                         </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  
+                  <!-- Modal حذف السؤال -->
+                  <div class="modal fade" id="deleteModal-question" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف السؤال؟</p>
+                        </div>
+                        <div class="modal-footer custom-modal-footer-manager">
+                        <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تأكيد الحذف</button>
+                        <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+              </div>
+          
+            </div>
+          </div>
 
       </div>
 
 
 
      
+      
+        
      
 <!-- زر فتح الرسائل باستخدام Bootstrap -->
 <button class="position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
@@ -271,24 +351,24 @@
       <a href="manager-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
     </div>
   </div>
-</div>   
+</div>
           
-      
 
-  
-    
-         <!--- footer start-->
-         <footer class="footer bg-white shadow fixed-bottom">
 
-            &copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة 
-         
-         </footer>
-        <!--- footer ends-->
-      
 
-  <!-- ربط ملف bootstrap JS المحلي -->
-  <script src="../../js/bootstrap.bundle.min.js"></script>
-  <script src="../../js/script.js"></script>
+
+ <!--- footer start-->
+ <footer class="footer bg-white shadow fixed-bottom">
+
+    &copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة 
+ 
+ </footer>
+<!--- footer ends-->
+
+
+<!-- ربط ملف bootstrap JS المحلي -->
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>
 

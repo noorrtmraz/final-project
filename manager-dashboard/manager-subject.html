@@ -266,7 +266,7 @@
                   </table>
 
                   
-                  <!-- Modal حذف الطالب -->
+                  <!-- Modal حذف المادة -->
                   <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
                       <div class="modal-content">
@@ -277,10 +277,10 @@
                           <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
                           <p>هل أنت متأكد أنك تريد حذف هذه المادة ؟</p>
                         </div>
-                        <div class="modal-footer justify-content-center">
-                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
-                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
-                        </div>
+                        <div class="modal-footer custom-modal-footer-manager">
+                        <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تأكيد الحذف</button>
+                        <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                      </div>
                       </div>
                     </div>
                   </div>

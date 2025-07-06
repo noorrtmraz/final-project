@@ -217,16 +217,19 @@
 
                 <div class="row mb-4">
                   <div class="col-md-4">
+                    <label for="" class="text-danger">المرحلة*</label>
                     <select class="form-select custom-select" id="grade">
                       <option selected disabled>اختر المرحلة ...</option>
                     </select>
                   </div>
                   <div class="col-md-4">
+                    <label for="" class="text-danger">الصف*</label>
                     <select class="form-select custom-select" id="class">
                       <option selected disabled>اختر الصف ...</option>
                     </select>
                   </div>
                   <div class="col-md-4">
+                    <label for="" class="text-danger">الشعبة*</label>
                     <select class="form-select custom-select" id="teacher">
                       <option selected disabled>اختر الشعبة ...</option>
                     </select>
@@ -235,10 +238,16 @@
                 
                 <div class="row mb-3">
                   <div class="col-md-6">
-                    <input type="text" class="form-control custom-input" id="subjectEn" placeholder=" عنوان الواجب *">
+                    <div class="form-group-float position-relative">
+                      <input type="text" class="form-control custom-input float-input" id="studentID" placeholder=" " />
+                      <label for="" class="float-label">عنوان الواجب</label>
+                    </div>
                   </div>
                   <div class="col-md-6">
-                    <input type="number" class="form-control custom-input" id="subjectEn" placeholder=" علامة الواجب *">
+                    <div class="form-group-float position-relative">
+                      <input type="number" class="form-control custom-input float-input" id="studentID" placeholder=" " />
+                      <label for="" class="float-label">علامة الواجب</label>
+                    </div>
                   </div>
                 </div>
         
@@ -246,11 +255,13 @@
 
                 <div class="row mb-3">
                   <div class="col-md-6">
+                    <label for="" class="text-danger">المادة*</label>
                     <select class="form-select custom-select" id="grade">
                       <option selected disabled>اختر المادة ...</option>
                     </select>
                   </div>
                   <div class="col-md-6">
+                    <label for="" class="text-danger">المعلم*</label>
                     <select class="form-select custom-select" id="class">
                       <option selected disabled>اختر المعلم ...</option>
                     </select>
@@ -260,12 +271,12 @@
 
                 <div class="row mb-3">
                   <div class="col-md-6">
-                    <label for="">اخر موعد تسليم الواجب</label>
+                    <label for="" class="text-danger">اخر موعد تسليم الواجب</label>
                     <input type="datetime-local" class="form-control custom-input" id="subjectAr" placeholder=" اخر موعد تسليم الواجب ">                  
                   </div>
 
                   <div class="col-md-6">
-                    <label for="">ملف الواجب (اختياري)</label>
+                    <label for="" class="text-danger">ملف الواجب (اختياري)</label>
                     <input type="file" class="form-control custom-input" id="subjectAr" placeholder="علامة الواجب">                  
                   </div>
                 </div>

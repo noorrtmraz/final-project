@@ -329,9 +329,50 @@
           
               <div class="tab-pane fade" id="specialization" role="tabpanel">
                 <div class="header-table">   
-                  <a href="#">
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#addModal-specialization">
                     إضافة تخصص
                   </a>
+
+                   <!--مودال اضافة تخصص  -->
+              <div class="modal fade custom-modal" id="addModal-specialization" tabindex="-1" aria-labelledby="addModal-specialization" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                  <div class="modal-content custom-modal-content">
+
+                    <!-- رأس المودال -->
+                    <div class="modal-header custom-modal-header">
+                      <h5 class="modal-title custom-modal-title" id="addStageModalLabel">إضافة تخصص جديد</h5>
+                    </div>
+
+                    <!-- جسم المودال -->
+                    <div class="modal-body custom-modal-body">
+                      <form id="stageForm" class="custom-form">
+                        <div class="mb-3 custom-form-group">
+                          <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">اسم التخصص بالعربي</label>
+                          </div> 
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                          <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">اسم التخصص بالانجليزي</label>
+                          </div> 
+                        </div>
+
+                
+                      </form>
+                    </div>
+
+                    <!-- تذييل المودال -->
+                    <div class="modal-footer custom-modal-footer-manager">
+                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">اضافة</button>
+                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
 
 
                                 
@@ -359,7 +400,7 @@
                             <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
 
                               <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="#">
+                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="#" data-bs-toggle="modal" data-bs-target="#editModal-specialization">
                                   <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
                                 </a>
                               </li>
@@ -387,7 +428,7 @@
 
 
               
-                      <!-- Modal حذف المرحلة -->
+                      <!-- Modal حذف المعلم -->
                       <div class="modal fade" id="deleteModal-teacher" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
                       <div class="modal-content">
@@ -398,10 +439,11 @@
                         <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
                         <p>هل أنت متأكد أنك تريد حذف هذا المعلم ؟</p>
                       </div>
-                      <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-del">تأكيد الحذف</button>
-                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
-                      </div>
+                      
+                      <div class="modal-footer custom-modal-footer-manager">
+                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تأكيد الحذف</button>
+                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                     </div>
                       </div>
                       </div>
                       </div>
@@ -420,13 +462,58 @@
                   <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
                   <p>هل أنت متأكد أنك تريد حذف هذا التخصص ؟</p>
                 </div>
-                <div class="modal-footer justify-content-center">
-                  <button type="button" class="btn btn-del">تأكيد الحذف</button>
-                  <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
-                </div>
+               
+
+                <div class="modal-footer custom-modal-footer-manager">
+                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تأكيد الحذف</button>
+                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
               </div>
             </div>
           </div>
+
+
+          
+                   <!--مودال اضافة تخصص  -->
+              <div class="modal fade custom-modal" id="editModal-specialization" tabindex="-1" aria-labelledby="editModal-specialization" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                  <div class="modal-content custom-modal-content">
+
+                    <!-- رأس المودال -->
+                    <div class="modal-header custom-modal-header">
+                      <h5 class="modal-title custom-modal-title" id="editModal-specialization">تعديل التخصص</h5>
+                    </div>
+
+                    <!-- جسم المودال -->
+                    <div class="modal-body custom-modal-body">
+                      <form id="stageForm" class="custom-form">
+                        <div class="mb-3 custom-form-group">
+                          <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">اسم التخصص بالعربي</label>
+                          </div> 
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                          <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">اسم التخصص بالانجليزي</label>
+                          </div> 
+                        </div>
+
+                
+                      </form>
+                    </div>
+
+                    <!-- تذييل المودال -->
+                    <div class="modal-footer custom-modal-footer-manager">
+                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تعديل</button>
+                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
 
       </div>
 

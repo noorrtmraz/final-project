@@ -210,29 +210,35 @@
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">   
         <h3 class="manager-header-form">تعديل اللقاء</h3> 
   
-        <div class="container mt-4">
+         <div class="container mt-4">
           <div class="card custom-form-card">
             <div class="card-body">        
               <form class="subject-form">
                 <div class="row mb-3">
                   <div class="col-md-12">
-                    <input type="text" class="form-control custom-input" id="subjectAr" placeholder=" عنوان اللقاء">
+                    <div class="form-group-float position-relative">
+                      <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                      <label for="" class="float-label"> عنوان اللقاء</label>
+                    </div>
                   </div>
               
                 </div>
         
                 <div class="row mb-4">
                   <div class="col-md-4">
+                    <label for="" class="text-danger"> المرحلة*</label>
                     <select class="form-select custom-select" id="grade">
                       <option selected disabled>اختر المرحلة ...</option>
                     </select>
                   </div>
                   <div class="col-md-4">
+                    <label for="" class="text-danger"> الصف*</label>
                     <select class="form-select custom-select" id="class">
                       <option selected disabled>اختر الصف ...</option>
                     </select>
                   </div>
                   <div class="col-md-4">
+                    <label for="" class="text-danger"> الشعبة*</label>
                     <select class="form-select custom-select" id="teacher">
                       <option selected disabled>اختر الشعبة ...</option>
                     </select>
@@ -241,11 +247,13 @@
 
                 <div class="row mb-3">
                   <div class="col-md-6">
+                    <label for="" class="text-danger"> المادة*</label>
                     <select class="form-select custom-select" id="grade">
                       <option selected disabled>اختر المادة ...</option>
                     </select>
                   </div>
                   <div class="col-md-6">
+                    <label for="" class="text-danger"> المعلم*</label>
                     <select class="form-select custom-select" id="class">
                       <option selected disabled>اختر المعلم ...</option>
                     </select>
@@ -256,7 +264,7 @@
                 <div class="row mb-3">
                   
                   <div class="col-md-12">
-                    <label for="">موعد اللقاء *</label>
+                    <label for="" class="text-danger">موعد اللقاء *</label>
                     <input type="datetime-local" class="form-control custom-input" id="subjectAr" placeholder=" بداية اللقاء ">                  
                   </div>
                 
@@ -264,7 +272,10 @@
 
                 <div class="row mb-3">
                   <div class="col-md-12">
-                    <input type="url" class="form-control custom-input" id="subjectAr" placeholder=" رابط اللقاء ">                  
+                    <div class="form-group-float position-relative">
+                      <input type="url" class="form-control custom-input float-input" id="" placeholder=" " />
+                      <label for="" class="float-label">رابط اللقاء</label>
+                    </div>                  
                   </div>
                 
                 </div>

@@ -117,6 +117,8 @@
 </header>
 
       
+
+
         <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
   <ul class="list-unstyled">
@@ -206,61 +208,81 @@
   </ul>
       </div>
       
-      
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">   
-        <h3 class="manager-header-form">اضافة كتاب جديد</h3> 
+        <h3 class="manager-header-form">إضافة سؤال</h3> 
   
         <div class="container mt-4">
           <div class="card custom-form-card">
             <div class="card-body">        
               <form class="subject-form">
                 <div class="row mb-3">
-                  <div class="col-md-6">
-                    <div class="form-group-float position-relative ">
-                          <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
-                          <label for="" class="float-label">اسم الكتاب بالعربي</label>
-                    </div> 
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group-float position-relative ">
-                          <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
-                          <label for="" class="float-label">اسم الكتاب بالانجليزي</label>
-                    </div> 
-                  </div>
-                </div>
-        
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <label for="" class="text-danger">المرحلة*</label>
+                  <div class="col-md-12">
+                    <label for="" class="text-danger">المادة*</label>
                     <select class="form-select custom-select" id="grade">
-                      <option selected disabled>اختر المرحلة ...</option>
-                    </select>
+                      <option selected disabled>مادة الاختبار  ...</option>
+                    </select> 
+                    </div>                 
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-12">
+                    <label for="" class="text-danger">نص السؤال*</label>
+                    <textarea class="form-control custom-textarea fs-5 p-3" id="stageNotes" rows="3" placeholder="ادخل نص السؤال"></textarea>
+            
+                </div>
+                 
+                </div>
+        
+                <div class="row mb-4">
+                  <div class="col-md-6">
+                    <div class="form-group-float position-relative">
+                      <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                      <label for="" class="float-label"> الخيار الأول</label>
+                    </div>
+
                   </div>
                   <div class="col-md-6">
-                    <label for="" class="text-danger">الصف</label>
-                    <select class="form-select custom-select" id="class">
-                      <option selected disabled>اختر الصف ...</option>
-                    </select>
+                    <div class="form-group-float position-relative">
+                      <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                      <label for="" class="float-label"> الخيار الثاني</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-md-6">
+                    <div class="form-group-float position-relative">
+                      <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                      <label for="" class="float-label"> الخيار الثالث</label>
+                    </div>
+
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group-float position-relative">
+                      <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                      <label for="" class="float-label"> الخيار الرابع</label>
+                    </div>
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                  <div class="col-md-6">
-                    <label for="" class="text-danger">صورة *</label>
-                    <input type="file" class="form-control custom-input" id="subjectAr">                  
+                  <div class="col-md-12">
+                    <div class="form-group-float position-relative">
+                      <input type="number" class="form-control custom-input float-input" id="" placeholder=" " />
+                      <label for="" class="float-label"> درجة السؤال</label>
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <label for="" class="text-danger">مرفقات *</label>
-                    <input type="file" class="form-control custom-input" id="subjectAr">
-                  
+         
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-12">
+                    <label for="" class="text-danger">ملف السؤال</label>
+                    <input type="file" class="form-control custom-input" id="subjectAr" placeholder="ملف السؤال">                  
                   </div>
                 </div>
-
-
-        
+                 
                 <div class="text-end">
-                  <button type="submit" class="btn save-btn">اضافة</button>
+                  <button type="submit" class="btn save-btn">إضافة</button>
                 </div>
               </form>
             </div>
@@ -299,8 +321,8 @@
 
     <div class="messages-body overflow-auto flex-grow-1 p-3">
       <!-- عنصر رسالة -->
-      <a href="manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+      <a href="../manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
           <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
@@ -308,8 +330,8 @@
         <span>٣٠٠ س</span>
       </a>
 
-      <a href="manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+      <a href="../manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
           <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
@@ -318,8 +340,8 @@
       </a>
 
 
-      <a href="manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+      <a href="../manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
           <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
@@ -327,8 +349,8 @@
         <span>٣٠٠ س</span>
       </a>
 
-      <a href="manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+      <a href="../manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
           <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
@@ -338,7 +360,7 @@
       <!-- يمكنك إضافة المزيد من الرسائل هنا -->
     </div>
     <div class="message-footer text-center">
-      <a href="manager-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
+      <a href="../manager-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
     </div>
   </div>
 </div>
