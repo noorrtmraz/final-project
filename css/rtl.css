@@ -1243,20 +1243,21 @@ color: var(--white);
 }
 
 .operations-dropdown {
-min-width: 160px;
-font-size: 1.2rem;
-border-radius: 0;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-padding: 0.5rem 0;
-background-color: #fff;
-border: none;
+  min-width: 160px;
+  font-size: 1.2rem;
+  border-radius: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+  background-color: #fff;
+  border: none;
 
-position: fixed !important;
-  top: auto !important;
-  left: 6rem !important;
-  transform: translateY(0) !important;
-  z-index: 9999;
+  /* ❌ احذف السطور التالية لأنها تخرب التموضع: */
+  position: fixed !important;
+  /* top: auto !important; */
+  /* left: 6rem !important; */
+  /* transform: translateY(0) !important; */
 }
+
 
 .operations-dropdown .dropdown-item {
 padding: 10px 15px;
