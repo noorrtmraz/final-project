@@ -800,6 +800,11 @@ header.header-page img {
     animation: fadeIn 1s ease-in-out;
   }
   
+  .chatContent{
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  
 @keyframes fadeIn {
   0% {
     opacity: 0;

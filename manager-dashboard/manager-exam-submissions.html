@@ -253,7 +253,7 @@
                               </li>
 
                               <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="#" >
+                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="#" data-bs-toggle="modal" data-bs-target="#relodeModal" >
                                   <i class="fas fa-rotate-right action-icon relode-icon-action"></i> اعادة الاختبار
                                 </a>
                               </li>
@@ -267,16 +267,16 @@
                   </table>
 
                   
-                  <!-- Modal حذف السؤال -->
-                  <div class="modal fade" id="deleteModal-question" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                  <!-- Modal  -->
+                  <div class="modal fade" id="relodeModal" tabindex="-1" aria-labelledby="relodeModal" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
                       <div class="modal-content">
                         <div class="modal-header">
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
                         </div>
                         <div class="modal-body text-center">
-                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
-                          <p>هل أنت متأكد أنك تريد حذف السؤال؟</p>
+                          <i class="fas fa-rotate-right fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد اعادة الاختبار لهذا الطالب <span>أحمد محمد</span> </p>
                         </div>
                         <div class="modal-footer custom-modal-footer-manager">
                         <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تأكيد الحذف</button>

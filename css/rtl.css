@@ -810,6 +810,11 @@ header.header-page img {
     animation: fadeIn 1s ease-in-out;
     direction: rtl;
   }
+
+  .chatContent{
+    animation: fadeIn 1s ease-in-out;
+    direction: rtl;
+  }
   
 @keyframes fadeIn {
   0% {
