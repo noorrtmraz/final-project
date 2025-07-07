@@ -328,77 +328,50 @@
                     إضافة صف
                   </a>
 
-             <!-- المودال -->
-<div class="modal fade custom-modal" id="addClassModal" tabindex="-1" aria-labelledby="addClassModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered custom-modal-dialog">
+             <!-- مودال اضافة الصف -->
+          <div class="modal fade custom-modal" id="addClassModal" tabindex="-1" aria-labelledby="addClassModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+              <div class="modal-content custom-modal-content">
 
-    <div class="modal-content custom-modal-content">
+                <!-- رأس المودال -->
+                <div class="modal-header custom-modal-header">
+                  <h5 class="modal-title custom-modal-title" id="addClassModal">إضافة صف</h5>
+                </div>
 
-      <!-- رأس المودال -->
-      <div class="modal-header custom-modal-header">
-        <h5 class="modal-title custom-modal-title" id="addClassModalLabel">إضافة صف جديد</h5>
-      </div>
+                <!-- جسم المودال -->
+                <div class="modal-body custom-modal-body">
+                  <form id="editClassForm" class="custom-form">
+                    <div class="mb-3 custom-form-group">
+                      <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">اسم الصف بالعربي</label>
+                          </div> 
+                    </div>
 
-      <!-- جسم المودال -->
-      <div class="modal-body custom-modal-body">
-        <form id="stageForm" class="custom-form p-3 ">
+                    <div class="mb-3 custom-form-group">
+                      <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">اسم الصف بالانجليزي</label>
+                          </div> 
+                    </div>
 
-          <div class="row align-items-end g-3">
+                    <div class="mb-3 custom-form-group">
+                      <select class="form-select custom-select" id="grade">
+                        <option selected disabled>اختر المرحلة ...</option>
+                      </select>                       
+                    </div>
+                  </form>
+                </div>
 
-            <!-- اسم الصف بالعربي -->
-            <div class="col-md-3">
-              <div class="form-group-float position-relative">
-                <input type="text" class="form-control custom-input float-input" id="classNameAr" placeholder=" " />
-                <label for="classNameAr" class="float-label">اسم الصف بالعربي</label>
+                <!-- التذييل -->
+                <div class="modal-footer custom-modal-footer-manager">
+                  <button type="submit" class="btn btn-primary custom-save-btn" form="editStageForm">تعديل</button>
+                  <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                </div>
+
               </div>
             </div>
-
-            <!-- اسم الصف بالإنجليزي -->
-            <div class="col-md-3">
-              <div class="form-group-float position-relative">
-                <input type="text" class="form-control custom-input float-input" id="classNameEn" placeholder=" " />
-                <label for="classNameEn" class="float-label">اسم الصف بالإنجليزي</label>
-              </div>
-            </div>
-
-            <!-- المرحلة -->
-            <div class="col-md-4">
-              <select class="form-select custom-select" id="grade">
-                <option selected disabled>اختر المرحلة ...</option>
-                <option value="1">الابتدائية</option>
-                <option value="2">الإعدادية</option>
-                <option value="3">الثانوية</option>
-              </select>
-            </div>
-
-            <!-- زر الحذف -->
-            <div class="col-md-2 text-end">
-              <button type="button" class="btn custom-delete-btn">
-               حذف الصف
-              </button>
-            </div>
-
           </div>
-
-          <!-- زر إضافة سطر -->
-          <div class=" mt-4">
-            <button type="button" class="btn custom-add-btn">
-               إضافة صف آخر
-            </button>
-          </div>
-
-        </form>
-      </div>
-
-      <!-- تذييل المودال -->
-      <div class="modal-footer custom-modal-footer-manager">
-        <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">إضافة</button>
-        <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
-      </div>
-
-    </div>
-  </div>
-</div>
 
                                 
                     <input type="search" class="form-control search-input" placeholder="ابحث ...">
