@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark Education</title>
+    <link rel="icon" href="../images/logo-dark.png" type="image/png">
+  
+
+  <!-- ربط ملف bootstrap CSS المحلي -->
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
+    <!-- font awsam cdn link -->
+    <script src="js/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&family=Square+Peg&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.css" rel="stylesheet" />
+  
+
+
+     <!-- custom css file link -->
+      <link  id="theme-style"  rel="stylesheet" href="../css/rtl.css">
+     
+</head>
+</head>
+<body>
+    <!-- الهيدر -->
+<header class="header-page bg-white shadow fixed-top">
+  
+  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3 ">
+
+      <!-- الشعار والقائمة الجانبية -->
+      <div class="d-flex align-items-center logo-spark">
+        <a href="manager-index.html">
+          <img src="../images/spark.png" alt="spark education">
+        </a>
+
+        <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
+
+      </div>
+
+    <!-- القائمة اليسرى (أيقونات) -->
+    <nav class="d-flex gap-4 ms-4 align-items-center">
+
+      <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
+          <i class="fas fa-bell icon-header"></i>
+        </a>
+
+        <a href="manager_chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
+
+          <h6 class="notification-title">الاشعارات</h6>
+
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
+          </div>
+
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
+          </div>
+          
+        </a>
+
+
+      </div>
+
+       <!-- القائمة المنسدلة للحساب -->
+       <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+          <i class="fas fa-user icon-header"></i>
+        </a>
+        
+        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
+          <li class="text-center">
+            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+            <p class="user-name">محمد محمد</p>
+            <p class="user-type">مدير</p>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <form action="">
+              <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+
+
+      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
+
+     
+     
+
+    </nav>
+
+  </div>
+</header>
+
+      
+      <!-- الشريط الجانبي -->
+      <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
+  <ul class="list-unstyled">
+
+    <li>
+      <a href="manager-index.html">
+        <span>لوحة التحكم</span>
+        <i class="fa fa-home"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-subject.html">
+        <span>المواد الدراسية</span>
+        <i class="fas fa-book"></i>
+      </a>
+    </li>
+
+    <!-- عنصر الطلاب مع قائمة تظهر وتختفي -->
+    <li class="dropdown-sidebar">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
+    
+    <i class="toggle-icon fas fa-plus"></i>
+    <div class="d-flex align-items-center gap-2">   
+      <span>الطلاب</span>
+      <i class="fas fa-user-graduate"></i>
+    </div>
+  </a>
+
+  <ul id="studentsMenu" class="collapse list-unstyled ps-4 mt-2">
+    <li><a href="manager-student.html">عرض الطلاب</a></li>
+    <li><a href="manager-graduated.html">الخريجين</a></li>
+    <li><a href="manager-promotion.html">الترقيات</a></li>
+  </ul>
+</li>
+
+
+
+    <li>
+      <a href="manager-teacher.html" class="active">
+        <span>المعلمين</span>
+        <i class="fas fa-chalkboard-teacher"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-parent.html">
+        <span>أولياء الأمور</span>
+        <i class="fas fa-user-shield"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-grade.html">
+        <span>المراحل الدراسية</span>
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-study-content.html">
+        <span>المحتوى الدراسي</span>
+        <i class="fas fa-book-reader"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-meet.html">
+        <span>اللقاءات المباشرة</span>
+        <i class="fas fa-video"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-setting.html">
+        <span>الاعدادات</span>
+        <i class="fa-solid fa-cogs"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-profile.html">
+        <span>الملف الشخصي</span>
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </li>
+  </ul>
+      </div>
+      
+      
+     
+      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;"> 
+        <div class="container my-5 subject-content-container">
+
+  <!-- عنوان المادة والمعلم -->
+  <div class="d-flex justify-content-between align-items-center mb-4 classroom-header">
+    <div class="classroom-title me-3">
+      <h5 class="fw-bold classroom-name">الصف التاسع<span class="section-name"> -أ- </span></h5>
+      <h3 class="subject-name ">اللغة العربية</h3>
+    </div>
+
+       <div class="dropdown">
+            <button class="btn operations-btn-subject dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                اضافة
+            </button>
+            <ul class="dropdown-menu operations-dropdown-subject text-end" aria-labelledby="operationsDropdown">
+
+               <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-add-book.html" >
+                       </i> كتاب
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-add-exam.html" >
+                     اختبار
+                    </a>
+                </li>
+                 <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-add-hw.html" >
+                     واجب
+                    </a>
+                </li>
+
+                 <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-add-meet-auto.html" >
+                      لقاء
+                    </a>
+                </li>
+            </ul>
+        </div>    
+  </div>
+
+  <div class="card-content-subject">
+
+    <!-- بطاقة مهمة -->
+  <div class="card shadow-sm mb-3 content">
+    <div class="card-body d-flex justify-content-between align-items-center flex-wrap content-card-body">
+      <div class="assignment-info">
+        <p class="mb-3 fw-bold content-title">كتاب اللغة العربية</p>
+        <h6 class="text-muted content-date">تاريخ الإضافة: 2025-05-01</h6>
+      </div>
+
+      <div class="dropdown">
+            <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                العمليات
+            </button>
+            <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
+
+               <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="#" >
+                        <i class="fa-solid fa-download action-icon download-icon-action"></i> تنزيل
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-forms/teacher-edit-book.html" >
+                        <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-book">
+                        <i class="fas fa-trash-alt action-icon delete-icon-action"></i> حذف
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+  <div class="card shadow-sm mb-3 content">
+    <div class="card-body d-flex justify-content-between align-items-center flex-wrap content-card-body">
+      <div class="assignment-info">
+        <p class="mb-3 fw-bold content-title">اختبار اللغة العربية</p>
+        <h6 class="text-muted content-date">تاريخ الإضافة: 2025-05-01</h6>
+      </div>
+         <div class="dropdown">
+                <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                العمليات
+                </button>
+             <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
+
+                <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-exam-submissions.html" >
+                        <i class="fas fa-users students-icon action-icon std-icon-action"></i> الطلاب
+                    </a>
+                </li>
+
+                <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-exam-questions.html" >
+                    <i class="fas fa-question-circle action-icon question-icon-action"></i> الاسئلة
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-forms/teacher-edit-exam.html" >
+                        <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
+                    </a>
+                </li>
+    
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-exam">
+                    <i class="fas fa-trash-alt action-icon delete-icon-action"></i> حذف
+                    </a>
+                </li>
+            </ul>
+        </div>
+                            
+
+    </div>
+  </div>
+
+   <div class="card shadow-sm mb-3 content">
+    <div class="card-body d-flex justify-content-between align-items-center flex-wrap content-card-body">
+      <div class="assignment-info">
+        <p class="mb-3 fw-bold content-title">لقاء مباشر في الدرس الأول</p>
+        <h6 class="text-muted content-date">تاريخ الإضافة: 2025-05-01</h6>
+      </div>
+         <div class="dropdown">
+                <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                العمليات
+                </button>
+             <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
+
+                <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-forms/teacher-edit-meet-auto.html" >
+                        <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
+                    </a>
+                </li>
+    
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-meet">
+                    <i class="fas fa-trash-alt action-icon delete-icon-action"></i> حذف
+                    </a>
+                </li>
+            </ul>
+        </div>
+                            
+
+    </div>
+  </div>
+
+
+  
+   <div class="card shadow-sm mb-3 content">
+    <div class="card-body d-flex justify-content-between align-items-center flex-wrap content-card-body">
+      <div class="assignment-info">
+        <p class="mb-3 fw-bold content-title"> الدرس الأول</p>
+        <h6 class="text-muted content-date">تاريخ الإضافة: 2025-05-01</h6>
+      </div>
+         <div class="dropdown">
+                <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                العمليات
+                </button>
+             <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
+
+                <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-forms/teacher-edit-lesson.html" >
+                        <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
+                    </a>
+                </li>
+    
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-lesson">
+                    <i class="fas fa-trash-alt action-icon delete-icon-action"></i> حذف
+                    </a>
+                </li>
+            </ul>
+        </div>
+                            
+
+    </div>
+  </div>
+
+   <div class="card shadow-sm mb-3 content">
+    <div class="card-body d-flex justify-content-between align-items-center flex-wrap content-card-body">
+      <div class="assignment-info">
+        <p class="mb-3 fw-bold content-title">واجب اللغة العربية</p>
+        <h6 class="text-muted content-date">تاريخ الإضافة: 2025-05-01</h6>
+      </div>
+         <div class="dropdown">
+                            <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                              العمليات
+                            </button>
+                            <ul class="dropdown-menu operations-dropdown text-end" aria-labelledby="operationsDropdown">
+
+                               <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-hw-submissions.html" >
+                                  <i class="fas fa-users students-icon action-icon std-icon-action"></i> الطلاب
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-forms/teacher-edit-hw.html" >
+                                  <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
+                                </a>
+                              </li>
+    
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-hw">
+                                  <i class="fas fa-trash-alt action-icon delete-icon-action"></i> حذف
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                            
+
+    </div>
+  </div>
+  </div>
+
+</div>
+
+
+ <!-- Modal حذف الدرس -->
+                   <div class="modal fade" id="deleteModal-lesson" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف هذا الدرس ؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    <!-- Modal حذف القاء -->
+                  <div class="modal fade" id="deleteModal-meet" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف هذا اللقاء ؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                   <!-- Modal حذف الاختبار -->
+                   <div class="modal fade" id="deleteModal-exam" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف هذا الاختبار ؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                     <!-- Modal حذف الكتاب -->
+                   <div class="modal fade" id="deleteModal-book" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف هذا الكتاب ؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                    <!-- Modal حذف الواجب -->
+                   <div class="modal fade" id="deleteModal-hw" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف هذا الواجب ؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+         
+      </div>
+
+
+
+         
+     
+<!-- زر فتح الرسائل باستخدام Bootstrap -->
+<button class="position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
+        type="button" 
+        data-bs-toggle="offcanvas" 
+        data-bs-target="#messagesOffcanvas" 
+        aria-controls="messagesOffcanvas">
+  <i class="fas fa-comments"></i>
+</button>
+
+<!-- Offcanvas الرسائل -->
+<div class="offcanvas offcanvas-bottom messages-panel" tabindex="-1" id="messagesOffcanvas" aria-labelledby="messagesOffcanvasLabel">
+    <div class="offcanvas-header message-title text-white d-flex  justify-content-between align-items-center">
+        <h5 class="offcanvas-title ms-auto">الرسائل</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+      </div>
+      
+      
+  <div class="offcanvas-body d-flex flex-column p-0">
+    <div>
+      <input type="text" class="form-control search-msg" placeholder="ابحث ...">
+    </div>
+
+    <div class="messages-body overflow-auto flex-grow-1 p-3">
+      <!-- عنصر رسالة -->
+      <a href="manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+        <div class="msg-info text-end">
+          <strong class="d-block">المعلم</strong>
+          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+        </div>
+        <span>٣٠٠ س</span>
+      </a>
+
+      <a href="manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+        <div class="msg-info text-end">
+          <strong class="d-block">المعلم</strong>
+          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+        </div>
+        <span>٣٠٠ س</span>
+      </a>
+
+
+      <a href="manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+        <div class="msg-info text-end">
+          <strong class="d-block">المعلم</strong>
+          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+        </div>
+        <span>٣٠٠ س</span>
+      </a>
+
+      <a href="manager-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+        <div class="msg-info text-end">
+          <strong class="d-block">المعلم</strong>
+          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+        </div>
+        <span>٣٠٠ س</span>
+      </a>
+      <!-- يمكنك إضافة المزيد من الرسائل هنا -->
+    </div>
+    <div class="message-footer text-center">
+      <a href="manager-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
+    </div>
+  </div>
+</div>
+          
+
+
+
+
+ <!--- footer start-->
+ <footer class="footer bg-white shadow fixed-bottom">
+
+    &copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة 
+ 
+ </footer>
+<!--- footer ends-->
+
+
+<!-- ربط ملف bootstrap JS المحلي -->
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
+
