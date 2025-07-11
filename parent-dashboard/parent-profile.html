@@ -97,6 +97,8 @@
           <li><hr class="dropdown-divider"></li>
           <li>
             <form action="">
+              <a href="parent-profile.html" class=" dropdown-item-profile"> <i class="fa fa-user"></i>الملف الشخصي</a>
+
               <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
             </form>
           </li>
@@ -118,38 +120,103 @@
 
 
 
-  <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
+<div class="parentContent">
+     <div class="container my-5 parent-info-container">
+  <div class="row bg-white align-items-start parent-info-row">
+
 
     
+    <!-- القسم الأيمن: صورة ومعلومات -->
+    <div class="col-md-4 text-center mt-4 mt-md-0 parent-profile-section">
+      <img src="../images/pic-8.jpg" alt="parent Image" class="img-fluid rounded-circle mb-3 parent-profile-img" width="150">
+      <p class="fw-bold  mb-0 parent-id">9876325422</p>
+      <p class="text-muted parent-role">ولي أمر</p>
+      <button class="btn px-4 mt-2 parent-logout-btn">تسجيل الخروج</button>
+    </div>
+
+    <!-- القسم الأيسر: بيانات الطالب -->
+    <div class="col-md-8 parent-info-section">
+      <h5 class="mb-4 text-center fw-bold parent-info-title">
+        بيانات ولي الأمر الأساسية
+      </h5>
+
+      <div class="row g-3 parent-info-fields">
+
+        <!-- الاسم رباعي -->
+        <div class="col-md-6 parent-info-field">
+          <label class="form-label parent-label">الاسم رباعي</label>
+          <input type="text" class="form-control parent-input" value="محمد خالد محمد علي" readonly>
+        </div>
+
+        <!-- رقم الهوية -->
+        <div class="col-md-6 parent-info-field">
+          <label class="form-label  parent-label">رقم الهوية</label>
+          <input type="text" class="form-control  parent-input" value="2041091047" readonly>
+        </div>
+
+        <!-- المرحلة الدراسية -->
+        <div class="col-md-6 parent-info-field">
+          <label class="form-label  parent-label">العنوان</label>
+          <input type="text" class="form-control parent-input" value="دير البلح" readonly>
+        </div>
+
+        <!-- الصف -->
+        <div class="col-md-6 parent-info-field">
+          <label class="form-label parent-label">الجنس</label>
+          <input type="text" class="form-control parent-input" value="ذكر" readonly>
+        </div>
+
+        <!-- الشعبة -->
+        <div class="col-md-6 parent-info-field">
+          <label class="form-label  parent-label">الشعبة</label>
+          <input type="text" class="form-control parent-input" value="أ" readonly>
+        </div>
+
+        <!-- رقم جوال ولي الأمر -->
+        <div class="col-md-6 parent-info-field">
+          <label class="form-label parent-label">رقم الهاتف</label>
+          <input type="text" class="form-control parent-input" value="0598766555" readonly>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
       
     <!-- محتوى الصفحة هنا -->
   </div>
 
 
 
-   
+  
+      
 <!-- زر فتح الرسائل باستخدام Bootstrap -->
-<button class=" position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
+<button class="position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
         type="button" 
         data-bs-toggle="offcanvas" 
         data-bs-target="#messagesOffcanvas" 
         aria-controls="messagesOffcanvas">
-  <i class="fas fa-message"></i>
-  <span class="msg-label">الرسائل</span>
+  <i class="fas fa-comments"></i>
 </button>
 
 <!-- Offcanvas الرسائل -->
 <div class="offcanvas offcanvas-bottom messages-panel" tabindex="-1" id="messagesOffcanvas" aria-labelledby="messagesOffcanvasLabel">
-    <div class="offcanvas-header message-title text-white d-flex flex-row-reverse justify-content-between align-items-center">
+    <div class="offcanvas-header message-title text-white d-flex  justify-content-between align-items-center">
         <h5 class="offcanvas-title ms-auto">الرسائل</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
       </div>
       
       
   <div class="offcanvas-body d-flex flex-column p-0">
+    <div>
+      <input type="text" class="form-control search-msg" placeholder="ابحث ...">
+    </div>
+
     <div class="messages-body overflow-auto flex-grow-1 p-3">
       <!-- عنصر رسالة -->
-      <a href="student-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="parent-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -158,7 +225,7 @@
         <span>٣٠٠ س</span>
       </a>
 
-      <a href="student-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="parent-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -168,7 +235,7 @@
       </a>
 
 
-      <a href="student-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="parent-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -177,7 +244,7 @@
         <span>٣٠٠ س</span>
       </a>
 
-      <a href="student-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
+      <a href="parent-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
         <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
@@ -188,27 +255,30 @@
       <!-- يمكنك إضافة المزيد من الرسائل هنا -->
     </div>
     <div class="message-footer text-center">
-      <a href="student-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
+      <a href="parent-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
     </div>
   </div>
 </div>
-                  
-      
+          
 
-  
-    
-         <!--- footer start-->
-         <footer class="footer bg-white shadow fixed-bottom">
 
-            &copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة 
-         
-         </footer>
-        <!--- footer ends-->
-      
 
-  <!-- ربط ملف bootstrap JS المحلي -->
-  <script src="../js/bootstrap.bundle.min.js"></script>
-  <script src="../js/script.js"></script>
+
+ <!--- footer start-->
+ <footer class="footer bg-white shadow fixed-bottom">
+
+    &copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة 
+ 
+ </footer>
+<!--- footer ends-->
+
+
+<!-- ربط ملف bootstrap JS المحلي -->
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>
+
+
+
 
