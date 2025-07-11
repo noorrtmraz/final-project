@@ -64,6 +64,67 @@
   }
 
 
+  
+/* error page start */
+
+.error-page{
+  background: linear-gradient(125deg , rgba(7, 35, 64, .5), rgba(88, 159, 67, 0.9));
+}
+ .error-page .custom-section {
+    min-height: 80vh;
+  }
+
+ .error-page .custom-section .custom-image-container {
+    padding: 2rem;
+  }
+
+ .error-page .custom-section .custom-image-container .custom-image {
+    max-width: 100%;
+    height: auto;
+    
+  }
+
+  .error-page .custom-section .custom-text-container {
+    padding: 2rem;
+
+  }
+
+  .error-page .custom-section .custom-text-container .custom-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-shadow:  2px 2px 2px rgba(0, 0, 0, .4);
+     text-align: left;
+  }
+
+  .error-page .custom-section .custom-text-container .custom-paragraph {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+     text-align: left;
+  }
+
+  .custom-back-btn {
+    font-size: 1.5rem;
+    padding: 0.7rem 2rem;
+    border-radius: 0.5rem;
+    background-image: url(../images/back-login.webp);
+    background-size: cover;
+    color: var(--white);
+    font-weight: bold;
+    border: 1px solid var(--main-color);
+  }
+  .custom-back-btn:hover{
+    background-image:  url(../images/back-login.webp);;
+    color: var(--white);
+    border: 1px solid var(--main-color);
+  }
+
+  
+/*  error page end */
+
+
 
 /* header start */
 
@@ -3470,6 +3531,200 @@ text-decoration: none;
 
 
 /* ------student dashboard end------- */
+
+/* --------- parent dashboard start------------ */
+
+.parentContent{
+  margin-top: 4rem;
+}
+
+.parentContent .welcome-card-parent {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border: none;
+  background-color: rgba(88, 159, 67, 0.2);
+  padding: 2rem;
+  box-shadow:  0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.parentContent .welcome-card-parent .welcome-parent{
+  display: flex;
+  justify-content: space-between;
+}
+.parentContent .welcome-card-parent .welcome-img-parent {
+  width: 14rem;
+  margin-right: 3rem;
+}
+
+.parentContent .welcome-card-parent .welcome-text-parent {
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.parentContent .welcome-card-parent .welcome-text-parent h4 {
+  color: var(--main-color);
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+}
+.parentContent .welcome-card-parent .welcome-text-parent p {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  padding-top: 1rem;
+}
+
+/* بطاقة الأبناء */
+.parentContent .children-card {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border: none;
+  background-color:var(--white) ;
+  /* padding: 2rem; */
+  /* border: 1px solid #ddd; */
+  box-shadow:  0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.parentContent .children-card .children-title {
+  color: var(--main-color);
+  background-color:  rgba(88, 159, 67, 0.2);
+  padding: 1rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+  font-size: 1.5rem;
+}
+
+.parentContent .children-card .children-icon{
+  font-size: 4rem;
+  color: var(--main-color);
+  margin-top: 1.5rem;
+}
+
+.parentContent .children-card .children-count{
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.parentContent .children-card .children-btn {
+  color: var(--main-color);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--light-bg);
+  padding-top: 1rem;
+  
+}
+.parentContent .children-card .children-btn:hover {
+  border-top: 1px solid var(--light-bg);
+}
+
+/* بطاقة الملف الشخصي */
+.parentContent .profile-card {
+   border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border: none;
+  background-color:var(--white) ;
+  /* padding: 2rem; */
+  /* border: 1px solid #ddd; */
+  box-shadow:  0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.parentContent .profile-card .profile-title {
+  color: var(--main-color);
+  background-color:  rgba(88, 159, 67, 0.2);
+  padding: 1rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+  font-size: 1.5rem;
+}
+
+.parentContent .profile-card .profile-icon{
+  font-size: 4rem;
+  color: var(--main-color);
+  margin-top: 1.5rem;
+}
+
+.parentContent .profile-card .profile-info{
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.parentContent .profile-card .profile-btn {
+  color: var(--main-color);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--light-bg);
+  padding-top: 1rem;
+  
+}
+.parentContent .profile-card .profile-btn:hover {
+  border-top: 1px solid var(--light-bg);
+}
+
+
+/* ----------------- */
+.children-card-parent{
+  margin-bottom: 5rem;
+}
+
+.children-card-parent .student-card {
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+      border: none;
+      background-color:var(--white) ;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      /* box-shadow:  1px 3px 5px rgba(0, 0, 0, 0.1); */
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+   .children-card-parent .student-card:hover {
+      transform: translateY(-2px);
+    }
+
+   .children-card-parent .student-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+
+  .children-card-parent  .student-name {
+      color: var(--main-color);
+      font-weight: bold;
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+    }
+
+  .children-card-parent  .info-text {
+      font-weight: 500;
+      color: #333;
+      font-size: 1.2rem;
+      padding-top: 1rem;
+    }
+
+   .children-card-parent .submit-count {
+      font-weight: bold;
+      color: var(--main-color);
+    }
+
+   .children-card-parent .btn-view {
+      background-color: var(--main-color);
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      padding: 0.5rem 2rem;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    /* --------- parent dashborad end---------- */
 
   
 
