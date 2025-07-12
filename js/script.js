@@ -320,9 +320,58 @@ function showForm(type, clickedIcon) {
     });
   });
 
-  
 
 
+  // المحادثات عند ولي الأمر
+
+function openChatPopup(name) {
+  document.getElementById("chatUserName").innerText = name;
+  document.getElementById("chatPopup").style.display = "block";
+
+  // إغلاق نافذة الرسائل
+  const offcanvasEl = document.getElementById('messagesOffcanvas');
+  const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+  if (bsOffcanvas) {
+    bsOffcanvas.hide();
+  }
+}
+
+  function closeChatPopup() {
+    document.getElementById("chatPopup").style.display = "none";
+  }
+
+ function sendMessage(event) {
+  if (event.key === "Enter") {
+    const input = event.target;
+    const message = input.value.trim();
+    if (message) {
+      const chatBody = document.getElementById("chatBody");
+
+      // رسالة المستخدم
+      const userMsg = document.createElement("div");
+      userMsg.className = "chat-msg-user";
+      userMsg.textContent = message;
+      chatBody.appendChild(userMsg);
+
+      input.value = "";
+
+      // رد تلقائي بعد ثانية
+      setTimeout(() => {
+        const botReply = document.createElement("div");
+        botReply.className = "chat-msg-reply";
+        botReply.textContent = "شكراً لرسالتك!";
+        chatBody.appendChild(botReply);
+
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }, 1000);
+
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+  }
+}
+
+
+  // ------------------------------------
   // اسئلة الاختبار 
    let currentQuestion = 1;
   const totalQuestions = 4;

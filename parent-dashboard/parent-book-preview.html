@@ -120,70 +120,49 @@
 
 
 
-<div class="parentContent">
-     <div class="container my-5 parent-info-container">
-  <div class="row bg-white align-items-start parent-info-row">
-
-
-    
-    <!-- القسم الأيمن: صورة ومعلومات -->
-    <div class="col-md-4 text-center mt-4 mt-md-0 parent-profile-section">
-      <img src="../images/pic-8.jpg" alt="parent Image" class="img-fluid rounded-circle mb-3 parent-profile-img" width="150">
-      <p class="fw-bold  mb-0 parent-id">9876325422</p>
-      <p class="text-muted parent-role">ولي أمر</p>
-      <button class="btn px-4 mt-2 parent-logout-btn">تسجيل الخروج</button>
-    </div>
-
-    <!-- القسم الأيسر: بيانات الطالب -->
-    <div class="col-md-8 parent-info-section">
-      <h5 class="mb-4 text-center fw-bold parent-info-title">
-        بيانات ولي الأمر الأساسية
-      </h5>
-
-      <div class="row g-3 parent-info-fields">
-
-        <!-- الاسم رباعي -->
-        <div class="col-md-6 parent-info-field">
-          <label class="form-label parent-label">الاسم رباعي</label>
-          <input type="text" class="form-control parent-input" value="محمد خالد محمد علي" readonly>
+  <div class="parentContent">        
+      <div class="container">
+    <div class="preview-box">
+      <div class="preview-header">
+        تفاصيل الكتاب
+      </div>
+      <div class="preview-content">
+        <div class="preview-row">
+          <div class="preview-label">اسم الكتاب :</div>
+          <div class="preview-value">كتاب لغة عربية</div>
         </div>
 
-        <!-- رقم الهوية -->
-        <div class="col-md-6 parent-info-field">
-          <label class="form-label  parent-label">رقم الهوية</label>
-          <input type="text" class="form-control  parent-input" value="2041091047" readonly>
+        <div class="preview-row">
+          <div class="preview-label">المادة :</div>
+          <div class="preview-value">لغة عربية</div>
         </div>
 
-        <!-- المرحلة الدراسية -->
-        <div class="col-md-6 parent-info-field">
-          <label class="form-label  parent-label">العنوان</label>
-          <input type="text" class="form-control parent-input" value="دير البلح" readonly>
+        <div class="preview-row">
+          <div class="preview-label">تاريخ الاضافة :</div>
+          <div class="preview-value">19-7-2025</div>
         </div>
 
-        <!-- الصف -->
-        <div class="col-md-6 parent-info-field">
-          <label class="form-label parent-label">الجنس</label>
-          <input type="text" class="form-control parent-input" value="ذكر" readonly>
+        <div class="preview-row-feedback">
+          <div class="preview-label">ملاحظات :</div>
+          <div>
+            <div class="note-box">ملاحظات الطالب: محمد علي</div>
+          </div>
         </div>
 
-        <!-- الشعبة -->
-        <div class="col-md-6 parent-info-field">
-          <label class="form-label  parent-label">الشعبة</label>
-          <input type="text" class="form-control parent-input" value="أ" readonly>
-        </div>
 
-        <!-- رقم جوال ولي الأمر -->
-        <div class="col-md-6 parent-info-field">
-          <label class="form-label parent-label">رقم الهاتف</label>
-          <input type="text" class="form-control parent-input" value="0598766555" readonly>
-        </div>
-
+          <div class="preview-buttons d-flex  gap-3">
+        <a href="student-hw-submission.html" class="btn preview-start-btn">
+          <i class="fas fa-download ms-1"></i> تنزيل
+        </a>
+        <a href="student-hw-submission.html" class="btn book-preview-btn">
+          <i class="fas fa-eye ms-1"></i> معاينة 
+        </a>
+        
+      </div>
       </div>
     </div>
-
-
   </div>
-</div>
+    
       
     <!-- محتوى الصفحة هنا -->
   </div>
@@ -191,7 +170,7 @@
 
 
   
-    
+ 
 <!-- زر فتح الرسائل باستخدام Bootstrap -->
 <button class="position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
         type="button" 

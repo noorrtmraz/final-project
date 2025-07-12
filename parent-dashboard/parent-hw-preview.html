@@ -120,8 +120,65 @@
 
 
 
-  <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
+  <div class="parentContent">        
+      <div class="container">
+    <div class="preview-box">
+      <div class="preview-header">
+        تفاصيل الواجب
+      </div>
+      <div class="preview-content">
+        <div class="preview-row">
+          <div class="preview-label"> وصف الواجب :</div>
+          <div class="preview-value">اختبار لغة عربية عبارة عن اسئلة الواحدة الاولى يتم حلها وتسليمها إما وورد أو بي دي إف</div>
+        </div>
 
+        <div class="preview-row">
+          <div class="preview-label">الدرجة الكلية :</div>
+          <div class="preview-value">15</div>
+        </div>
+
+        <div class="preview-row">
+          <div class="preview-label">انتهاء التسليم :</div>
+          <div class="preview-value">2025-05-24 15:01:00</div>
+        </div>
+
+        <div class="preview-row-feedback">
+          <div>
+            <div class="note-box">قام الطالب <span>أحمد أحمد </span> بتسليم الواجب بالفعل</div>
+          </div>
+        </div>
+
+        <div class="preview-row">
+          <div class="preview-label">تاريخ التسليم :</div>
+          <div class="preview-value">2025-05-22 1:21 PM</div>
+        </div>
+
+    
+        <div class="preview-row">
+          <div class="preview-label">الحالة :</div>
+          <div>
+            <span class="preview-grade">تم التسليم</span>
+          </div>
+        </div>
+
+         <div class="preview-row">
+          <div class="preview-label">الدرجة :</div>
+          <div>
+            <span class="preview-grade">13/15</span>
+          </div>
+        </div>
+
+        <div class="preview-row-feedback">
+          <div class="preview-label">ملاحظات :</div>
+          <div>
+            <div class="note-box">ملاحظات الطالب <span>أحمد أحمد</span></div>
+          </div>
+        </div>
+
+       
+      </div>
+    </div>
+  </div>
     
       
     <!-- محتوى الصفحة هنا -->
@@ -129,8 +186,8 @@
 
 
 
- 
-      
+  
+  
 <!-- زر فتح الرسائل باستخدام Bootstrap -->
 <button class="position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
         type="button" 
@@ -155,67 +212,84 @@
 
     <div class="messages-body overflow-auto flex-grow-1 p-3">
       <!-- عنصر رسالة -->
-      <a href="parent-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
-        <div class="msg-info text-end">
-          <strong class="d-block">المعلم</strong>
-          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-        </div>
-        <span>٣٠٠ س</span>
-      </a>
-
-      <a href="parent-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
-        <div class="msg-info text-end">
-          <strong class="d-block">المعلم</strong>
-          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-        </div>
-        <span>٣٠٠ س</span>
-      </a>
+     <div class="d-flex align-items-center border-bottom py-2 text-dark message-item" style="cursor: pointer;" onclick="openChatPopup('المعلم')">
+  <img src="../images/pic-2.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+  <div class="msg-info text-end">
+    <strong class="d-block">المعلم</strong>
+    <p class="mb-0">لديك مهام جديدة</p>
+  </div>
+  <span>٣٠٠ س</span>
+</div>
 
 
-      <a href="parent-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
-        <div class="msg-info text-end">
-          <strong class="d-block">المعلم</strong>
-          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-        </div>
-        <span>٣٠٠ س</span>
-      </a>
+      <div class="d-flex align-items-center border-bottom py-2 text-dark message-item" style="cursor: pointer;" onclick="openChatPopup('المعلم')">
+  <img src="../images/pic-2.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+  <div class="msg-info text-end">
+    <strong class="d-block">المعلم</strong>
+    <p class="mb-0">لديك مهام جديدة</p>
+  </div>
+  <span>٣٠٠ س</span>
+</div>
 
-      <a href="parent-chat.html" class="d-flex align-items-center border-bottom py-2 text-decoration-none text-dark message-item">
-        <img src="../images/pic-1.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+
+
+     <div class="d-flex align-items-center border-bottom py-2 text-dark message-item" style="cursor: pointer;" onclick="openChatPopup('المعلم')">
+        <img src="../images/pic-2.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
         <div class="msg-info text-end">
           <strong class="d-block">المعلم</strong>
-          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+          <p class="mb-0">لديك مهام جديدة</p>
         </div>
         <span>٣٠٠ س</span>
-      </a>
+      </div>
+
+<div class="d-flex align-items-center border-bottom py-2 text-dark message-item" style="cursor: pointer;" onclick="openChatPopup('المعلم')">
+  <img src="../images/pic-2.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+  <div class="msg-info text-end">
+    <strong class="d-block">المعلم</strong>
+    <p class="mb-0">لديك مهام جديدة</p>
+  </div>
+  <span>٣٠٠ س</span>
+</div>
+
       <!-- يمكنك إضافة المزيد من الرسائل هنا -->
-    </div>
-    <div class="message-footer text-center">
-      <a href="parent-chat.html" class="text-decoration-none ">إظهار جميع الرسائل</a>
     </div>
   </div>
 </div>
-          
+                  
+      
 
+<!-- نافذة المحادثة المنبثقة -->
+<div class="card-message chat-popup-wrapper position-fixed bottom-0 shadow" id="chatPopup" style="display: none;">
+  
+  <div class="chat-popup-header d-flex justify-content-between align-items-center">
+    <button class="chat-close-button btn btn-sm btn-close" onclick="closeChatPopup()"></button>
+    <span id="chatUserName" class="chat-username">المعلم</span>
+  </div>
 
+  <div class="chat-popup-body overflow-auto" id="chatBody">
+    <div class="chat-msg-bot text-muted small">مرحباً! كيف يمكنني مساعدتك؟</div>
+  </div>
 
+  <div class="chat-popup-footer">
+    <input type="text" class="chat-input form-control" placeholder="اكتب رسالة..." onkeydown="sendMessage(event)">
+  </div>
 
- <!--- footer start-->
- <footer class="footer bg-white shadow fixed-bottom">
+</div>
 
-    &copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة 
- 
- </footer>
-<!--- footer ends-->
+  
+    
+         <!--- footer start-->
+         <footer class="footer bg-white shadow fixed-bottom">
 
+            &copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة 
+         
+         </footer>
+        <!--- footer ends-->
+      
 
-<!-- ربط ملف bootstrap JS المحلي -->
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/script.js"></script>
+  <!-- ربط ملف bootstrap JS المحلي -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
-
 
