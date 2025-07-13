@@ -4010,6 +4010,102 @@ text-decoration: none;
 }
 
 
+/* --------- exam review------------ */
+.form-check-ltr {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+/* الصندوق الكامل للسؤال */
+.question-card {
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* عنوان السؤال */
+.question-card .question-title {
+  background-color: rgba(88, 159, 67, 0.2);
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  padding: 1rem;
+}
+
+/* جسم الخيارات */
+.question-card .question-body {
+  padding: 1.5rem;
+}
+
+/* كل خيار */
+.question-card .question-body .answer-option {
+  font-size: 1.3rem;
+}
+
+.question-card .question-body .answer-option label{
+  margin-left: 3rem;
+}
+
+/* الخيار المختار وكان خاطئ */
+.question-card .question-body .answer-option .answer-wrong.selected-by-student {
+  border-radius: 8px;
+  color: var(--red);
+}
+
+/* الخيار المختار وكان خاطئ */
+.question-card .question-body .answer-option .answer-correct.selected-by-student {
+  border-radius: 8px;
+  color: var(--main-color);
+}
+
+.question-card .question-body .answer-option .wrong-icon {
+  color: #dc3545;
+  margin-left: 6px;
+}
+
+/* الخيار الصحيح */
+.question-card .question-body .answer-option .answer-correct {
+  border-radius: 8px;
+}
+
+.question-card .question-body .answer-option .correct-icon {
+  color: var(--main-color);
+  margin-left: 6px;
+}
+
+/* خانة النتيجة أسفل السؤال */
+.question-card .question-footer {
+  background-color:rgba(88, 159, 67, 0.05) ;
+  font-size: 1.3rem;
+  padding-left: 1rem;
+}
+
+.question-card .question-footer .exam-grade{
+  color: var(--secondary-color);
+  font-weight: bold;
+  
+}
+
+.question-card .question-footer .exam-grade span{
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: 0 1rem;
+  border-radius: 4px;
+}
+
+
+.question-card .question-footer .exam-correct-answer{
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.question-card .question-footer .exam-correct-answer span{
+  color: var(--main-color);
+}
+
+
     /* --------- parent dashborad end---------- */
 
   
