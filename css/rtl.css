@@ -3034,13 +3034,13 @@ transition: 0.2s;
 
 
 
-.card-content-subject{
+.card-content-subject-empty{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card-content-subject .empty-page{
+.card-content-subject-empty .empty-page{
   font-size: 3rem;
   font-weight: 200;
   color: var(--main-color);
