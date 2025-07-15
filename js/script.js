@@ -430,3 +430,22 @@ function openChatPopup(name) {
 
   updateTimer(); // عرض أولي
   const timerInterval = setInterval(updateTimer, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+   document.querySelectorAll('.unit-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const unit = header.parentElement;
+      unit.classList.toggle('open');
+    });
+  });
