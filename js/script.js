@@ -373,38 +373,72 @@ function openChatPopup(name) {
 
   // ------------------------------------
   // اسئلة الاختبار 
-   let currentQuestion = 1;
-  const totalQuestions = 4;
+  const questionsPerPage = 5;
+  const totalQuestions = 10;
+  let currentPage = 1;
 
-  function showQuestion(index) {
-    for (let i = 1; i <= totalQuestions; i++) {
-      document.getElementById(`question-${i}`).classList.remove("active");
-      document.querySelectorAll(".question-number-btn")[i - 1].classList.remove("active");
-    }
-    document.getElementById(`question-${index}`).classList.add("active");
-    document.querySelectorAll(".question-number-btn")[index - 1].classList.add("active");
-    currentQuestion = index;
+  // إنشاء أزرار الأرقام الجانبية
+  const btnContainer = document.getElementById("questionNumbers");
+  for (let i = 1; i <= totalQuestions; i++) {
+    const btn = document.createElement("button");
+    btn.classList.add("btn", "btn-sm", "question-number-btn");
+    btn.textContent = i;
+    btn.onclick = () => {
+      const page = Math.ceil(i / questionsPerPage);
+      showPage(page);
+    };
+    btnContainer.appendChild(btn);
   }
 
-  document.getElementById("nextBtn").addEventListener("click", function () {
-    if (currentQuestion < totalQuestions) {
-      showQuestion(currentQuestion + 1);
+  function showPage(page) {
+    const start = (page - 1) * questionsPerPage + 1;
+    const end = Math.min(start + questionsPerPage - 1, totalQuestions);
+
+    // إخفاء كل الأسئلة
+    for (let i = 1; i <= totalQuestions; i++) {
+      document.getElementById(`question-${i}`).style.display = "none";
+    }
+
+    // عرض أسئلة الصفحة الحالية
+    for (let i = start; i <= end; i++) {
+      document.getElementById(`question-${i}`).style.display = "block";
+    }
+
+    // تمييز الأزرار الخاصة بالصفحة
+    const allBtns = document.querySelectorAll(".question-number-btn");
+    allBtns.forEach((btn, index) => {
+      const questionNumber = index + 1;
+      const isInPage = questionNumber >= start && questionNumber <= end;
+      btn.classList.toggle("active", isInPage);
+    });
+
+    currentPage = page;
+  }
+
+  // التالي والسابق
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    if (currentPage * questionsPerPage < totalQuestions) {
+      showPage(currentPage + 1);
     }
   });
 
-  document.getElementById("prevBtn").addEventListener("click", function () {
-    if (currentQuestion > 1) {
-      showQuestion(currentQuestion - 1);
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    if (currentPage > 1) {
+      showPage(currentPage - 1);
     }
   });
 
+  window.onload = () => {
+    showPage(1);
+  };
 
+
+
+  // ---------------------------------------
 
   // عداد الوقت 
 
   const timerElement = document.getElementById("timer");
-
-  // قراءة الرقم من الخاصية data-time
   let durationInMinutes = parseInt(timerElement.dataset.time);
   let time = durationInMinutes * 60;
 
@@ -412,7 +446,6 @@ function openChatPopup(name) {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
 
-    // عرض الوقت داخل العنصر
     timerElement.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 
     if (time <= 0) {
@@ -425,7 +458,6 @@ function openChatPopup(name) {
 
   function endExam() {
     alert("انتهى الوقت! سيتم تسليم الاختبار الآن.");
-    // يمكنك هنا إعادة توجيه أو إرسال الطلب أو إخفاء المحتوى
   }
 
   updateTimer(); // عرض أولي

@@ -2619,8 +2619,9 @@ font-weight: bold;
 
 .content-title{
   font-size: 1.8rem;
-  text-shadow:  1px 1px 2px rgba(0, 0, 0, .2);
+  /* text-shadow:  1px 1px 2px rgba(0, 0, 0, .2); */
   color: var(--secondary-color);
+  font-weight: bold;
 
 }
 
@@ -3273,6 +3274,26 @@ text-decoration: none;
     }
 
 
+        .exam-container .exam-header p{
+      color: var(--main-color);
+      font-weight: 220;
+      padding: 1rem;
+      font-size: 2rem;
+      text-shadow:  2px 2px 2px rgba(0, 0, 0, .1);
+    }
+
+    .question-number-container img{
+      border-radius: 50%;
+      margin-top: 2rem;
+    }
+
+    .question-number-container h6{
+      color: #b7b7b7;
+      padding: 1.5rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
     
     /* --------------------------- */
     
@@ -3516,6 +3537,74 @@ text-decoration: none;
       font-size: 1.2rem;
       margin-bottom: 1rem;
       padding: 1rem;
+    }
+
+     /*----------------------- */
+
+    
+.custom-answer th{
+    background-color: var(--white);
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: normal;
+
+}
+
+.custom-answer td{
+    padding: 1.4rem;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+
+   .custom-answer .custom-row-answer  .answer-present {
+      /* background-color: var(--main-color); أخضر */
+      color: var(--main-color);
+      padding: 2px 5px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+    }
+
+    .answer-missing {
+      /* background-color: var(--red); أحمر */
+      color: var(--red);
+      padding: 2px 5px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+    }
+
+    .end-of-exam{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .end-of-exam .back-to-exam-btn{
+      background-color: var(--main-color);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.3rem;
+      padding: .5rem 1rem;
+      border-radius: 4px;
+      margin-right:1rem ;
+    }
+
+    .end-of-exam .end-of-exam-btn{
+      background-color:var(--main-color);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.3rem;
+      padding: .5rem 1rem;
+      border-radius: 4px;
+    }
+
+
+    .end-of-exam .back-to-exam-btn:hover,
+    .end-of-exam .end-of-exam-btn:hover{
+      background-color: rgba(88, 159, 67, 0.7);
+      transition: .3s linear;
     }
 
 
@@ -4134,6 +4223,12 @@ text-decoration: none;
     font-size: 1.3rem;
   }
 
+    .unit-content-subject .unit-link{
+    text-decoration: none;
+  }
+  .unit-content-subject .unit-link i{
+    margin-left: 1rem;
+  }
     .unit-action .action-eye-btn{
     background-color: var(--main-color);
     color: var(--white);
