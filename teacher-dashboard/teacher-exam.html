@@ -117,7 +117,7 @@
 </header>
 
       
-      <!-- الشريط الجانبي -->
+     <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
             <ul class="list-unstyled">
                 <li>
@@ -188,21 +188,20 @@
       </div>
       
       
-       <!-- المحتوى الرئيسي -->
-       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
+      <!-- المحتوى الرئيسي -->
+      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
 
-        <h3 class="teacher-title">جدول الاختبارات</h3> 
+         <h3 class="teacher-title">جدول الاختبارات</h3> 
        
         <div class="table-users-teacher mt-5"> 
             <!-- المحتوى -->
             <div class="table-content-teacher tab-content" id="myTabContent">
               <div class="tab-pane fade show active" role="tabpanel">
-                 <div class="header-table-teacher">   
-                  <a href="teacher-forms/teacher-add-exam.html">اضافة اختبار </a>
+                <div class="header-table-teacher">   
+                  <a href="teacher-forms/teacher-add-exam.html">اضافة اختبار</a>
                   <input type="search" class="form-control search-input" placeholder="ابحث ...">
               
                 </div>
-
                 <div class="table-responsive">
                   <table class="table text-center custom-user-table-teacher">
                     <thead class="thead-user">
@@ -213,13 +212,12 @@
                         <th>الصف</th>
                         <th>الشعبة</th>
                         <th>مدة الاختبار</th>
-                        <th> بداية الاختبار</th>
-                        <th>نهاية الاختبار</th>
+                        <th>بداية</th>
+                        <th>نهاية</th>
                         <th>العمليات</th>
                       </tr>
                     </thead>
                     <tbody>
-                    
                       <tr>
                         <td>1</td>
                         <td>اختبار الوحدة الاولى</td>
@@ -228,7 +226,7 @@
                         <td>أ</td>
                         <td>20 دقيقة</td>
                         <td>12-2-2025 12:00pm</td>
-                        <td>12-2-2025 12:00am</td> 
+                        <td>12-2-2025 12:00am</td>
                        <td class="position-relative">
                           <div class="dropdown">
                             <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -243,11 +241,12 @@
                                 </a>
                               </li>
 
-                               <li>
+                              <li>
                                 <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-exam-questions.html" >
                                   <i class="fas fa-question-circle action-icon question-icon-action"></i> الاسئلة
                                 </a>
                               </li>
+
                               <li>
                                 <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-forms/teacher-edit-exam.html" >
                                   <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
@@ -263,10 +262,12 @@
                           </div>
                         </td>
                       </tr>
+
+                      
                     </tbody>
                   </table>
 
-                   <!-- Modal حذف الاختبار -->
+                   <!-- Modal حذف الواجب -->
                    <div class="modal fade" id="deleteModal-exam" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
                       <div class="modal-content">
@@ -297,7 +298,7 @@
 
 
      
-   
+  
   
     
 <!-- زر فتح الرسائل باستخدام Bootstrap -->
@@ -387,27 +388,6 @@
   </div>
 
 </div>
-
-  
-    
-         <!--- footer start-->
-         <footer class="footer bg-white shadow fixed-bottom">
-
-            &copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة 
-         
-         </footer>
-        <!--- footer ends-->
-      
-
-  <!-- ربط ملف bootstrap JS المحلي -->
-  <script src="../js/bootstrap.bundle.min.js"></script>
-  <script src="../js/script.js"></script>
-</body>
-</html>
-
-
-                  
-      
 
   
     
