@@ -2830,7 +2830,8 @@ transition: 0.2s;
 
 }
 
-/* ---------------- */
+
+/* -------------- */
 .exam-preview-container {
   width: 80%;
   margin-right: auto;
@@ -3783,6 +3784,60 @@ transition: 0.2s;
 
 
 /* --------- exam review------------ */
+
+.result-summary-container {
+  background-color: var(--white) ;
+  padding: 1rem;
+  border-radius: 0;
+  border: 1px solid var(--light-bg);
+}
+
+.result-item {
+  min-width: 100px;
+  margin: 0 10px;
+}
+
+.result-item .label {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+}
+
+.result-item .value {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.result-item .correct-icon{
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: .4rem .5rem;
+  margin-left: .7rem;
+  font-size: 1.3rem;
+  text-shadow:  2px 2px 2px rgba(0, 0, 0, .4);
+  border-radius: 3px;
+}
+
+.result-item .wrong-icon{
+  background-color: var(--red);
+  color: var(--white);
+  padding: .4rem .5rem;
+  margin-left: .7rem;
+  font-size: 1.3rem;
+  text-shadow:  2px 2px 2px rgba(0, 0, 0, .4);
+  border-radius: 3px;
+}
+
+.result-item .chart-icon{
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: .4rem .5rem;
+  margin-left: .7rem;
+  font-size: 1.3rem;
+  text-shadow:  2px 2px 2px rgba(0, 0, 0, .4);
+  border-radius: 3px;
+}
 
 
 /* الصندوق الكامل للسؤال */

@@ -221,6 +221,24 @@
       
     <div class="container my-5">
 
+      
+      <div class="result-summary-container alert alert-light d-flex justify-content-around align-items-center mb-4 text-center">
+        <div class="result-item correct-answer">
+          <i class="fa-solid fa-check correct-icon"></i> <strong class="label"> الصحيحة:</strong>
+          <span class="value">8</span>
+        </div>
+        <div class="result-item wrong-answer">
+          <i class="fas fa-times wrong-icon"></i><strong class="label"> الخاطئة:</strong>
+          <span class="value">2</span>
+        </div>
+        <div class="result-item total-score">
+          <i class="fas fa-chart-bar chart-icon"></i><strong class="label"> العلامة:</strong>
+          <span class="value">8 / 10</span>
+        </div>
+      </div>
+
+
+
     <!-- بطاقة سؤال -->
     <div class="card question-card mb-4">
       <div class="card-header question-title fw-bold">
@@ -230,7 +248,7 @@
       <div class="card-body question-body">
 
         <!-- خيار خاطئ مختار من الطالب -->
-        <div class="form-check form-check-reverse mb-2 answer-option answer-wrong selected-by-student">
+        <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option answer-wrong selected-by-student">
           <input class="form-check-input" type="radio" checked disabled>
           <label class="fw-bold">
             برلين <i class="fas fa-times wrong-icon"></i>
@@ -238,7 +256,7 @@
         </div>
 
         <!-- الخيار الصحيح -->
-        <div class="form-check form-check-reverse mb-2 answer-option">
+        <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option">
           <input class="form-check-input" type="radio" disabled>
           <label>
             باريس
@@ -246,14 +264,14 @@
         </div>
 
         <!-- باقي الخيارات -->
-        <div class="form-check form-check-reverse mb-2 answer-option">
+        <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option">
           <input class="form-check-input" type="radio" disabled>
           <label>
             مدريد
           </label>
         </div>
 
-        <div class="form-check form-check-reverse mb-2 answer-option">
+        <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option">
           <input class="form-check-input" type="radio" disabled>
           <label>
             روما
@@ -278,7 +296,7 @@
       <div class="card-body question-body">
 
         <!-- خيار خاطئ غير مختار -->
-        <div class="form-check form-check-reverse mb-2 answer-option">
+        <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option">
           <input class="form-check-input" type="radio" disabled>
           <label>
             برلين
@@ -286,7 +304,7 @@
         </div>
 
         <!-- الخيار الصحيح والمختار من الطالب -->
-        <div class="form-check form-check-reverse mb-2 answer-option answer-correct selected-by-student">
+        <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option answer-correct selected-by-student">
           <input class="form-check-input" type="radio" checked disabled>
           <label  class="fw-bold">
             باريس <i class="fa-solid fa-check correct-icon"></i>
@@ -294,14 +312,14 @@
         </div>
 
         <!-- باقي الخيارات -->
-        <div class="form-check form-check-reverse mb-2 answer-option ">
+        <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option ">
           <input class="form-check-input" type="radio" disabled>
           <label>
             مدريد
           </label>
         </div>
 
-        <div class="form-check form-check-reverse mb-2 answer-option">
+        <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option">
           <input class="form-check-input" type="radio" disabled>
           <label>
             روما
