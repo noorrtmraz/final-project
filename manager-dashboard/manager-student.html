@@ -267,15 +267,13 @@
                         <td>الابتدائي</td>
                         <td>الأول</td>
                         <td>أ</td>
-                        <td class="position-relative">
-                          <div class="dropdown">
-                            <button class="btn operations-btn dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                              العمليات
-                            </button>
-                              <ul class="dropdown-menu dropdown-menu-end operations-dropdown text-end" aria-labelledby="operationsDropdown">
-
-
-                              <li>
+                        <td>
+                              <div class="dropdown">
+                                <button class="operations-btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                    العمليات
+                                </button>
+                                <ul class="dropdown-menu operations-btn-item">
+                                   <li>
                                 <a class="dropdown-item d-flex align-items-center gap-2" href="manager-data-student.html">
                                    <i class="fas fa-eye action-icon eye-icon-action"></i> عرض بيانات الطالب
                                 </a>
@@ -291,9 +289,10 @@
                                   <i class="fas fa-trash-alt action-icon delete-icon-action"></i> حذف
                                 </a>
                               </li>
-                            </ul>
-                          </div>
-                        </td>
+                                </ul>
+                              </div>
+                          </td>
+                       
                         
                   <!-- Modal حذف الطالب -->
                   <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">

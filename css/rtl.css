@@ -925,13 +925,6 @@ header.header-page img {
     direction: rtl;
   }
 
-.table-users{
-    width: 95%;
-    margin-right: auto;
-    margin-left: auto;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0 ,0.15);
-    padding: 2rem;
-}
 
 .table-users ul.nav li button{
   font-size: 1.4rem;
@@ -1285,49 +1278,82 @@ h6.section-heading{
 
 /* -------------- */
 
+   .dropdown-menu {
+    margin-top: 0 !important;
+    transform: none !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 13rem !important;
+    min-width: unset !important;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1050;
+  }
 
-/* زر العمليات */
-.operations-btn {
-background-color: var(--main-color);
-color: white;
-font-weight: bold;
-font-size: 1.3rem;
-border-radius: 0;
-padding: 6px 10px;
-border: none;
-transition: 0.3s;
+  .table-responsive {
+    overflow: visible !important;
+  }
+
+
+.table-users{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0 ,0.15);
+    padding: 2rem;
+    overflow: visible !important;
 }
 
-.operations-btn:hover {
-background-color: rgba(88, 159, 67, 0.2);
-color: var(--white);
-}
 
-.operations-dropdown {
-  min-width: 160px;
-  font-size: 1.2rem;
-  border-radius: 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 0.5rem 0;
-  background-color: #fff;
+.operations-btn{
+  background-color: var(--main-color);
+  padding: .5rem 1rem;
+  color: var(--white);
   border: none;
+  font-size: 1.3rem;
+  border-radius: 0;
+  font-weight: bold;
+}
 
-  /* ❌ احذف السطور التالية لأنها تخرب التموضع: */
-  position: fixed !important;
-  /* top: auto !important; */
-  /* left: 6rem !important; */
-  /* transform: translateY(0) !important; */
+.operations-btn-teacher{
+  background-color: var(--main-color);
+  padding: .5rem 1rem;
+  color: var(--white);
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.operations-btn:hover{
+  background-color: rgba(88, 159, 67, 0.7);
+  transition: .3s linear;
+  color: var(--white);
+  
+}
+
+.operations-btn-item{
+  border: none;
+  box-shadow: 1px 4px 5px rgba(88, 159, 67, 0.1);
 }
 
 
-.operations-dropdown .dropdown-item {
-padding: 10px 15px;
-transition: 0.2s;
+.dropdown-item.active, .dropdown-item:active{
+  background-color: rgba(88, 159, 67, 0.7);
 }
 
-.operations-dropdown .dropdown-item:hover {
-background-color: rgba(88, 159, 67, 0.2);
+.operations-btn-item li a{
+  font-size: 1.3rem;
+  font-weight: 200;
+  padding: .5rem;
 }
+
+.operations-btn-item li a:hover{
+   background-color: rgba(88, 159, 67, 0.2);
+}
+
+
 
 /* ------------------- */
 
