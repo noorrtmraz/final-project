@@ -2907,6 +2907,42 @@ text-decoration: none;
 }
 
 
+
+.exam-preview-container .preview-wrapper .exam-description li .file-btn{
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: .3rem .7rem;
+  border-radius: 4px;
+}
+
+.status-of-std{
+  background-color: rgba(88, 159, 67, 0.2);
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.degree-data {
+  margin-top: 2rem;
+}
+
+.degree-data .note-student-header{
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: 1rem;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.degree-data .note-student-body{
+  /* background-color: rgba(88, 159, 67, 0.2); */
+  border: 1px solid var(--main-color);
+  padding: 1rem;
+}
+
+
 /* -------------------- */
 
 .custom-mark th{
