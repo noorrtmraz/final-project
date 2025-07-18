@@ -2180,25 +2180,22 @@ font-weight: bold;
 }
 
 
-.std-submission-hw input{
-  padding: .7rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-.std-submission-hw button{
+.std-submission-hw a{
   padding: .7rem;
   font-size: 1.3rem;
   background-color: var(--main-color);
   border: none;
+  color: var(--white);
+  border-radius: 3px;
+  text-decoration: none;
 }
 
-.std-submission-hw button:hover{
-  color: var(--main-color);
-  background-color: rgba(88, 159, 67, 0.2);
-  transition: .5s linear;
-}
+.std-submission-hw a:hover{
+  color: var(--white);
+  background-color: rgba(88, 159, 67, 0.7);
+  transition: .3s linear;
 
+}
 
 /* --------------------- */
 .cards-data-student{

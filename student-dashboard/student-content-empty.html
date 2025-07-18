@@ -41,7 +41,7 @@
 
       <!-- الشعار والقائمة الجانبية -->
       <div class="d-flex align-items-center logo-spark">
-        <a href="teacher-index.html">
+        <a href="student-index.html">
           <img src="../images/spark.png" alt="spark education">
         </a>
 
@@ -57,7 +57,7 @@
           <i class="fas fa-bell icon-header"></i>
         </a>
 
-        <a href="teacher-chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
+        <a href="#" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
 
           <h6 class="notification-title">الاشعارات</h6>
 
@@ -94,11 +94,12 @@
           <li class="text-center">
             <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
             <p class="user-name">محمد محمد</p>
-            <p class="user-type">معلم</p>
+            <p class="user-type">طالب</p>
           </li>
           <li><hr class="dropdown-divider"></li>
           <li>
             <form action="">
+              <a href="student-profile.html" class=" dropdown-item-profile"> <i class="fa fa-user"></i>الملف الشخصي</a>
               <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
             </form>
           </li>
@@ -116,173 +117,86 @@
   </div>
 </header>
 
-      
+
+   
       <!-- الشريط الجانبي -->
-      <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
-            <ul class="list-unstyled">
-                <li>
-                  <a href="teacher-index.html">
-                      <span>لوحة التحكم</span>
-                      <i class="fa fa-home"></i>
-                  </a>
-                </li>
-                <li>
-                    <a href="teacher-student.html">
-                      <span> الطلاب</span>
-                      <i class="fas fa-user-graduate"></i>
-                    </a>
-                  </li>
+      <div id="sidebarStd" class="sidebarStd bg-white shadow position-fixed end-0 vh-100 p-4">
+          <div class="sidebar-std">
 
-                  <li>
-                    <a href="teacher-grade.html">
-                        <span>الصفوف الدراسية</span>
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
-                  </li>
-                <li>
-                    <a href="teacher-book.html">
-                      <span> الكتب الدراسية</span>
-                      <i class="fas fa-book-reader"></i>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="teacher-exam.html">
-                      <span> الاختبارات</span>
-                      <i class="fa fa-pen-to-square"></i>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="teacher-hw.html" class="active">
-                      <span> الواجبات</span>
-                      <i class="fa fa-tasks"></i>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="teacher-lesson.html">
-                        <span>الدروس المسجلة</span>
-                        <i class="fas fa-play-circle"></i>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="teacher-meet.html">
-                        <span>اللقاءات المباشرة</span>
-                        <i class="fas fa-video"></i>
-                    </a>
-                  </li>
-
-               
-
-                <li>
-                    <a href="teacher-profile.html">
-                        <span>الملف الشخصي</span>
-                      <i class="fa-solid fa-user"></i>
-                      
-                    </a>
-                  </li>
-              </ul>
-    
-      </div>
-      
-      
-      <!-- المحتوى الرئيسي -->
-      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
-        
-        <div class="table-users-teacher mt-5"> 
-            <!-- المحتوى -->
-            <div class="table-content-teacher tab-content" id="myTabContent">
-              <!-- الطلاب -->
-               <div class="tab-pane fade show active" role="tabpanel">
-                <div class="header-table-teacher2">   
-                   <h3 class="teacher-title2">تقييم الواجب</h3>
-                  <input type="search" class="form-control search-input" placeholder="ابحث ...">
+            <div class="widget">
+                <h3>مقرراتي الدراسية</h3>
+                <ul>
+                  <li><a href="student-subject-data.html">
+                    <span class="course-name"> رياضيات</span>
+                    <span class="instructor-name">م. ميادة مغاري </span>
+                  </a></li>
+            
+                  <li><a href="student-subject-data.html">
+                    <span class="course-name"> لغة عربية</span>
+                    <span class="instructor-name">م. ميادة مغاري </span>
+                  </a></li>
+            
+                  <li><a href="student-subject-data.html">
+                    <span class="course-name"> علوم</span>
+                    <span class="instructor-name">م. ميادة مغاري </span>
+                  </a></li>
+            
+                  <li><a href="student-subject-data.html">
+                    <span class="course-name"> تنشئة</span>
+                    <span class="instructor-name">م. ميادة مغاري </span>
+                  </a></li>
+                 
+                </ul>
               </div>
-                <div class="table-responsive">
-                  <table class="table text-center custom-user-table-teacher">
-                    <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th>اسم الطالب</th>
-                        <th>الصف</th>
-                        <th>الشعبة</th>
-                        <th>ملف التسليم</th>
-                        <th>موعد التسليم</th>
-                        <th>العمليات</th>  
-                        
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>الاول</td>
-                        <td>أ</td>
-                        <td>txt.docs</td>
-                        <td>12-3-2025 3:30pm</td>
-                       <td>
-                         <div class="d-flex justify-content-center align-items-center gap-2 std-submission-hw">
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#addGradeModal"> تقييم </a>
-                         </div>
-                        </td>
-                    
-                    </tbody>
-                  </table>
-
-                  <!-- مودال تقييم الواجب -->
-                <div class="modal fade custom-modal" id="addGradeModal" tabindex="-1" aria-labelledby="addGradeModal" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
-                  <div class="modal-content custom-modal-content">
-
-                    <!-- رأس المودال -->
-                    <div class="modal-header custom-modal-header">
-                      <h5 class="modal-title custom-modal-title" id="addGradeModal">تقييم الواجب للطالب <span>محمد</span></h5>
-                    </div>
-
-                    <!-- جسم المودال -->
-                    <div class="modal-body custom-modal-body">
-                      <form id="stageForm" class="custom-form">
-                        <div class="mb-3 custom-form-group">
-                          <div class="form-group-float position-relative ">
-                            <input type="number" class="form-control custom-input float-input" id="" placeholder=" " />
-                            <label for="" class="float-label">الدرجة</label>
-                          </div> 
-                        </div>
-
-                        <div class="mb-3 custom-form-group">
-                          <textarea class="form-control custom-textarea" id="stageNotes" rows="3" placeholder="ملاحظات"></textarea>
-                        </div>
-                      </form>
-                    </div>
-
-                    <!-- تذييل المودال -->
-                    <div class="modal-footer custom-modal-footer">
-                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تقييم</button>
-                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
-                    </div>
-
-                  </div>
-                </div>
+            
+              <div class="widget">
+                <h3>الأحداث القادمة</h3>
+                <a href="student-exam-preview.html">اختبار لغة عربية <span>12-2-2026</span></a>
+                <br>
+                <a href="student-hw-preview.html">واجب رياضيات <span>12-2-2026</span></a>
               </div>
-
-
-                </div>
+            
+              
+            <div class="mini-calendar">
+              <div class="calendar-header">
+                <span onclick="changeMonth(-1)">‹</span>
+                <span id="mini-month-year">مايو 2025</span>
+                <span onclick="changeMonth(1)">›</span>
               </div>
-          
+              <div class="calendar-grid" id="mini-calendar-grid"></div>
             </div>
           </div>
-          
-        <!-- محتوى الصفحة هنا -->
+       
+
+  </div>
+
+
+
+  <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
+
+
+ <div class="container mt-5">
+  <div class="page-title-parent">
+        <h2> اللغة العربية - <span>أحمد أحمد</span></h2>
+        <a href="student-mark.html">العلامات</a>
       </div>
+   
+      
 
+      
+  <div class="card-content-subject-empty">
 
-
-     
- 
+    <h6 class="empty-page">لا يوجد محتوى حتى الآن</h6>
+  </div>
   
-    
+ </div>
+      
+    <!-- محتوى الصفحة هنا -->
+  </div>
+
+
+
+   
 <!-- زر فتح الرسائل باستخدام Bootstrap -->
 <button class="position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
         type="button" 
@@ -348,6 +262,7 @@
 
       <!-- يمكنك إضافة المزيد من الرسائل هنا -->
     </div>
+   
   </div>
 </div>
                   
