@@ -149,6 +149,55 @@
   }
 
 
+
+/* ------------ */
+.nav-item-lang{
+  font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, .1); */
+    padding-right: 2rem;
+
+}
+.lang-dropdown{
+  border-right: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
+  /* border-radius: 6px; */
+}
+
+.lang-dropdown img {
+  vertical-align: middle;
+  margin-bottom: .4rem;
+  margin-right: 1rem;
+  margin-left: .5rem;
+}
+
+.dropdown-item-lang img {
+  vertical-align: middle;
+   margin-left: .5rem;
+}
+
+.lang-switcher .dropdown-menu-lang {
+  min-width: 130px;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid #eee;
+  font-size: 1.3rem;
+}
+
+.lang-switcher .dropdown-menu-lang .dropdown-item-lang{
+  padding: 1rem 1rem;
+}
+
+
+.lang-dropdown i {
+  font-size: 1rem;
+  margin-right: 4px;
+  color: var(--secondary-color);
+}
+
+
+/* ----------------------- */
   .hero-section{
     background:linear-gradient(125deg ,rgba(7, 35, 64, 0), rgba(88, 159, 67, 0.8));
     margin-top: 5rem;

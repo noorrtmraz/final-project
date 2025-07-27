@@ -481,3 +481,5 @@ function openChatPopup(name) {
       unit.classList.toggle('open');
     });
   });
+
+

@@ -4,6 +4,7 @@
   
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,9 +68,33 @@
     <div class="navbar-collapse-item" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link active" href="#">الرئيسية</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
         <li class="nav-item"><a class="nav-link" href="#offer">ماذا نقدم</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
+       
+
+       <li class="nav-item-lang dropdown lang-switcher">
+          <a class="nav-link lang-dropdown d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="images/ar.png" alt="العربية" width="20" class="lang-flag">
+            <span class="lang-label">العربية</span>
+            <i class="fas fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-lang shadow-sm rounded">
+            <li>
+              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('ar')">
+                <img src="images/ar.png" alt="ar" width="20" > العربية
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('en')">
+                <img src="images/en.png" alt="en" width="20"> English
+              </a>
+            </li>
+          </ul>
+        </li>
+
+
+
       </ul>
     </div>
    
@@ -237,19 +262,25 @@
     </p>
     
     <div class="team-card row justify-content-center g-4">
-      <div class="col-md-4 col-6">
+      <div class="col-md-3 col-6">
         <div class="team-member rounded">
           <h5 class="member-name">نور تمراز</h5>
           <small class="member-job">تصميم الواجهات</small>
         </div>
       </div>
-        <div class="col-md-4 col-6">
+        <div class="col-md-3 col-6">
         <div class="team-member rounded">
           <h5 class="member-name">مازن أبو صفر</h5>
           <small class="member-job">برمجة النظام</small>
         </div>
       </div>
-      <div class="col-md-4 col-6">
+      <div class="col-md-3 col-6">
+        <div class="team-member rounded">
+          <h5 class="member-name">مصطفى أبو مهادي</h5>
+          <small class="member-job">برمجة النظام</small>
+        </div>
+      </div>
+       <div class="col-md-3 col-6">
         <div class="team-member rounded">
           <h5 class="member-name">منتهى دوحان</h5>
           <small class="member-job">تحليل النظام</small>
@@ -310,7 +341,7 @@
 
 
 
-
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/script.js"></script>
 </body>

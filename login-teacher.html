@@ -64,7 +64,25 @@
     <div class="navbar-collapse-item" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">اللغة</a></li>
+        <li class="nav-item-lang dropdown lang-switcher">
+          <a class="nav-link lang-dropdown d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="images/ar.png" alt="العربية" width="20" class="lang-flag">
+            <span class="lang-label">العربية</span>
+            <i class="fas fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-lang shadow-sm rounded">
+            <li>
+              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('ar')">
+                <img src="images/ar.png" alt="ar" width="20" > العربية
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('en')">
+                <img src="images/en.png" alt="en" width="20"> English
+              </a>
+            </li>
+          </ul>
+        </li>
        
       </ul>
     </div>
