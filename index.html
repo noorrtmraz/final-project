@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   
-    <meta charset="UTF-8">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+  <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark Education</title>
@@ -10,7 +13,7 @@
   
 
   <!-- ربط ملف bootstrap CSS المحلي -->
-   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
 
 
     <!-- font awsam cdn link -->
@@ -29,93 +32,132 @@
 
      <!-- custom css file link -->
       <link  id="theme-style"  rel="stylesheet" href="css/rtl.css">
-     
-</head>
 </head>
 <body>
-    <header class="header-page bg-white shadow fixed-top">
-        <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3">
+
+
+  <div class="landing-page">
+
+    <div class="header-landing">
+
+      <div class="top-header">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center ">
+    
+    
+    <div class="d-flex gap-3 flex-wrap">
+      <span class="info-item-location"> فلسطين - غزة <i class="fas fa-map-marker-alt"></i></span>
       
-           <!-- الشعار على اليمين -->
-           <a href="index.html">
-            <img src="images/spark.png" alt="spark education">
-          </a>
-          
-          <!-- القائمة اليسرى (أيقونات) -->
-          <nav class="d-flex gap-4 ms-4">
-            <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
-            <a href="index.html" title="من نحن"><i class="fas fa-question icon-header"></i></a>
-            <a href="#" title="اتصل بنا"><i class="fas fa-phone icon-header"></i></a>
+      <span class="info-item-hour"> من 8:00 ص - 3:00 م <i class="fas fa-clock"></i> </span>
+    </div>
+    <div class="d-flex gap-3">
+      <span class="contact-item-email"> sparkEducation.edu <i class="fas fa-envelope"></i></span>
+      <span class="contact-item-phone"> 0598765432234 <i class="fas fa-phone"></i></span>
+    </div>
+  </div>
+</div>
 
-          </nav>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg main-navbar">
+  <div class="container">
+     <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="images/spark.png" alt="Logo">
+    </a>
+
+
+    <div class="navbar-collapse-item" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link" href="#offer">ماذا نقدم</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
+      </ul>
+    </div>
+   
+
+  </div>
+</nav>
+
+    </div>
+
+<section class="hero-section">
+  <div class="container">
+    <div class="row hero-row">
+      <!-- الصورة -->
+      <div class="col-lg-6 text-center hero-image-box">
+        <img src="images/child-index.webp" alt="طالبة تحمل جهاز لوحي">
+      </div>
+
+      <!-- النص -->
+      <div class="col-lg-6 hero-text-box">
+        <p class="hero-text mb-2">نظام تعليمي متكامل</p>
+        <h1 class="hero-title">نصنع تجربة <span class="highlight">تعليم ذكية</span></h1>
+        <p class="hero-description">
+          منصة <span>Spark Education </span>تربط بين الطالب والمعلم وولي الأمر والمدير ضمن بيئة رقمية سهلة وآمنة لإدارة كافة تفاصيل التعليم الحديث
+        </p>
+         <a href="login-std.html" class="btn hero-btn">
+          <span>ابدأ الآن</span>
+          <i class="fas fa-arrow-left ms-2"></i>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+
+ <!-- الإحصائيات مدمجة بصريًا -->
+<div class="stats-boxes">
+  <div class="container">
+    <div class="row g-3 justify-content-center">
+      <div class="col-md-3 col-6">
+        <div class="stats-item d-flex align-items-center justify-content-center">
+          <img src="images/manager.png" alt="مدير" class="stats-icon">
+          <div class="stats-content">
+            <h5>10k+</h5>
+            <p>مدراء المدارس</p>
+          </div>
         </div>
-      </header>
-
-      <div class="index-page">
-
-        <section class="about-section">
-          <div class="container">
-            <div class="row align-items-center mb-5 about-row">
-  
-              <div class="col-md-6 text-center about-img">
-                <img src="images/child-index.webp" alt="..." class="img-fluid mx-auto d-block">
-              </div>
-  
-              <div class="col-md-6">
-                <div class="about-text">
-                  <h3>لماذا نحن ؟</h3>
-                  <p>منصة تعليمية مرنة وآمنة للتعلم عن بُعد، تُمكّن الطلاب والمعلمين وأولياء الأمور من التواصل الفعّال ومتابعة الأداء الأكاديمي بسهولة، خاصة فيي بسهولة، خاصة فيي بسهولة، خاصة فيي بسهولة، خاصة في المناطق المتأثرة بالأزمات.</p>
-                  <a href="login-std.html" class="log-index">تسجيل الدخول</a>
-                </div>
-              </div>
-              
-            </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stats-item d-flex align-items-center justify-content-center">
+          <img src="images/teacher.png" alt="معلم" class="stats-icon">
+          <div class="stats-content">
+            <h5>10k+</h5>
+            <p>المعلمين</p>
           </div>
-        </section>
-        
-        <div class="box-container">
-        
-  
-          <div class="box">
-            <a href="parent-dashboard/parent-index.html"><img src="images/par-on.png" alt=""></a>
-
-             <div>
-                <h3>+10k</h3>
-                <p>أولياء الأمور</p>
-             </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stats-item d-flex align-items-center justify-content-center">
+          <img src="images/std-on.png" alt="طالب" class="stats-icon">
+          <div class="stats-content">
+            <h5>10k+</h5>
+            <p>الطلاب</p>
           </div>
-    
-          <div class="box">
-            <a href="student-dashboard/student-index.html"><img src="images/std-on.png" alt=""></a>
-
-             <div>
-                <h3>+10k</h3>
-                <p>الطلاب</p>
-             </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stats-item d-flex align-items-center justify-content-center">
+          <img src="images/par-on.png" alt="ولي أمر" class="stats-icon">
+          <div class="stats-content">
+            <h5>10k+</h5>
+            <p>أولياء الأمور</p>
           </div>
-    
-          <div class="box">
-            <a href="teacher-dashboard/teacher-index.html"><img src="images/teacher.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-             <div>
-                <h3>+10k</h3>
-                <p>المعلمين</p>
-             </div>
-          </div>
-    
-          <div class="box">
-            <a href="manager-dashboard/manager-index.html"><img src="images/manager.png" alt=""></a>
 
-             <div>
-                <h3>+10k</h3>
-                <p> مدراء المدارس</p>
-             </div>
-          </div>
-    
-       </div>
-        
-        <div class="container-fluid px-4 pt-0 mt-0">
-          <div class="paragraph-box  p-5 rounded ms-auto my-3 me-5">
+</section>
+
+
+<section class="feature-section" id="offer">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      
+      <!-- النص -->
+      <div class="col-lg-5">
+        <div class="paragraph-box  p-5 rounded ms-auto my-3 me-5">
             <div class="d-flex align-items-center gap-2 mb-3">
               <img src="images/question.png" alt="أيقونة" width="35">
               <h3>ماذا نقدم ؟</h3>
@@ -128,23 +170,148 @@
               <li>نظام آمن ومرن يعمل حتى في ظل ضعف الاتصال بالإنترنت أو الظروف الصعبة.</li>
             </ul>
           </div>
+      </div>
+   
+      <!-- البطاقات -->
+      <div class="col-lg-7">
+        <div class="row g-3">
+          
+          <div class="col-lg-5 col-md-4 col-sm-6">
+            <div class="card feature-card-bg">
+               <i class="fas fa-laptop-code feature-icon"></i>
+                <div class="feature-content">
+                  <h5>بيئة تعليمية ذكية</h5>
+                  <p>دروس تفاعلية مباشرة ومسجلة تتيح للطلبة التعلم من أي مكان وفي أي وقت.</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-4 col-sm-6">
+            <div class="card feature-card">
+              <i class="fas fa-chalkboard-teacher feature-icon"></i>
+              <div class="feature-content">
+                <h5>منصة متكاملة للمعلمين</h5>
+                <p>أدوات إعداد المحتوى، إدارة الاختبارات وتصحيحها بسهولة واحترافية.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-4 col-sm-6">
+            <div class="card feature-card">
+              <i class="fas fa-user-shield feature-icon"></i>
+                <div class="feature-content">
+                  <h5>دعم أولياء الأمور</h5>
+                  <p>منصة تتيح للآباء متابعة أبنائهم والمشاركة في العملية التعليمية.</p>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-lg-5 col-md-4 col-sm-6">
+            <div class="card feature-card-bg">
+               <i class="fas fa-shield-alt feature-icon"></i>
+              <div class="feature-content">
+                <h5>واجهة سهلة وآمنة</h5>
+                <p>واجهة بسيطة تعمل حتى في ظل ضعف الإنترنت أو الظروف الصعبة.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-     
+    </div>
+  </div>
+</section>
+
+
+
+<section class="team-section" id="about">
+  <div class="container text-center">
+    <h2 class="team-title">فريق العمل</h2>
+ 
+    <p class="team-description">
+      تم تطوير نظام <span> Spark Education</span> بأيدٍ شابة مبدعة من خريجي تخصص تكنولوجيا الويب وأمن المعلومات، ضمن مشروع تخرج جامعي تحت إشراف نُخبة من أساتذة الجامعة.
+
+        عمل الفريق على تصميم نظام تعليمي ذكي يجمع بين الكفاءة التقنية وسهولة الاستخدام، بهدف إحداث نقلة نوعية في بيئة التعليم الرقمي.
+
+        نحن لا نقدّم مجرد نظام إلكتروني، بل نضع بين أيديكم رؤية جيلٍ يؤمن بأن المعرفة حقّ، وأن التكنولوجيا بوابتنا نحو تعليم أكثر عدالة وفاعلية.
+    </p>
+    
+    <div class="team-card row justify-content-center g-4">
+      <div class="col-md-4 col-6">
+        <div class="team-member rounded">
+          <h5 class="member-name">نور تمراز</h5>
+          <small class="member-job">تصميم الواجهات</small>
+        </div>
+      </div>
+        <div class="col-md-4 col-6">
+        <div class="team-member rounded">
+          <h5 class="member-name">مازن أبو صفر</h5>
+          <small class="member-job">برمجة النظام</small>
+        </div>
+      </div>
+      <div class="col-md-4 col-6">
+        <div class="team-member rounded">
+          <h5 class="member-name">منتهى دوحان</h5>
+          <small class="member-job">تحليل النظام</small>
+        </div>
+      </div>
+
+    </section>
+
+
+
+<section class="contact-modern" id="contact">
+  <div class="container">
+    <div class="row align-items-center g-4 contact-box">
       
+    <div class="col-md-7 pe-md-5">
+      <h2 class="fw-bold contact-title">اتصل بنا</h2>
+      <p class="contact-description">لا تترددوا في التواصل معنا في أي وقت. سنرد عليكم في أقرب وقت ممكن!
+      </p>
+      <form>
+        <input type="text" class="form-control contact-input" placeholder="الاسم">
+        <input type="email" class="form-control contact-input" placeholder="البريد الالكتروني">
+        <textarea class="form-control contact-textarea" placeholder="اكتب رسالتك هنا .." rows="3"></textarea>
+        <button class="send-btn">ارسال</button>
+      </form>
+    </div>
+    <div class="col-md-5 position-relative info-box d-flex justify-content-between ">
+      <div class="info-box-text">
+        <h5 class="mb-4">معلومات عن النظام</h5>
+        <p><i class="fas fa-envelope"></i> sparkEducation@edu</p>
+        <p><i class="fas fa-phone"></i> +24 56 89 146</p>
+        <p><i class="fas fa-map-marker-alt"></i>فلسطين - غزة </p>
+        <p><i class="fas fa-clock"></i> 08:00 am - 03:00 pm</p>
+      </div>
+      
+      <div class="info-box-img">
+        <img src="images/logo-dark.png" alt="" width="120">
+      </div>
+      
+    </div>
      
+    </div>
+  </div>
+</section>
+
+
            <!--- footer start-->
            <footer class="footer-index">
-            <img src="images/s.png" alt="">
+            
 
             <h1>&copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة </h1>
-         
+         <img src="images/s.png" alt="">
          </footer>
         <!--- footer ends-->
+  
+  
+  </div>
 
-      
 
-  <!-- ربط ملف bootstrap JS المحلي -->
-  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>

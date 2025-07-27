@@ -58,11 +58,708 @@
       height: auto;
       margin: 0;
       padding-top: 6.5rem;
-      padding-bottom: 7rem;
+      /* padding-bottom: 7rem; */
       overflow-x: hidden;
       overflow: auto; /* لتمكين التمرير عند الحاجة */
      
   }
+
+  /* ------landing page start */
+
+  .landing-page{
+    direction: rtl;
+  }
+
+  .header-landing{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+.top-header{
+  
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: var(--white);
+  font-weight: 250;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+  background-image: url(../images/back-login.webp);
+  background-size: cover;
+  background-position:center;
+}
+
+.top-header span.info-item-hour {
+  padding-right: 2rem;
+  letter-spacing: 2px;
+   border-right: 1px solid #ddd;
+}
+
+.top-header span.info-item-location{
+  letter-spacing: 2px;
+}
+
+.top-header span.info-item-location i,
+.top-header span.info-item-hour i{
+  margin-right: .7rem;
+}
+
+.top-header span.contact-item-email{
+  padding-left: 2rem;
+  letter-spacing: 2px;
+  border-left: 1px solid #ddd;
+}
+
+.top-header span.contact-item-phone{
+  letter-spacing: 2px;
+}
+.top-header span.contact-item-email i,
+.top-header span.contact-item-phone i{
+  margin-right: .7rem;
+}
+  
+
+.main-navbar{
+    /* background-color: rgba(88, 159, 67, 0.3); */
+   
+  box-shadow: 0 2px 6px rgba(88, 159, 67, 0.2);
+  z-index: 1050;
+  background-color: var(--white);
+  }
+
+  .main-navbar .navbar-brand img{
+    width: 100px;
+  }
+
+    .main-navbar .navbar-collapse-item .navbar-nav .nav-item{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, .1); */
+    padding-right: 2rem;
+
+  }
+  .main-navbar .navbar-collapse-item .navbar-nav .nav-item:hover{
+    transform: scale(1.1);
+    transition: all .3s ease;
+  }
+
+  .main-navbar .navbar-collapse-item .navbar-nav .nav-item .nav-link.active{
+    font-weight: bold;
+     border-bottom: 1px solid var(--secondary-color);
+  }
+
+
+  .hero-section{
+    background:linear-gradient(125deg ,rgba(7, 35, 64, 0), rgba(88, 159, 67, 0.8));
+    margin-top: 5rem;
+    padding: 50px 0;
+    
+  }
+  .hero-section .hero-text-box .hero-text{
+    font-size: 1.4rem;
+    color: var(--light-color);
+
+  }
+   .hero-section .hero-row {
+      align-items: center;
+    }
+   .hero-section .hero-text-box {
+      max-width: 600px;
+    }
+   .hero-section .hero-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--secondary-color);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+    }
+   .hero-section .hero-title .highlight {
+      color: var(--main-color);
+    }
+   .hero-section .hero-description {
+      margin-top: 15px;
+      color: #555;
+      font-size: 1.5rem;
+      line-height: 2.5;
+      width: 85%;
+    }
+
+   .hero-section .hero-description span{
+      color: var(--main-color);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+    }
+   .hero-section .hero-btn {
+      background-image: url(../images/back-login.webp);
+      background-size: cover;
+      background-position:center;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+
+   .hero-section .hero-btn i{
+      background-color: var(--white);
+      border-radius: 50%;
+      color: var(--main-color);
+      padding: 2px 3px;
+    }
+   .hero-section .hero-image-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      max-height: 400px;
+    }
+
+
+
+    /* .stats-boxes {
+      position: absolute;
+      bottom: -10px;
+      width:100%;
+      z-index: 15;
+      margin-bottom: 3rem;
+     
+    } */
+   .stats-boxes .stats-item {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  text-align: right;
+  display: flex;
+  gap: 15px;
+  width: 95%;
+}
+
+ .stats-boxes .stats-item .stats-icon {
+  width: 55px;
+  height: 55px;
+}
+
+ .stats-boxes .stats-item .stats-content h5 {
+  color: var(--main-color);
+  font-weight: bold;
+  margin: 0;
+  font-size: 2rem;
+  text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+ .stats-boxes .stats-item .stats-content p {
+  color: var(--light-color);
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+
+
+  .feature-section{
+    padding: 60px 0;
+    /* margin-top: 3rem; */
+    background:linear-gradient(125deg ,rgba(7, 35, 64, 0), rgba(88, 159, 67, 0.05));
+    background-size: cover;
+    background-position: center;
+    padding-right: 4rem;
+  }
+ 
+  
+  .feature-card{
+    padding: 1.5rem;
+    text-align: center;
+    border:none;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: -1;
+  }
+
+  .feature-card .feature-icon{
+    font-size: 2.5rem;
+    color: var(--main-color);
+  }
+
+
+  .feature-card .feature-content h5{
+    font-size: 1.4rem;
+    color: var(--main-color);
+    margin-top: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+  }
+
+   .feature-card .feature-content p{
+    font-size: 1.1rem;
+    color: var(--light-color);
+    margin-top: 1rem;
+    
+  }
+
+
+
+    .feature-card-bg{
+    padding: 1.5rem;
+    text-align: center;
+    background-image: url(../images/back-login.webp);
+    background-size: cover;
+    background-position: center;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    z-index: -1;
+  }
+
+  .feature-card-bg .feature-icon{
+    font-size: 2.5rem;
+    color: var(--white);
+  }
+
+
+  .feature-card-bg .feature-content h5{
+    font-size: 1.4rem;
+    color: var(--white);
+    margin-top: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+  }
+
+   .feature-card-bg .feature-content p{
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-top: 1rem;
+    
+  }
+
+  .paragraph-box ul {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    line-height: 2.5;
+    
+  }
+
+  .paragraph-box div h3{
+    margin: 0;
+    font-size: 2rem;
+    color: var(--main-color);
+    padding: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+  }
+
+
+  .team-section .team-title{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    padding: 3rem 0 1rem 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+  }
+
+
+
+
+.team-section .team-description{
+  width: 82%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.3rem;
+  line-height: 30px;
+  /* text-align: justify; */
+  color: var(--light-color);
+}
+
+.team-card{
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.team-card .team-member{
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.team-card .team-member .member-name{
+  font-size: 1.5rem;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.team-card .team-member .member-job{
+  font-size: 1.3rem;
+  font-weight: 250;
+  color: var(--main-color);
+}
+
+
+ .contact-modern {
+    background:rgba(88, 159, 67, 0.2);
+    padding: 40px;
+    box-shadow: 1px 5px 6px rgba(88, 159, 67, 0.25);
+    margin-top: 5rem;
+
+  }
+
+  .contact-modern  .contact-box{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+  .contact-modern .contact-box .contact-title{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    padding: 1rem 0 1rem 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+  }
+
+  .contact-modern .contact-box .contact-description{
+    font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--light-color);
+  }
+
+
+   .contact-modern .contact-box .contact-input,
+   .contact-modern .contact-box .contact-textarea{
+    padding: 1.2rem;
+    /* border: 1px solid var(--light-bg); */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    
+    margin-bottom: .8rem;
+    font-size: 1.1rem;
+    text-align: right;
+   }
+
+  .contact-modern .contact-box .send-btn {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+  }
+ .contact-modern .contact-box .info-box {
+   background-image: url(../images/back-login.webp);
+   background-size: cover;
+   background-position: center;
+    color: #fff;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(88, 159, 67, 0.5);
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .contact-modern .contact-box .info-box i {
+    color: var(--white);
+    width: 30px;
+  }
+  .contact-modern .contact-box .info-box p {
+    padding: 10px 0 5px 0;
+    font-size: 1.2rem;
+    border-top: 1px solid var(--light-color);
+  }
+
+
+  
+  
+.footer-index{
+    background-image: url(../images/back.webp);
+    background-size: cover;
+    background-position: center;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  
+  .footer-index h1{
+    color: var(--white);
+    font-size: 1.5rem;
+  }
+  
+  .footer-index img{
+    width: 70px;
+    height: auto;
+    position: relative;
+    bottom: 20px;
+  }
+  
+  .footer-index span{
+    color: var(--main-color);
+  }
+
+  /* ----------- landing page end */
+
+  
+/* login page for student & parent start */
+  
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/back-login.webp);
+    background-size: cover;
+    background-position: center;
+    /* background:linear-gradient(125deg ,rgba(7, 35, 64, .1),rgba(88, 159, 67, 0.8)); */
+
+    direction: rtl;
+
+}
+.login .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9rem;
+}
+
+.login .login-container .left-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+
+.login .login-container .left-section .image-container .student-img {
+    width:36rem;
+    max-width: 100%;
+    height: auto;
+    margin-left: 11rem;
+    margin-top: 5rem;
+
+}
+
+
+.login .login-container .right-section{
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 1.875rem;
+    height: 40rem;
+    margin-bottom: 10rem;
+    width: 50%;
+    margin-right: 6rem;
+}
+
+.login .login-container .right-section .login-box {
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.login .login-container .right-section .login-box h2{
+    color: var(--main-color);
+    font-size: 2.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    padding-bottom: 1.5rem;
+
+}
+
+.login .login-container .right-section .login-box h2 span{
+  font-weight: bold;
+}
+
+
+.login .login-container .right-section .login-box .input-box-custom {
+    padding: 1.4rem;
+    margin: 0.625rem 0;
+    margin-top:1.5rem ;
+    width: 80%;
+    border: 0.06rem solid #ccc;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+
+.login .login-container .right-section .login-box .input-box-custom2 {
+    padding: 1.4rem;
+    margin-top:0.125rem;
+    margin-bottom: 1rem;
+    width: 80%;
+    border: 0.06rem solid #ccc;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+
+
+.login .login-container .right-section .login-box .login-btn-custom {
+    background-image: url(../images/back-login.webp);
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 1.2rem;
+    border: none;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    cursor: pointer;
+    width: 80%;
+    margin-top:1rem;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+
+}
+
+.login .login-container .right-section .login-box .login-btn-custom:hover{
+    background-color: var(--secondary-color);
+    transition: .5s linear;
+}
+
+
+.login .login-container .right-section .login-box .icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+}
+.login .login-container .right-section .login-box .icons img {
+    width: 5rem;
+    margin-top: 2rem;
+}
+
+
+/* login page for student & parent end */
+
+
+/******teacher & admin login page starts**/
+
+.login-teacher{
+    padding: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    height: auto;
+    background-image: url(../images/back-login.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.login-teacher .form-container-teacher{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* يضع المحتوى في المنتصف أفقيًا */
+    align-items: center;
+    background-color:var(--white);
+    width: 60rem;
+    height: 40rem;
+    border-radius: 2.5rem;
+    padding: 3rem;
+
+}
+
+.login-teacher .form-container-teacher .custom-form h3{
+    color: var(--main-color);
+    font-size: 2.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    padding-bottom: 1.5rem;
+    text-align: center;
+
+}
+
+.login-teacher .form-container-teacher .custom-form h3 span{
+  font-weight: bold;
+  
+}
+
+.login-teacher .form-container-teacher .custom-form .input-box-teacher {
+    padding: 1.6rem;
+    margin: 0.625rem 0;
+    margin-top:1.5rem ;
+    width: 100%;
+    border: 0.06rem solid #ccc;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.login-teacher .form-container-teacher .custom-form .input-box-teacher2 {
+    padding: 1.6rem;
+    margin: 0.625rem 0;
+    width: 100%;
+    border: 0.06rem solid #ccc;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.login-teacher .form-container-teacher .custom-form .login-btn-teacher{
+
+    background-image: url(../images/back-login.webp);
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 1.4rem;
+    border: none;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top:1rem;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.login-teacher .form-container-teacher .custom-form .login-btn-teacher:hover{
+  background-color: var(--secondary-color);
+  transition: .5s linear;
+}
+
+
+.login-teacher .form-container-teacher .icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+
+.login-teacher .form-container-teacher .icons img{
+    width: 5rem;
+    margin-top: 2rem;
+}
+
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+/******teacher & admin login page ends**/
 
 
 /* error page start */
@@ -313,445 +1010,13 @@ header.header-page img {
 
 /* header end */
 
-/* index page start */
 
 
-.index-page{
-  direction: rtl;
-}
-  .about-section .about-text h3 {
-    font-size: 2.5rem;
-    color: var(--black);
-    background-color:  rgba(255, 255, 255, 0.95);
-    width: 27%;
-    padding: 1rem 1rem; /* اختصار لتحديد padding عمودي وأفقي */
-    margin-left: auto;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    text-align: right;
-    font-weight: bold;
-  }
-  .about-section {
-    background: url('../images/back.webp') center/cover no-repeat;
-    /* padding: 3rem 0; */
-    position: relative;
-  }
-   .about-section .about-text {
-    padding-bottom: 3rem;
-    flex: 0 0 50rem;
-    text-align: right;
-   
-  }
-  .about-section .about-text .log-index {
-    text-align: right;
-    color: var(--white);
-    font-size: 1.6rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid var(--white);
-    display: inline-block;
-    animation: moveSide 1s infinite alternate;
-    position: relative;
-    text-decoration: none;
-   }
 
-    @keyframes moveSide {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-10px); }
-    }
 
-  .about-section .about-text .log-index:hover {
-    color: var(--main-color);
-    border-bottom: 1px solid var(--main-color);
-    transition: .5s linear;
-  }
-
-  .about-section .about-text p{
-    line-height: 2;
-    width: 80%;
-    font-size: 1.5rem;
-    color: var(--white);
-    /* background-color: rgba(255, 255, 255, 0.95); */
-    padding: 0.5rem 1rem;
-    direction: rtl;
-    text-align: justify;
-    margin-top: 1.3rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    margin-left: auto;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-
-  }
-
-  
- .box-container {
-    display: flex;
-    justify-content: center; /* توسيط أفقي */
-    align-items: center; 
-  
-    position: relative;
-     top: -4rem;
-      display: flex;
-      flex-wrap: wrap;  /* يسمح بتعدد الصفوف عند ضيق العرض */
-  }
-  
-  .box-container .box {
-     width: 27rem;
-      display: flex;
-      justify-content: flex-s; /* كل العناصر لأقصى اليمين */
-      align-items: center;
-      gap: 0.5rem; /* مسافة صغيرة بين النص والصورة */
-      background-color: var(--white);
-      border-radius: 0.5rem;
-      padding: 1.8rem;
-      box-shadow: 0 0.25rem 0.7rem rgba(0, 0, 0, 0.1); 
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      margin-right: 1rem;
-      margin-left: 1rem;
-  }
-  
-  .box-container .box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
-      transition: 0.5s;
-  }
-  
-   .box-container .box div {
-      text-align: right; /* النص داخل الـ div */
-      margin-right: 1rem;
-  }
-  
-  .box-container .box h3 {
-      color: var(--main-color);
-      font-size: 2rem;
-      margin: 0 0 0.3rem; /* تعديل هامش بسيط */
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-     font-weight: bold;
-  }
-  
-  .box-container .box p {
-      font-size: 1.4rem;
-      color: var(--light-color);
-      margin: 0;
-  }
-  
-  .box-container .box img {
-      width: 5.5rem;
-      height: auto;
-      margin-left: 0; /* إزالة المسافة الإضافية */
-  }
-
-  .paragraph-box{
-    direction: rtl;
-  }
-
-  .paragraph-box ul {
-    padding-right: 1.5rem;
-    color: var(--secondary-color);
-    font-size: 1.4rem;
-    line-height: 1.8;
-  }
-
-  .paragraph-box div img{
-    width: 35px;
-    height: 35px;
-  }
-
-  .paragraph-box div h3{
-    margin: 0;
-    font-size: 2rem;
-    color: var(--main-color);
-    padding: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-  }
-
-  
-.footer-index{
-    background-image: url(../images/back.webp);
-    background-size: cover;
-    background-position: center;
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    margin-top: 3rem;
-
-  }
-  
-  .footer-index h1{
-    color: var(--white);
-    font-size: 1.5rem;
-  }
-  
-  .footer-index img{
-    width: 70px;
-    height: auto;
-    position: relative;
-    bottom: 20px;
-  }
-  
-  .footer-index span{
-    color: var(--main-color);
-  }
-
-
-  /* index page end */
-
-  /* login page for student & parent start */
-  
-.login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('../images/back-login.webp') no-repeat center center;
-    background-size: cover;
-    direction: rtl;
-
-}
-.login .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 9rem;
-}
-
-.login .login-container .left-section {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-
-}
-
-
-
-.login .login-container .left-section .image-container .student-img {
-    width:36rem;
-    max-width: 100%;
-    height: auto;
-    margin-left: 11rem;
-    margin-top: 5rem;
-
-}
-
-
-.login .login-container .right-section{
-    display: flex;
-    align-items: center;
-    background-color: var(--white);
-    border-radius: 1.875rem;
-    height: 40rem;
-    margin-bottom: 10rem;
-    width: 50%;
-    margin-right: 6rem;
-}
-
-.login .login-container .right-section .login-box {
-    text-align: center;
-    width: 100%;
-}
-
-
-
-.login .login-container .right-section .login-box h2{
-    color: var(--main-color);
-    font-size: 2.1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    padding-bottom: 1.5rem;
-
-}
-
-.login .login-container .right-section .login-box h2 span{
-  font-weight: bold;
-}
-
-
-.login .login-container .right-section .login-box .input-box-custom {
-    padding: 1.4rem;
-    margin: 0.625rem 0;
-    margin-top:1.5rem ;
-    width: 80%;
-    border: 0.06rem solid #ccc;
-    border-top-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-    text-align: right;
-    font-size: 1.2rem;
-}
-
-
-.login .login-container .right-section .login-box .input-box-custom2 {
-    padding: 1.4rem;
-    margin-top:0.125rem;
-    margin-bottom: 1rem;
-    width: 80%;
-    border: 0.06rem solid #ccc;
-    border-top-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    text-align: right;
-    font-size: 1.2rem;
-}
-
-
-
-.login .login-container .right-section .login-box .login-btn-custom {
-    background-color: var(--main-color);
-    color: var(--white);
-    padding: 1.4rem;
-    border: none;
-    border-bottom-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    cursor: pointer;
-    width: 80%;
-    margin-top:1rem;
-    font-size: 1.6rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-
-}
-
-.login .login-container .right-section .login-box .login-btn-custom:hover{
-    background-color: var(--secondary-color);
-    transition: .5s linear;
-}
-
-
-.login .login-container .right-section .login-box .icons {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.7rem;
-}
-.login .login-container .right-section .login-box .icons img {
-    width: 5rem;
-    margin-top: 2rem;
-}
-
-
-/* login page for student & parent end */
-
-
-
-/******teacher & admin login page starts**/
-
-.login-teacher{
-    padding: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('../images/back.webp') no-repeat center center;
-    background-size: cover;
-    height: auto;
-}
-
-.login-teacher .form-container-teacher{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  /* يضع المحتوى في المنتصف أفقيًا */
-    align-items: center;
-    background-color:var(--white);
-    width: 60rem;
-    height: 40rem;
-    border-radius: 2.5rem;
-    padding: 3rem;
-
-}
-
-.login-teacher .form-container-teacher .custom-form h3{
-    color: var(--main-color);
-    font-size: 2.1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    padding-bottom: 1.5rem;
-    text-align: center;
-
-}
-
-.login-teacher .form-container-teacher .custom-form h3 span{
-  font-weight: bold;
-  
-}
-
-.login-teacher .form-container-teacher .custom-form .input-box-teacher {
-    padding: 1.6rem;
-    margin: 0.625rem 0;
-    margin-top:1.5rem ;
-    width: 100%;
-    border: 0.06rem solid #ccc;
-    border-top-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-    text-align: right;
-    font-size: 1.2rem;
-}
-
-.login-teacher .form-container-teacher .custom-form .input-box-teacher2 {
-    padding: 1.6rem;
-    margin: 0.625rem 0;
-    width: 100%;
-    border: 0.06rem solid #ccc;
-    border-top-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    text-align: right;
-    font-size: 1.2rem;
-}
-
-.login-teacher .form-container-teacher .custom-form .login-btn-teacher{
-
-    background-color: var(--main-color);
-    color: var(--white);
-    padding: 1.6rem;
-    border: none;
-    border-bottom-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    cursor: pointer;
-    width: 100%;
-    margin-top:1rem;
-    font-size: 1.6rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-}
-
-.login-teacher .form-container-teacher .custom-form .login-btn-teacher:hover{
-  background-color: var(--secondary-color);
-  transition: .5s linear;
-}
-
-
-.login-teacher .form-container-teacher .icons {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.7rem;
-}
-
-
-.login-teacher .form-container-teacher .icons img{
-    width: 5rem;
-    margin-top: 2rem;
-}
-
-
-.fade-in {
-    animation: fadeIn 0.3s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-
-/******teacher & admin login page ends**/
 
 
 /* footer start */
-
-
 
 .footer{
     bottom: 0; right: 0; left: 0;
@@ -762,6 +1027,8 @@ header.header-page img {
     margin-top: .5rem;
     z-index: 1000;
     max-height: 7rem;
+    position: fixed;
+    background-color: var(--white);
 }
 
 .footer span{
@@ -1278,18 +1545,7 @@ h6.section-heading{
 
 /* -------------- */
 
-   .dropdown-menu {
-    margin-top: 0 !important;
-    transform: none !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 13rem !important;
-    min-width: unset !important;
-    margin-right: auto;
-    margin-left: auto;
-    z-index: 1050;
-  }
+
 
   .table-responsive {
     overflow: visible !important;
@@ -1336,6 +1592,18 @@ h6.section-heading{
 .operations-btn-item{
   border: none;
   box-shadow: 1px 4px 5px rgba(88, 159, 67, 0.1);
+    
+    margin-top: 0 !important;
+    transform: none !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 13rem !important;
+    min-width: unset !important;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1050;
+  
 }
 
 
@@ -4264,19 +4532,6 @@ transition: 0.2s;
 
   }
   
-  @media (max-width: 576px){
-    .footer-index h1{
-        font-size: 1.2rem;
-      }
-      
-      .footer-index img{
-        width: 35px;
-        height: auto;
-      }
-    
-
-  }
-
 
 
   @media (max-width: 480px) {
