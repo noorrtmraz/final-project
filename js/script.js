@@ -174,6 +174,86 @@ function showForm(type, clickedIcon) {
 
 
 
+
+
+
+
+
+  // المخططات في صفحة علامات الطلاب عند المعلم 
+
+   const barData = {
+      labels: ['0-5', '6-10', '11-15', '16-20', '21-25', '26-30'],
+      datasets: [{
+        label: 'عدد الطلاب',
+        data: [2, 5, 8, 4,9,3],
+        backgroundColor: '#589F43',
+        borderRadius: 0
+      }]
+    };
+
+    const barOptions = {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        title: {
+          display: true,
+          text: 'توزيع الدرجات'
+        }
+      },
+      scales: {
+        x: {
+          title: { display: true, text: 'الفئة' }
+        },
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: 'عدد الطلاب' }
+        }
+      }
+    };
+
+    // بيانات مخطط الدائري
+    const donutData = {
+      labels: ['قدموا', 'لم يُقدموا', 'ناجحين', 'راسبين'],
+      datasets: [{
+        data: [12, 3, 9, 3],
+        backgroundColor: ['#003c9dff', '#ff9800', '#589F43', '#d35000']
+      }]
+    };
+
+    const donutOptions = {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        },
+        title: {
+          display: true,
+          text: 'حالة الطلاب'
+        }
+      },
+      cutout: '60%'
+    };
+
+    // إنشاء الرسومات
+    new Chart(document.getElementById('barChart'), {
+      type: 'bar',
+      data: barData,
+      options: barOptions
+    });
+
+    new Chart(document.getElementById('donutChart'), {
+      type: 'doughnut',
+      data: donutData,
+      options: donutOptions
+    });
+
+
+
+
+
+
+
+
   // التقويم في سايد بار الطالب
 
   
@@ -483,3 +563,10 @@ function openChatPopup(name) {
   });
 
 
+
+
+
+
+
+  
+  

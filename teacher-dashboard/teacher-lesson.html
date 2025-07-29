@@ -190,20 +190,22 @@
        <!-- المحتوى الرئيسي -->
        <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
 
-        <h3 class="teacher-title">الدروس المسجلة</h3> 
+          <h3 class="teacher-title2">الدروس المسجلة</h3>
+      <div class="title-underline"></div>
        
-        <div class="table-users-teacher mt-5"> 
-            <!-- المحتوى -->
-            <div class="table-content-teacher tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" role="tabpanel">
-                <div class="header-table-teacher">   
-                  <a href="teacher-forms/teacher-add-lesson.html">اضافة درس </a>
-                  <input type="search" class="form-control search-input" placeholder="ابحث ...">
-              
-                </div>
-                <div class="table-responsive">
-                  <table class="table text-center custom-user-table-teacher">
-                    <thead class="thead-user">
+                <div class="container custom-table-teacher">
+
+                <div class="header-table-teacher">  
+                  <a href="teacher-forms/teacher-add-lesson.html">اضافة درس</a>
+
+
+                    <div class="search-box-student text-end mb-3">
+                      <input type="search" class="form-control search-input-custom" placeholder="ابحث ...">
+                    </div>
+                 </div>
+                <div class="table-responsive custom-table-wrapper">
+                <table class="table text-center custom-grade-table">
+                  <thead class="thead-custom">
                       <tr>
                         <th>#</th>
                         <th>عنوان الدرس</th>
@@ -224,12 +226,12 @@
                         <td>12-2-2025 12:00pm</td>
                         <td>
                           <div class="dropdown">
-                             <button class="operations-btn-teacher dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                                العمليات
-                            </button>
-                            <ul class="dropdown-menu operations-btn-item">
-                             <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-forms/teacher-edit-lesson.html" >
+                          <button class="dropdown-toggle dropdown-toggle-operations" data-bs-toggle="dropdown">
+                            العمليات
+                          </button>
+                         <ul class="dropdown-menu dropdown-menu-operations">
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-edit-lesson.html" >
                                   <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
                                 </a>
                               </li>

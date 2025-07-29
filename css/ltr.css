@@ -2356,7 +2356,7 @@ font-weight: bold;
 
 
 
-.table-users-teacher .header-table-teacher{
+.custom-table-teacher .header-table-teacher{
   display: flex;
   justify-content: space-between;
 }
@@ -2738,6 +2738,118 @@ transition: 0.2s;
   font-size: 1.4rem;
   padding: 1rem 3rem;
 }
+
+
+
+
+/* --------------- */
+
+.teacher-title2{
+  color: var(--main-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 5rem 0 1rem 0;
+}
+
+.title-underline {
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-color); /* يمكنك تغيير اللون */
+  margin: 5px auto 3rem auto; /* المسافات العلوية والسفلية */
+  border-radius: 3px;
+}
+
+
+.charts-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .chart-box {
+      background: #fff;
+      border-radius: 0;
+      padding: 1rem;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
+      width: 600px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    /* ✅ ترويسة الجدول */
+.thead-custom th {
+  background-color: var(--main-color); /* أخضر فاتح */
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+/* ✅ صندوق البحث */
+.search-input-custom {
+  max-width: 250px;
+  border-radius: 3px;
+  padding: 8px 12px;
+  border: 1px solid #d1e7dd;
+  font-size: 1.3rem;
+}
+
+.custom-table-teacher{
+  width: 97%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3rem;
+}
+
+
+.custom-table-wrapper {
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 15rem;
+  
+}
+
+.dropdown-toggle-operations{
+  font-size: 1.4rem;
+  font-weight: 330;
+  background-color: var(--main-color);
+  color: var(--white);
+  border-radius: 4px;
+  padding: .4rem 1rem;
+}
+
+.dropdown-menu-operations{
+  border: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ الزر داخل القائمة المنسدلة */
+.custom-grade-table .dropdown-menu-operations a {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 330;
+  padding: .7rem 1.5rem;
+  color:var(--secondary-color);
+}
+
+
+
+.custom-grade-table td{
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  font-weight: 330;
+}
+
+
+
 
 
 
@@ -4482,6 +4594,66 @@ text-decoration: none;
   .chat-list {
     width: 240px;
   }
+
+
+  
+
+@media (max-width: 991.98px) {
+  /* ✅ العنوان والخط أسفله */
+  .teacher-title2 {
+    font-size: 2rem;
+    margin: 3rem 0 1rem 0;
+  }
+
+  .title-underline {
+    width: 50px;
+    margin-bottom: 2rem;
+  }
+
+  /* ✅ تخطيط المخططات: عمودي بدلاً من أفقي */
+  .charts-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart-box {
+    width: 90%;
+    height: 300px;
+  }
+
+  /* ✅ تعديل الجدول وصندوق البحث */
+  .custom-table-teacher {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .search-box-student {
+    text-align: center;
+  }
+
+  .search-input-custom {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* ✅ تصغير حجم الخط داخل الجدول على الموبايل */
+  .custom-grade-table td,
+  .thead-custom th {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+
+  .dropdown-toggle-operations {
+    font-size: 1.2rem;
+    padding: .3rem .8rem;
+  }
+
+  .custom-grade-table .dropdown-menu-operations a {
+    font-size: 1.1rem;
+    padding: .6rem 1.2rem;
+  }
+}
+
 
 
   .exam-preview-container{

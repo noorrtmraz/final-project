@@ -189,13 +189,11 @@
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
-       <h3 class="teacher-title">جدول الطلاب</h3> 
+       <h3 class="teacher-title2">قائمة الطلاب</h3>
+      <div class="title-underline"></div>
 
-        <div class="table-users-teacher mt-5"> 
-            <!-- المحتوى -->
-            <div class="table-content-teacher tab-content" id="myTabContent">
-              <!-- الطلاب -->
-               <div class="tab-pane fade show active" role="tabpanel">
+
+          <div class="container custom-table-teacher">
                 <div class="header-table-teacher2">   
                    <div class="select-std d-flex gap-2 flex-wrap">
                     <select class="form-select std-select" id="stage">
@@ -208,12 +206,17 @@
                       <option selected disabled>اختر الشعبة ...</option>
                     </select>
                   </div>
-                  
-                  <input type="search" class="form-control search-input" placeholder="ابحث ...">
+
+              <div class="search-box-student text-end mb-3">
+                <input type="search" class="form-control search-input-custom" placeholder="ابحث ...">
               </div>
-                <div class="table-responsive">
-                  <table class="table text-center custom-user-table-teacher">
-                    <thead class="thead-user">
+                  
+              </div>
+
+
+                <div class="table-responsive custom-table-wrapper">
+                <table class="table text-center custom-grade-table">
+                  <thead class="thead-custom">
                       <tr>
                         <th>#</th>
                         <th>اسم الطالب</th>

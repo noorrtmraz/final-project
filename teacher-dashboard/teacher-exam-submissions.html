@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark Education</title>
     <link rel="icon" href="../images/logo-dark.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   
 
   <!-- ربط ملف bootstrap CSS المحلي -->
@@ -190,69 +191,71 @@
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
-        
-        <div class="table-users-teacher mt-5"> 
-            <!-- المحتوى -->
-            <div class="table-content-teacher tab-content" id="myTabContent">
-              <!-- الطلاب -->
-               <div class="tab-pane fade show active" role="tabpanel">
-                <div class="header-table-teacher2">   
-                   <h3 class="teacher-title2">علامات الطلاب</h3>
-                  <input type="search" class="form-control search-input" placeholder="ابحث ...">
-              </div>
-                <div class="table-responsive">
-                  <table class="table text-center custom-user-table-teacher">
-                    <thead class="thead-user">
-                      <tr>
-                        <th>#</th>
-                        <th>اسم الطالب</th>
-                        <th>الدرجة</th>
-                        <th>موعد التسليم</th>
-                        <th>العمليات</th>  
-                        
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>20</td>
-                        <td>12-3-2025 3:30pm</td>
-                        <td>
-                          <div class="dropdown">
-                             <button class="operations-btn-teacher dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                                العمليات
-                            </button>
-                            <ul class="dropdown-menu operations-btn-item">
-                                 
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="teacher-exam-review.html" >
-                                  <i class="fas fa-eye action-icon relode-icon-action"></i>  عرض الاجابات
-                                </a>
-                              </li>
+     
+      <h3 class="teacher-title2">علامات الطلاب</h3>
+      <div class="title-underline"></div>
 
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="#" data-bs-toggle="modal" data-bs-target="#relodeModal-exam"  >
-                                  <i class="fas fa-rotate-right action-icon relode-icon-action"></i> اعادة الاختبار
-                                </a>
-                              </li>
-    
-                             </ul>
-                          </div>
-                       </td>
+         <div class="charts-wrapper">
+            <div class="chart-box">
+              <canvas id="barChart"></canvas>
+            </div>
 
-                  
-                      </tr>
-
-                     
-                      
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-          
+            <div class="chart-box">
+              <canvas id="donutChart"></canvas>
             </div>
           </div>
+
+         
+             <div class="container custom-table-teacher">
+
+              <div class="search-box-student text-end mb-3">
+                <input type="search" class="form-control search-input-custom" placeholder="ابحث ...">
+              </div>
+
+              <div class="table-responsive custom-table-wrapper">
+                <table class="table text-center custom-grade-table">
+                  <thead class="thead-custom">
+                    <tr>
+                      <th>#</th>
+                      <th>اسم الطالب</th>
+                      <th>الدرجة</th>
+                      <th>موعد التسليم</th>
+                      <th>العمليات</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>محمد محمد</td>
+                      <td>20</td>
+                      <td>12-3-2025 3:30pm</td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="dropdown-toggle dropdown-toggle-operations" data-bs-toggle="dropdown">
+                            العمليات
+                          </button>
+                         <ul class="dropdown-menu dropdown-menu-operations">
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-exam-review.html" >
+                                  <i class="fas fa-eye eye-icon-action"></i> عرض الإجابات
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#relodeModal-exam" >
+                                  <i class="fas fa-rotate-right relode-icon-action"></i> إعادة الاختبار
+                                </a>
+                              </li>
+                            </ul>
+
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+             </div>
+
+
           
          <div class="modal fade" id="relodeModal-exam" tabindex="-1" aria-labelledby="relodeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
@@ -382,4 +385,6 @@
   <script src="../js/script.js"></script>
 </body>
 </html>
+
+
 

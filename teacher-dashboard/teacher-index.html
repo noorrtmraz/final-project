@@ -191,7 +191,7 @@
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
         <section class="dashboard-teacher">
-            <div class="container-fluid">
+            <div class="container">
               <div class="row gy-4">
 
         
@@ -244,21 +244,15 @@
           </section>
 
 
-          <div class="table-users-teacher mt-5">
-
-            <div class="header-table-teacher">   
+          <div class="container custom-table-teacher">
  
-           <h3 class="teacher-title2" style="margin-bottom: 2rem;">الصفوف الدراسية</h3>
+           <h3 class="teacher-title3" style="margin-bottom: 2rem;">الصفوف الدراسية</h3>
+        
+            <div class="table-responsive custom-table-wrapper">
 
-            </div>
-          
-            <!-- المحتوى -->
-            <div class="table-content-teacher tab-content" id="myTabContent">
 
-                <div class="tab-pane fade show active" id="grades" role="tabpanel">
-                <div class="table-responsive">
-                  <table class="table table-hover text-center custom-user-table-teacher">
-                    <thead class="thead-user">
+                  <table class="table table-hover text-center custom-grade-table">
+                    <thead class="thead-custom">
                       <tr>
                         <th>#</th>
                         <th> المرحلة</th>
@@ -296,16 +290,6 @@
                        <td> رياضيات</td>
                       </tr>
 
-                      <tr onclick="window.location.href='teacher-content-preview.html'" style="cursor: pointer;">
-                        <td>1</td>
-                        <td>الابتدائي</td>
-                        <td>الاول</td>
-                        <td>أ</td>
-                        <td>100</td>
-                       <td> رياضيات</td>
-                      </tr>
-
-                    
                      
                     </tbody>
                   </table>
