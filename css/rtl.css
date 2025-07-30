@@ -1187,6 +1187,7 @@ header.header-page img {
   #mainContent{
     animation: fadeIn 1s ease-in-out;
     direction: rtl;
+    overflow-x: auto;
   }
 
   
@@ -1863,7 +1864,7 @@ h6.section-heading{
   border-radius: 0;
   border: none;
   border-bottom: 1px solid rgba(88, 159, 67, 0.3);
-  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 4px rgba(88, 159, 67, 0.2);
 }
 
 .state-cards i{
@@ -2269,6 +2270,17 @@ font-weight: bold;
 
  }
 
+
+ .search-box-student input{
+  text-align: right;
+  border: 1px solid rgba(88, 159, 67, 0.2);
+  padding: .7rem;
+  width: 20rem;
+  font-size: 1.4rem;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0 ,0.05);
+  /* border-radius: 7px; */
+  border-radius:4px ;
+}
  /* /* ---- */
 
 .dashboard-teacher{
@@ -2589,7 +2601,7 @@ font-weight: bold;
 .custom-form-card-teacher .card-body .subject-form div input[type="url"].custom-input,
 .custom-form-card-teacher .card-body .subject-form div input[type="file"].custom-input,
 .custom-form-card-teacher .card-body .subject-form div textarea{
-    padding: 15px;
+    padding: 10px;
     margin: 5px 0;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -2609,8 +2621,8 @@ font-weight: bold;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     font-size: 1.3rem;
     border: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: var(--light-color);
 }
 
@@ -2675,6 +2687,11 @@ font-weight: bold;
 
 }
 
+.content-title i{
+  padding-left:1rem ;
+}
+
+
 
 .content-date{
   font-size: 1.2rem;
@@ -2726,6 +2743,24 @@ transition: 0.2s;
   color: var(--main-color);
   transition: all.5s ease;
 }
+
+
+.dropdown-menu-subjects{
+  border: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.3rem;
+  
+
+}
+
+
+.dropdown-menu-subjects a{
+  padding: .7rem 1rem;
+  color: var(--main-color);
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
 
 .select-add .custom-select{
  text-align: right;
@@ -2796,14 +2831,7 @@ transition: 0.2s;
   padding: 1rem;
 }
 
-/* ✅ صندوق البحث */
-.search-input-custom {
-  max-width: 250px;
-  border-radius: 3px;
-  padding: 8px 12px;
-  border: 1px solid #d1e7dd;
-  font-size: 1.3rem;
-}
+
 
 .custom-table-teacher{
   width: 97%;
@@ -2811,6 +2839,8 @@ transition: 0.2s;
   margin-left: auto;
   margin-top: 3rem;
 }
+
+
 
 
 .custom-table-wrapper {
@@ -2834,6 +2864,7 @@ transition: 0.2s;
 .dropdown-menu-operations{
   border: none;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  
 }
 
 /* ✅ الزر داخل القائمة المنسدلة */
@@ -4459,6 +4490,7 @@ transition: 0.2s;
   
   /* Media Queries */
 @media (max-width: 768px) {
+
 
     .about-section .about-text h3 {
       width: 35%;
