@@ -36,13 +36,31 @@
 <body>
     <!-- الهيدر -->
 <header class="header-page bg-white shadow fixed-top">
+
+   <div class="top-header-dashboard">
+  <div class=" d-flex flex-wrap justify-content-between align-items-center ">
+    
+    
+    <div class="d-flex gap-3 flex-wrap">
+      <span class="info-item-location"> فلسطين - غزة <i class="fas fa-map-marker-alt"></i></span>
+      
+      <span class="info-item-hour"> من 8:00 ص - 3:00 م <i class="fas fa-clock"></i> </span>
+    </div>
+    <div class="d-flex gap-3">
+      <span class="contact-item-email"> sparkEducation.edu <i class="fas fa-envelope"></i></span>
+      <span class="contact-item-phone"> 0598765432234 <i class="fas fa-phone"></i></span>
+    </div>
+  </div>
+</div>
   
   <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3 ">
+
+    
 
       <!-- الشعار والقائمة الجانبية -->
       <div class="d-flex align-items-center logo-spark">
         <a href="manager-index.html">
-          <img src="../images/spark.png" alt="spark education">
+          <img src="../images/spark.png" alt="spark education" class="logo">
         </a>
 
         <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
@@ -52,69 +70,86 @@
     <!-- القائمة اليسرى (أيقونات) -->
     <nav class="d-flex gap-4 ms-4 align-items-center">
 
-      <div class="dropdown">
-        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
-          <i class="fas fa-bell icon-header"></i>
-        </a>
+      <ul class="d-flex gap-4 ms-4 align-items-center list-unstyled m-0">
 
-        <a href="manager_chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
+ 
 
-          <h6 class="notification-title">الاشعارات</h6>
+  <!-- الإشعارات -->
+  <li class="dropdown">
+    <a href="#" id="notificationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
+      <i class="fas fa-bell icon-header"></i>
+    </a>
+    <div class="dropdown-menu notification-dropdown text-end" aria-labelledby="notificationsDropdown">
+      <h6 class="notification-title">الاشعارات</h6>
 
-          <div class="notification-content">
-            <div class="notification-info text-end">
-              <strong class="d-block">المعلم</strong>
-              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-            </div>
-            <span>٣٠٠ س</span>
-
-          </div>
-
-          <div class="notification-content">
-            <div class="notification-info text-end">
-              <strong class="d-block">المعلم</strong>
-              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-            </div>
-            <span>٣٠٠ س</span>
-
-          </div>
-          
-        </a>
-
-
+      <div class="notification-content">
+        <div class="notification-info text-end">
+          <strong class="d-block">المعلم</strong>
+          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+        </div>
+        <span>٣٠٠ س</span>
       </div>
 
-       <!-- القائمة المنسدلة للحساب -->
-       <div class="dropdown">
-        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
-          <i class="fas fa-user icon-header"></i>
-        </a>
-        
-        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
-          <li class="text-center">
-            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
-            <p class="user-name">محمد محمد</p>
-            <p class="user-type">مدير</p>
-          </li>
-          <li><hr class="dropdown-divider"></li>
-          <li>
-            <form action="">
-              <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
-            </form>
-          </li>
-        </ul>
+      <div class="notification-content">
+        <div class="notification-info text-end">
+          <strong class="d-block">المعلم</strong>
+          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+        </div>
+        <span>٣٠٠ س</span>
       </div>
+    </div>
+  </li>
+
+  <!-- الحساب -->
+  <li class="dropdown">
+    <a href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+      <i class="fas fa-user icon-header"></i>
+    </a>
+    <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="accountDropdown">
+      <li class="text-center">
+        <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+        <p class="user-name">محمد محمد</p>
+        <p class="user-type">مدير</p>
+      </li>
+      <li><hr class="dropdown-divider"></li>
+      <li>
+        <form action="">
+          <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
+        </form>
+      </li>
+    </ul>
+  </li>
 
 
-      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
+   <!-- مبدّل اللغة -->
+  <li class="nav-item-lang-dashboard dropdown lang-switcher">
+          <a class="nav-link lang-dropdown d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../images/ar.png" alt="العربية" class="lang-flag">
+            <span class="lang-label">العربية</span>
+            <i class="fas fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-lang shadow-sm rounded">
+            <li>
+              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('ar')">
+                <img src="../images/ar.png" alt="ar" > العربية
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('en')">
+                <img src="../images/en.png" alt="en"> English
+              </a>
+            </li>
+          </ul>
+        </li>
 
-     
-     
+</ul>
+
 
     </nav>
 
   </div>
 </header>
+
 
       
       <!-- الشريط الجانبي -->
@@ -155,7 +190,7 @@
 </li>
 
  <li class="dropdown-sidebar">
-  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#techaersMenu" aria-expanded="false">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center active" data-bs-toggle="collapse" data-bs-target="#techaersMenu" aria-expanded="false">
     
     <i class="toggle-icon fas fa-plus"></i>
     <div class="d-flex align-items-center gap-2">   
@@ -224,38 +259,50 @@
   <div class="d-flex justify-content-between align-items-center mb-4 classroom-header">
     <div class="classroom-title me-3">
       <h5 class="fw-bold classroom-name">الصف التاسع<span class="section-name"> -أ- </span></h5>
-      <h3 class="subject-name ">اللغة العربية</h3>
+      <h3 class="subject-name ">اللغة العربية <span>- محمد محمد -</span></h3>
     </div>
 
        <div class="dropdown">
-            <button class="btn operations-btn-subject dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                اضافة
-            </button>
-            <ul class="dropdown-menu operations-dropdown-subject text-end" aria-labelledby="operationsDropdown">
+              <button class="btn operations-btn-subject dropdown-toggle" data-bs-toggle="dropdown">
+                    اضافة
+              </button>
+                  <ul class="dropdown-menu dropdown-menu-subjects">
 
                <li>
                     <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-add-book.html" >
-                       </i> كتاب
+                      <i class="fa fa-book"></i>
+                        كتاب
                     </a>
                 </li>
                 <li>
                     <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-add-exam.html" >
+                      <i class="fa fa-pen-to-square"></i>
                      اختبار
                     </a>
                 </li>
                  <li>
                     <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-add-hw.html" >
+                      <i class="fa fa-tasks"></i>
                      واجب
                     </a>
                 </li>
 
                  <li>
                     <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-add-meet-auto.html" >
+                      <i class="fa fa-video"></i>
                       لقاء
                     </a>
                 </li>
+
+                 <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-add-meet-auto.html" >
+                      <i class="fa fa-play-circle"></i>
+                      درس
+                    </a>
+                </li>
+
             </ul>
-        </div>    
+        </div>      
   </div>
 
   <div class="card-content-subject">
@@ -264,7 +311,9 @@
   <div class="card shadow-sm mb-3 content">
     <div class="card-body d-flex justify-content-between align-items-center flex-wrap content-card-body">
       <div class="assignment-info">
-        <p class="mb-3 fw-bold content-title">كتاب اللغة العربية</p>
+        <p class="mb-3 fw-bold content-title">
+          <i class="fas fa-book"></i>
+          كتاب اللغة العربية</p>
         <h6 class="text-muted content-date">تاريخ الإضافة: 2025-05-01</h6>
       </div>
 
@@ -295,7 +344,9 @@
   <div class="card shadow-sm mb-3 content">
     <div class="card-body d-flex justify-content-between align-items-center flex-wrap content-card-body">
       <div class="assignment-info">
-        <p class="mb-3 fw-bold content-title">اختبار اللغة العربية</p>
+        <p class="mb-3 fw-bold content-title">
+          <i class="fas fa-pen-to-square"></i>
+          اختبار اللغة العربية</p>
         <h6 class="text-muted content-date">تاريخ الإضافة: 2025-05-01</h6>
       </div>
           
@@ -336,7 +387,9 @@
    <div class="card shadow-sm mb-3 content">
     <div class="card-body d-flex justify-content-between align-items-center flex-wrap content-card-body">
       <div class="assignment-info">
-        <p class="mb-3 fw-bold content-title">لقاء مباشر في الدرس الأول</p>
+        <p class="mb-3 fw-bold content-title">
+           <i class="fas fa-video"></i>
+          لقاء مباشر في الدرس الأول</p>
         <h6 class="text-muted content-date">تاريخ الإضافة: 2025-05-01</h6>
       </div>
 
@@ -367,7 +420,9 @@
    <div class="card shadow-sm mb-3 content">
     <div class="card-body d-flex justify-content-between align-items-center flex-wrap content-card-body">
       <div class="assignment-info">
-        <p class="mb-3 fw-bold content-title"> الدرس الأول</p>
+        <p class="mb-3 fw-bold content-title"> 
+          <i class="fas fa-play-circle"></i>
+          الدرس الأول</p>
         <h6 class="text-muted content-date">تاريخ الإضافة: 2025-05-01</h6>
       </div>
        
@@ -397,7 +452,9 @@
    <div class="card shadow-sm mb-3 content">
     <div class="card-body d-flex justify-content-between align-items-center flex-wrap content-card-body">
       <div class="assignment-info">
-        <p class="mb-3 fw-bold content-title">واجب اللغة العربية</p>
+        <p class="mb-3 fw-bold content-title">
+           <i class="fa fa-tasks"></i>
+          واجب اللغة العربية</p>
         <h6 class="text-muted content-date">تاريخ الإضافة: 2025-05-01</h6>
       </div>
 

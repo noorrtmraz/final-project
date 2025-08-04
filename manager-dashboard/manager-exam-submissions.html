@@ -36,13 +36,31 @@
 <body>
     <!-- الهيدر -->
 <header class="header-page bg-white shadow fixed-top">
+
+   <div class="top-header-dashboard">
+  <div class=" d-flex flex-wrap justify-content-between align-items-center ">
+    
+    
+    <div class="d-flex gap-3 flex-wrap">
+      <span class="info-item-location"> فلسطين - غزة <i class="fas fa-map-marker-alt"></i></span>
+      
+      <span class="info-item-hour"> من 8:00 ص - 3:00 م <i class="fas fa-clock"></i> </span>
+    </div>
+    <div class="d-flex gap-3">
+      <span class="contact-item-email"> sparkEducation.edu <i class="fas fa-envelope"></i></span>
+      <span class="contact-item-phone"> 0598765432234 <i class="fas fa-phone"></i></span>
+    </div>
+  </div>
+</div>
   
   <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3 ">
+
+    
 
       <!-- الشعار والقائمة الجانبية -->
       <div class="d-flex align-items-center logo-spark">
         <a href="manager-index.html">
-          <img src="../images/spark.png" alt="spark education">
+          <img src="../images/spark.png" alt="spark education" class="logo">
         </a>
 
         <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
@@ -52,69 +70,86 @@
     <!-- القائمة اليسرى (أيقونات) -->
     <nav class="d-flex gap-4 ms-4 align-items-center">
 
-      <div class="dropdown">
-        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
-          <i class="fas fa-bell icon-header"></i>
-        </a>
+      <ul class="d-flex gap-4 ms-4 align-items-center list-unstyled m-0">
 
-        <a href="manager_chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
+ 
 
-          <h6 class="notification-title">الاشعارات</h6>
+  <!-- الإشعارات -->
+  <li class="dropdown">
+    <a href="#" id="notificationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
+      <i class="fas fa-bell icon-header"></i>
+    </a>
+    <div class="dropdown-menu notification-dropdown text-end" aria-labelledby="notificationsDropdown">
+      <h6 class="notification-title">الاشعارات</h6>
 
-          <div class="notification-content">
-            <div class="notification-info text-end">
-              <strong class="d-block">المعلم</strong>
-              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-            </div>
-            <span>٣٠٠ س</span>
-
-          </div>
-
-          <div class="notification-content">
-            <div class="notification-info text-end">
-              <strong class="d-block">المعلم</strong>
-              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-            </div>
-            <span>٣٠٠ س</span>
-
-          </div>
-          
-        </a>
-
-
+      <div class="notification-content">
+        <div class="notification-info text-end">
+          <strong class="d-block">المعلم</strong>
+          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+        </div>
+        <span>٣٠٠ س</span>
       </div>
 
-       <!-- القائمة المنسدلة للحساب -->
-       <div class="dropdown">
-        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
-          <i class="fas fa-user icon-header"></i>
-        </a>
-        
-        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
-          <li class="text-center">
-            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
-            <p class="user-name">محمد محمد</p>
-            <p class="user-type">مدير</p>
-          </li>
-          <li><hr class="dropdown-divider"></li>
-          <li>
-            <form action="">
-              <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
-            </form>
-          </li>
-        </ul>
+      <div class="notification-content">
+        <div class="notification-info text-end">
+          <strong class="d-block">المعلم</strong>
+          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+        </div>
+        <span>٣٠٠ س</span>
       </div>
+    </div>
+  </li>
+
+  <!-- الحساب -->
+  <li class="dropdown">
+    <a href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+      <i class="fas fa-user icon-header"></i>
+    </a>
+    <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="accountDropdown">
+      <li class="text-center">
+        <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+        <p class="user-name">محمد محمد</p>
+        <p class="user-type">مدير</p>
+      </li>
+      <li><hr class="dropdown-divider"></li>
+      <li>
+        <form action="">
+          <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
+        </form>
+      </li>
+    </ul>
+  </li>
 
 
-      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
+   <!-- مبدّل اللغة -->
+  <li class="nav-item-lang-dashboard dropdown lang-switcher">
+          <a class="nav-link lang-dropdown d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../images/ar.png" alt="العربية" class="lang-flag">
+            <span class="lang-label">العربية</span>
+            <i class="fas fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-lang shadow-sm rounded">
+            <li>
+              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('ar')">
+                <img src="../images/ar.png" alt="ar" > العربية
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('en')">
+                <img src="../images/en.png" alt="en"> English
+              </a>
+            </li>
+          </ul>
+        </li>
 
-     
-     
+</ul>
+
 
     </nav>
 
   </div>
 </header>
+
 
        <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
@@ -227,9 +262,9 @@
                 <div class="header-table">   
                     <input type="search" class="form-control search-input" placeholder="ابحث ...">
                 </div>
-                <div class="table-responsive">
-                  <table class="table text-center custom-user-table">
-                    <thead class="thead-user">
+                <div class="table-responsive manager-table-wrapper">
+                <table class="table text-center manager-grade-table">
+                  <thead class="thead-manager">
                       <tr>
                         <th>#</th>
                         <th>اسم الطالب</th>
@@ -249,12 +284,12 @@
                         <td>12-2-2025 3:30pm</td>
                        
                         <td>
-                          <div class="dropdown">
-                             <button class="operations-btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                                العمليات
-                            </button>
-                            <ul class="dropdown-menu operations-btn-item">
-                                <li>
+                              <div class="dropdown">
+                          <button class="dropdown-toggle operations-btn" data-bs-toggle="dropdown">
+                            العمليات
+                          </button>
+                         <ul class="dropdown-menu operations-btn-item">
+                              <li>
                                 <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="manager-exam-review.html" >
                                   <i class="fas fa-eye action-icon relode-icon-action"></i>  عرض الاجابات
                                 </a>

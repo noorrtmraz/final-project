@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark Education</title>
+    <link rel="icon" href="../images/logo-dark.png" type="image/png">
+  
+
+  <!-- ربط ملف bootstrap CSS المحلي -->
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
+    <!-- font awsam cdn link -->
+    <script src="js/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&family=Square+Peg&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.css" rel="stylesheet" />
+  
+
+
+     <!-- custom css file link -->
+      <link  id="theme-style"  rel="stylesheet" href="../css/rtl.css">
+     
+</head>
+</head>
+<body>
+    <!-- الهيدر -->
+<header class="header-page bg-white shadow fixed-top">
+
+   <div class="top-header-dashboard">
+  <div class=" d-flex flex-wrap justify-content-between align-items-center ">
+    
+    
+    <div class="d-flex gap-3 flex-wrap">
+      <span class="info-item-location"> فلسطين - غزة <i class="fas fa-map-marker-alt"></i></span>
+      
+      <span class="info-item-hour"> من 8:00 ص - 3:00 م <i class="fas fa-clock"></i> </span>
+    </div>
+    <div class="d-flex gap-3">
+      <span class="contact-item-email"> sparkEducation.edu <i class="fas fa-envelope"></i></span>
+      <span class="contact-item-phone"> 0598765432234 <i class="fas fa-phone"></i></span>
+    </div>
+  </div>
+</div>
+  
+  <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3 ">
+
+    
+
+      <!-- الشعار والقائمة الجانبية -->
+      <div class="d-flex align-items-center logo-spark">
+        <a href="manager-index.html">
+          <img src="../images/spark.png" alt="spark education" class="logo">
+        </a>
+
+        <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
+
+      </div>
+
+    <!-- القائمة اليسرى (أيقونات) -->
+    <nav class="d-flex gap-4 ms-4 align-items-center">
+
+      <ul class="d-flex gap-4 ms-4 align-items-center list-unstyled m-0">
+
+ 
+
+  <!-- الإشعارات -->
+  <li class="dropdown">
+    <a href="#" id="notificationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
+      <i class="fas fa-bell icon-header"></i>
+    </a>
+    <div class="dropdown-menu notification-dropdown text-end" aria-labelledby="notificationsDropdown">
+      <h6 class="notification-title">الاشعارات</h6>
+
+      <div class="notification-content">
+        <div class="notification-info text-end">
+          <strong class="d-block">المعلم</strong>
+          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+        </div>
+        <span>٣٠٠ س</span>
+      </div>
+
+      <div class="notification-content">
+        <div class="notification-info text-end">
+          <strong class="d-block">المعلم</strong>
+          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+        </div>
+        <span>٣٠٠ س</span>
+      </div>
+    </div>
+  </li>
+
+  <!-- الحساب -->
+  <li class="dropdown">
+    <a href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+      <i class="fas fa-user icon-header"></i>
+    </a>
+    <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="accountDropdown">
+      <li class="text-center">
+        <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+        <p class="user-name">محمد محمد</p>
+        <p class="user-type">مدير</p>
+      </li>
+      <li><hr class="dropdown-divider"></li>
+      <li>
+        <form action="">
+          <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
+        </form>
+      </li>
+    </ul>
+  </li>
+
+
+   <!-- مبدّل اللغة -->
+  <li class="nav-item-lang-dashboard dropdown lang-switcher">
+          <a class="nav-link lang-dropdown d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../images/ar.png" alt="العربية" class="lang-flag">
+            <span class="lang-label">العربية</span>
+            <i class="fas fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-lang shadow-sm rounded">
+            <li>
+              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('ar')">
+                <img src="../images/ar.png" alt="ar" > العربية
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('en')">
+                <img src="../images/en.png" alt="en"> English
+              </a>
+            </li>
+          </ul>
+        </li>
+
+</ul>
+
+
+    </nav>
+
+  </div>
+</header>
+
+
+      
+     <!-- الشريط الجانبي -->
+      <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
+  <ul class="list-unstyled">
+
+    <li>
+      <a href="manager-index.html">
+        <span>لوحة التحكم</span>
+        <i class="fa fa-home"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-subject.html">
+        <span>المواد الدراسية</span>
+        <i class="fas fa-book"></i>
+      </a>
+    </li>
+
+    <!-- عنصر الطلاب مع قائمة تظهر وتختفي -->
+    <li class="dropdown-sidebar">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
+    
+    <i class="toggle-icon fas fa-plus"></i>
+    <div class="d-flex align-items-center gap-2">   
+      <span>الطلاب</span>
+      <i class="fas fa-user-graduate"></i>
+    </div>
+  </a>
+
+  <ul id="studentsMenu" class="collapse list-unstyled ps-4 mt-2">
+    <li><a href="manager-student.html">عرض الطلاب</a></li>
+    <li><a href="manager-graduated.html">الخريجين</a></li>
+    <li><a href="manager-promotion.html">الترقيات</a></li>
+  <li><a href="manager-std-record.html">السجل</a></li>
+  </ul>
+</li>
+
+ <li class="dropdown-sidebar">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center active" data-bs-toggle="collapse" data-bs-target="#techaersMenu" aria-expanded="false">
+    
+    <i class="toggle-icon fas fa-plus"></i>
+    <div class="d-flex align-items-center gap-2">   
+      <span>المعلمين</span>
+      <i class="fas fa-chalkboard-teacher"></i>
+    </div>
+  </a>
+
+  <ul id="techaersMenu" class="collapse list-unstyled ps-4 mt-2">
+    <li><a href="manager-all-teacher.html">كل المعلمين</a></li>
+    <li><a href="manager-teacher.html">المعلمين الحاليين</a></li>
+    <li><a href="manager-teacher-record.html">السجل</a></li>
+  </ul>
+</li>
+
+    <li>
+      <a href="manager-parent.html">
+        <span>أولياء الأمور</span>
+        <i class="fas fa-user-shield"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-grade.html">
+        <span>المراحل الدراسية</span>
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-study-content.html">
+        <span>المحتوى الدراسي</span>
+        <i class="fas fa-book-reader"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-meet.html">
+        <span>اللقاءات المباشرة</span>
+        <i class="fas fa-video"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-setting.html">
+        <span>الاعدادات</span>
+        <i class="fa-solid fa-cogs"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-profile.html">
+        <span>الملف الشخصي</span>
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </li>
+  </ul>
+      </div>
+      
+      
+      <!-- المحتوى الرئيسي -->
+      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
+        <h3 class="manager-header">سجل التعيينات</h3> 
+
+       
+        <div class="table-users mt-5"> 
+            <!-- المحتوى -->
+              <!-- الطلاب -->
+              <div class="tab-pane fade show active" role="tabpanel">
+                <div class="header-table">   
+                    <input type="search" class="form-control search-input" placeholder="ابحث ...">
+
+                </div>
+                <div class="table-responsive manager-table-wrapper">
+                <table class="table text-center manager-grade-table">
+                  <thead class="thead-manager">
+                      <tr>
+                        <th>#</th>
+                        <th>اسم المعلم</th>
+                        <th>تاريخ التعيين</th>
+                        <th>نهاية التعيين</th>
+                        <th>مدة التعيين</th>
+                        <th>العمليات</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>محمد محمد</td>
+                        <td>12-3-2022</td>
+                        <td>12-3-2025</td>
+                        <td>3 سنوات</td>
+                        <td>
+                              <div class="dropdown">
+                          <button class="dropdown-toggle operations-btn" data-bs-toggle="dropdown">
+                            العمليات
+                          </button>
+                         <ul class="dropdown-menu operations-btn-item">
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="manager-data-teacher.html">
+                                  <i class="fas fa-eye action-icon edit-icon-action"></i> عرض بيانات المعلم
+                                </a>
+                              </li>
+                             
+                             
+                             </ul>
+                          </div>
+                       </td>
+                      
+                    
+                        </tr>
+                      
+                    </tbody>
+                  </table>
+
+            
+                </div>
+              </div>
+          
+
+      </div>
+
+
+      </div>
+
+
+     
+       
+ 
+  
+    
+<!-- زر فتح الرسائل باستخدام Bootstrap -->
+<button class="position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
+        type="button" 
+        data-bs-toggle="offcanvas" 
+        data-bs-target="#messagesOffcanvas" 
+        aria-controls="messagesOffcanvas">
+  <i class="fas fa-comments"></i>
+</button>
+
+<!-- Offcanvas الرسائل -->
+<div class="offcanvas offcanvas-bottom messages-panel" tabindex="-1" id="messagesOffcanvas" aria-labelledby="messagesOffcanvasLabel">
+    <div class="offcanvas-header message-title text-white d-flex  justify-content-between align-items-center">
+        <h5 class="offcanvas-title ms-auto">الرسائل</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+      </div>
+      
+      
+  <div class="offcanvas-body d-flex flex-column p-0">
+    <div>
+      <input type="text" class="form-control search-msg" placeholder="ابحث ...">
+    </div>
+
+    <div class="messages-body overflow-auto flex-grow-1 p-3">
+      <!-- عنصر رسالة -->
+     <div class="d-flex align-items-center border-bottom py-2 text-dark message-item" style="cursor: pointer;" onclick="openChatPopup('المعلم')">
+  <img src="../images/pic-2.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+  <div class="msg-info text-end">
+    <strong class="d-block">المعلم</strong>
+    <p class="mb-0">لديك مهام جديدة</p>
+  </div>
+  <span>٣٠٠ س</span>
+</div>
+
+
+      <div class="d-flex align-items-center border-bottom py-2 text-dark message-item" style="cursor: pointer;" onclick="openChatPopup('المعلم')">
+  <img src="../images/pic-2.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+  <div class="msg-info text-end">
+    <strong class="d-block">المعلم</strong>
+    <p class="mb-0">لديك مهام جديدة</p>
+  </div>
+  <span>٣٠٠ س</span>
+</div>
+
+
+
+     <div class="d-flex align-items-center border-bottom py-2 text-dark message-item" style="cursor: pointer;" onclick="openChatPopup('المعلم')">
+        <img src="../images/pic-2.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+        <div class="msg-info text-end">
+          <strong class="d-block">المعلم</strong>
+          <p class="mb-0">لديك مهام جديدة</p>
+        </div>
+        <span>٣٠٠ س</span>
+      </div>
+
+<div class="d-flex align-items-center border-bottom py-2 text-dark message-item" style="cursor: pointer;" onclick="openChatPopup('المعلم')">
+  <img src="../images/pic-2.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+  <div class="msg-info text-end">
+    <strong class="d-block">المعلم</strong>
+    <p class="mb-0">لديك مهام جديدة</p>
+  </div>
+  <span>٣٠٠ س</span>
+</div>
+
+      <!-- يمكنك إضافة المزيد من الرسائل هنا -->
+    </div>
+  </div>
+</div>
+                  
+      
+
+<!-- نافذة المحادثة المنبثقة -->
+<div class="card-message chat-popup-wrapper position-fixed bottom-0 shadow" id="chatPopup" style="display: none;">
+  
+  <div class="chat-popup-header d-flex justify-content-between align-items-center">
+    <button class="chat-close-button btn btn-sm btn-close" onclick="closeChatPopup()"></button>
+    <span id="chatUserName" class="chat-username">المعلم</span>
+  </div>
+
+  <div class="chat-popup-body overflow-auto" id="chatBody">
+    <div class="chat-msg-bot text-muted small">مرحباً! كيف يمكنني مساعدتك؟</div>
+  </div>
+
+  <div class="chat-popup-footer">
+    <input type="text" class="chat-input form-control" placeholder="اكتب رسالة..." onkeydown="sendMessage(event)">
+  </div>
+
+</div>
+
+  
+    
+         <!--- footer start-->
+         <footer class="footer bg-white shadow fixed-bottom">
+
+            &copy; جميع الحقوق محفوظة  | <span>spark eucation</span>  حقوق الطبع والنشر بواسطة 
+         
+         </footer>
+        <!--- footer ends-->
+      
+
+  <!-- ربط ملف bootstrap JS المحلي -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
+
