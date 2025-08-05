@@ -154,7 +154,6 @@
 
   .hero-section{
     background:linear-gradient(60deg ,rgba(7, 35, 64, 0), rgba(88, 159, 67, 0.5));
-    margin-top: 5rem;
     padding: 50px 0;
     
   }
@@ -1115,6 +1114,7 @@ header.header-page img.logo {
     background-color: #fff;
     left: 0;
     direction: rtl;
+    margin-top: 4rem;
   }
 
   .sidebar ul {
@@ -1208,6 +1208,7 @@ header.header-page img.logo {
   margin-bottom: 15rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* سلاسة على الموبايل */
+  margin-bottom: 15rem;
 }
 
 
@@ -1585,7 +1586,23 @@ header.header-page img.logo {
   font-size: 2.2rem;
   font-weight: bold;
   margin-top:4rem;
-  margin-left: 4rem;
+  margin-left: 3rem;
+}
+
+.title-underline-manager {
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-color); /* يمكنك تغيير اللون */
+  margin: 1rem 0 3rem 3rem; /* المسافات العلوية والسفلية */
+  border-radius: 3px;
+}
+
+.title-underline-manager2 {
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-color); /* يمكنك تغيير اللون */
+  margin: 1rem 0 0 3rem; /* المسافات العلوية والسفلية */
+  border-radius: 3px;
 }
 
 
@@ -2685,7 +2702,6 @@ font-weight: bold;
   color: var(--main-color);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
   font-size: 2.2rem;
-  font-weight: 200;
   margin-top:4rem;
  
 }
@@ -2697,6 +2713,7 @@ font-weight: bold;
     /* box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15); */
     padding: 3rem;
     border: 1px solid rgba(88, 159, 67, 0.2);
+     margin-bottom: 8rem;
 }
 
 .checkbox-file div label{
@@ -2748,7 +2765,7 @@ font-weight: bold;
     border: none;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    padding: 15px;
+    padding: 10px;
     margin-top: 10px;
     color: var(--white);
     text-align: center;
@@ -2903,7 +2920,7 @@ transition: 0.2s;
   width: 60px;
   height: 1px;
   background-color: var(--main-color); /* يمكنك تغيير اللون */
-  margin: 5px auto 3rem auto; /* المسافات العلوية والسفلية */
+  margin: 2rem auto 3rem auto; /* المسافات العلوية والسفلية */
   border-radius: 3px;
 }
 
@@ -4662,6 +4679,7 @@ text-decoration: none;
 
     .sidebar.active {
       transform: translateX(0);
+      margin-top: 4rem;
     }
 
     #mainContent.with-sidebar {
@@ -4858,6 +4876,9 @@ text-decoration: none;
 
 
   @media (max-width: 480px) {
+    .nav-link span{
+      display: none;
+    }
     
     .nav-item-lang{
   font-size: 1rem;
@@ -4865,7 +4886,7 @@ text-decoration: none;
 
 
 .lang-dropdown img {
-  width: 15px;
+  width: 20px;
 }
     .about-section .about-text h3 {
       font-size: 1.3rem;

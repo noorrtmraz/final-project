@@ -213,7 +213,6 @@
 /* ----------------------- */
   .hero-section{
     background:linear-gradient(125deg ,rgba(7, 35, 64, 0), rgba(88, 159, 67, 0.8));
-    margin-top: 5rem;
     padding: 50px 0;
     
   }
@@ -1230,7 +1229,7 @@ header.header-page img.logo {
   box-shadow: 0 0 4px rgba(0,0,0,0.1);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* سلاسة على الموبايل */
-
+margin-bottom: 15rem;
   
 }
 
@@ -1604,9 +1603,26 @@ header.header-page img.logo {
   text-shadow: 1px 1px 2px rgba(88, 159, 67, 0.2);
   font-size: 2.2rem;
   margin-top:4rem;
-  margin-right: 4rem;
+  margin-right: 3rem;
+  
 }
 
+.title-underline-manager {
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-color); /* يمكنك تغيير اللون */
+  margin: 1rem 3rem 3rem 0; /* المسافات العلوية والسفلية */
+  border-radius: 3px;
+}
+
+
+.title-underline-manager2 {
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-color); /* يمكنك تغيير اللون */
+  margin: 1rem 3rem 0 0; /* المسافات العلوية والسفلية */
+  border-radius: 3px;
+}
 
 /* ----------------- */
 
@@ -2653,9 +2669,7 @@ font-weight: bold;
   color: var(--main-color);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
   font-size: 2.2rem;
-  font-weight: 200;
   margin-top:4rem;
- 
 }
 
 .custom-form-card-teacher{
@@ -2665,6 +2679,7 @@ font-weight: bold;
     /* box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15); */
     padding: 3rem;
     border: 1px solid rgba(88, 159, 67, 0.2);
+    margin-bottom: 8rem;
 }
 
 .checkbox-file div label{
@@ -2717,7 +2732,7 @@ font-weight: bold;
     border: none;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    padding: 15px;
+    padding: 10px;
     margin-top: 10px;
     color: var(--white);
     text-align: center;
@@ -2876,7 +2891,7 @@ transition: 0.2s;
   width: 60px;
   height: 1px;
   background-color: var(--main-color); /* يمكنك تغيير اللون */
-  margin: 5px auto 3rem auto; /* المسافات العلوية والسفلية */
+  margin: 2rem auto 3rem auto; /* المسافات العلوية والسفلية */
   border-radius: 3px;
 }
 
@@ -4636,10 +4651,12 @@ transition: 0.2s;
       height: calc(100vh - 72px);
       background-color: #fff;
       z-index: 1;
+      margin-top: 4rem;
     }
 
     .sidebar.active {
       transform: translateX(0);
+      margin-top: 4rem;
     }
 
     #mainContent.with-sidebar {
@@ -4813,13 +4830,17 @@ transition: 0.2s;
 
   @media (max-width: 480px) {
 
+    .nav-link span{
+      display: none;
+    }
+
     .nav-item-lang{
   font-size: 1rem;
 }
 
 
 .lang-dropdown img {
-  width: 15px;
+  width: 20px;
 }
 
     .about-section .about-text h3 {

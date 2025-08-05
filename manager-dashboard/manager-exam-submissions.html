@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark Education</title>
     <link rel="icon" href="../images/logo-dark.png" type="image/png">
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   
 
   <!-- ربط ملف bootstrap CSS المحلي -->
@@ -251,7 +252,18 @@
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
-        <h3 class="manager-header">علامات الطلاب </h3> 
+        <h3 class="manager-header">علامات الطلاب </h3>
+        <div class="title-underline-manager"></div> 
+
+        <div class="charts-wrapper">
+            <div class="chart-box">
+              <canvas id="barChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+              <canvas id="donutChart"></canvas>
+            </div>
+          </div>
 
        
         <div class="table-users mt-5"> 
