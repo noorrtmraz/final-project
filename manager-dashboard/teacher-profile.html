@@ -35,33 +35,14 @@
 </head>
 <body>
     <!-- الهيدر -->
-    <!-- الهيدر -->
 <header class="header-page bg-white shadow fixed-top">
-
-   <div class="top-header-dashboard">
-  <div class=" d-flex flex-wrap justify-content-between align-items-center ">
-    
-    
-    <div class="d-flex gap-3 flex-wrap">
-      <span class="info-item-location"> فلسطين - غزة <i class="fas fa-map-marker-alt"></i></span>
-      
-      <span class="info-item-hour"> من 8:00 ص - 3:00 م <i class="fas fa-clock"></i> </span>
-    </div>
-    <div class="d-flex gap-3">
-      <span class="contact-item-email"> sparkEducation.edu <i class="fas fa-envelope"></i></span>
-      <span class="contact-item-phone"> 0598765432234 <i class="fas fa-phone"></i></span>
-    </div>
-  </div>
-</div>
   
   <div class="header-row container-fluid d-flex align-items-center justify-content-between py-3 ">
-
-    
 
       <!-- الشعار والقائمة الجانبية -->
       <div class="d-flex align-items-center logo-spark">
         <a href="teacher-index.html">
-          <img src="../images/spark.png" alt="spark education" class="logo">
+          <img src="../images/spark.png" alt="spark education">
         </a>
 
         <a href="#" id="sidebarToggle" title="القائمة"><i class="fas fa-bars fa-lg me-3"></i></a>
@@ -71,89 +52,72 @@
     <!-- القائمة اليسرى (أيقونات) -->
     <nav class="d-flex gap-4 ms-4 align-items-center">
 
-      <ul class="d-flex gap-4 ms-4 align-items-center list-unstyled m-0">
+      <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
+          <i class="fas fa-bell icon-header"></i>
+        </a>
 
- 
+        <a href="teacher-chat.html" class="dropdown-menu notification-dropdown text-end" aria-labelledby="userDropdown">
 
-  <!-- الإشعارات -->
-  <li class="dropdown">
-    <a href="#" id="notificationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الاشعارات">
-      <i class="fas fa-bell icon-header"></i>
-    </a>
-    <div class="dropdown-menu notification-dropdown text-end" aria-labelledby="notificationsDropdown">
-      <h6 class="notification-title">الاشعارات</h6>
+          <h6 class="notification-title">الاشعارات</h6>
 
-      <div class="notification-content">
-        <div class="notification-info text-end">
-          <strong class="d-block">المعلم</strong>
-          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-        </div>
-        <span>٣٠٠ س</span>
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
+          </div>
+
+          <div class="notification-content">
+            <div class="notification-info text-end">
+              <strong class="d-block">المعلم</strong>
+              <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
+            </div>
+            <span>٣٠٠ س</span>
+
+          </div>
+          
+        </a>
+
+
       </div>
 
-      <div class="notification-content">
-        <div class="notification-info text-end">
-          <strong class="d-block">المعلم</strong>
-          <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-        </div>
-        <span>٣٠٠ س</span>
+       <!-- القائمة المنسدلة للحساب -->
+       <div class="dropdown">
+        <a href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
+          <i class="fas fa-user icon-header"></i>
+        </a>
+        
+        <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="userDropdown">
+          <li class="text-center">
+            <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
+            <p class="user-name">محمد محمد</p>
+            <p class="user-type">معلم</p>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <form action="">
+              <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
+            </form>
+          </li>
+        </ul>
       </div>
-    </div>
-  </li>
-
-  <!-- الحساب -->
-  <li class="dropdown">
-    <a href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="الحساب">
-      <i class="fas fa-user icon-header"></i>
-    </a>
-    <ul class="dropdown-menu account-dropdown text-end" aria-labelledby="accountDropdown">
-      <li class="text-center">
-        <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
-        <p class="user-name">محمد محمد</p>
-        <p class="user-type">معلم</p>
-      </li>
-      <li><hr class="dropdown-divider"></li>
-      <li>
-        <form action="">
-          <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>تسجيل الخروج</button>
-        </form>
-      </li>
-    </ul>
-  </li>
 
 
-   <!-- مبدّل اللغة -->
-  <li class="nav-item-lang-dashboard dropdown lang-switcher">
-          <a class="nav-link lang-dropdown d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="../images/ar.png" alt="العربية" class="lang-flag">
-            <span class="lang-label">العربية</span>
-            <i class="fas fa-angle-down"></i>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-lang shadow-sm rounded">
-            <li>
-              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('ar')">
-                <img src="../images/ar.png" alt="ar" > العربية
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item dropdown-item-lang d-flex align-items-center" href="#" onclick="changeLanguage('en')">
-                <img src="../images/en.png" alt="en"> English
-              </a>
-            </li>
-          </ul>
-        </li>
+      <a href="#" title="تغيير اللغة"><i class="fas fa-language icon-header"></i></a>
 
-</ul>
-
+     
+     
 
     </nav>
 
   </div>
 </header>
 
-
       
-      <!-- الشريط الجانبي -->
+       <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
             <ul class="list-unstyled">
                 <li>
@@ -224,119 +188,128 @@
       </div>
       
       
-      <!-- المحتوى الرئيسي -->
-      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
-        <section class="dashboard-teacher">
-            <div class="container">
-              <div class="row gy-4">
+       <!-- المحتوى الرئيسي -->
+      <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
+       
 
+        <div class="container py-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="profile-card-manager text-center">
+                <img src="../images/pic-1.jpg" alt="مدير" class="profile-avatar mb-3">
+                <div class="profile-info-manager">
+                  <h3>أ. أحمد يوسف</h3>
+                  <p>9876543234</p>
+                  <p>+970 599 123 456</p>
+                  <p>معلم - مدرسة الأمل</p>
+                </div>
         
-                <div class="col-lg-6 col-md-12">
-                    <div class="card stats-card border-0 rounded-3 p-3">
-                      <div class="card-welcome-content d-flex justify-content-between align-items-center">
-                       
-                        <div class="user-welcome">
-                            <h4> مرحباً بك في لوحة التحكم </h4>
-                            <h6>محمد محمد</h6>
-                            <img src="../images/pic-1.jpg" alt="" class="rounded-circle">
-                        </div>
-                        <img src="../images/welcome.png" alt="">
+                <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+                  <a href="#" class="btn btn-custom-manager px-4" data-bs-toggle="modal" data-bs-target="#editProfile">
+                    <i class="fas fa-edit me-2"></i>تعديل الملف الشخصي
+                  </a>
 
-
-                      </div>                    
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-6">
-                    <div class="card stats-card border-0 rounded-3 ">
-                      <div class="card-techaer-content d-flex justify-content-center align-items-center">
-                          <i class="fa-solid fa-user-graduate fa-2x"></i>
-  
-                        <div class="user-number-teacher">
-                          <h4 class="fw-bold">200</h4>
-                          <h6 class="text-muted">عدد الطلاب</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            
-                  <div class="col-lg-3 col-md-6">
-                    <div class="card stats-card border-0 rounded-3">
-                      <div class="card-techaer-content d-flex justify-content-center align-items-center">
-                          <i class="fas fa-book fa-2x"></i>
-  
-                        <div class="user-number-teacher">
-                          <h4 class="fw-bold">200</h4>
-                          <h6 class="text-muted">عدد الصفوف</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-          
-                
-          
+                </div>
               </div>
             </div>
-          </section>
-
-
-          <div class="container custom-table-teacher">
- 
-           <h3 class="teacher-title3" style="margin-bottom: 2rem;">الصفوف الدراسية</h3>
+          </div>
         
-            <div class="table-responsive custom-table-wrapper">
+          <!-- ✅ قسم الإحصائيات البارزة -->
+          <div class="row text-center mt-5 g-4 cards-profile-manager">
+            <div class="col-md-4 col-sm-6">
+              <a href="teacher-hw.html" class="card state-cards" style="text-decoration: none;">
+                <div class="card-body">
+                  <i class="fa fa-tasks fa-2x mb-2"></i>
+                  <h6 class="mb-1">الواجبات</h6>
+                </div>
+              </a>
+            </div>
+        
+      
+        
+            <div class="col-md-4 col-sm-6">
+              <a href="teacher-exam.html" class="card state-cards" style="text-decoration: none;">
+                <div class="card-body">
+                  <i class="fa fa-pen-to-square fa-2x  mb-2"></i>
+                  <h6 class="mb-1"> الاختبارات</h6>
+                </div>
+              </a>
+            </div>
+        
+            <div class="col-md-4 col-sm-6">
+              <a href="teacher-lesson.html" class="card state-cards" style="text-decoration: none;">
+                <div class="card-body">
+                  <i class="fa fa-book-open fa-2x mb-2"></i>
+                  <h6 class="mb-1"> الدروس</h6>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
 
 
-                  <table class="table table-hover text-center custom-grade-table">
-                    <thead class="thead-custom">
-                      <tr>
-                        <th>#</th>
-                        <th> المرحلة</th>
-                        <th> الصفوف</th>
-                        <th> الشعبة</th>
-                        <th>عدد الطلاب</th>
-                        <th> المادة</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr  onclick="window.location.href='teacher-content-preview.html'" style="cursor: pointer;">
-                        <td>1</td>
-                        <td>الابتدائي</td>
-                        <td>الاول</td>
-                        <td>أ</td>
-                        <td>100</td>
-                        <td> رياضيات</td>
-                      </tr>
-                       
-                      <tr onclick="window.location.href='teacher-content-preview.html'" style="cursor: pointer;">
-                        <td>1</td>
-                        <td>الابتدائي</td>
-                        <td>الاول</td>
-                        <td>أ</td>
-                        <td>100</td>
-                       <td> رياضيات</td>
-                      </tr>
+                           <!-- المودال -->
+              <div class="modal fade custom-modal" id="editProfile" tabindex="-1" aria-labelledby="editProfile" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                  <div class="modal-content custom-modal-content">
 
-                      <tr onclick="window.location.href='teacher-content-preview.html'" style="cursor: pointer;">
-                        <td>1</td>
-                        <td>الابتدائي</td>
-                        <td>الاول</td>
-                        <td>أ</td>
-                        <td>100</td>
-                       <td> رياضيات</td>
-                      </tr>
+                    <!-- رأس المودال -->
+                    <div class="modal-header custom-modal-header">
+                      <h5 class="modal-title custom-modal-title" id="editProfile">إضافة صف جديد</h5>
+                    </div>
 
-                     
-                    </tbody>
-                  </table>
+                    <!-- جسم المودال -->
+                    <div class="modal-body custom-modal-body">
+                      <form id="stageForm" class="custom-form">
+                        <div class="mb-3 custom-form-group">
+                           <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">الاسم بالعربي</label>
+                          </div> 
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                           <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label"> االاسم بالانجليزي</label>
+                          </div> 
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                           <div class="form-group-float position-relative ">
+                            <input type="password" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">كلمة المرور الحالية</label>
+                          </div> 
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                           <div class="form-group-float position-relative ">
+                            <input type="password" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">كلمة المرور الجديدة</label>
+                          </div> 
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                           <div class="form-group-float position-relative ">
+                            <input type="password" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label"> تأكيد كلمة المرور</label>
+                          </div> 
+                        </div>
+
+                      </form>
+                    </div>
+
+                    <!-- تذييل المودال -->
+                    <div class="modal-footer custom-modal-footer">
+                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تعديل</button>
+                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+
+                  </div>
                 </div>
               </div>
         
-            </div>
-          </div>   
-          
-          
-        <!-- محتوى الصفحة هنا -->
+
       </div>
 
 
