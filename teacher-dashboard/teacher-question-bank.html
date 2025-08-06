@@ -32,7 +32,7 @@
       <link  id="theme-style"  rel="stylesheet" href="../css/rtl.css">
      
 </head>
-
+</head>
 <body>
 
     <!-- الهيدر -->
@@ -152,7 +152,7 @@
 </header>
 
       
-     
+       
       <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
             <ul class="list-unstyled">
@@ -189,7 +189,7 @@
                     </a>
                   </li>
                   <li class="dropdown-sidebar">
-                  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#techaersMenu" aria-expanded="false">
+                  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center active" data-bs-toggle="collapse" data-bs-target="#techaersMenu" aria-expanded="false">
                     
                     <i class="toggle-icon fas fa-plus"></i>
                     <div class="d-flex align-items-center gap-2">   
@@ -242,70 +242,58 @@
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
-
-         <h3 class="teacher-title2">قائمة الاختبارات</h3>
-         <div class="title-underline"></div>
+        <h3 class="teacher-title2">بنك الاسئلة</h3>
+      <div class="title-underline"></div>
        
-            <div class="container custom-table-teacher">
+                <div class="container custom-table-teacher">
+
                 <div class="header-table-teacher">  
-                  <a href="teacher-forms/teacher-add-exam.html">اضافة اختبار</a>
+                  <a href="teacher-forms/teacher-add-question.html">اضافة سؤال</a>
 
 
-                    <div class="search-box-student text-end mb-3">
+                    <div class="search-box-student text-end mb-3 d-flex flex-row">
+                        <select class="form-select std-select" id="stage">
+                        <option selected disabled>اختر القسم...</option>
+                        </select>
+
                       <input type="search" class="form-control search-input-custom" placeholder="ابحث ...">
+                        
                     </div>
                  </div>
-              <div class="table-responsive custom-table-wrapper">
-                  <table class="table text-center custom-grade-table">
+
+               <div class="table-responsive custom-table-wrapper">
+                <table class="table text-center custom-grade-table">
                   <thead class="thead-custom">
                       <tr>
                         <th>#</th>
-                        <th>عنوان الاختبار</th>
-                        <th> المادة</th>
-                        <th>الصف</th>
-                        <th>الشعبة</th>
-                        <th>مدة الاختبار</th>
-                        <th>بداية</th>
-                        <th>نهاية</th>
+                        <th> السؤال</th>
+                        <th> قسم السؤال</th>
+                        <th> نوع السؤال</th>
+                        <th>علامة السؤال</th>
                         <th>العمليات</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>اختبار الوحدة الاولى</td>
-                        <td>لغة عربية</td>
-                        <td>الأول</td>
-                        <td>أ</td>
-                        <td>20 دقيقة</td>
-                        <td>12-2-2025 12:00pm</td>
-                        <td>12-2-2025 12:00am</td>
+                        <td>السؤال الأول</td>
+                        <td>اختبار نصفي</td>
+                        <td>اختيار من متعدد</td>
+                        <td>5</td>
                         <td>
                           <div class="dropdown">
-                             <button class="dropdown-toggle dropdown-toggle-operations" data-bs-toggle="dropdown">
-                                العمليات
-                              </button>
-                            <ul class="dropdown-menu dropdown-menu-operations">
-                             <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-exam-submissions.html" >
-                                  <i class="fas fa-users students-icon action-icon std-icon-action"></i> الطلاب
-                                </a>
-                              </li>
-
+                          <button class="dropdown-toggle dropdown-toggle-operations" data-bs-toggle="dropdown">
+                            العمليات
+                          </button>
+                         <ul class="dropdown-menu dropdown-menu-operations">
                               <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2 " href="teacher-exam-questions.html" >
-                                  <i class="fas fa-question-circle action-icon question-icon-action"></i> الاسئلة
-                                </a>
-                              </li>
-
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-edit-exam.html" >
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-edit-question.html" >
                                   <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
                                 </a>
                               </li>
     
                               <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-exam">
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-question">
                                   <i class="fas fa-trash-alt action-icon delete-icon-action"></i> حذف
                                 </a>
                               </li>
@@ -313,13 +301,11 @@
                           </div>
                        </td>
                       </tr>
-
-                      
                     </tbody>
                   </table>
 
-                   <!-- Modal حذف الواجب -->
-                   <div class="modal fade" id="deleteModal-exam" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                   <!-- Modal حذف الطالب -->
+                   <div class="modal fade" id="deleteModal-question" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
                       <div class="modal-content">
                         <div class="modal-header">
@@ -327,7 +313,7 @@
                         </div>
                         <div class="modal-body text-center">
                           <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
-                          <p>هل أنت متأكد أنك تريد حذف هذا الاختبار ؟</p>
+                          <p>هل أنت متأكد أنك تريد حذف هذا السؤال ؟</p>
                         </div>
                         <div class="modal-footer justify-content-center">
                           <button type="button" class="btn btn-del">تأكيد الحذف</button>
@@ -336,7 +322,6 @@
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
           
@@ -372,6 +357,7 @@
   <div class="offcanvas-body d-flex flex-column p-0">
     <div>
       <input type="text" class="form-control search-msg" placeholder="ابحث ...">
+
     </div>
 
     <div class="messages-body overflow-auto flex-grow-1 p-3">

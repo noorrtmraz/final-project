@@ -151,7 +151,7 @@
 </header>
 
       
-      <!-- الشريط الجانبي -->
+     <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
             <ul class="list-unstyled">
                 <li>
@@ -181,11 +181,26 @@
                   </li>
 
                   <li>
-                    <a href="../teacher-exam.html" class="active">
+                    <a href="../teacher-exam.html">
                       <span> الاختبارات</span>
                       <i class="fa fa-pen-to-square"></i>
                     </a>
                   </li>
+                  <li class="dropdown-sidebar">
+                  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center active" data-bs-toggle="collapse" data-bs-target="#techaersMenu" aria-expanded="false">
+                    
+                    <i class="toggle-icon fas fa-plus"></i>
+                    <div class="d-flex align-items-center gap-2">   
+                      <span>الاسئلة</span>
+                      <i class="fas fa-circle-question"></i>
+                    </div>
+                  </a>
+
+                  <ul id="techaersMenu" class="collapse list-unstyled ps-4 mt-2">
+                    <li><a href="../teacher-question-bank.html">بنك الاسئلة</a></li>
+                    <li><a href="../teacher-question-category.html">اقسام الاسئلة</a></li>
+                  </ul>
+                </li>
 
                   <li>
                     <a href="../teacher-hw.html">
@@ -227,23 +242,23 @@
 
         <h3 class="teacher-header-form">اضافة سؤال جديد</h3> 
         <div class="title-underline"></div>
-  
+
+
         <div class="container mt-4">
           <div class="card custom-form-card-teacher">
-            <div class="card-body">        
-                <form class="subject-form">
+            <div class="card-body">
+               <form class="subject-form">
                   <div class="row mb-4">
                     <div class="col-md-12">
-                      <label for="" class="text-danger">المادة *</label>
-                      <select class="form-select custom-select" id="grade">
-                        <option selected disabled>مادة الاختبار ...</option>
-                      </select>                     
+                      <label for="" class="text-danger">قسم السؤال*</label>
+                      <select class="form-select custom-select" id="class">
+                        <option selected disabled> اختر القسم ...</option>
+                      </select>
+
                     </div>
-                  
                   </div>
 
-
-                  <div class="row mb-4">
+                    <div class="row mb-4">
                     <div class="col-md-12">
                       <label for="" class="text-danger">نص السؤال *</label>
                       <textarea class="form-control custom-textarea fs-5 p-3" id="stageNotes" rows="3" placeholder="ادخل نص السؤال"></textarea>
@@ -252,43 +267,70 @@
                   </div>
 
                   <div class="row mb-4">
-                    <div class="col-md-12">
-                        <label for="" class="text-danger">اضافة صورة السؤال (اختباري)</label>
-                        <input type="file" class="form-control custom-input float-input" id="" placeholder=" " />
+                    
+                      <label for="" class="text-danger">نوع السؤال *</label>
+                      <div class="col-md-12 mt-4">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="questionType" id="multipleChoice">
+                        <label class="form-check-label " for="multipleChoice">اختيار من متعدد</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="questionType" id="trueFalse">
+                        <label class="form-check-label " for="trueFalse">صح أو خطأ</label>
+                      </div>
                     </div>
-                  </div>
-
-                  <div class="row mb-3">
-                    <div class="col-md-6">
-                       <div class="form-group-float position-relative ">
-                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
-                            <label for="" class="float-label">الخيار الأول</label>
-                        </div> 
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group-float position-relative ">
-                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
-                            <label for="" class="float-label">الخيار الثاني</label>
-                        </div> 
-                    </div>
-                  </div>
-
-                  <div class="row mb-3">
-                    <div class="col-md-6">
-                       <div class="form-group-float position-relative ">
-                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
-                            <label for="" class="float-label">الخيار الثالث</label>
-                        </div> 
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group-float position-relative ">
-                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
-                            <label for="" class="float-label">الخيار الرابع</label>
-                        </div> 
-                    </div>
+                  
                   </div>
 
                   <div class="row mb-4">
+                    
+                    <label class="text-danger">الخيارات *</label>
+                     <div>
+                    <!-- خيار 1 -->
+                    <div class="option-line">
+                      <input type="radio" name="correctOption">
+                      
+                      <div class="col-md-11">
+                        <div class="form-group-float position-relative ">
+                          <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                          <label for="" class="float-label">الخيار الأول  *</label>
+                        </div>                  
+                      </div>
+
+                      
+                      <button type="button" class="btn btn-danger remove-btn">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+
+                    <!-- خيار 2 -->
+                     <div class="option-line">
+                      <input type="radio" name="correctOption">
+                      
+                      <div class="col-md-11">
+                        <div class="form-group-float position-relative ">
+                          <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                          <label for="" class="float-label">الخيار الثاني  *</label>
+                        </div>                  
+                      </div>
+
+                      
+                      <button type="button" class="btn btn-danger remove-btn">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+
+                    <!-- زر إضافة -->
+                    <div class=" mt-3">
+                      <button type="button" class="add-question-plus">
+                       <i class="fa fa-plus"></i> خيار جديد 
+                      </button>
+                    </div>
+                  </div>
+                    
+                  </div>
+
+                    <div class="row mb-4">
                     <div class="col-md-12">
                      <div class="form-group-float position-relative ">
                             <input type="number" class="form-control custom-input float-input" id="" placeholder=" " />
@@ -298,30 +340,19 @@
         
                   </div>
 
-                  <div class="row mb-4">
-                  
-                    <div class="col-md-12">
-                      <label for="" class="text-danger">الاجابة الصحيحة *</label>
-                      <select class="form-select custom-select" id="class">
-                        <option selected disabled>الاجابة الصحيحة ...</option>
-                      </select>
-                    </div>
-                    
-                  </div>
 
-
-  
-                   
-  
-  
-          
                   <div class="text-end">
-                    <button type="submit" class="btn save-btn">اضافة</button>
-                  </div>
-                </form>
-              </div>
+                  <button type="submit" class="btn save-btn">اضافة</button>
+                </div>
+              </form>
+
           </div>
+          </div>
+          
         </div>
+
+          
+              
         <!-- محتوى الصفحة هنا -->
       </div>
 

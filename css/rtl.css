@@ -2367,11 +2367,27 @@ font-weight: bold;
 
  }
 
+ /* .search-box-student{
+  display: flex;
+  flex-direction: row;
+ } */
+
 
  .search-box-student input{
   text-align: right;
   border: 1px solid rgba(88, 159, 67, 0.2);
   padding: .7rem;
+  width: 20rem;
+  font-size: 1.4rem;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0 ,0.05);
+  /* border-radius: 7px; */
+  border-radius:4px ;
+  margin-right: 1rem;
+}
+
+.search-box-student select{
+  text-align: right;
+  border: 1px solid rgba(88, 159, 67, 0.2);
   width: 20rem;
   font-size: 1.4rem;
   box-shadow: 1px 2px 2px rgba(0, 0, 0 ,0.05);
@@ -2664,6 +2680,63 @@ font-weight: bold;
 
 /* --------forms in teacher dashboard--------- */
 
+
+     .option-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .option-line input[type="radio"] {
+      margin: 0 5px;
+    }
+
+    .option-line input[type="text"] {
+      flex-grow: 1;
+    }
+
+    .remove-btn {
+      padding: 8px 10px;
+      white-space: nowrap;
+      border-bottom-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+
+   .form-check .form-check-label{
+      font-size: 1.4rem;
+      margin-right: 3rem;
+      color: var(--light-color);
+    }
+
+   .form-check .form-check-input{
+      padding: .7rem;
+      border: 1px solid var(--light-color);
+    }
+
+    .form-check{
+      display: flex;
+      padding-top: .7rem;
+    }
+
+    .add-question-plus{
+      margin-right: 4rem;
+      background-color: var(--main-color);
+      color: var(--white);
+      padding: .5rem 1rem;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .add-question-plus:hover{
+      background-color: rgba(88, 159, 67, 0.7);
+      transition: all .3s linear;
+    }
+
+    /* -------------- */
+
+
 .teacher-header-form{
   text-align: center;
   color: var(--main-color);
@@ -2723,7 +2796,7 @@ font-weight: bold;
 }
 
 
-.custom-form-card-teacher .card-body .subject-form .text-end button{
+.custom-form-card-teacher .card-body .subject-form .save-btn{
   font-weight: bold;
     font-size: 1.5rem;
     background-color: var(--main-color);

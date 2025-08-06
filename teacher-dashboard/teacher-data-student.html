@@ -153,6 +153,7 @@
 
 
       
+        
       <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
             <ul class="list-unstyled">
@@ -163,7 +164,7 @@
                   </a>
                 </li>
                 <li>
-                    <a href="teacher-student.html" class="active">
+                    <a href="teacher-student.html">
                       <span> الطلاب</span>
                       <i class="fas fa-user-graduate"></i>
                     </a>
@@ -188,6 +189,21 @@
                       <i class="fa fa-pen-to-square"></i>
                     </a>
                   </li>
+                  <li class="dropdown-sidebar">
+                  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#techaersMenu" aria-expanded="false">
+                    
+                    <i class="toggle-icon fas fa-plus"></i>
+                    <div class="d-flex align-items-center gap-2">   
+                      <span>الاسئلة</span>
+                      <i class="fas fa-circle-question"></i>
+                    </div>
+                  </a>
+
+                  <ul id="techaersMenu" class="collapse list-unstyled ps-4 mt-2">
+                    <li><a href="teacher-question-bank.html">بنك الاسئلة</a></li>
+                    <li><a href="teacher-question-category.html">اقسام الاسئلة</a></li>
+                  </ul>
+                </li>
 
                   <li>
                     <a href="teacher-hw.html">
@@ -222,6 +238,7 @@
               </ul>
     
       </div>
+      
       
       
        <!-- المحتوى الرئيسي -->
