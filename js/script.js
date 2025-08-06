@@ -1,64 +1,4 @@
 
-// الانتقال بين النماذج فيي صفحات اللوقن
-function showForm(type, clickedIcon) {
-    const formGroups = {
-      student: {
-        show: "stdForm",
-        hide: "parentForm",
-        activeImg: "images/std-on.png",
-        inactiveImg: "images/par-off.png",
-        activeIcon: "icon-std",
-        inactiveIcon: "icon-parent"
-      },
-      parent: {
-        show: "parentForm",
-        hide: "stdForm",
-        activeImg: "images/par-on.png",
-        inactiveImg: "images/std-off.png",
-        activeIcon: "icon-parent",
-        inactiveIcon: "icon-std"
-      },
-      teacher: {
-        show: "teacherForm",
-        hide: "adminForm",
-        activeImg: "images/teacher.png",
-        inactiveImg: "images/manager-off.png",
-        activeIcon: "icon-teacher",
-        inactiveIcon: "icon-admin"
-      },
-      admin: {
-        show: "adminForm",
-        hide: "teacherForm",
-        activeImg: "images/manager.png",
-        inactiveImg: "images/teacher-off.png",
-        activeIcon: "icon-admin",
-        inactiveIcon: "icon-teacher"
-      }
-    };
-  
-    // التأكد إن النوع صحيح
-    if (!formGroups[type]) return;
-  
-    const group = formGroups[type];
-    const showFormEl = document.getElementById(group.show);
-    const hideFormEl = document.getElementById(group.hide);
-    const activeIconImg = document.getElementById(group.activeIcon).querySelector("img");
-    const inactiveIconImg = document.getElementById(group.inactiveIcon).querySelector("img");
-  
-    hideFormEl.style.display = "none";
-    showFormEl.style.display = "block";
-    showFormEl.classList.add("fade-in");
-  
-    activeIconImg.src = group.activeImg;
-    inactiveIconImg.src = group.inactiveImg;
-  
-    document.querySelectorAll('.icon, .login-icon').forEach(icon => {
-      icon.classList.remove('active-icon');
-    });
-    clickedIcon.classList.add('active-icon');
-  }
-
-
 //   اظهار واخفاء السايد بار من خلال الضغط على اييقونة القائمة
 
 
@@ -175,85 +115,6 @@ function showForm(type, clickedIcon) {
 
 
 
-
-
-
-
-  // المخططات في صفحة علامات الطلاب عند المعلم 
-
-   const barData = {
-      labels: ['0-5', '6-10', '11-15', '16-20', '21-25', '26-30'],
-      datasets: [{
-        label: 'عدد الطلاب',
-        data: [2, 5, 8, 4,9,3],
-        backgroundColor: '#589F43',
-        borderRadius: 0
-      }]
-    };
-
-    const barOptions = {
-      responsive: true,
-      plugins: {
-        legend: { display: false },
-        title: {
-          display: true,
-          text: 'توزيع الدرجات'
-        }
-      },
-      scales: {
-        x: {
-          title: { display: true, text: 'الفئة' }
-        },
-        y: {
-          beginAtZero: true,
-          title: { display: true, text: 'عدد الطلاب' }
-        }
-      }
-    };
-
-    // بيانات مخطط الدائري
-    const donutData = {
-      labels: ['قدموا', 'لم يُقدموا', 'ناجحين', 'راسبين'],
-      datasets: [{
-        data: [12, 3, 9, 3],
-        backgroundColor: ['#003c9dff', '#ff9800', '#589F43', '#d35000']
-      }]
-    };
-
-    const donutOptions = {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: 'bottom'
-        },
-        title: {
-          display: true,
-          text: 'حالة الطلاب'
-        }
-      },
-      cutout: '60%'
-    };
-
-    // إنشاء الرسومات
-    new Chart(document.getElementById('barChart'), {
-      type: 'bar',
-      data: barData,
-      options: barOptions
-    });
-
-    new Chart(document.getElementById('donutChart'), {
-      type: 'doughnut',
-      data: donutData,
-      options: donutOptions
-    });
-
-
-
-
-
-
-
-
   // التقويم في سايد بار الطالب
 
   
@@ -310,6 +171,237 @@ function showForm(type, clickedIcon) {
 
   renderMiniCalendar(miniDate);
 });
+
+
+
+  // المخططات في صفحة علامات الطلاب عند المعلم 
+document.addEventListener("DOMContentLoaded", function () {
+
+   const barData = {
+      labels: ['0-5', '6-10', '11-15', '16-20', '21-25', '26-30'],
+      datasets: [{
+        label: 'عدد الطلاب',
+        data: [2, 5, 8, 4,9,3],
+        backgroundColor: '#589F43',
+        borderRadius: 0
+      }]
+    };
+
+    const barOptions = {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        title: {
+          display: true,
+          text: 'توزيع الدرجات'
+        }
+      },
+      scales: {
+        x: {
+          title: { display: true, text: 'الفئة' }
+        },
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: 'عدد الطلاب' }
+        }
+      }
+    };
+
+    // بيانات مخطط الدائري
+    const donutData = {
+      labels: ['قدموا', 'لم يُقدموا', 'ناجحين', 'راسبين'],
+      datasets: [{
+        data: [12, 3, 9, 3],
+        backgroundColor: ['#003c9dff', '#ff9800', '#589F43', '#d35000']
+      }]
+    };
+
+    const donutOptions = {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        },
+        title: {
+          display: true,
+          text: 'حالة الطلاب'
+        }
+      },
+      cutout: '60%'
+    };
+
+    // إنشاء الرسومات
+    
+    new Chart(document.getElementById('barChart'), {
+      type: 'bar',
+      data: barData,
+      options: barOptions
+    });
+
+    new Chart(document.getElementById('donutChart'), {
+      type: 'doughnut',
+      data: donutData,
+      options: donutOptions
+    });
+
+  });
+
+
+  // ------------------------------------
+  // اسئلة الاختبار 
+  const questionsPerPage = 5;
+  const totalQuestions = 10;
+  let currentPage = 1;
+
+  // إنشاء أزرار الأرقام الجانبية
+  const btnContainer = document.getElementById("questionNumbers");
+  for (let i = 1; i <= totalQuestions; i++) {
+    const btn = document.createElement("button");
+    btn.classList.add("btn", "btn-sm", "question-number-btn");
+    
+    btn.textContent = i;
+    btn.onclick = () => {
+      const page = Math.ceil(i / questionsPerPage);
+      showPage(page);
+    };
+    btnContainer.appendChild(btn);
+  }
+
+  function showPage(page) {
+    const start = (page - 1) * questionsPerPage + 1;
+    const end = Math.min(start + questionsPerPage - 1, totalQuestions);
+
+    // إخفاء كل الأسئلة
+    for (let i = 1; i <= totalQuestions; i++) {
+      document.getElementById(`question-${i}`).style.display = "none";
+    }
+
+    // عرض أسئلة الصفحة الحالية
+    for (let i = start; i <= end; i++) {
+      document.getElementById(`question-${i}`).style.display = "block";
+    }
+
+    // تمييز الأزرار الخاصة بالصفحة
+    const allBtns = document.querySelectorAll(".question-number-btn");
+    allBtns.forEach((btn, index) => {
+      const questionNumber = index + 1;
+      const isInPage = questionNumber >= start && questionNumber <= end;
+      btn.classList.toggle("active", isInPage);
+    });
+
+    currentPage = page;
+  }
+
+  // التالي والسابق
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    if (currentPage * questionsPerPage < totalQuestions) {
+      showPage(currentPage + 1);
+    }
+  });
+
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    if (currentPage > 1) {
+      showPage(currentPage - 1);
+    }
+  });
+
+  window.onload = () => {
+    showPage(1);
+  };
+
+
+
+  // ---------------------------------------
+
+  // عداد الوقت 
+
+  const timerElement = document.getElementById("timer");
+  let durationInMinutes = parseInt(timerElement.dataset.time);
+  let time = durationInMinutes * 60;
+
+  function updateTimer() {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+
+    timerElement.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+
+    if (time <= 0) {
+      clearInterval(timerInterval);
+      endExam(); // انتهى الوقت
+    }
+
+    time--;
+  }
+
+  function endExam() {
+    alert("انتهى الوقت! سيتم تسليم الاختبار الآن.");
+  }
+
+  updateTimer(); // عرض أولي
+  const timerInterval = setInterval(updateTimer, 1000);
+
+
+
+
+
+// الانتقال بين النماذج فيي صفحات اللوقن
+function showForm(type, clickedIcon) {
+    const formGroups = {
+      student: {
+        show: "stdForm",
+        hide: "parentForm",
+        activeImg: "images/std-on.png",
+        inactiveImg: "images/par-off.png",
+        activeIcon: "icon-std",
+        inactiveIcon: "icon-parent"
+      },
+      parent: {
+        show: "parentForm",
+        hide: "stdForm",
+        activeImg: "images/par-on.png",
+        inactiveImg: "images/std-off.png",
+        activeIcon: "icon-parent",
+        inactiveIcon: "icon-std"
+      },
+      teacher: {
+        show: "teacherForm",
+        hide: "adminForm",
+        activeImg: "images/teacher.png",
+        inactiveImg: "images/manager-off.png",
+        activeIcon: "icon-teacher",
+        inactiveIcon: "icon-admin"
+      },
+      admin: {
+        show: "adminForm",
+        hide: "teacherForm",
+        activeImg: "images/manager.png",
+        inactiveImg: "images/teacher-off.png",
+        activeIcon: "icon-admin",
+        inactiveIcon: "icon-teacher"
+      }
+    };
+  
+    // التأكد إن النوع صحيح
+    if (!formGroups[type]) return;
+  
+    const group = formGroups[type];
+    const showFormEl = document.getElementById(group.show);
+    const hideFormEl = document.getElementById(group.hide);
+    const activeIconImg = document.getElementById(group.activeIcon).querySelector("img");
+    const inactiveIconImg = document.getElementById(group.inactiveIcon).querySelector("img");
+  
+    hideFormEl.style.display = "none";
+    showFormEl.style.display = "block";
+    showFormEl.classList.add("fade-in");
+  
+    activeIconImg.src = group.activeImg;
+    inactiveIconImg.src = group.inactiveImg;
+  
+    document.querySelectorAll('.icon, .login-icon').forEach(icon => {
+      icon.classList.remove('active-icon');
+    });
+    clickedIcon.classList.add('active-icon');
+  }
 
 
 // القائمة المنسدلة للطلاب فيي الساييد بار
@@ -451,103 +543,6 @@ function openChatPopup(name) {
 }
 
 
-  // ------------------------------------
-  // اسئلة الاختبار 
-  const questionsPerPage = 5;
-  const totalQuestions = 10;
-  let currentPage = 1;
-
-  // إنشاء أزرار الأرقام الجانبية
-  const btnContainer = document.getElementById("questionNumbers");
-  for (let i = 1; i <= totalQuestions; i++) {
-    const btn = document.createElement("button");
-    btn.classList.add("btn", "btn-sm", "question-number-btn");
-    btn.textContent = i;
-    btn.onclick = () => {
-      const page = Math.ceil(i / questionsPerPage);
-      showPage(page);
-    };
-    btnContainer.appendChild(btn);
-  }
-
-  function showPage(page) {
-    const start = (page - 1) * questionsPerPage + 1;
-    const end = Math.min(start + questionsPerPage - 1, totalQuestions);
-
-    // إخفاء كل الأسئلة
-    for (let i = 1; i <= totalQuestions; i++) {
-      document.getElementById(`question-${i}`).style.display = "none";
-    }
-
-    // عرض أسئلة الصفحة الحالية
-    for (let i = start; i <= end; i++) {
-      document.getElementById(`question-${i}`).style.display = "block";
-    }
-
-    // تمييز الأزرار الخاصة بالصفحة
-    const allBtns = document.querySelectorAll(".question-number-btn");
-    allBtns.forEach((btn, index) => {
-      const questionNumber = index + 1;
-      const isInPage = questionNumber >= start && questionNumber <= end;
-      btn.classList.toggle("active", isInPage);
-    });
-
-    currentPage = page;
-  }
-
-  // التالي والسابق
-  document.getElementById("nextBtn").addEventListener("click", () => {
-    if (currentPage * questionsPerPage < totalQuestions) {
-      showPage(currentPage + 1);
-    }
-  });
-
-  document.getElementById("prevBtn").addEventListener("click", () => {
-    if (currentPage > 1) {
-      showPage(currentPage - 1);
-    }
-  });
-
-  window.onload = () => {
-    showPage(1);
-  };
-
-
-
-  // ---------------------------------------
-
-  // عداد الوقت 
-
-  const timerElement = document.getElementById("timer");
-  let durationInMinutes = parseInt(timerElement.dataset.time);
-  let time = durationInMinutes * 60;
-
-  function updateTimer() {
-    const minutes = Math.floor(time / 60);
-    const seconds = time % 60;
-
-    timerElement.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-
-    if (time <= 0) {
-      clearInterval(timerInterval);
-      endExam(); // انتهى الوقت
-    }
-
-    time--;
-  }
-
-  function endExam() {
-    alert("انتهى الوقت! سيتم تسليم الاختبار الآن.");
-  }
-
-  updateTimer(); // عرض أولي
-  const timerInterval = setInterval(updateTimer, 1000);
-
-
-
-
-
-
 
 
 
@@ -567,6 +562,77 @@ function openChatPopup(name) {
 
 
 
+  // المخططات في صفحة علامات الطلاب عند المعلم 
+document.addEventListener("DOMContentLoaded", function () {
+
+   const barData = {
+      labels: ['0-5', '6-10', '11-15', '16-20', '21-25', '26-30'],
+      datasets: [{
+        label: 'عدد الطلاب',
+        data: [2, 5, 8, 4,9,3],
+        backgroundColor: '#589F43',
+        borderRadius: 0
+      }]
+    };
+
+    const barOptions = {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        title: {
+          display: true,
+          text: 'توزيع الدرجات'
+        }
+      },
+      scales: {
+        x: {
+          title: { display: true, text: 'الفئة' }
+        },
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: 'عدد الطلاب' }
+        }
+      }
+    };
+
+    // بيانات مخطط الدائري
+    const donutData = {
+      labels: ['قدموا', 'لم يُقدموا', 'ناجحين', 'راسبين'],
+      datasets: [{
+        data: [12, 3, 9, 3],
+        backgroundColor: ['#003c9dff', '#ff9800', '#589F43', '#d35000']
+      }]
+    };
+
+    const donutOptions = {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        },
+        title: {
+          display: true,
+          text: 'حالة الطلاب'
+        }
+      },
+      cutout: '60%'
+    };
+
+    // إنشاء الرسومات
+    
+    new Chart(document.getElementById('barChart'), {
+      type: 'bar',
+      data: barData,
+      options: barOptions
+    });
+
+    new Chart(document.getElementById('donutChart'), {
+      type: 'doughnut',
+      data: donutData,
+      options: donutOptions
+    });
+
+  });
 
   
   

@@ -3181,6 +3181,11 @@ transition: 0.2s;
 
 /* ------------------------------- */
 
+.subject-section{
+  margin-bottom: 8rem;
+}
+
+
 .student-header{
   margin-bottom: 3.5rem;
   margin-left: 1rem;
@@ -3376,6 +3381,7 @@ text-decoration: none;
   padding: 3rem;
   margin-top: 5rem;
   border-radius: 10px;
+  margin-bottom: 8rem;
 
 }
 .exam-preview-container .preview-title-text {
@@ -3589,6 +3595,9 @@ text-decoration: none;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 95%;
       padding: 1rem;
+      margin-bottom: 8rem;
+      margin-top: 4rem;
+    
     }
 
      .exam-container .question-box {
@@ -4741,10 +4750,12 @@ text-decoration: none;
     height: calc(100vh - 72px);
     background-color: #fff;
     z-index: 1;
+    margin-top: 4rem;
   }
 
   .sidebarStd.active {
     transform: translateX(0);
+    margin-top: 4rem;
   }
 
   #mainContent.with-sidebarStd {

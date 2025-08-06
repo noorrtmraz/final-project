@@ -3118,11 +3118,15 @@ transition: 0.2s;
 
 /* ------------------------------- */
 
+.subject-section{
+  margin-bottom: 8rem;
+}
+
 .student-header{
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
   margin-right: 1rem;
   text-align: right;
-  margin-top: 3rem;
+  margin-top: 5rem;
   font-size: 2rem;
   color: var(--main-color);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -3333,6 +3337,7 @@ transition: 0.2s;
   padding: 3rem;
   margin-top: 5rem;
   border-radius: 10px;
+  margin-bottom: 8rem;
 }
 .exam-preview-container .preview-title-text {
   font-size: 20px;
@@ -3541,6 +3546,8 @@ transition: 0.2s;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 95%;
       padding: 1rem;
+      margin-bottom: 8rem;
+      margin-top: 4rem;
     }
 
      .exam-container .question-box {
@@ -3593,6 +3600,13 @@ transition: 0.2s;
     color: #fff;
     }
 
+    .end-question-number-container .question-number-btn{
+      color: var(--white);
+      background-color: var(--main-color);
+      padding: .5rem .8rem;
+      font-size: 1.2rem;
+    }
+    
     .question-number-container .question-number-btn{
       border: 1px solid var(--main-color);
       color: var(--main-color);
@@ -4717,10 +4731,12 @@ transition: 0.2s;
     height: calc(100vh - 72px);
     background-color: #fff;
     z-index: 1;
+    margin-top: 4rem;
   }
 
   .sidebarStd.active {
     transform: translateX(0);
+    margin-top: 4rem;
   }
 
   #mainContent.with-sidebarStd {
