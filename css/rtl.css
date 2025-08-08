@@ -1181,6 +1181,33 @@ header.header-page img.logo {
 
   /* manager dashoard start */
 
+  .search-box-manager select{
+  text-align: right;
+  border: 1px solid #ccc;
+  font-size: 1.4rem;
+  width: 200px;
+  border-radius: 0;
+  transition: 0.3s ease-in-out;
+  color: var(--light-color);
+  margin-left: 1rem;
+}
+
+  .remove-btn-manager {
+      padding: 8px 10px;
+      white-space: nowrap;
+      
+    }
+
+     .add-question-plus-manager{
+      margin-right: 4rem;
+      background-color: var(--main-color);
+      color: var(--white);
+      padding: .5rem 1rem;
+      border-radius: 0;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
   
 .top-header-dashboard{
   
@@ -2394,6 +2421,8 @@ font-weight: bold;
   /* border-radius: 7px; */
   border-radius:4px ;
 }
+
+
  /* /* ---- */
 
 .dashboard-teacher{

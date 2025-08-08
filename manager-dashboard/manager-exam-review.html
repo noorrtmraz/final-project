@@ -152,7 +152,7 @@
 
 
       
-       <!-- الشريط الجانبي -->
+        <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
   <ul class="list-unstyled">
 
@@ -160,13 +160,6 @@
       <a href="manager-index.html">
         <span>لوحة التحكم</span>
         <i class="fa fa-home"></i>
-      </a>
-    </li>
-
-    <li>
-      <a href="manager-subject.html">
-        <span>المواد الدراسية</span>
-        <i class="fas fa-book"></i>
       </a>
     </li>
 
@@ -185,7 +178,7 @@
     <li><a href="manager-student.html">عرض الطلاب</a></li>
     <li><a href="manager-graduated.html">الخريجين</a></li>
     <li><a href="manager-promotion.html">الترقيات</a></li>
-  <li><a href="manager-std-record.html">السجل</a></li>
+    <li><a href="manager-std-record.html">السجل</a></li>
   </ul>
 </li>
 
@@ -205,6 +198,7 @@
     <li><a href="manager-teacher-record.html">السجل</a></li>
   </ul>
 </li>
+
 
     <li>
       <a href="manager-parent.html">
@@ -227,6 +221,23 @@
       </a>
     </li>
 
+    <li class="dropdown-sidebar">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#questionMenu" aria-expanded="false">
+    
+    <i class="toggle-icon fas fa-plus"></i>
+    <div class="d-flex align-items-center gap-2">   
+      <span>الاسئلة</span>
+      <i class="fas fa-question-circle"></i>
+    </div>
+  </a>
+
+  <ul id="questionMenu" class="collapse list-unstyled ps-4 mt-2">
+    <li><a href="manager-question-bank.html">بنك الاسئلة</a></li>
+    <li><a href="manager-question-category.html">اقسام الاسئلة</a></li>
+  </ul>
+</li>
+
+
     <li>
       <a href="manager-meet.html">
         <span>اللقاءات المباشرة</span>
@@ -234,12 +245,7 @@
       </a>
     </li>
 
-    <li>
-      <a href="manager-setting.html">
-        <span>الاعدادات</span>
-        <i class="fa-solid fa-cogs"></i>
-      </a>
-    </li>
+   
 
     <li>
       <a href="manager-profile.html">
@@ -249,7 +255,6 @@
     </li>
   </ul>
       </div>
-      
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
@@ -286,7 +291,7 @@
         <!-- خيار خاطئ مختار من الطالب -->
         <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option answer-wrong selected-by-student">
           <input class="form-check-input" type="radio" checked disabled>
-          <label class="fw-bold">
+          <label class="fw-bold me-3">
             برلين <i class="fas fa-times wrong-icon"></i>
           </label>
         </div>
@@ -294,7 +299,7 @@
         <!-- الخيار الصحيح -->
         <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option">
           <input class="form-check-input" type="radio" disabled>
-          <label>
+          <label class="me-3">
             باريس
           </label>
         </div>
@@ -302,14 +307,14 @@
         <!-- باقي الخيارات -->
         <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option">
           <input class="form-check-input" type="radio" disabled>
-          <label>
+          <label class="me-3">
             مدريد
           </label>
         </div>
 
         <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option">
           <input class="form-check-input" type="radio" disabled>
-          <label>
+          <label class="me-3">
             روما
           </label>
         </div>
@@ -334,7 +339,7 @@
         <!-- خيار خاطئ غير مختار -->
         <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option">
           <input class="form-check-input" type="radio" disabled>
-          <label>
+          <label class="me-3">
             برلين
           </label>
         </div>
@@ -342,7 +347,7 @@
         <!-- الخيار الصحيح والمختار من الطالب -->
         <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option answer-correct selected-by-student">
           <input class="form-check-input" type="radio" checked disabled>
-          <label  class="fw-bold">
+          <label  class="fw-bold me-3">
             باريس <i class="fa-solid fa-check correct-icon"></i>
           </label>
         </div>
@@ -350,14 +355,14 @@
         <!-- باقي الخيارات -->
         <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option ">
           <input class="form-check-input" type="radio" disabled>
-          <label>
+          <label class="me-3">
             مدريد
           </label>
         </div>
 
         <div class="form-check form-check-reverse form-check-ltr mb-2 answer-option">
           <input class="form-check-input" type="radio" disabled>
-          <label>
+          <label class="me-3">
             روما
           </label>
         </div>

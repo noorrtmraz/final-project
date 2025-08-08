@@ -151,7 +151,6 @@
 </header>
 
 
-      
        <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
   <ul class="list-unstyled">
@@ -165,7 +164,7 @@
 
     <!-- عنصر الطلاب مع قائمة تظهر وتختفي -->
     <li class="dropdown-sidebar">
-  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center active" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
     
     <i class="toggle-icon fas fa-plus"></i>
     <div class="d-flex align-items-center gap-2">   
@@ -222,7 +221,7 @@
     </li>
 
     <li class="dropdown-sidebar">
-  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#questionMenu" aria-expanded="false">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center active" data-bs-toggle="collapse" data-bs-target="#questionMenu" aria-expanded="false">
     
     <i class="toggle-icon fas fa-plus"></i>
     <div class="d-flex align-items-center gap-2">   
@@ -256,76 +255,110 @@
   </ul>
       </div>
       
-      
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">     
-        <h3 class="manager-header">سجل الطلاب</h3> 
+        <h3 class="manager-header">بنك الاسئلة</h3> 
         <div class="title-underline-manager"></div> 
 
        
         <div class="table-users mt-5"> 
             <!-- المحتوى -->
+            <div class="table-content tab-content" id="myTabContent">
               <!-- الطلاب -->
               <div class="tab-pane fade show active" role="tabpanel">
-                <div class="header-table">   
-                    <input type="search" class="form-control search-input" placeholder="ابحث ...">
+              
 
-                </div>
-                <div class="table-responsive manager-table-wrapper">
+                <div class="header-table">  
+                  <a href="teacher-forms/teacher-add-question.html">اضافة سؤال</a>
+
+
+                    <div class="search-box-manager text-end mb-3 d-flex flex-row">
+                        <select class="form-select" id="stage">
+                        <option selected disabled>اختر القسم...</option>
+                        </select>
+
+                      <input type="search" class="form-control search-input" placeholder="ابحث ...">
+                        
+                    </div>
+                 </div>
+                 <div class="table-responsive manager-table-wrapper">
                 <table class="table text-center manager-grade-table">
                   <thead class="thead-manager">
                       <tr>
                         <th>#</th>
-                        <th>اسم الطالب</th>
-                        <th>من</th>
-                        <th>إلى</th>
-                        <th>العمليات</th>
+                        <th>السؤال</th>
+                        <th>قسم السؤال</th>
+                        <th>نوع السؤال</th>
+                        <th>علامة السؤال</th>
+                        <th>العمليات</th>  
                         
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>محمد محمد</td>
-                        <td>شعبة أ</td>
-                        <td>شعبة ب</td>
+                        <td>السؤال الاول</td>
+                        <td>اختبار نصفي</td>
+                        <td>اختيار من متعدد</td>
+                        <td>4</td>
                         <td>
                               <div class="dropdown">
                           <button class="dropdown-toggle operations-btn" data-bs-toggle="dropdown">
                             العمليات
                           </button>
                          <ul class="dropdown-menu operations-btn-item">
+                              
                               <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="manager-data-student.html">
-                                  <i class="fas fa-eye action-icon edit-icon-action"></i> عرض بيانات الطالب
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-question.html">
+                                   <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
                                 </a>
                               </li>
-                             
-                             
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                  <i class="fas fa-trash-alt action-icon delete-icon-action"></i> حذف
+                                </a>
+                              </li>
                              </ul>
                           </div>
                        </td>
-                      
-                    
-                        </tr>
-                      
+                      </tr>
                     </tbody>
                   </table>
 
-            
+                  
+                  <!-- Modal حذف ولي الامر -->
+                  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف السؤال ؟</p>
+                        </div>
+                        <div class="modal-footer custom-modal-footer-manager">
+                        <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تأكيد الحذف</button>
+                        <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
                 </div>
               </div>
           
+            </div>
+          </div>
 
       </div>
 
-
-      </div>
 
 
      
-       
- 
+      
+     
   
     
 <!-- زر فتح الرسائل باستخدام Bootstrap -->
