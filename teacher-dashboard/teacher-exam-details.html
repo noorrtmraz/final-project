@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark Education</title>
     <link rel="icon" href="../images/logo-dark.png" type="image/png">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   
 
   <!-- ربط ملف bootstrap CSS المحلي -->
    <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
     <!-- font awsam cdn link -->
@@ -33,10 +33,10 @@
       <link  id="theme-style"  rel="stylesheet" href="../css/rtl.css">
      
 </head>
-</head>
+
 <body>
 
-      <!-- الهيدر -->
+    <!-- الهيدر -->
 <header class="header-page bg-white shadow fixed-top">
 
    <div class="top-header-dashboard">
@@ -152,8 +152,8 @@
   </div>
 </header>
 
-  
-   
+      
+     
       <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
             <ul class="list-unstyled">
@@ -184,7 +184,7 @@
                   </li>
 
                   <li>
-                    <a href="teacher-exam.html">
+                    <a href="teacher-exam.html" class="active">
                       <span> الاختبارات</span>
                       <i class="fa fa-pen-to-square"></i>
                     </a>
@@ -243,11 +243,320 @@
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
-     
-      <h3 class="teacher-title2">علامات الطلاب</h3>
-      <div class="title-underline"></div>
 
-         <div class="charts-wrapper">
+         <h3 class="teacher-title2">تفاصيل الاختبار</h3>
+         <div class="title-underline"></div>
+       
+            <div class="student-data">
+
+                <ul class="nav nav-tabs nav-exam-data" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="students-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab">االتفاصيل</button>
+                    </li>
+                     <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="questions-tab" data-bs-toggle="tab" data-bs-target="#questions" type="button" role="tab">الاسئلة</button>
+                    </li>
+                     <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="resuls-tab" data-bs-toggle="tab" data-bs-target="#resuls" type="button" role="tab">النتائج</button>
+                    </li>
+                
+
+                    <div class="dropdown">
+                             <button class="dropdown-toggle dropdown-toggle-detalis" data-bs-toggle="dropdown">
+                                المزيد
+                              </button>
+                            <ul class="dropdown-menu dropdown-menu-operations">
+                     
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-edit-exam.html" >
+                                  <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
+                                </a>
+                              </li>
+    
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-exam">
+                                  <i class="fas fa-trash-alt action-icon delete-icon-action"></i> حذف
+                                </a>
+                              </li>
+                             </ul>
+                          </div>
+
+
+                    
+                  </ul>   
+            
+    
+          
+           
+            <div class="table-users mt-5">  
+                <!-- المحتوى -->
+                <div class="table-content tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="details" role="tabpanel">
+                    <div class="container">
+                      <div class="exam-table table-responsive">
+                        <table class="table table-bordered mb-0">
+                          <tbody>
+                            <tr>
+                              <td>اسم الاختبار</td>
+                              <td>اختبار نصفي</td>
+                            </tr>
+                            <tr>
+                              <td> الوصف</td>
+                              <td>اختبار نصفي في مادة اللغة العربية للصف الخامس</td>
+                            </tr>
+                            <tr>
+                              <td>المادة</td>
+                              <td>لغة عربية</td>
+                            </tr>
+                            <tr>
+                              <td>الوقت</td>
+                              <td>30 دقيقة</td>
+                            </tr>
+                            <tr>
+                              <td>وقت البداية</td>
+                              <td>20-2-2025 2:20pm</td>
+                            </tr>
+                            <tr>
+                             <td>وقت النهاية</td>
+                              <td>20-2-2025 2:20pm</td>
+                            </tr>
+                            <tr>
+                              <td>الدرجة النهائية</td>
+                              <td>20</td>
+                            </tr>
+                            <tr>
+                              <td>مجموع درجات الاسئلة</td>
+                              <td>0</td>
+                            </tr>
+                            
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="tab-pane fade" id="questions" role="tabpanel">
+
+                   <div class="custom-form-container container">
+                    <form>
+                        <div class="row align-items-center g-3">
+                        
+                        <!-- العمود الأول: الدرجة النهائية -->
+                        <div class="col-md-8 col-12">
+                            <div class="form-group-float position-relative">
+                            <input type="text" class="form-control custom-input-form float-input" placeholder=" " />
+                            <label class="float-label">الدرجة النهائية</label>
+                            </div>
+                        </div>
+
+                        <!-- العمود الثاني: تبديل ترتيب الأسئلة -->
+                        <div class="col-md-2 col-12 d-flex align-items-center">
+                            <label class="custom-checkbox-label m-0">
+                            <input type="checkbox" class="custom-checkbox">
+                            تبديل ترتيب الأسئلة
+                            </label>
+                        </div>
+
+                        <!-- العمود الثالث: زر حفظ -->
+                        <div class="col-md-2 col-12">
+                            <button type="submit" class="custom-btn-save">حفظ التعديلات</button>
+                        </div>
+
+                        </div>
+                    </form>
+                    </div>
+
+
+
+
+                    <div class="container custom-table-teacher">
+
+               <div class="table-responsive custom-table-wrapper">
+                <table class="table text-center custom-grade-table">
+                  <thead class="thead-custom">
+                      <tr>
+                        <th>#</th>
+                        <th> السؤال</th>
+                        <th> القسم</th>
+                        <th>النوع</th>
+                        <th>الدرجة</th>
+                        <th>العمليات</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>السؤال الأول</td>
+                        <td>اختبار نصفي</td>
+                        <td>صح وخطأ</td>
+                        <td>5</td>
+                       <td>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-question">
+                                <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف السؤال"></i>
+                            </a>
+
+                       </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                    <div class="dropdown">
+                            <button class="operations-btn-exam dropdown-toggle" data-bs-toggle="dropdown">
+                                    إضافة سؤال
+                            </button>
+                                <ul class="dropdown-menu dropdown-menu-subjects">
+
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-add-question.html" >
+                                    سؤال جديد
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#addModal-questionRandom" >
+                                    سؤال عشوائي
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#addModal-questionBank" >
+                                    بنك الأسئلة
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> 
+
+                   <!-- Modal حذف الطالب -->
+                   <div class="modal fade" id="deleteModal-question" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                          <p>هل أنت متأكد أنك تريد حذف هذا السؤال ؟</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
+                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                    <div class="modal fade custom-modal" id="addModal-questionRandom" tabindex="-1" aria-labelledby="addModal-questionRandom" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                  <div class="modal-content custom-modal-content">
+
+                    <!-- رأس المودال -->
+                    <div class="modal-header custom-modal-header">
+                      <h5 class="modal-title custom-modal-title" id="addModal-questionRandom">إضافة سؤال عشوائي</h5>
+                    </div>
+
+                    <!-- جسم المودال -->
+                    <div class="modal-body custom-modal-body">
+                      <form id="stageForm" class="custom-form">
+                        
+
+                        <div class="mb-3 custom-form-group">
+                            <select class="form-select custom-select" id="grade">
+                                <option selected disabled>اختر تصنيف الاسئلة ...</option>
+                            </select>                       
+                            </div>
+
+                        <div class="mb-3 custom-form-group">
+                          <div class="form-group-float position-relative ">
+                            <input type="text" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">عدد الاسئلة العشوائية</label>
+                          </div> 
+                        </div>
+
+                        
+                      </form>
+                    </div>
+
+                    <!-- تذييل المودال -->
+                    <div class="modal-footer custom-modal-footer">
+                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">اضافة</button>
+                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+             <div class="modal fade custom-modal" id="addModal-questionBank" tabindex="-1" aria-labelledby="addModal-questionBank" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog modal-lg">
+                        <div class="modal-content custom-modal">
+                        <!-- رأس المودال -->
+                    <div class="modal-header custom-modal-header">
+                      <h5 class="modal-title custom-modal-title" id="addModal-questionBank">إضافة من بنك الاسئلة</h5>
+                    </div>
+                        
+                        <div class="modal-body custom-modal-body">
+                            
+                             <div class="mb-3 custom-form">
+                            <select class="form-select custom-select" id="grade">
+                                <option selected disabled>اختر تصنيف الاسئلة ...</option>
+                            </select>                       
+                            </div>
+
+                            <!-- الجدول -->
+                            <div class="table-responsive">
+                            <table class="table table-bordered custom-table">
+                                <thead>
+                                <tr>
+                                    <th><input type="checkbox" class="form-check-input"></th>
+                                    <th>السؤال</th>
+                                    <th>النوع</th>
+                                    <th>الدرجة</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>السؤال الأول</td>
+                                    <td>MCQ</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>السؤال الثاني</td>
+                                    <td>MCQ</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>السؤال الثالث</td>
+                                    <td>MCQ</td>
+                                    <td>20</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+
+                        </div>
+                        
+                        <div class="modal-footer custom-modal-footer">
+                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">اضافة</button>
+                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                </div>
+                
+              </div>
+                  </div>
+
+
+                  <div class="tab-pane fade" id="resuls" role="tabpanel">
+                    <div class="charts-wrapper">
             <div class="chart-box">
               <canvas id="barChart"></canvas>
             </div>
@@ -326,10 +635,24 @@
                       </div>
                     </div>
                   </div>
+                  </div>
+
+              
+                 
+                </div>
+              </div>
+    
+            </div>
+          
+            </div>
+          </div>
+          
+        <!-- محتوى الصفحة هنا -->
       </div>
 
 
 
+     
   
   
     
@@ -437,6 +760,4 @@
   <script src="../js/script.js"></script>
 </body>
 </html>
-
-
 

@@ -2170,6 +2170,7 @@ font-weight: bold;
 .custom-modal-body .custom-form select{
   padding: 1.5rem 3rem;
   font-size: 1.3rem;
+  color: var(--light-color);
 }
 
 .custom-modal-footer{
@@ -2389,6 +2390,142 @@ font-weight: bold;
 
 /* ----------- teacher dashboard start-------------- */
 
+.dropdown-toggle-detalis{
+  font-size: 1.5rem;
+  font-weight: normal;
+  background:none;
+  color: var(--light-color);
+  border-radius: 4px;
+
+  margin-top: .8rem;
+}
+
+
+
+
+#mainContent .nav-exam-data{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+#mainContent .nav-exam-data li{
+  font-size: 1.5rem;
+  margin-left: .2rem;
+ }
+ 
+ #mainContent .nav-exam-data li button{
+   color: var(--light-color);
+   padding: .8rem;
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+   border: none;
+ 
+  }
+ 
+  #mainContent .nav-exam-data li button.active{
+   color: var(--main-color);
+   font-weight: bold;
+   border-bottom: 1px solid var(--main-color);
+  }
+
+  
+
+.exam-table {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.exam-table td {
+  padding: 0.8rem 1rem;
+  vertical-align: middle;
+  font-size: 1.3rem;
+}
+.exam-table tr:nth-child(even) {
+  background-color:rgba(88, 159, 67, 0.03);
+}
+.exam-table td:first-child {
+  font-weight: bold;
+  color: var(--black);
+  width: 30%;
+  font-size: 1.3rem;
+  background-color: rgba(88, 159, 67, 0.03);
+
+}
+
+
+
+.custom-form-container {
+  border: 1px solid rgba(88, 159, 67, 0.2);
+  padding: 15px;
+  border-radius: 0;
+  width: 96%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Checkbox */
+.custom-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+   font-size: 1.3rem;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+ 
+}
+
+.custom-input-label {
+  font-size: 1.3rem;
+}
+
+.custom-input-form {
+  padding: 8px 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%
+}
+
+/* Button */
+.custom-btn-save {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  width: 100%;
+}
+
+
+.operations-btn-exam {
+ background-color: var(--main-color);
+  color: var(--white);
+  transition: all.5s ease;
+  font-size: 1.4rem;
+  padding: .8rem;
+  z-index: 9999; 
+ border-radius: 4px;
+
+}
+
+
+/* ---------------------- */
 
 .dashboard-teacher{
   width: 97%;
@@ -3035,7 +3172,7 @@ transition: 0.2s;
       border-radius: 0;
       padding: 1rem;
       box-shadow: 0 0 4px rgba(0,0,0,0.1);
-      width: 600px;
+      width: 550px;
       height: 400px;
       display: flex;
       justify-content: center;
@@ -3070,9 +3207,9 @@ transition: 0.2s;
 
 
 .custom-table-wrapper {
-  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  /* box-shadow: 0 0 4px rgba(0,0,0,0.1); */
   overflow: hidden;
-  margin-bottom: 15rem;
+  margin-bottom: 20rem;
   
 }
 
