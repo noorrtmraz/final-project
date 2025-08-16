@@ -32,16 +32,13 @@
   
   *::-webkit-scrollbar{
       height: .5rem;
-      width: 1rem;
+      width: 0;
   } 
   
    *::-webkit-scrollbar-track{
       background-color: transparent;
   } 
-  
-  *::-webkit-scrollbar-thumb{
-      background-color: var(--main-color);
-  } 
+
   
   html{
       font-size: 62.5%;
@@ -1136,6 +1133,7 @@ header.header-page img.logo {
     width: 250px;
     z-index: 1;
     background-color: #fff;
+    overflow: auto;
   }
 
   .sidebar ul {

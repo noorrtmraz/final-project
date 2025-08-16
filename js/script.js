@@ -405,28 +405,28 @@ function showForm(type, clickedIcon) {
 
 
 // القائمة المنسدلة للطلاب فيي الساييد بار
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleLink = document.querySelector(".dropdown-toggle-custom");
+  const menu = document.querySelector("#studentsMenu");
+  const icon = toggleLink.querySelector(".toggle-icon");
 
- document.addEventListener("DOMContentLoaded", function () {
-    const toggleLink = document.querySelector(".dropdown-toggle-custom");
-    const target = document.querySelector("#studentsMenu");
-    const toggleIcon = toggleLink.querySelector(".toggle-icon");
+  toggleLink.addEventListener("click", function (e) {
+    e.preventDefault();
 
-    // عند الضغط: نتوقع الحالة القادمة
-    toggleLink.addEventListener("click", function (e) {
-      const willOpen = !target.classList.contains("show");
-
-      if (willOpen) {
-        toggleIcon.classList.remove("fa-plus");
-        toggleIcon.classList.add("fa-minus");
-      }
-    });
-
-    // عند الإغلاق النهائي: نرجّع الأيقونة إلى زائد
-    target.addEventListener("hidden.bs.collapse", function () {
-      toggleIcon.classList.remove("fa-minus");
-      toggleIcon.classList.add("fa-plus");
-    });
+    if (menu.style.maxHeight) {
+      // القائمة مفتوحة → أغلقها
+      menu.style.maxHeight = null;
+      icon.classList.remove("fa-minus");
+      icon.classList.add("fa-plus");
+    } else {
+      // القائمة مغلقة → افتحها
+      menu.style.maxHeight = menu.scrollHeight + "px";
+      icon.classList.remove("fa-plus");
+      icon.classList.add("fa-minus");
+    }
   });
+});
+
 
 
 
