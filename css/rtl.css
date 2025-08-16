@@ -898,7 +898,19 @@
   border-bottom: 2px solid var(--main-color);
   text-decoration: none;
 
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: block;       /* نتحكم بالانميشن */
+  visibility: hidden; 
 
+}
+
+/* عند الفتح */
+.notification-dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
 
 .dropdown-menu.notification-dropdown .notification-content{
@@ -942,7 +954,23 @@
   border:none;
   border-bottom: 2px solid var(--main-color);
 
+
+   opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: block; /* لنتحكم بالانميشن */
+  visibility: hidden;
+
 }
+
+
+/* عند الفتح */
+.account-dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
 
 /* ✅ تخصيص العناصر داخل القائمة */
 .account-dropdown .dropdown-item {
