@@ -61,6 +61,28 @@
 
 
  /* ------landing page start */
+ /* شكل زر الهامبرغر */
+.navbar-toggler{
+  display:none; /* يظهر بالموبايل فقط */
+  cursor:pointer;
+  background:transparent;
+  border:0;
+  padding:8px;
+  margin-inline-start:8px;
+}
+.navbar-toggler .toggler-bar{
+  display:block;
+  width:26px; height:2px;
+  background:#333;
+  margin:5px 0;
+  transition:transform .2s ease, opacity .2s ease;
+}
+
+/* الوضع الطبيعي (ديسكتوب) */
+.navbar-collapse-item{
+  display:block;
+}
+
 
 
 
@@ -204,6 +226,8 @@
       border-radius: 50%;
       color: var(--main-color);
       padding: 2px 3px;
+      rotate: 180deg;
+      margin-left: .5rem;
     }
    .hero-section .hero-image-box img {
       max-width: 100%;
@@ -1114,7 +1138,7 @@ header.header-page img.logo {
   }
 
   .sidebar ul {
-    margin-top: 11.5rem;
+    margin-top: 7.5rem;
   }
 
   .sidebar ul li a {
@@ -5103,6 +5127,47 @@ text-decoration: none;
     font-size: 1.1rem;
     padding: .6rem 1.2rem;
   }
+   .navbar-toggler{ display:inline-block; }
+
+  /* اخفي القائمة افتراضيًا */
+  .navbar-collapse-item{
+    display:none;
+    position:absolute;
+    top:100%;
+    inset-inline:0;              /* يمين/يسار حسب RTL/LTR */
+    background:#fff;
+    border-top:1px solid #eee;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+  }
+  /* لما تنفتح */
+  .navbar-collapse-item.show{ display:block; }
+
+  /* خلي عناصر الـ UL عمودية */
+  .navbar-collapse-item .navbar-nav{
+    padding:8px;
+  }
+  .navbar-collapse-item .nav-link{
+    padding:12px 14px;
+  }
+
+  .nav-item-lang .lang-flag{
+    width:22px; height:auto;
+  }
+
+  /* قائمة اللغات داخل القائمة الرئيسية */
+  .dropdown-menu-lang{
+    position:static;   /* داخل التدفق */
+    float:none;
+    display:none;
+    margin:0;
+    border:0;
+    box-shadow:none;
+  }
+  /* افتحها لما نضيف كلاس show على عنصر اللغة */
+  .nav-item-lang.show .dropdown-menu-lang{
+    display:block;
+  }
+  
 }
 
 

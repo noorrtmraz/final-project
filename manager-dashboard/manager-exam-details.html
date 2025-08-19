@@ -33,9 +33,8 @@
       <link  id="theme-style"  rel="stylesheet" href="../css/rtl.css">
      
 </head>
-
+</head>
 <body>
-
     <!-- الهيدر -->
 <header class="header-page bg-white shadow fixed-top">
 
@@ -61,7 +60,7 @@
 
       <!-- الشعار والقائمة الجانبية -->
       <div class="d-flex align-items-center logo-spark">
-        <a href="teacher-index.html">
+        <a href="manager-index.html">
           <img src="../images/spark.png" alt="spark education" class="logo">
         </a>
 
@@ -111,7 +110,7 @@
       <li class="text-center">
         <img src="../images/pic-1.jpg" alt="صورة المستخدم" class="rounded-circle user-img" style="width: 40px; height: 40px;">
         <p class="user-name">محمد محمد</p>
-        <p class="user-type">معلم</p>
+        <p class="user-type">مدير</p>
       </li>
       <li><hr class="dropdown-divider"></li>
       <li>
@@ -153,99 +152,116 @@
 </header>
 
       
-     
-      <!-- الشريط الجانبي -->
+     <!-- الشريط الجانبي -->
       <div id="sidebar" class="sidebar bg-white shadow position-fixed end-0 vh-100 p-4">
-            <ul class="list-unstyled">
-                <li>
-                  <a href="teacher-index.html">
-                      <span>لوحة التحكم</span>
-                      <i class="fa fa-home"></i>
-                  </a>
-                </li>
-                <li>
-                    <a href="teacher-student.html">
-                      <span> الطلاب</span>
-                      <i class="fas fa-user-graduate"></i>
-                    </a>
-                  </li>
+  <ul class="list-unstyled">
 
-                  <li>
-                    <a href="teacher-grade.html">
-                        <span>الصفوف الدراسية</span>
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
-                  </li>
-                <li>
-                    <a href="teacher-book.html">
-                      <span> الكتب الدراسية</span>
-                      <i class="fas fa-book-reader"></i>
-                    </a>
-                  </li>
+    <li>
+      <a href="manager-index.html">
+        <span>لوحة التحكم</span>
+        <i class="fa fa-home"></i>
+      </a>
+    </li>
 
-                  <li>
-                    <a href="teacher-exam.html" class="active">
-                      <span> الاختبارات</span>
-                      <i class="fa fa-pen-to-square"></i>
-                    </a>
-                  </li>
-                  <li class="dropdown-sidebar">
-                  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#techaersMenu" aria-expanded="false">
-                    
-                    <i class="toggle-icon fas fa-plus"></i>
-                    <div class="d-flex align-items-center gap-2">   
-                      <span>الاسئلة</span>
-                      <i class="fas fa-circle-question"></i>
-                    </div>
-                  </a>
-
-                  <ul id="techaersMenu" class="collapse list-unstyled ps-4 mt-2">
-                    <li><a href="teacher-question-bank.html">بنك الاسئلة</a></li>
-                    <li><a href="teacher-question-category.html">اقسام الاسئلة</a></li>
-                  </ul>
-                </li>
-
-                  <li>
-                    <a href="teacher-hw.html">
-                      <span> الواجبات</span>
-                      <i class="fa fa-tasks"></i>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="teacher-lesson.html">
-                        <span>الدروس المسجلة</span>
-                        <i class="fas fa-play-circle"></i>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="teacher-meet.html">
-                        <span>اللقاءات المباشرة</span>
-                        <i class="fas fa-video"></i>
-                    </a>
-                  </li>
-
-               
-
-                <li>
-                    <a href="teacher-profile.html">
-                        <span>الملف الشخصي</span>
-                      <i class="fa-solid fa-user"></i>
-                      
-                    </a>
-                  </li>
-              </ul>
+    <!-- عنصر الطلاب مع قائمة تظهر وتختفي -->
+    <li class="dropdown-sidebar">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#studentsMenu" aria-expanded="false">
     
+    <i class="toggle-icon fas fa-plus"></i>
+    <div class="d-flex align-items-center gap-2">   
+      <span>الطلاب</span>
+      <i class="fas fa-user-graduate"></i>
+    </div>
+  </a>
+
+  <ul id="studentsMenu" class="collapse list-unstyled ps-4 mt-2">
+    <li><a href="manager-student.html">عرض الطلاب</a></li>
+    <li><a href="manager-graduated.html">الخريجين</a></li>
+    <li><a href="manager-promotion.html">الترقيات</a></li>
+    <li><a href="manager-std-record.html">السجل</a></li>
+  </ul>
+</li>
+
+ <li class="dropdown-sidebar">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#techaersMenu" aria-expanded="false">
+    
+    <i class="toggle-icon fas fa-plus"></i>
+    <div class="d-flex align-items-center gap-2">   
+      <span>المعلمين</span>
+      <i class="fas fa-chalkboard-teacher"></i>
+    </div>
+  </a>
+
+  <ul id="techaersMenu" class="collapse list-unstyled ps-4 mt-2">
+    <li><a href="manager-all-teacher.html">كل المعلمين</a></li>
+    <li><a href="manager-teacher.html">المعلمين الحاليين</a></li>
+    <li><a href="manager-teacher-record.html">السجل</a></li>
+  </ul>
+</li>
+
+
+    <li>
+      <a href="manager-parent.html">
+        <span>أولياء الأمور</span>
+        <i class="fas fa-user-shield"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-grade.html">
+        <span>المراحل الدراسية</span>
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+
+    <li>
+      <a href="manager-study-content.html" class="active">
+        <span>المحتوى الدراسي</span>
+        <i class="fas fa-book-reader"></i>
+      </a>
+    </li>
+
+    <li class="dropdown-sidebar">
+  <a href="#" class="dropdown-toggle-custom d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#questionMenu" aria-expanded="false">
+    
+    <i class="toggle-icon fas fa-plus"></i>
+    <div class="d-flex align-items-center gap-2">   
+      <span>الاسئلة</span>
+      <i class="fas fa-question-circle"></i>
+    </div>
+  </a>
+
+  <ul id="questionMenu" class="collapse list-unstyled ps-4 mt-2">
+    <li><a href="manager-question-bank.html">بنك الاسئلة</a></li>
+    <li><a href="manager-question-category.html">اقسام الاسئلة</a></li>
+  </ul>
+</li>
+
+
+    <li>
+      <a href="manager-meet.html">
+        <span>اللقاءات المباشرة</span>
+        <i class="fas fa-video"></i>
+      </a>
+    </li>
+
+   
+
+    <li>
+      <a href="manager-profile.html">
+        <span>الملف الشخصي</span>
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </li>
+  </ul>
       </div>
-      
       
       
       <!-- المحتوى الرئيسي -->
       <div id="mainContent" class="transition-all with-sidebar" style="transition: margin-inline-end 0.3s ease-in-out;">        
 
-         <h3 class="teacher-title2">تفاصيل الاختبار</h3>
-         <div class="title-underline"></div>
+         <h3 class="manager-header"> تفاصيل الاختبار</h3> 
+        <div class="title-underline-manager"></div> 
        
             <div class="student-data">
 
@@ -268,7 +284,7 @@
                             <ul class="dropdown-menu dropdown-menu-operations">
                      
                               <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-edit-question.html" >
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-edit-question.html" >
                                   <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل
                                 </a>
                               </li>
@@ -283,8 +299,9 @@
 
 
                     
-                  </ul>   
-
+                  </ul>  
+                  
+                  
                   <div class="modal fade" id="deleteModal-exam" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
                       <div class="modal-content">
@@ -295,7 +312,7 @@
                           <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
                           <p>هل أنت متأكد أنك تريد حذف هذا الكتاب ؟</p>
                         </div>
-                        <div class="modal-footer custom-modal-footer">
+                        <div class="modal-footer custom-modal-footer-manager">
                         <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تأكيد الحذف</button>
                         <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
                       </div>
@@ -378,7 +395,7 @@
 
                         <!-- العمود الثالث: زر حفظ -->
                         <div class="col-md-2 col-12">
-                            <button type="submit" class="custom-btn-save">حفظ التعديلات</button>
+                            <button type="submit" class="custom-btn-save-manager">حفظ التعديلات</button>
                         </div>
 
                         </div>
@@ -391,12 +408,12 @@
                     <div class="container custom-table-teacher">
 
                <div class="table-responsive custom-table-wrapper">
-                <table class="table text-center custom-grade-table">
-                  <thead class="thead-custom">
+                <table class="table text-center manager-grade-table">
+                  <thead class="thead-manager">
                       <tr>
                         <th>#</th>
-                        <th> السؤال</th>
-                        <th> القسم</th>
+                        <th>السؤال</th>
+                        <th>القسم</th>
                         <th>النوع</th>
                         <th>الدرجة</th>
                         <th>العمليات</th>
@@ -405,28 +422,30 @@
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>السؤال الأول</td>
+                        <td>الاول</td>
                         <td>اختبار نصفي</td>
-                        <td>صح وخطأ</td>
+                         <td>صح وخطأ</td>
                         <td>5</td>
-                       <td>
+                        <td>
                             <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal-question">
-                                <i class="fas fa-trash-alt action-icon delete-icon-action" title="حذف السؤال"></i>
+                                <i class="fas fa-trash-alt action-icon delete-icon-action" title=" حذف"></i>
                             </a>
 
                        </td>
+
                       </tr>
+                      
                     </tbody>
                   </table>
                   
                     <div class="dropdown">
-                            <button class="operations-btn-exam dropdown-toggle" data-bs-toggle="dropdown">
+                            <button class="operations-btn-exam-manager dropdown-toggle" data-bs-toggle="dropdown">
                                     إضافة سؤال
                             </button>
                                 <ul class="dropdown-menu dropdown-menu-subjects">
 
                                 <li>
-                                    <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-forms/teacher-add-question.html" >
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="manager-forms/manager-add-question.html" >
                                     سؤال جديد
                                     </a>
                                 </li>
@@ -446,7 +465,7 @@
                         </div> 
 
                    <!-- Modal حذف الطالب -->
-                   <div class="modal fade" id="deleteModal-question" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="deleteModal-question" tabindex="-1" aria-labelledby="deleteModal-question" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
                       <div class="modal-content">
                         <div class="modal-header">
@@ -456,10 +475,10 @@
                           <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
                           <p>هل أنت متأكد أنك تريد حذف هذا السؤال ؟</p>
                         </div>
-                        <div class="modal-footer justify-content-center">
-                          <button type="button" class="btn btn-del">تأكيد الحذف</button>
-                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
-                        </div>
+                        <div class="modal-footer custom-modal-footer-manager">
+                        <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تأكيد الحذف</button>
+                        <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -497,7 +516,7 @@
                     </div>
 
                     <!-- تذييل المودال -->
-                    <div class="modal-footer custom-modal-footer">
+                    <div class="modal-footer custom-modal-footer-manager">
                       <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">اضافة</button>
                       <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
                     </div>
@@ -558,7 +577,7 @@
 
                         </div>
                         
-                        <div class="modal-footer custom-modal-footer">
+                        <div class="modal-footer custom-modal-footer-manager">
                       <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">اضافة</button>
                       <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
                     </div>
@@ -593,7 +612,7 @@
 
               <div class="table-responsive custom-table-wrapper">
                 <table class="table text-center custom-grade-table">
-                  <thead class="thead-custom">
+                  <thead class="thead-manager">
                     <tr>
                       <th>#</th>
                       <th>اسم الطالب</th>
@@ -608,26 +627,26 @@
                       <td>محمد محمد</td>
                       <td>20</td>
                       <td>12-3-2025 3:30pm</td>
-                      <td>
-                        <div class="dropdown">
-                          <button class="dropdown-toggle dropdown-toggle-operations" data-bs-toggle="dropdown">
+                       <td>
+                              <div class="dropdown">
+                          <button class="dropdown-toggle operations-btn" data-bs-toggle="dropdown">
                             العمليات
                           </button>
-                         <ul class="dropdown-menu dropdown-menu-operations">
+                         <ul class="dropdown-menu operations-btn-item">
                               <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="teacher-exam-review.html" >
-                                  <i class="fas fa-eye eye-icon-action"></i> عرض الإجابات
+                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="manager-exam-review.html" >
+                                  <i class="fas fa-eye action-icon relode-icon-action"></i>  عرض الاجابات
                                 </a>
                               </li>
-                              <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#relodeModal-exam" >
-                                  <i class="fas fa-rotate-right relode-icon-action"></i> إعادة الاختبار
-                                </a>
-                              </li>
-                            </ul>
 
-                        </div>
-                      </td>
+                              <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 custom-edit-btn" href="#" data-bs-toggle="modal" data-bs-target="#relodeModal" >
+                                  <i class="fas fa-rotate-right action-icon relode-icon-action"></i> اعادة الاختبار
+                                </a>
+                              </li>
+                             </ul>
+                          </div>
+                       </td>
                     </tr>
                   </tbody>
                 </table>
@@ -636,7 +655,7 @@
 
 
           
-         <div class="modal fade" id="relodeModal-exam" tabindex="-1" aria-labelledby="relodeModalLabel" aria-hidden="true">
+         <div class="modal fade" id="relodeModal" tabindex="-1" aria-labelledby="relodeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
                       <div class="modal-content">
                         <div class="modal-header">
@@ -646,10 +665,10 @@
                           <i class="fas fa-rotate-right fa-3x mb-3"></i>
                           <p>هل أنت متأكد من أنك تريد اعادة الاختبار للطالب <span>أحمد محمد</span></p>
                         </div>
-                        <div class="modal-footer justify-content-center">
-                          <button type="button" class="btn btn-del">تأكيد</button>
-                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
-                        </div>
+                        <div class="modal-footer custom-modal-footer-manager">
+                        <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تأكيد</button>
+                        <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -669,9 +688,7 @@
       </div>
 
 
-
-     
-  
+   
   
     
 <!-- زر فتح الرسائل باستخدام Bootstrap -->

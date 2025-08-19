@@ -1,4 +1,40 @@
+(function(){
+    const menu   = document.getElementById('mainNavbar');
+    const toggle = document.querySelector('.navbar-toggler');
+    const langBtn = document.querySelector('.lang-switcher .lang-dropdown');
+    const langItem = document.querySelector('.lang-switcher');
 
+    // فتح/إغلاق القائمة الرئيسية
+    toggle && toggle.addEventListener('click', function(){
+      const isOpen = menu.classList.toggle('show');
+      this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // فتح/إغلاق قائمة اللغة على الموبايل فقط
+    if (langBtn){
+      langBtn.addEventListener('click', function(e){
+        // على الشاشات الصغيرة فقط
+        if (window.matchMedia('(max-width: 991.98px)').matches){
+          e.preventDefault();
+          langItem.classList.toggle('show');
+        }
+      });
+    }
+
+    // إغلاق أي شيء مفتوح عند الضغط خارج القوائم
+    document.addEventListener('click', function(e){
+      const clickInsideMenu = menu.contains(e.target) || (toggle && toggle.contains(e.target));
+      if (!clickInsideMenu){
+        menu.classList.remove('show');
+        toggle && toggle.setAttribute('aria-expanded', 'false');
+      }
+      if (langItem && !langItem.contains(e.target)){
+        langItem.classList.remove('show');
+      }
+    });
+  })();
+
+  
 //   اظهار واخفاء السايد بار من خلال الضغط على اييقونة القائمة
 
 
