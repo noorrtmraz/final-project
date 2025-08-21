@@ -2333,7 +2333,7 @@ font-weight: bold;
 }
 
 .messages-panel{
-    width: 35% !important;
+    width: 28% !important;
     margin-left: 3rem;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -2391,8 +2391,8 @@ font-weight: bold;
  .message-title{
     background-color: var(--main-color);
     padding: 2rem;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 
 }
 
@@ -2412,7 +2412,7 @@ font-weight: bold;
   .messages-body {
     overflow-y: auto;
     flex: 1;
-    padding: 10px;
+    /* padding: 10px; */
 
   }
   
@@ -2442,6 +2442,22 @@ font-weight: bold;
       font-size: 1.2rem;
   }
   
+
+
+
+  .card-message.chat-popup-wrapper{
+  opacity: 0;
+  transform: translateY(30px) scale(.98);
+  transition: transform .25s ease, opacity .25s ease;
+  pointer-events: none; /* ما يتفاعل وهو مخفي */
+}
+
+/* حالة الظهور */
+.card-message.chat-popup-wrapper.is-open{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
 
   
 /* message end */
@@ -4464,6 +4480,7 @@ transition: 0.2s;
       margin-right: auto;
       margin-left: auto;
       margin-top: 5rem;
+      margin-bottom: 8rem;
     }
 
     .preview-box .preview-header {
@@ -4576,11 +4593,21 @@ transition: 0.2s;
 
 }
 
-/* رأس المحادثة */
-.chat-popup-header {
-  background-color: var(--main-color);
+ .chat-popup-header{
+    background-color: var(--main-color);
+    padding: 1.5rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  direction: rtl;
   color: white;
-  padding: 10px;
+
+}
+
+.chat-popup-header span{
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.7rem;
+    
 }
 
 /* اسم المستخدم */
@@ -4868,6 +4895,12 @@ transition: 0.2s;
   margin-top: 2rem;
   margin-bottom: 1rem;
   text-decoration: none;
+}
+
+.subject-data{
+  width: 97%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 

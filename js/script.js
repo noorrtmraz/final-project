@@ -466,69 +466,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  // صفحة المحادثات
- 
-    const toggleBtn = document.getElementById('sidebarToggle');
-  const chatList = document.querySelector('.chat-list');
-  const messageArea = document.querySelector('.main-message-area');
-
-  toggleBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    chatList.classList.toggle('slide-hidden');
-    messageArea.classList.toggle('expanded');
-  });
-
-// بعرض قائمة الرسائل عند تصغير الشاشة 
-   function toggleChatList() {
-    const chatList = document.querySelector('.chat-list');
-    chatList.classList.toggle('active');
-  
-  }
-
-
-
-
-  const chatItems = document.querySelectorAll(".chat-item");
-  const msgStart = document.querySelector(".msg-start");
-  const conversation = document.querySelector(".conversation");
-
-  chatItems.forEach(item => {
-    item.addEventListener("click", () => {
-      // إظهار المحادثة
-      msgStart.style.display = "none";
-      conversation.style.display = "block";
-
-      // تمييز الرسالة المختارة
-      chatItems.forEach(i => i.classList.remove("selected"));
-      item.classList.add("selected");
-
-      // (اختياري) تحديث الرسائل أو الاسم حسب العنصر المختار
-    });
-  });
-
-
-  // الرسائل عند الطالب 
-  
-  const chatItemsStd = document.querySelectorAll(".chat-item");
-  const msgStartStd = document.querySelector(".msg-start-std");
-  const conversationStd = document.querySelector(".conversation-std");
-
-  chatItemsStd.forEach(item => {
-    item.addEventListener("click", () => {
-      // إظهار المحادثة
-      msgStartStd.style.display = "none";
-      conversationStd.style.display = "block";
-
-      // تمييز الرسالة المختارة
-      chatItemsStd.forEach(i => i.classList.remove("selected"));
-      item.classList.add("selected");
-
-      // (اختياري) تحديث الرسائل أو الاسم حسب العنصر المختار
-    });
-  });
-
-
 
   // المحادثات عند ولي الأمر
 
@@ -578,6 +515,54 @@ function openChatPopup(name) {
   }
 }
 
+
+
+
+function openChatPopup(name) {
+  // اسم المستخدم
+  document.getElementById("chatUserName").innerText = name;
+
+  const popup = document.getElementById("chatPopup");
+  const offcanvasEl = document.getElementById('messagesOffcanvas');
+
+  // خلي العنصر يظهر أولاً
+  popup.style.display = "block";
+
+  // شغّل الانيميشن بإطار رسم (تضمن تشغيل الترانزيشن كل مرة)
+  requestAnimationFrame(() => {
+    popup.classList.add("is-open");
+  });
+
+  // إغلاق الـOffcanvas إن وجد
+  if (window.bootstrap && offcanvasEl) {
+    let inst = bootstrap.Offcanvas.getInstance(offcanvasEl);
+    if (!inst) inst = new bootstrap.Offcanvas(offcanvasEl);
+    inst.hide();
+  }
+
+  // فوكس على حقل الكتابة
+  setTimeout(() => {
+    const input = document.querySelector(".chat-input");
+    input && input.focus();
+  }, 80);
+}
+
+function closeChatPopup() {
+  const popup = document.getElementById("chatPopup");
+
+  // شغّل الانيميشن العكسي
+  popup.classList.remove("is-open");
+
+  // بعد انتهاء الترانزيشن، خبّي العنصر
+  const done = () => {
+    popup.style.display = "none";
+    popup.removeEventListener("transitionend", done);
+  };
+  popup.addEventListener("transitionend", done, { once: true });
+
+  // احتياط لو المتصفح ما أطلق transitionend
+  setTimeout(done, 300);
+}
 
 
 

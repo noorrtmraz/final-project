@@ -2293,7 +2293,7 @@ font-weight: bold;
 }
 
 .messages-panel{
-    width: 35% !important;
+    width: 28% !important;
     margin-left: auto;
     margin-right: 3rem;
     border-top-left-radius: 20px;
@@ -2348,17 +2348,19 @@ font-weight: bold;
     color: var(--light-color);
   }
 
- .offcanvas-header{
+ .chat-popup-header{
     background-color: var(--main-color);
-    padding: 2rem;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    padding: 1.5rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+   color: white;
+
 }
 
-.message-title h5{
+.chat-popup-header span{
     color: var(--white);
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     
 }
 
@@ -2399,6 +2401,21 @@ font-weight: bold;
       font-size: 1.2rem;
   }
   
+
+
+.card-message.chat-popup-wrapper{
+  opacity: 0;
+  transform: translateY(30px) scale(.98);
+  transition: transform .25s ease, opacity .25s ease;
+  pointer-events: none; /* ما يتفاعل وهو مخفي */
+}
+
+/* حالة الظهور */
+.card-message.chat-popup-wrapper.is-open{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
 
   
 /* message end */
@@ -4402,6 +4419,8 @@ text-decoration: none;
       width: 70%;
       margin-right: auto;
       margin-left: auto;
+      margin-top: 5rem;
+      margin-bottom: 8rem;
     }
 
     .preview-box .preview-header {
@@ -4511,13 +4530,7 @@ text-decoration: none;
   right: 5rem;
 }
 
-/* رأس المحادثة */
-.chat-popup-header {
-  background-color: var(--main-color);
-  color: white;
-  padding: 10px;
-  flex-direction: row-reverse;
-}
+
 
 /* اسم المستخدم */
 .chat-username {
@@ -4814,6 +4827,14 @@ text-decoration: none;
   margin-bottom: 1rem;
   text-decoration: none;
 }
+
+
+.subject-data{
+  width: 97%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 
     /* --------- parent dashborad end---------- */
 
