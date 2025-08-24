@@ -545,6 +545,7 @@
     box-shadow: 0 4px 6px rgba(88, 159, 67, 0.5);
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    z-index: -1;
   }
   
   .contact-modern .contact-box .info-box i {
@@ -5140,6 +5141,21 @@ transition: 0.2s;
   
 
 @media (max-width: 991.98px) {
+
+  .hero-section .hero-description{
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-section .hero-btn{
+    margin-bottom: 2rem;
+  }
+
+  .card-offers{
+    margin-left: 5rem;
+  }
+
+
   /* ✅ العنوان والخط أسفله */
   .teacher-title2 {
     font-size: 2rem;
