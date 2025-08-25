@@ -72,6 +72,7 @@
   padding:8px;
   margin-inline-start:8px;
 }
+
 .navbar-toggler .toggler-bar{
   display:block;
   width:26px; height:2px;
@@ -5131,9 +5132,6 @@ transition: 0.2s;
       height: 70vh !important;
     }
 
-  .chat-list {
-    width: 240px;
-  }
 
   }
 
@@ -5141,6 +5139,17 @@ transition: 0.2s;
   
 
 @media (max-width: 991.98px) {
+  .hero-section .hero-text-box .hero-text{
+    text-align: center;
+  }
+
+   .hero-text-box{
+    text-align: center;
+  }
+
+  .contact-modern .contact-box{
+    width: 100%;
+  }
 
   .hero-section .hero-description{
     margin-right: auto;
@@ -5256,6 +5265,17 @@ transition: 0.2s;
 
 
   @media (max-width: 480px) {
+
+  
+    .contact-modern .contact-box .info-box {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+
+    .contact-modern .contact-box .info-box .info-box-img{
+      margin-bottom: 2rem;
+    }
 
     .nav-link span{
       display: none;

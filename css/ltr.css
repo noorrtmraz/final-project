@@ -229,6 +229,10 @@
       rotate: 180deg;
       margin-left: .5rem;
     }
+
+    .hero-section .hero-image-box{
+      margin-left: auto;
+    }
    .hero-section .hero-image-box img {
       max-width: 100%;
       height: auto;
@@ -482,6 +486,7 @@
     box-shadow: 0 4px 6px rgba(88, 159, 67, 0.5);
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    z-index: -1;
   }
   
   .contact-modern .contact-box .info-box i {
@@ -504,7 +509,6 @@
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    margin-top: 3rem;
     flex-direction: row-reverse;
      
   }
@@ -4917,6 +4921,25 @@ text-decoration: none;
   
   /* Media Queries */
 @media (max-width: 768px) {
+.navbar-collapse-item {
+        display: none; /* أخفاء القائمة عند تصغير الشاشة إلى 768px أو أقل */
+    }
+
+    .navbar-toggler {
+        display: inline-block;  /* زر القائمة يظهر بشكل صحيح */
+    }
+
+    /* تأكد من أن القائمة تظل مخفية حتى يتم الضغط على الأيقونة */
+    .navbar-collapse-item.show {
+        display: block;
+    }
+
+    .navbar-collapse-item .navbar-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
     .about-section .about-text h3 {
       width: 35%;
       font-size: 1.8rem;
@@ -5071,26 +5094,6 @@ text-decoration: none;
   #overlayStd.active {
     display: block;
   }
-
-
-  
-  .chat-list {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 1050;
-    background-color: #fff;
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  .chat-list.active {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
   
     .preview-box{
       width: 90%;
@@ -5106,14 +5109,35 @@ text-decoration: none;
       height: 70vh !important;
     }
 
-  .chat-list {
-    width: 240px;
   }
-
-
   
 
 @media (max-width: 991.98px) {
+  .hero-section .hero-text-box .hero-text{
+    text-align: center;
+  }
+
+   .hero-text-box{
+    text-align: center;
+  }
+
+  .contact-modern .contact-box{
+    width: 100%;
+  }
+
+  .hero-section .hero-description{
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-section .hero-btn{
+    margin-bottom: 2rem;
+  }
+
+  .card-offers{
+    margin-right: 4rem;
+  }
+
   /* ✅ العنوان والخط أسفله */
   .teacher-title2 {
     font-size: 2rem;
@@ -5207,8 +5231,6 @@ text-decoration: none;
   .nav-item-lang.show .dropdown-menu-lang{
     display:block;
   }
-  
-}
 
 
 
@@ -5216,12 +5238,23 @@ text-decoration: none;
     width: 90%;
   }
 
-  }
   
-
+}
 
 
   @media (max-width: 480px) {
+    
+    .contact-modern .contact-box .info-box {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+
+    .contact-modern .contact-box .info-box .info-box-img{
+      margin-bottom: 2rem;
+    }
+
+
     .nav-link span{
       display: none;
     }
@@ -5262,5 +5295,10 @@ text-decoration: none;
       margin-right: .5rem;
     }
 
+     .chat-popup-wrapper{
+      width: 95%;
+      margin-right: auto;
+      margin-left: auto;
+    }
 
   }
