@@ -235,6 +235,8 @@
 }
 
 
+
+
 /* ----------------------- */
   .hero-section{
     background:linear-gradient(125deg ,rgba(7, 35, 64, 0), rgba(88, 159, 67, 0.8));
@@ -1237,6 +1239,32 @@ header.header-page img.logo {
 
   /* manager dashoard start */
 
+    
+.manager-grade-table{
+  width: 100%;
+  border: 1px solid var(--light-bg);
+}
+
+/* إزالة أي لون خلفية افتراضي */
+.manager-grade-table tbody tr {
+  background-color: transparent !important;
+}
+
+/* الصفوف بالتناوب */
+.manager-grade-table tbody tr:nth-of-type(odd) {
+  background-color: #ffffff !important; /* أبيض */
+}
+
+.manager-grade-table tbody tr:nth-of-type(even) {
+  background-color: rgba(88, 159, 67, 0.05) !important; /* أخضر فاتح */
+}
+
+/* عند المرور على الصف */
+.manager-grade-table tbody tr:hover {
+  background-color: rgba(88, 159, 67, 0.1) !important; /* أخضر أغمق */
+}
+
+
   .custom-btn-save-manager{
     background-color: var(--main-color);
     color: #fff;
@@ -1341,6 +1369,13 @@ margin-bottom: 15rem;
   
 }
 
+
+.manager-table-wrapper-section {
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* سلاسة على الموبايل */
+  
+}
 
 
 /* ✅ الزر داخل القائمة المنسدلة */
@@ -2468,6 +2503,9 @@ font-weight: bold;
 
 
 /* ----------- teacher dashboard start-------------- */
+
+
+
 .dropdown-toggle-detalis{
   font-size: 1.5rem;
   font-weight: normal;
@@ -3299,22 +3337,45 @@ transition: 0.2s;
   
 }
 
-/* ✅ الزر داخل القائمة المنسدلة */
+.custom-grade-table{
+  width: 100%;
+  border: 1px solid var(--light-bg);
+}
+
+/* إزالة أي لون خلفية افتراضي */
+.custom-grade-table tbody tr {
+  background-color: transparent !important;
+}
+
+/* الصفوف بالتناوب */
+.custom-grade-table tbody tr:nth-of-type(odd) {
+  background-color: #ffffff !important; /* أبيض */
+}
+
+.custom-grade-table tbody tr:nth-of-type(even) {
+  background-color: rgba(88, 159, 67, 0.1) !important; /* أخضر فاتح */
+}
+
+/* عند المرور على الصف */
+.custom-grade-table tbody tr:hover {
+  background-color: rgba(88, 159, 67, 0.2) !important; /* أخضر أغمق */
+}
+
+/* الخلايا */
+.custom-grade-table td {
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  font-weight: 330;
+}
+
+/* روابط القائمة المنسدلة داخل الجدول */
 .custom-grade-table .dropdown-menu-operations a {
   text-align: right;
   font-size: 1.2rem;
   font-weight: 330;
   padding: .7rem 1.5rem;
-  color:var(--secondary-color);
-}
-
-
-
-.custom-grade-table td{
-  padding: 1rem;
-  font-size: 1.4rem;
   color: var(--secondary-color);
-  font-weight: 330;
 }
 
 /* ---------------- */
@@ -5027,6 +5088,7 @@ transition: 0.2s;
     .sidebar.active {
       transform: translateX(0);
       margin-top: 4rem;
+      transition: .3s linear;
     }
 
     #mainContent.with-sidebar {
@@ -5278,7 +5340,7 @@ transition: 0.2s;
     }
 
     .nav-link span{
-      display: none;
+      font-size: 1.5rem;
     }
 
     .nav-item-lang{
