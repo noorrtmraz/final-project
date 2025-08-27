@@ -852,64 +852,6 @@
 /******teacher & admin login page ends**/
 
 
-/* error page start */
-
-.error-page{
-  direction: rtl;
-  background: linear-gradient(125deg , rgba(88, 159, 67, 0.9) , rgba(7, 35, 64, .5));
-}
- .error-page .custom-section {
-    min-height: 80vh;
-  }
-
- .error-page .custom-section .custom-image-container {
-    padding: 2rem;
-  }
-
- .error-page .custom-section .custom-image-container .custom-image {
-    max-width: 100%;
-    height: auto;
-    
-  }
-
-  .error-page .custom-section .custom-text-container {
-    padding: 2rem;
-  }
-
-  .error-page .custom-section .custom-text-container .custom-title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: var(--white);
-    margin-bottom: 1rem;
-    text-shadow:  2px 2px 2px rgba(0, 0, 0, .4);
-  }
-
-  .error-page .custom-section .custom-text-container .custom-paragraph {
-    font-size: 1.5rem;
-    color: var(--white);
-    margin-bottom: 2rem;
-  }
-
-  .custom-back-btn {
-    font-size: 1.5rem;
-    padding: 0.7rem 2rem;
-    border-radius: 0.5rem;
-    background-image: url(../images/back-login.webp);
-    background-size: cover;
-    color: var(--white);
-    font-weight: bold;
-    border: 1px solid var(--main-color);
-  }
-  .custom-back-btn:hover{
-    background-image:  url(../images/back-login.webp);;
-    color: var(--white);
-    border: 1px solid var(--main-color);
-  }
-
-  .custom-back-btn i {
-    transform: rotate(180deg); /* لعكس السهم باتجاه اليمين */
-  }
-/*  error page end */
 
 /* header start */
 
@@ -1284,6 +1226,7 @@ header.header-page img.logo {
   padding: .8rem;
   z-index: 9999; 
  border-radius: 0;
+ margin-right: 1rem;
 
 }
 
@@ -1800,7 +1743,25 @@ margin-bottom: 15rem;
     padding: 10px;
     margin: 5px 0;
     border-radius: 6px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(244, 141, 141, 0.2);
+    text-align: right;
+    font-size: 1.3rem;
+    border: none;
+    color: var(--light-color);
+
+}
+
+.custom-form-card .card-body .subject-form div input[type="text"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="date"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="number"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="password"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="datetime-local"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="url"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="file"].custom-input-error{
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    box-shadow: 0 0 3px var(--red);
     text-align: right;
     font-size: 1.3rem;
     border: none;
@@ -2312,9 +2273,99 @@ font-weight: bold;
 }
 
 /* modle end */
- 
+
+/* تخصيص مظهر التصفح */
+.pagination-container {
+  text-align: center;
+  padding: 1.5rem 1rem 1rem 0;
+}
+
+/* تخصيص اللون الخلفي للأزرار عند التحديد */
+.pagination .page-item.active .page-link {
+  background-color: var(--main-color);
+  color: var(--white);
+  font-weight: bold;
+  border: 1px solid var(--main-color);
+}
+
+/* تخصيص الأزرار العادية */
+.pagination .page-link {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
+
+/* تخصيص الأزرار عند التمرير */
+.pagination .page-link:hover {
+  background-color: var(--main-color);
+  color: white;
+  transition: .3s linear;
+}
+
+/* تخصيص التباعد بين الأزرار */
+.pagination .page-item {
+  margin: 0 2px;
+}
+
+.pagination .page-item:first-child .page-link {
+   background-color:var(--main-color); /* تغيير اللون الخلفي */
+  border: none;/* تغيير حدود الزر */
+  color: white; /* تغيير لون النص */
+  border-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
 
 
+
+.pagination .page-item:last-child .page-link {
+  background-color: var(--main-color); /* تغيير اللون الخلفي */
+  border: none;/* تغيير حدود الزر */
+  color: white; /* تغيير لون النص */
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.pagination-container .pagination-show{
+  margin: 1.5rem 0 1rem 3rem;
+}
+
+.pagination-container .pagination-show p{
+  font-size: 1.3rem;
+  color: var(--light-color);
+}
+
+.title-underline-page{
+  width: 60px;
+  height: 1px;
+  background-color: #ddd; /* يمكنك تغيير اللون */
+  margin: .5rem auto 0 auto; /* المسافات العلوية والسفلية */
+  border-radius: 3px;
+
+}
+
+
+/* تخصيص الرسالة تحت كل input */
+.error-message {
+  color: var(--red); /* اللون الأحمر */
+  font-size: 1.1rem; /* حجم الخط */
+  margin-top: 1rem; /* مسافة من الحقل */
+  background-color: rgb(255, 215, 215);
+  padding: .7rem;
+  position: relative;
+  bottom: 1rem;
+  border-radius: 3px;
+}
+
+.error-message i{
+  margin-left: .5rem;
+}
 
   /* manager dashboard end */
 
@@ -3061,6 +3112,9 @@ font-weight: bold;
   color: #686868;
   margin-right: .7rem;
 }
+
+
+
 
 
 .custom-form-card-teacher .card-body .subject-form div input[type="text"].custom-input,

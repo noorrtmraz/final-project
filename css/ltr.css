@@ -1243,6 +1243,29 @@ header.header-page img.logo {
 }
 
 
+  .custom-btn-save-manager{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 1.3rem;
+    width: 100%;
+  }
+
+  .operations-btn-exam-manager {
+ background-color: var(--main-color);
+  color: var(--white);
+  transition: all.5s ease;
+  font-size: 1.4rem;
+  padding: .8rem;
+  z-index: 9999; 
+ border-radius: 0;
+ margin-left: 1rem;
+
+}
+
 
 
 
@@ -1800,7 +1823,7 @@ header.header-page img.logo {
   top: 0;
   transform: translateY(-50%) scale(0.85);
   background-color: white;
-  color: var(--main-color);
+  color: var(--red);
 }
 
 
@@ -2297,6 +2320,81 @@ font-weight: bold;
 
 
 /* modle end */
+
+.pagination-container {
+  text-align: center;
+  padding: 1.5rem 0 1rem 1rem;
+}
+
+/* تخصيص اللون الخلفي للأزرار عند التحديد */
+.pagination .page-item.active .page-link {
+  background-color: var(--main-color);
+  color: var(--white);
+  font-weight: bold;
+  border: 1px solid var(--main-color);
+}
+
+/* تخصيص الأزرار العادية */
+.pagination .page-link {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
+
+/* تخصيص الأزرار عند التمرير */
+.pagination .page-link:hover {
+  background-color: var(--main-color);
+  color: white;
+  transition: .3s linear;
+}
+
+/* تخصيص التباعد بين الأزرار */
+.pagination .page-item {
+  margin: 0 2px;
+}
+
+.pagination .page-item:first-child .page-link {
+   background-color:var(--main-color); /* تغيير اللون الخلفي */
+  border: none;/* تغيير حدود الزر */
+  color: white; /* تغيير لون النص */
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+
+
+.pagination .page-item:last-child .page-link {
+  background-color: var(--main-color); /* تغيير اللون الخلفي */
+  border: none;/* تغيير حدود الزر */
+  color: white; /* تغيير لون النص */
+  border-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.pagination-container .pagination-show{
+  margin: 1.5rem 3rem 1rem 0;
+}
+
+.pagination-container .pagination-show p{
+  font-size: 1.3rem;
+  color: var(--light-color);
+}
+
+.title-underline-page{
+  width: 60px;
+  height: 1px;
+  background-color: #ddd; /* يمكنك تغيير اللون */
+  margin: .5rem auto 0 auto; /* المسافات العلوية والسفلية */
+  border-radius: 3px;
+
+}
 
 
   /* manager dashboard end */
