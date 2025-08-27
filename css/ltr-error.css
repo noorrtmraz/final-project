@@ -118,9 +118,7 @@
     border: 1px solid var(--main-color);
   }
 
-  .custom-back-btn i {
-    transform: rotate(180deg); /* لعكس السهم باتجاه اليمين */
-  }
+ 
 
 .title-underline {
   width: 60px;
