@@ -3137,6 +3137,29 @@ font-weight: bold;
 
 }
 
+
+
+
+.custom-form-card-teacher .card-body .subject-form div input[type="text"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="date"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="number"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="password"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="datetime-local"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="url"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="file"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div textarea{
+    padding: 10px;
+    margin: 5px 0;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 0 3px var(--red);
+    text-align: right;
+    font-size: 1.3rem;
+    border: none;
+    color: var(--light-color);
+
+}
+
 .custom-form-card-teacher .card-body .subject-form div select.custom-select{
 
     margin: 5px 0;

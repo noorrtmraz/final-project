@@ -1793,6 +1793,25 @@ header.header-page img.logo {
 }
 
 
+.custom-form-card .card-body .subject-form div input[type="text"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="date"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="number"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="password"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="datetime-local"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="url"].custom-input-error,
+.custom-form-card .card-body .subject-form div input[type="file"].custom-input-error{
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    box-shadow: 0 0 3px var(--red);
+    text-align: left;
+    font-size: 1.3rem;
+    border: none;
+    color: var(--light-color);
+
+}
+
+
 .form-group-float {
   direction: ltr;
 }
@@ -2395,6 +2414,23 @@ font-weight: bold;
   border-radius: 3px;
 
 }
+
+/* تخصيص الرسالة تحت كل input */
+.error-message {
+  color: var(--red); /* اللون الأحمر */
+  font-size: 1.1rem; /* حجم الخط */
+  margin-top: 1rem; /* مسافة من الحقل */
+  background-color: rgb(255, 215, 215);
+  padding: .7rem;
+  position: relative;
+  bottom: 1rem;
+  border-radius: 3px;
+}
+
+.error-message i{
+  margin-right: .5rem;
+}
+
 
 
   /* manager dashboard end */
@@ -3213,6 +3249,27 @@ font-weight: bold;
     color: var(--light-color);
 
 }
+
+.custom-form-card-teacher .card-body .subject-form div input[type="text"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="date"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="number"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="password"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="datetime-local"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="url"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div input[type="file"].custom-input-error,
+.custom-form-card-teacher .card-body .subject-form div textarea{
+    padding: 10px;
+    margin: 5px 0;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 0 3px var(--red);
+    text-align: left;
+    font-size: 1.3rem;
+    border: none;
+    color: var(--light-color);
+
+}
+
 
 .custom-form-card-teacher .card-body .subject-form div select.custom-select{
 
