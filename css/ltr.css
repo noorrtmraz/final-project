@@ -3242,7 +3242,7 @@ font-weight: bold;
 .custom-form-card-teacher .card-body .subject-form div input[type="datetime-local"].custom-input,
 .custom-form-card-teacher .card-body .subject-form div input[type="url"].custom-input,
 .custom-form-card-teacher .card-body .subject-form div input[type="file"].custom-input,
-.custom-form-card-teacher .card-body .subject-form div textarea{
+.custom-form-card-teacher .card-body .subject-form div .custom-textarea{
     padding: 15px;
     margin: 5px 0;
     border-top-right-radius: 15px;
@@ -3262,11 +3262,11 @@ font-weight: bold;
 .custom-form-card-teacher .card-body .subject-form div input[type="datetime-local"].custom-input-error,
 .custom-form-card-teacher .card-body .subject-form div input[type="url"].custom-input-error,
 .custom-form-card-teacher .card-body .subject-form div input[type="file"].custom-input-error,
-.custom-form-card-teacher .card-body .subject-form div textarea{
+.custom-form-card-teacher .card-body .subject-form div .custom-textarea-error{
     padding: 10px;
     margin: 5px 0;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
     box-shadow: 0 0 3px var(--red);
     text-align: left;
     font-size: 1.3rem;

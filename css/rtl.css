@@ -3128,7 +3128,7 @@ font-weight: bold;
 .custom-form-card-teacher .card-body .subject-form div input[type="datetime-local"].custom-input,
 .custom-form-card-teacher .card-body .subject-form div input[type="url"].custom-input,
 .custom-form-card-teacher .card-body .subject-form div input[type="file"].custom-input,
-.custom-form-card-teacher .card-body .subject-form div textarea{
+.custom-form-card-teacher .card-body .subject-form div .custom-textarea{
     padding: 10px;
     margin: 5px 0;
     border-top-left-radius: 15px;
@@ -3151,7 +3151,7 @@ font-weight: bold;
 .custom-form-card-teacher .card-body .subject-form div input[type="datetime-local"].custom-input-error,
 .custom-form-card-teacher .card-body .subject-form div input[type="url"].custom-input-error,
 .custom-form-card-teacher .card-body .subject-form div input[type="file"].custom-input-error,
-.custom-form-card-teacher .card-body .subject-form div textarea{
+.custom-form-card-teacher .card-body .subject-form div .custom-textarea-error{
     padding: 10px;
     margin: 5px 0;
     border-top-left-radius: 15px;
