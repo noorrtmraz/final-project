@@ -3355,6 +3355,17 @@ transition: 0.2s;
   margin: 5rem 0 1rem 0;
 }
 
+
+
+.std-attempts-name{
+  color: var(--main-color);
+  font-size: 1.6rem;
+}
+
+.std-attempts-name span{
+  font-size: 1.5rem;
+}
+
 .title-underline {
   width: 60px;
   height: 1px;
