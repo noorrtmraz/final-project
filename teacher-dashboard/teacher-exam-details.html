@@ -312,7 +312,7 @@
                   <div class="tab-pane fade show active" id="details" role="tabpanel">
                     <div class="container">
                       <div class="exam-table table-responsive">
-                        <table class="table-bordered mb-0">
+                        <table class="table table-bordered mb-0">
                           <tbody>
                             <tr>
                               <td>اسم الاختبار</td>
@@ -600,21 +600,29 @@
 
 
                   <div class="tab-pane fade" id="resuls" role="tabpanel">
-                    <div class="charts-wrapper">
-            <div class="chart-box">
-              <canvas id="barChart"></canvas>
-            </div>
 
-            <div class="chart-box">
-              <canvas id="donutChart"></canvas>
-            </div>
-          </div>
+                    
+
+                    <div class="charts-wrapper">
+                      <div class="chart-box">
+                        <canvas id="barChart"></canvas>
+                      </div>
+
+                      <div class="chart-box">
+                        <canvas id="donutChart"></canvas>
+                      </div>
+                    </div>
 
          
              <div class="container custom-table-teacher">
 
-              <div class="search-box-student text-end mb-3">
+              <div class="search-box-student  mb-3 d-flex justify-content-between">
                 <input type="search" class="form-control search-input-custom" placeholder="ابحث ...">
+
+                <div class="btn-export-zero d-flex align-items-center">
+                    <button href="#" class="btn-export">تصدير النتائج</button>
+                    <button href="#" class="btn-zero">نتيجة صفر</button>
+                </div>
               </div>
 
               <div class="table-responsive custom-table-wrapper">
@@ -646,8 +654,8 @@
                                 </a>
                               </li>
                               <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#relodeModal-exam" >
-                                  <i class="fas fa-rotate-right relode-icon-action"></i> إعادة الاختبار
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#addGradeModal" >
+                                  <i class="fas fa-edit action-icon edit-icon-action"></i> تعديل الدرجة
                                 </a>
                               </li>
                             </ul>
@@ -662,23 +670,40 @@
 
 
           
-         <div class="modal fade" id="relodeModal-exam" tabindex="-1" aria-labelledby="relodeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered"> <!-- يجعل المودال بالنص -->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
-                        </div>
-                        <div class="modal-body text-center">
-                          <i class="fas fa-rotate-right fa-3x mb-3"></i>
-                          <p>هل أنت متأكد من أنك تريد اعادة الاختبار للطالب <span>أحمد محمد</span></p>
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                          <button type="button" class="btn btn-del">تأكيد</button>
-                          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
-                        </div>
-                      </div>
+          <div class="modal fade custom-modal" id="addGradeModal" tabindex="-1" aria-labelledby="addGradeModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                  <div class="modal-content custom-modal-content">
+
+                    <!-- رأس المودال -->
+                    <div class="modal-header custom-modal-header">
+                      <h5 class="modal-title custom-modal-title" id="addGradeModal">تقييم الواجب للطالب <span>محمد</span></h5>
                     </div>
+
+                    <!-- جسم المودال -->
+                    <div class="modal-body custom-modal-body">
+                      <form id="stageForm" class="custom-form">
+                        <div class="mb-3 custom-form-group">
+                          <div class="form-group-float position-relative ">
+                            <input type="number" class="form-control custom-input float-input" id="" placeholder=" " />
+                            <label for="" class="float-label">الدرجة</label>
+                          </div> 
+                        </div>
+
+                        <div class="mb-3 custom-form-group">
+                          <textarea class="form-control custom-textarea" id="stageNotes" rows="3" placeholder="ملاحظات"></textarea>
+                        </div>
+                      </form>
+                    </div>
+
+                    <!-- تذييل المودال -->
+                    <div class="modal-footer custom-modal-footer">
+                      <button type="submit" class="btn btn-primary custom-save-btn" form="stageForm">تعديل</button>
+                      <button type="button" class="btn btn-secondary custom-cancel-btn" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+
                   </div>
+                </div>
+              </div>
                   </div>
 
               

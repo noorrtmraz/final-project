@@ -2357,8 +2357,8 @@ font-weight: bold;
 .pagination .page-link {
   color: var(--main-color);
   border: 1px solid var(--main-color);
-  padding: .5rem 1rem;
-  font-size: 1.5rem;
+  padding: .3rem .7rem;
+  font-size: 1.2rem;
 }
 
 /* تخصيص الأزرار عند التمرير */
@@ -2374,28 +2374,33 @@ font-weight: bold;
 }
 
 .pagination .page-item:first-child .page-link {
-   background-color:var(--main-color); /* تغيير اللون الخلفي */
   border: none;/* تغيير حدود الزر */
-  color: white; /* تغيير لون النص */
+  color: var(--main-color); /* تغيير لون النص */
   border-radius: 0;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+}
+
+.pagination .page-item:first-child .page-link:hover{
+  background: none;
 }
 
 
 
 .pagination .page-item:last-child .page-link {
-  background-color: var(--main-color); /* تغيير اللون الخلفي */
   border: none;/* تغيير حدود الزر */
-  color: white; /* تغيير لون النص */
+  color: var(--main-color); /* تغيير لون النص */
   border-radius: 0;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 }
+
+.pagination .page-item:last-child .page-link:hover{
+  background: none;
+}
+
 
 .pagination-container .pagination-show{
   margin: 1.5rem 3rem 1rem 0;
@@ -3285,6 +3290,20 @@ font-weight: bold;
 }
 
 
+.custom-form-card-teacher .card-body .subject-form div select.custom-select-error{
+
+    margin: 5px 0;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    font-size: 1.3rem;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: var(--light-color);
+}
+
+
 .custom-form-card-teacher .card-body .subject-form .text-end button{
   font-weight: bold;
     font-size: 1.5rem;
@@ -4112,7 +4131,7 @@ text-decoration: none;
     }
 
      .exam-container .question-box {
-      display: none;
+      /* display: none; */
       background: linear-gradient(125deg , rgba(7, 35, 64, 0.05), rgba(88, 159, 67, 0.05));
       padding: 20px;
       border-radius: 5px;
