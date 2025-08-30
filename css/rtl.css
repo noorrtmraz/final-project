@@ -1251,7 +1251,6 @@ header.header-page img.logo {
     }
 
      .add-question-plus-manager{
-      margin-right: 4rem;
       background-color: var(--main-color);
       color: var(--white);
       padding: .5rem 1rem;
@@ -3052,13 +3051,6 @@ font-weight: bold;
       flex-grow: 1;
     }
 
-    .remove-btn {
-      padding: 8px 10px;
-      white-space: nowrap;
-      border-bottom-right-radius: 10px;
-      border-top-left-radius: 10px;
-    }
-
    .form-check .form-check-label{
       font-size: 1.4rem;
       margin-right: 3rem;
@@ -3076,7 +3068,6 @@ font-weight: bold;
     }
 
     .add-question-plus{
-      margin-right: 4rem;
       background-color: var(--main-color);
       color: var(--white);
       padding: .5rem 1rem;
@@ -3139,6 +3130,16 @@ font-weight: bold;
     border: none;
     color: var(--light-color);
 
+}
+
+.custom-form-card-teacher .card-body .subject-form div input[type="text"].custom-input-option{
+   padding: 10px;
+    margin: 5px 0;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    font-size: 1.3rem;
+    border: none;
+    color: var(--light-color);
 }
 
 

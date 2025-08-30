@@ -1287,7 +1287,6 @@ header.header-page img.logo {
     }
 
      .add-question-plus-manager{
-      margin-left: 4rem;
       background-color: var(--main-color);
       color: var(--white);
       padding: .5rem 1rem;
@@ -3194,7 +3193,6 @@ font-weight: bold;
     }
 
     .add-question-plus{
-      margin-left: 1rem;
       background-color: var(--main-color);
       color: var(--white);
       padding: .5rem 1rem;
@@ -3243,7 +3241,7 @@ font-weight: bold;
 .custom-form-card-teacher .card-body .subject-form div input[type="url"].custom-input,
 .custom-form-card-teacher .card-body .subject-form div input[type="file"].custom-input,
 .custom-form-card-teacher .card-body .subject-form div .custom-textarea{
-    padding: 15px;
+    padding: 10px;
     margin: 5px 0;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -3253,6 +3251,16 @@ font-weight: bold;
     border: none;
     color: var(--light-color);
 
+}
+
+.custom-form-card-teacher .card-body .subject-form div input[type="text"].custom-input-option{
+   padding: 10px;
+    margin: 5px 0;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    font-size: 1.3rem;
+    border: none;
+    color: var(--light-color);
 }
 
 .custom-form-card-teacher .card-body .subject-form div input[type="text"].custom-input-error,
