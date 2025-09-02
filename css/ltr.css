@@ -4401,6 +4401,104 @@ text-decoration: none;
       transition: .3s linear;
     }
 
+     /* -------------------- */
+
+  
+
+    /* شريط المواعيد */
+ .exam-preview-container .page-wrap .header-box {
+  background: #fff; 
+  border-radius: .5rem;
+  padding: 2rem;
+}
+
+ .page-wrap .header-box .header-dates {
+  font-size: 1.1rem;
+   color: #555;
+  }
+
+     .page-wrap .header-box .tiny {
+      font-size: 1.3rem;
+      color: var(--main-color);
+    }
+
+    .action-btn {
+      margin-bottom: 1rem;
+    }
+
+    /* أزرار الأكشن */
+    .action-btn .action-btn-edit,
+    .action-btn .action-btn-delete {
+      font-size: 1.1rem;
+      background-color: var(--main-color);
+      color: var(--white);
+      padding: .5rem;
+      border-radius: 3px;
+    }
+
+    .action-btn .action-btn-edit:hover,
+    .action-btn .action-btn-delete:hover{
+      background-color:rgba(88, 159, 67, 0.7) ;
+      transition: .3s linear;
+    }
+
+    .page-wrap .card{
+      border: none;
+    }
+
+    /* عنوان البطاقة */
+    .section-title {
+      font-weight: bold; 
+      font-size: 1.3rem;
+      color: var(--main-color);
+      padding: .5rem .5rem;
+    }
+
+    /* الجدول */
+  
+    .status-table th {
+      width: 30%; 
+      color: #555;
+      font-size: 1.2rem;
+      /* padding: .5rem .5rem; */
+    }
+    .status-table td {
+      vertical-align: middle;
+      font-size: 1.1rem;
+       /* padding: .5rem .5rem; */
+    }
+
+    /* حالة النجاح */
+   .status-table .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .5rem .5rem;
+      border-radius: 3px;
+      font-weight: bold;
+      background: #e8f5e9; 
+      color: var(--main-color); 
+    }
+
+    /* الملف */
+    .file-pill {
+      display: inline-flex; 
+      align-items: center; 
+      gap: .45rem;
+      padding: .5rem .5rem; 
+      border-radius: 3px;
+      border: 1px solid var(--main-color); 
+      background: #fff; 
+      text-decoration: none;
+      color: var(--main-color);
+      margin-left: 1rem;
+    }
+
+
+
+    .muted {
+      color: var(--light-color);
+    }
 
 /* ------student dashboard end------- */
 
