@@ -152,64 +152,87 @@
 
 
   <div class="parentContent">        
-      <div class="container">
-    <div class="preview-box">
-      <div class="preview-header">
-        تفاصيل الواجب
+      <div class="container exam-preview-container">
+  <div class="exam-preview-title text-center">
+    <h4>
+      <span class="preview-title-text fw-bold">معاينة </span>
+      <span class="preview-title-highlight fw-bold">الواجب</span>
+    </h4>
+  </div>
+
+ <div class="container page-wrap py-4">
+    <!-- شريط المواعيد -->
+    <div class="header-box mb-3">
+      <div class="header-dates">
+        <div>فتحت: <strong>الثلاثاء 12 أغسطس 2025، AM 12:00</strong></div>
+        <div>تستحق: <strong>الجمعة 22 أغسطس 2025، AM 12:00</strong></div>
       </div>
-      <div class="preview-content">
-        <div class="preview-row">
-          <div class="preview-label"> وصف الواجب :</div>
-          <div class="preview-value">اختبار لغة عربية عبارة عن اسئلة الواحدة الاولى يتم حلها وتسليمها إما وورد أو بي دي إف</div>
+      <hr>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="tiny">عنوان الواجب</div>  
+      </div>
+    </div>
+
+     <div class="action-btn d-flex gap-2">
+          <button class="action-btn-edit">تحرير التسليم</button>
+          <button class="action-btn-delete">إزالة التسليم</button>
         </div>
 
-        <div class="preview-row">
-          <div class="preview-label">الدرجة الكلية :</div>
-          <div class="preview-value">15</div>
+    <!-- البطاقة -->
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <h5 class="section-title">حالة التسليم</h5>
+        </div>
+        <hr>
+
+        <div class="table-responsive">
+          <table class="table status-table">
+            <tbody>
+              <tr>
+                <th>حالة التسليم</th>
+                <td><span class="status-badge">مُسلَّمة للتقييم</span></td>
+              </tr>
+              <tr>
+                <th>حالة التسليم</th>
+                <td><span class="status-badge-un">لم يتمم التسليم</span></td>
+              </tr>
+              <tr>
+                <th>حالة التقييم</th>
+                <td class="text-danger">لم يتم التقييم</td>
+              </tr>
+              <tr>
+                <th>الوقت المتبقي</th>
+                <td class="text-success">تم تسليم الواجب منذ 9 ساعات باكرًا</td>
+              </tr>
+              <tr>
+                <th>آخر تعديل</th>
+                <td>الخميس، 3 ابريل 2025، PM 2:33</td>
+              </tr>
+              <tr>
+                <th>التسليمات بالملفات</th>
+                <td class="d-flex flex-wrap align-items-center gap-2">
+                  <span class="muted">PM 2:11، 21 أغسطس 2025</span>
+                  <a class="file-pill" href="#">
+                    part 1 answers.pdf
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th>تعليقات التسليم</th>
+                <td>تم تسليم الواجب في الملف كامل تم تسليم الواجب في الملف كامل</td>
+
+
+
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="preview-row">
-          <div class="preview-label">انتهاء التسليم :</div>
-          <div class="preview-value">2025-05-24 15:01:00</div>
-        </div>
-
-        <div class="preview-row-feedback">
-          <div>
-            <div class="note-box">قام الطالب <span>أحمد أحمد </span> بتسليم الواجب بالفعل</div>
-          </div>
-        </div>
-
-        <div class="preview-row">
-          <div class="preview-label">تاريخ التسليم :</div>
-          <div class="preview-value">2025-05-22 1:21 PM</div>
-        </div>
-
-    
-        <div class="preview-row">
-          <div class="preview-label">الحالة :</div>
-          <div>
-            <span class="preview-grade">تم التسليم</span>
-          </div>
-        </div>
-
-         <div class="preview-row">
-          <div class="preview-label">الدرجة :</div>
-          <div>
-            <span class="preview-grade">13/15</span>
-          </div>
-        </div>
-
-        <div class="preview-row-feedback">
-          <div class="preview-label">ملاحظات :</div>
-          <div>
-            <div class="note-box">ملاحظات الطالب <span>أحمد أحمد</span></div>
-          </div>
-        </div>
-
-       
       </div>
     </div>
   </div>
+</div>
     
       
     <!-- محتوى الصفحة هنا -->
