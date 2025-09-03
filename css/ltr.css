@@ -1118,10 +1118,11 @@ header.header-page img.logo {
     font-size: 1.5rem;
     margin-top: .5rem;
     z-index: 1000;
-    height: 7rem;
+    max-height: 7rem;
     position: fixed;
     background-color: var(--white);
 }
+
 
 .footer span{
     color: var(--main-color);
@@ -3660,6 +3661,7 @@ transition: 0.2s;
   z-index: 1;
   background-color: #fff;
   left: 0;
+  overflow: auto;
 }
 
 .sidebarStd .sidebar-std{
@@ -4478,6 +4480,17 @@ text-decoration: none;
       font-weight: bold;
       background: #e8f5e9; 
       color: var(--main-color); 
+    }
+
+    .status-table .status-badge-un {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .5rem .5rem;
+      border-radius: 3px;
+      font-weight: bold;
+      background: #f5e8e8; 
+      color: var(--red); 
     }
 
     /* الملف */
