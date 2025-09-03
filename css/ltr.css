@@ -2763,6 +2763,16 @@ font-weight: bold;
    font-size: 1.3rem;
 }
 
+.custom-checkbox-label2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+   font-size: 1.3rem;
+   margin-right: 2rem;
+}
+
+
+
 .custom-checkbox {
   width: 20px;
   height: 20px;
@@ -2943,7 +2953,7 @@ font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.search-box-student input{
+.search-box-student .earch-input-custom{
   text-align: left;
   border: 1px solid rgba(88, 159, 67, 0.2);
   padding: .7rem;
