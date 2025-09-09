@@ -84,18 +84,25 @@
     <span class="notification-dot"></span>
   </a>
   <div class="dropdown-menu notification-dropdown text-end" aria-labelledby="notificationsDropdown">
-    <h6 class="notification-title d-flex justify-content-between align-items-center">
-      الاشعارات
-      <!-- العداد الأحمر -->
-      <span class="badge badge-number text-white">2</span>
+    <h6 class="notification-title d-flex justify-content-between align-items-center px-3 py-2">
+      <div class="d-flex align-items-center gap-2">
+        الاشعارات
+        <span class="badge badge-number text-white" id="notifCount">2</span>
+      </div>
+      <button class="btn btn-sm btn-link  mark-read-btn mark-all-read" id="markAllRead">
+        تمييز الكل كمقروء
+      </button>
     </h6>
 
-    <div class="notification-content">
+    <div class="notification-list">
+
+      <div class="notification-content">
       <div class="notification-info text-end">
         <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
       </div>
       <span>٣٠٠ س</span>
     </div>
+   
 
     <div class="notification-content">
       <div class="notification-info text-end">
@@ -103,45 +110,16 @@
       </div>
       <span>٣٠٠ س</span>
     </div>
-    <div class="notification-content">
-      <div class="notification-info text-end">
-        <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-      </div>
-      <span>٣٠٠ س</span>
-    </div>
-    <div class="notification-content">
-      <div class="notification-info text-end">
-        <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-      </div>
-      <span>٣٠٠ س</span>
-    </div>
-    <div class="notification-content">
-      <div class="notification-info text-end">
-        <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-      </div>
-      <span>٣٠٠ س</span>
-    </div>
-    <div class="notification-content">
-      <div class="notification-info text-end">
-        <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-      </div>
-      <span>٣٠٠ س</span>
-    </div>
-    <div class="notification-content">
-      <div class="notification-info text-end">
-        <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-      </div>
-      <span>٣٠٠ س</span>
-    </div>
+   
+     </div>
 
-    <div class="notification-content">
-      <div class="notification-info text-end">
-        <p class="mb-0">يوجد طالب جديد يريد التسجيل في النظام</p>
-      </div>
-      <span>٣٠٠ س</span>
+    <!-- الفوتر -->
+    <div class="notification-footer">
+      لا توجد اشعارات
     </div>
   </div>
 </li>
+
 
 
 

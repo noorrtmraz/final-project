@@ -857,7 +857,7 @@
 
 .badge-number{
   background-color: var(--red);
-  padding: .4rem .6rem;
+  padding: .3rem .5rem;
 }
 
 .notification-dot {
@@ -880,7 +880,7 @@
 
 .dropdown-menu.notification-dropdown{
   width: 35rem;
-  height: 33rem;  
+  height: auto;  
   /* padding: 2rem; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border:none;
@@ -892,8 +892,31 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   display: block;       /* نتحكم بالانميشن */
   visibility: hidden; 
-  overflow: auto;
+ 
 
+}
+.notification-list{
+  overflow: auto;
+  height: 33rem; 
+   padding-bottom: 42px;
+}
+
+.notification-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #f8f9fa;
+  text-align: center;
+  padding: 8px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: var(--main-color);
+
+}
+
+.mark-all-read{
+  font-size: 1.2rem;
+  color: var(--secondary-color);
 }
 
 /* عند الفتح */
