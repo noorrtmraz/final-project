@@ -355,15 +355,23 @@
 
 
 
-     
-<!-- زر فتح الرسائل باستخدام Bootstrap -->
-<button class="position-fixed  m-4 d-flex align-items-center gap-2 shadow open-msg-btn"
+<!-- زر فتح الرسائل -->
+<button class="position-fixed m-4 d-flex align-items-center justify-content-center 
+               shadow open-msg-btn position-relative"
         type="button" 
         data-bs-toggle="offcanvas" 
         data-bs-target="#messagesOffcanvas" 
         aria-controls="messagesOffcanvas">
-  <i class="fas fa-comments"></i>
+
+  <!-- أيقونة الرسائل -->
+  <i class="fas fa-comments fa-lg msg-icon"></i>
+
+  <!-- البادج (الدائرة الحمراء) -->
+  <span class="msg-badge">5</span>
 </button>
+
+
+
 
 <!-- Offcanvas الرسائل -->
 <div class="offcanvas offcanvas-bottom messages-panel" tabindex="-1" id="messagesOffcanvas" aria-labelledby="messagesOffcanvasLabel">
@@ -385,14 +393,28 @@
 
     <div class="messages-body overflow-auto flex-grow-1 p-3">
       <!-- عنصر رسالة -->
-     <div class="d-flex align-items-center border-bottom py-2 text-dark message-item" style="cursor: pointer;" onclick="openChatPopup('المعلم')">
-  <img src="../images/pic-2.jpg" alt="user" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+    <div class="d-flex align-items-center border-bottom py-2 text-dark message-item" 
+     style="cursor: pointer;" 
+     onclick="openChatPopup('المعلم')">
+
+  <!-- صورة البروفايل -->
+  <img src="../images/pic-2.jpg" alt="user" class="rounded-circle me-3" 
+       style="width: 45px; height: 45px; object-fit: cover;">
+
+  <!-- معلومات الرسالة -->
   <div class="msg-info text-end">
-    <strong class="d-block">المعلم</strong>
+    <strong class="d-block">
+      المعلم
+      <!-- الدائرة الخضراء بعد الاسم -->
+      <span class="msg-count-badge">12</span>
+    </strong>
     <p class="mb-0">لديك مهام جديدة</p>
   </div>
+
+  <!-- الوقت -->
   <span>٣٠٠ س</span>
 </div>
+
 
 
       <div class="d-flex align-items-center border-bottom py-2 text-dark message-item" style="cursor: pointer;" onclick="openChatPopup('المعلم')">
